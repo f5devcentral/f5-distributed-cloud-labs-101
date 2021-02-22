@@ -5,10 +5,10 @@ During this lab you will use VoltConsole to
 
 - Create Volterra Load Balancer Resources
   
-During the previous lab you created and configured a site that represented
-an on-premises data center environment.
+During the previous lab you created an "on-prem" (UDF) and "cloud" (AWS) site.
 
-This next lab will create an AWS site and connect it to the previous site.
+This next lab will create a Volterra Load Balancer resource that will enable
+you to access both sites from a local Virtual IP.
 
 .. toctree::
    :maxdepth: 1

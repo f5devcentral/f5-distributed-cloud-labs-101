@@ -43,5 +43,47 @@ assigned for your namespace (i.e. first initial-lastname).
 
 Record the "UID" that is created.  You will later use this when you add a site.
 
+Exercise 3: Add a Site
+~~~~~~~~~~~~~~~~~~~~~~~~
 
+From your UDF Deployment find your "volterra" component and click on "Site UI".
+
+.. image:: udf-site-ui.png
+
+You will next need to click on "Configure Now".
+
+.. image:: site-ui-configure-now.png
+
+You will need to provide the following information.
+
+- Token: [use one created previously]
+- Cluster Name: [unique name]+udf
+- Hostname: main-0
+- Certified Hardware: generic-single-nic
+- Primary Outside NIC: eth0
+- Latitude/Longitude
+
+.. image:: site-ui-device-configuration.png
+
+You can then click on "Save Configuration". 
+
+You will then need to go back to VoltConsole to "Accept" the registration.
+
+You will need to go under "System->Site Management->Registrations".
+
+.. image:: registrations-menu.png
+
+Click on the "checkmark" icon to accept the registration.
+
+.. image:: registrations-accept.png
+
+You can then click on "Accept" to use the default values (we will modify
+these in a later lab).
+
+This will start the process of loading the Volterra software that is 
+necessary to connect the site to a Volterra Regional Edge site.
+
+It will take several minutes
+for this to complete.  You can continue to the next lab while you wait for
+it to complete.
 
