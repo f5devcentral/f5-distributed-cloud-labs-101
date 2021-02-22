@@ -1,23 +1,17 @@
-# Solutions Engineering Template Repository
-A template repository that contains all required files (LICENSE, SUPPORT, CONTRIBUTING, etc) as outlined in the org standards.  
-
-
-The sections below are recommended in your project's README.md file. 
+# F5 Volterra 101
 
 ## Overview
-Provide a short overview of the project.
 
-## Getting Started
-Provide a quick example of how to use your code.  This should provide the user with a launch point to quickly see what the project can offer them. 
+This Lab environment highlights some of the basic concepts of VoltMesh.
 
-## Installation
-Outline the requirements and steps to install this project. 
+During the lab you will be emulating a customer that needs to extend an
+existing on-premises internal application to a Public Cloud environment.
+The goal is to securely extend the application into the cloud environment
+and have it highly availabe in both on-prem/cloud simultaneously.
 
-## Usage
-Outline how the user can use your project and the various features the project offers. 
+## Lab Guide
 
-## Development
-Outline any requirements to setup a development environment if someone would like to contribute.  You may also link to another file for this information. 
+Please see the `docs` directory.
 
 ## Support
 For support, please open a GitHub issue.  Note, the code in this repository is community supported and is not supported by F5 Networks.  For a complete list of supported projects please reference [SUPPORT.md](SUPPORT.md).
@@ -44,3 +38,4 @@ If your employer has rights to intellectual property that you create, such as yo
 
 If you are signing on behalf of a company, you represent that you are legally entitled to grant the license recited therein.
 You represent further that each employee of the entity that submits contributions is authorized to submit such contributions on behalf of the entity pursuant to the CLA.
+ 
