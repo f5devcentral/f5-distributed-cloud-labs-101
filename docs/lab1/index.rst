@@ -1,5 +1,5 @@
-Lab 1: VoltConsole
-==================
+Lab 1: Creating a Site 
+======================
 
 During this lab you will be introduced to VoltConsole and learn how to
 

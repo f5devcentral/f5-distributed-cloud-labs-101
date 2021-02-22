@@ -38,5 +38,10 @@ Click on "Add Site Token".
 
 .. image:: add-site-token-button.png
 
-Provide a name for the token.  
+Provide a name for the token.  You can use the same unique name that was 
+assigned for your namespace (i.e. first initial-lastname).
+
+Record the "UID" that is created.  You will later use this when you add a site.
+
+
 
