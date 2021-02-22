@@ -17,6 +17,8 @@ outside of the site as well as allow remote resources to connect into the site.
    :maxdepth: 1
    :caption: Contents:
 
+   virtual-network
+   network-connector
    fleet
 
 
