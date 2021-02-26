@@ -12,3 +12,7 @@ output INTERNAL_SUBNET_ID {
 output INTERNAL2_SUBNET_ID {
   value = aws_subnet.f5-volterra-internal-3.id
 }
+
+output AWS_INSTANCE {
+  value = aws_instance.f5-frontend-1.public_ip
+}
