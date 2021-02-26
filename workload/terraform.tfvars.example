@@ -1,0 +1,7 @@
+prefix = "${prefix}"
+aws_region = "${region}"
+subnet_id = "${subnet_id}"
+ssh_key = "${ssh_key}"
+security_group = "${security_group}"
+vpc_id = "${vpc_id}"
+
