@@ -47,7 +47,7 @@ snap install docker
 systemctl enable snap.docker.dockerd
 systemctl start snap.docker.dockerd
 sleep 30
-docker run -d --dns ${data.aws_instance.volterra_gateway.private_ip} --net=host --restart=always \
+docker run -d --dns ${var.volterra_gateway} --net=host --restart=always \
     -e F5DEMO_APP=text \
         -e F5DEMO_NODENAME='AWS Environment' \
 	    -e F5DEMO_COLOR=ffd734 \
