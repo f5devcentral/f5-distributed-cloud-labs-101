@@ -31,6 +31,7 @@ At this point you will have to go through the steps of setting up a TCP LB of cr
 health monitor, and TCP LB object.
 
 - Name: [unique name]-backend-tcp
+- Domains: backend.example.local
 - Listen Port: 8443
 
 Under "Origin Pools" click on "Configure" and then "Add item".
@@ -43,3 +44,16 @@ Under "Origin Pool" then click on "Create new pool" under the pull down menu.
 - Select Type of Origin Server: IP address of Origin Server on given Sites
 - Enter ip: 10.1.1.4
 - Site: [unique name]-udf
+
+After creating the new pool you select the newly created pool.
+
+Under "Where to advertise the VIP" change to "Advertise Custom" then click on "Configure" next to "Advertise Custom".
+
+Under "Custom Advertise VIP Configuration" leave "Select where to advertise" on "Site".
+
+- Site Network: Inside
+- Site Reference: [unique name]-aws
+
+Click on "Apply".
+
+On the main screen you can then click on "Save and Exit".
