@@ -44,6 +44,16 @@ Under "Origin Pool" then click on "Create new pool" under the pull down menu.
 - Select Type of Origin Server: IP address of Origin Server on given Sites
 - Enter ip: 10.1.1.4
 - Site: [unique name]-udf
+- Select Network on this site: Outside Network
+
+Under "List of Health Checks" select the option to create a new Health Check
+
+- Name: backend-tcp-health-check
+- Health Check: TCP Healthcheck
+
+You wil then need to click on configure under "TCP Health Check" followed by "Apply".
+
+Then click on "Continue" to finish creating the Health Check.
 
 After creating the new pool you select the newly created pool.
 
