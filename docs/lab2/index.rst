@@ -1,25 +1,20 @@
-Lab 2: Configure Site Networking
-================================
+Lab 2: Creating AWS Site
+========================
 
 During this lab you will use VoltConsole to
 
-- Create a fleet
-- Create a Network Connector
+- Create an AWS site
+  
+During the previous lab you created and configured a site that represented
+an on-premises data center environment.
 
-During the previous lab you created a site.  This creates an initial network
-endpoint for VoltMesh, but it does not provide any information about how to
-connect into or out of the site network.
-
-This next lab will configure the site to allow it to connect to remote resources
-outside of the site as well as allow remote resources to connect into the site. 
+This next lab will create an AWS site and connect it to the previous site.
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   virtual-network
-   network-connector
-   fleet
+   awssite
 
 
 
