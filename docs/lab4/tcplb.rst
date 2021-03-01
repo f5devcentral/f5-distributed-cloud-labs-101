@@ -26,3 +26,20 @@ Navigate the menu to go to "Manage"->"TCP Load Balancers" and click on "Add TCP 
 .. note:: This may appear differently if there is an existing LB resource
 
 .. image:: add-tcp-lb.png
+
+At this point you will have to go through the steps of setting up a TCP LB of creating an origin pool,
+health monitor, and TCP LB object.
+
+- Name: [unique name]-backend-tcp
+- Listen Port: 8443
+
+Under "Origin Pools" click on "Configure" and then "Add item".
+
+- Origin Pool Method: Origin Pool
+
+Under "Origin Pool" then click on "Create new pool" under the pull down menu.
+
+- Name: backend-tcp
+- Select Type of Origin Server: IP address of Origin Server on given Sites
+- Enter ip: 10.1.1.4
+- Site: [unique name]-udf
