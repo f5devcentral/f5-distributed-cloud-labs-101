@@ -65,3 +65,64 @@ Under "Custom Advertise VIP Configuration" leave "Select where to advertise" on 
 Click on "Apply".
 
 On the main screen you can then click on "Save and Exit".
+
+You should now be able to go to the DNS name that you entered 
+previously in a web browser.
+
+.. code-block::
+    
+    ================================================
+    ___ ___   ___                    _
+    | __| __| |   \ ___ _ __  ___    /_\  _ __ _ __
+    | _||__ \ | |) / -_) '  \/ _ \  / _ \| '_ \ '_ \ 
+    |_| |___/ |___/\___|_|_|_\___/ /_/ \_\ .__/ .__/
+                                        |_|  |_|
+    ================================================
+
+        Node Name: AWS Environment
+        Short Name: ip-10-0-3-14
+
+        Server IP: 10.0.3.14
+        Server Port: 8080
+
+        Client IP: 10.0.3.29
+        Client Port: 51201
+
+    Client Protocol: HTTP
+    Request Method: GET
+        Request URI: /
+
+        host_header: frontend.[unique name].[tenant domain]
+        user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36
+    x-forwarded-for: 192.0.2.10
+
+If you append "/backend/" to the URL you should see the following output 
+that shows how the "frontend" application is able to connect to the "backend"
+via the TCP Load Balancer.
+
+.. code-block::
+    
+    ================================================
+    ___ ___   ___                    _
+    | __| __| |   \ ___ _ __  ___    /_\  _ __ _ __
+    | _||__ \ | |) / -_) '  \/ _ \  / _ \| '_ \ '_ \ 
+    |_| |___/ |___/\___|_|_|_\___/ /_/ \_\ .__/ .__/
+                                        |_|  |_|
+    ================================================
+
+        Node Name: UDF Environment (Backend App)
+        Short Name: ubuntu
+
+        Server IP: 10.1.1.4
+        Server Port: 8443
+
+        Client IP: 10.1.1.6
+        Client Port: 52595
+
+    Client Protocol: HTTPS
+    Request Method: GET
+        Request URI: /txt
+
+        host_header: backend.example.local
+        user-agent: Frontend App/1.0
+    x-forwarded-for: 10.0.3.29
