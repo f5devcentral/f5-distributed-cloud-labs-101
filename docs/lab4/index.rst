@@ -18,7 +18,9 @@ you to access both sites from a local Virtual IP.
    :maxdepth: 1
    :caption: Contents:
 
-   awssite
+   tcplb
+   workload
+   httplb
 
 
 
