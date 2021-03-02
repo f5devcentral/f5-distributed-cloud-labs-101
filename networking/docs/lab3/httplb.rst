@@ -33,12 +33,12 @@ health monitor, and TCP LB object.
 
 .. note::
   If you are not setup with a delegated domain you can disable the option to automatically manage DNS records.
-  You can supply an arbitrary domain (hopefully something like example.com works) and later you can use the following
+  You can supply an arbitrary domain (example.com) and later you can use the following
   command to verify
 
   .. code-block::
     
-    $ curl --resolve [your name].example.com:80:[DNS A record created by Volterra] http://[your name].example.com
+    $ curl --resolve [unique-name].example.com:80:[IP address of ves.io name created by LB] http://[unique-name].example.com
 
 Under "Origin Pools" click on "Configure" and then "Add item".
 
