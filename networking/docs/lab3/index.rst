@@ -1,9 +1,9 @@
-Lab 3: Create Volterra Load Balancer Resources
-==============================================
+Lab 3: Create Load Balancer Resources
+=====================================
 
 During this lab you will use VoltConsole to
 
-- Create Volterra Load Balancer Resources
+- Create Load Balancer Resources
   
 During the previous lab you created an "on-prem" (UDF) and "cloud" (AWS) site.
 

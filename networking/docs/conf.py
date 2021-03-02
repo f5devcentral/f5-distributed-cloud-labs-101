@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'F5 Volterra 101'
+project = 'F5 Volterra Networking 101'
 copyright = '2021, Eric Chen'
 author = 'Eric Chen'
 

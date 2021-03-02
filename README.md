@@ -2,16 +2,11 @@
 
 ## Overview
 
-This Lab environment highlights some of the basic concepts of VoltMesh.
-
-During the lab you will be emulating a customer that needs to extend an
-existing on-premises internal application to a Public Cloud environment.
-The goal is to securely extend the application into the cloud environment
-and have it highly availabe in both on-prem/cloud simultaneously.
+This Lab environment highlights some of the basic concepts of Volterra.
 
 ## Lab Guide
 
-Please see the `docs` directory.
+Please see the `docs` directory in the `networking` or `application` directories.
 
 ## Support
 For support, please open a GitHub issue.  Note, the code in this repository is community supported and is not supported by F5 Networks.  For a complete list of supported projects please reference [SUPPORT.md](SUPPORT.md).

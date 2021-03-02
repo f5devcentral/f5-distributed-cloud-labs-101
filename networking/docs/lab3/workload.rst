@@ -24,7 +24,7 @@ from the "Cloud Accounts" tab may be set for the incorrect region).
 
 .. code-block:: Shell
   
-  $ cd ~/f5-volterra-labs-101/terraform/
+  $ cd ~/f5-volterra-labs-101/networking/terraform/
   $ terraform output
     ...
     AWS_CONSOLE = "https://XXXXX.signin.aws.amazon.com/console?region=us-east-1"
@@ -65,7 +65,7 @@ On the Ubuntu Client (via webshell or SSH) access the following directory.
 
 .. code-block:: shell
   
-  $ cd ~/f5-volterra-labs-101/workload
+  $ cd ~/f5-volterra-labs-101/networking/workload
 
 This directory contains Terraform code that will deploy the frontend resource.  In 
 the previous run of Terraform it also updated this directory to specify the VPC/Subnet
@@ -77,7 +77,7 @@ run "terraform apply" and enter the private IP when prompted for the Volterra Ga
 
 .. code-block:: shell
   
-  ubuntu@ubuntu:~/f5-volterra-labs-101/workload$ terraform apply
+  ubuntu@ubuntu:~/f5-volterra-labs-101/networking/workload$ terraform apply
   var.volterra_gateway
     Enter a value: 10.0.3.XX
 

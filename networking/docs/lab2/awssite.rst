@@ -18,7 +18,7 @@ Run the following commands to deploy the VPC.
 
 .. code-block:: Shell
   
-  $ cd f5-volterra-labs-101/terraform/
+  $ cd f5-volterra-labs-101/networking/terraform/
   $ terraform apply -auto-approve
     ...
     AWS_CONSOLE = "https://XXXXX.signin.aws.amazon.com/console?region=us-east-1"

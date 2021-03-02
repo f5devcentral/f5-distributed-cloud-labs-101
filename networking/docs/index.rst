@@ -1,5 +1,5 @@
-F5 Volterra 101
-===============
+F5 Volterra Networking 101
+==========================
 
 This Lab environment highlights some of the basic concepts of VoltMesh.
 
