@@ -32,7 +32,9 @@ Run the following commands to deploy the VPC.
 
 .. warning::   
   
-  If you see the following .. error:: 
+  If you see the following 
+  
+  .. code-block:: 
   
     Error: Error launching source instance: InvalidKeyPair.NotFound: The key pair 'udf-key' does not exist
                 status code: 400, request id: xxxxxxxx-xxxx-xxxx-xxxxxxxxxx
@@ -44,6 +46,16 @@ Run the following commands to deploy the VPC.
     $ ~/init-cloud.sh
 
   This command should reset the environment.
+
+  If you see the following error
+
+  .. code-block::
+
+    Error: Error launching source instance: PendingVerification: Your request for accessing resources in this region is being validated, and you will not be able to launch additional resources in this region until the validation is complete. We will notify you by email once your request has been validated. While normally resolved within minutes, please allow up to 4 hours for this process to complete. If the issue still persists, please let us know by writing to aws-verification@amazon.com for further assistance.
+          status code: 400, request id: 99a5736b-02c4-4aff-9781-4b559e337375
+
+  You may need to retry the command again.  This is due to the AWS account not having used that particular region before.
+
 
 If you are using the "Web Shell" you can highlight the output to copy it into your 
 clipboard.
