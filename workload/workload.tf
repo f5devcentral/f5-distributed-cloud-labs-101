@@ -14,7 +14,7 @@ data "aws_instance" "volterra_gateway" {
     name   = "vpc-id"
     values = [var.vpc_id]
   }
-  
+
 }
 
 data "aws_ami" "ubuntu" {
@@ -34,10 +34,10 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "f5-frontend-1" {
-  ami                    = data.aws_ami.ubuntu.id
-  instance_type          = "t2.micro"
-  subnet_id              = var.subnet_id
-#  private_ip             = "10.0.3.4"
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t2.micro"
+  subnet_id     = var.subnet_id
+  #  private_ip             = "10.0.3.4"
   vpc_security_group_ids = [var.security_group]
   key_name               = var.ssh_key
   user_data              = <<-EOF

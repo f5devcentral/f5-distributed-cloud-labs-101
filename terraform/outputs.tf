@@ -20,5 +20,5 @@ output AWS_INSTANCE {
 data "aws_caller_identity" "current" {}
 
 output AWS_CONSOLE {
-   value = "https://${data.aws_caller_identity.current.account_id}.signin.aws.amazon.com/console?region=${var.aws_region}"
+  value = "https://${data.aws_caller_identity.current.account_id}.signin.aws.amazon.com/console?region=${var.aws_region}"
 }
