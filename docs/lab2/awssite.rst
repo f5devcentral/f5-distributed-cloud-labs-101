@@ -29,7 +29,22 @@ Run the following commands to deploy the VPC.
     _VPC_ID = "vpc-05767b378021fdc6c"  
 
 .. note:: Notice that the AWS region will vary depending on which UDF region you selected.  You may want to copy the URL for AWS_CONSOLE to use later in the lab.
-   
+
+.. warning::   
+  
+  If you see the following .. error:: 
+  
+    Error: Error launching source instance: InvalidKeyPair.NotFound: The key pair 'udf-key' does not exist
+                status code: 400, request id: xxxxxxxx-xxxx-xxxx-xxxxxxxxxx
+
+  Please run the following command:
+
+  .. code-block:: shell
+    
+    $ ~/init-cloud.sh
+
+  This command should reset the environment.
+
 If you are using the "Web Shell" you can highlight the output to copy it into your 
 clipboard.
 
