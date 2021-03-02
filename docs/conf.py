@@ -22,7 +22,7 @@ copyright = '2021, Eric Chen'
 author = 'Eric Chen'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = ''
 
 
 # -- General configuration ---------------------------------------------------
@@ -57,3 +57,17 @@ html_static_path = ['_static']
 import f5_sphinx_theme
 html_theme = 'f5_sphinx_theme'
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
+import json
+
+aws_region = "us-west-2"
+try:
+    f = open('../terraform/terraform.auto.tfvars.json')
+    d = json.load(f)
+    aws_region = d['aws_region']
+except:
+    pass
+rst_prolog = """
+.. |aws_region| replace:: %s
+.. |aws_zone| replace:: %sa
+""" %(aws_region,aws_region)
+

@@ -10,24 +10,26 @@ site, but that will be covered in a separate lab).
 Exercise 1: Deploy AWS Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In your lab environment an AWS VPC site has already been deployed.
-
-You will need to retrieve information about this environment before deploying
-your Volterra site.  
+In your lab environment you will need to create an  AWS VPC.
 
 From your UDF environment access the "Client" host either via SSH or Web Shell.
 
-Run the following commands to get the necessary information.
+Run the following commands to deploy the VPC.
 
 .. code-block:: Shell
   
   $ cd f5-volterra-labs-101/terraform/
-  $ terraform output
-    EXTERNAL_SUBNET_ID = "subnet-0b97da84a39c38aa1"
-    INTERNAL2_SUBNET_ID = "subnet-0425edbdd121f0cf0"
-    INTERNAL_SUBNET_ID = "subnet-0bb37ea062001b919"
-    _VPC_ID = "vpc-0e79ef1cd3b8b86e9"
+  $ terraform apply -auto-approve
+    ...
+    AWS_CONSOLE = "https://XXXXX.signin.aws.amazon.com/console?region=us-east-1"
+    AWS_INSTANCE = "192.0.2.10"
+    EXTERNAL_SUBNET_ID = "subnet-0f8ec509e82e4d3f5"
+    INTERNAL2_SUBNET_ID = "subnet-06c3611948fc6fc83"
+    INTERNAL_SUBNET_ID = "subnet-066c974f0e37f0326"
+    _VPC_ID = "vpc-05767b378021fdc6c"  
 
+.. note:: Notice that the AWS region will vary depending on which UDF region you selected.  You may want to copy the URL for AWS_CONSOLE to use later in the lab.
+   
 If you are using the "Web Shell" you can highlight the output to copy it into your 
 clipboard.
 
@@ -44,7 +46,7 @@ From VoltConsole go to the "System" namespace, "Site Management" -> "AWS VPC Sit
 
 Under "New AWS Site" you will need to provide the following information:
 
-- AWS Region: us-west-2
+- AWS Region: |aws_region|
 - Change from "New VPC Parameters" to "Existing VPC ID"
 - Existing VPC ID specify the "_VPC_ID" value that you collected earlier
 - Change "Ingress Gateway" to "Ingress/Egress Gateway (Two Interface)"
@@ -52,7 +54,7 @@ Under "New AWS Site" you will need to provide the following information:
 
 Under the section for "Nodes" provide the following information
 
-- AWS AZ Name: us-west-2a
+- AWS AZ Name: |aws_zone|
 - Subnet Choices for Inside Interface change to "Subnet for Inside Interface"
 - Change from "New Subnet" to "Existing Subnet ID"
 - Enter the value of "INTERNAL_SUBNET_ID"

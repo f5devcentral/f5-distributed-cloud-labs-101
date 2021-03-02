@@ -12,12 +12,30 @@ Before we can deploy the frontend application we will need to identify the IP ad
 of the Volterra Gateway.  This IP address will be used for internal DNS resolution as
 well as the IP address of the VIP that was configured on the TCP Load Balancer previously.
 
-From the UDF console you will need to find the "Cloud Accounts" tab that contains the URL
-for your AWS console as well as the username/password that you will be using.
+From the UDF console you will need to find the "Cloud Accounts" tab that contains  the
+username/password that you will be using to access the AWS Console.
 
 .. image:: aws-console-password.png
 
-Click on the Console URL (recommend using a private browsing window to avoid any existing AWS 
+From your UDF environment access the "Client" host either via SSH or Web Shell.
+
+Run the following commands to get the URL for your AWS Console (note that the URL
+from the "Cloud Accounts" tab may be set for the incorrect region).
+
+.. code-block:: Shell
+  
+  $ cd ~/f5-volterra-labs-101/terraform/
+  $ terraform output
+    ...
+    AWS_CONSOLE = "https://XXXXX.signin.aws.amazon.com/console?region=us-east-1"
+    AWS_INSTANCE = "192.0.2.10"
+    EXTERNAL_SUBNET_ID = "subnet-0f8ec509e82e4d3f5"
+    INTERNAL2_SUBNET_ID = "subnet-06c3611948fc6fc83"
+    INTERNAL_SUBNET_ID = "subnet-066c974f0e37f0326"
+    _VPC_ID = "vpc-05767b378021fdc6c"  
+
+
+Open up the AWS Console URL (recommend using a private browsing window to avoid any existing AWS 
 console sessions you may have) and enter the provided username/password.
 
 Click on "EC2" under "Services".
