@@ -33,7 +33,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "f5-backend-1" {
+resource "aws_instance" "f5-frontend-1" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t2.micro"
   subnet_id              = var.subnet_id
@@ -58,7 +58,7 @@ docker run -d --dns ${var.volterra_gateway} --net=host --restart=always \
               EOF
 
   tags = {
-    Name = "${var.prefix}-f5-backend-1"
+    Name = "${var.prefix}-f5-frontend-1"
   }
 }
 
