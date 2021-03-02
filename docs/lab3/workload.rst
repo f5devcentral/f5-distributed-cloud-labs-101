@@ -46,6 +46,12 @@ Click on "Instances" and you should see two instances running.  Select the insta
 of type "t3.xlarge".  This is the primary node of your Volterra Gateway (in an HW deployment 
 there would be multiple instances).
 
+.. note:: 
+  
+  If you do not see any instances you may be in the incorrect AWS region.  The "AWS_CONSOLE" value 
+  from running "terraform output" previously should contain the region (i.e. us-east-1).  You can
+  also try "us-west-2" (fallback value).
+
 Take note of the private ip of the internal interface.  It should be on the 10.0.3.0/24 network.
 You will use the IP address next to configure your workload instance.
 
