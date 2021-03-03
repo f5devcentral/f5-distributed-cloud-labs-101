@@ -65,13 +65,6 @@ Then click on "Continue" to finish creating the Health Check.
 
 After creating the new pool you select the newly created pool.
 
-Under "Where to advertise the VIP" change to "Advertise Custom" then click on "Configure" next to "Advertise Custom".
-
-Under "Custom Advertise VIP Configuration" leave "Select where to advertise" on "Site".
-
-- Site Network: Inside
-- Site Reference: [unique name]-aws
-
 Click on "Apply".
 
 On the main screen you can then click on "Save and Exit".
