@@ -52,6 +52,7 @@ Use the private IP address for the workload instance that you created in the pre
 - Select Type of Origin Server: IP address of Origin Server on given Sites
 - Enter ip: 10.0.3.XX
 - Site: [unique name]-aws
+- Port: 8080
 - Select Network on this site: Inside Network
 
 Under "List of Health Checks" select the option to create a new Health Check
