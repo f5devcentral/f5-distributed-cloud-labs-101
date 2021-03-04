@@ -7,6 +7,13 @@ uses a process that automates the steps of deploying the site.  This enables Vol
 to perform the deployment on behalf of the end-user (you can also use Terraform to deploy a 
 site, but that will be covered in a separate lab).
 
+.. note:: 
+  
+  The lab guide should include a recommended AWS region based on the geographic
+  region that you selected to run the lab.  Please be aware that any screen shots
+  that you see may differ from the recommended value.  i.e. if you see "eu-west-1"
+  ignore screenshots that include "us-east-1"
+
 Exercise 1: Deploy AWS Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -24,18 +31,16 @@ Under "New AWS Site" you will need to provide the following information:
 
 - AWS Region: |aws_region|
 - Primary IPv4 CIDR block: 10.0.0.0/16 
-- Change "Ingress Gateway" to "Ingress/Egress Gateway (Two Interface)"
-- Click on "Configure" (appears after "Select Ingress Gateway...)
+- Change "Ingress Gateway" to "Voltstack Cluster (One Interface)"
+- Click on "Configure" (appears after "Voltstack Cluster (One Interface) ...)
 
 Under the section for "Nodes" provide the following information
 
 - AWS AZ Name: |aws_zone|
 - Subnet Choices for Inside Interface change to "Subnet for Inside Interface"
-- Internal IPv4 Subnet: 10.0.3.0/24
-- Under "Workload Subnet" 
-- Workload IPv4 Subnet: 10.0.2.0/24
-- Under "Subnet for Outside Interface" 
-- External IPv4 Subnet: 10.0.0.0/24
+- Internal IPv4 Subnet: 10.0.0.0/24
+
+.. image:: voltconsole-aws-site-settings2.png
 
 Click on "Apply"
 

@@ -61,7 +61,7 @@ import json
 
 aws_region = "us-west-2"
 try:
-    f = open('../terraform/terraform.auto.tfvars.json')
+    f = open('../../networking/terraform/terraform.auto.tfvars.json')
     d = json.load(f)
     aws_region = d['aws_region']
 except:
