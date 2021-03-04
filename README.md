@@ -8,6 +8,21 @@ This Lab environment highlights some of the basic concepts of Volterra.
 
 Please see the `docs` directory in the `networking` or `application` directories.
 
+## Development
+Please run the following commands to setup a development environment:
+```bash
+python3 -m venv venv
+source ./venv/bin/activate
+cd ./application/docs/
+pip install -r requirements.txt
+```
+
+To build the documentation
+```bash
+cd ./application/docs
+make html
+```
+
 ## Support
 For support, please open a GitHub issue.  Note, the code in this repository is community supported and is not supported by F5 Networks.  For a complete list of supported projects please reference [SUPPORT.md](SUPPORT.md).
 
