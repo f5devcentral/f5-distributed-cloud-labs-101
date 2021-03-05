@@ -22,6 +22,7 @@ Over the course of this lab, we will help the customer meet these design goals w
    :maxdepth: 1
    :caption: Contents:
 
+   pre-work/index
    state1/index
    state2/index
    state3/index

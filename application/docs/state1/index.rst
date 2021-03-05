@@ -50,8 +50,3 @@ The architecture is confined to the customer's on-prem data center.
    :maxdepth: 1
    :caption: Contents:
 
-   voltconsole
-   httplb
-
-.. |state1| image:: images/state1.png
-.. |arch1| image:: images/arch1.png

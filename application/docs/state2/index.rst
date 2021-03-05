@@ -36,9 +36,11 @@ host the SPA and API services while the on-prem site will solely host the databa
    :maxdepth: 1
    :caption: Contents:
 
-   voltconsole
-   httplb
-
+   awssite
+   vsite
+   vk8s
+   deployPods
+   updateHttpLb
 
 .. |state2| image:: images/state2.png
 .. |arch2| image:: images/arch2.png

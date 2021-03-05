@@ -26,11 +26,10 @@ This state includes the new internally available Inventory service.
 |arch3|
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-
-   voltconsole
-   httplb
+    :maxdepth: 1
+    :caption: Contents:
+ 
+    internallb
 
 .. |state3| image:: images/state2.png
 .. |arch3| image:: images/arch2.png

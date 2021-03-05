@@ -202,15 +202,15 @@ You should now be able to go to the DNS name that you entered
 previously in a web browser.
 
 
-.. |app-context| image:: images/app-context.png
-.. |http_lb_menu| image:: images/http_lb_menu.png
-.. |http_lb_add| image:: images/http_lb_add.png
-.. |http_lb| image:: images/http_lb.png
-.. |http_lb_origin_pool_config| image:: images/http_lb_origin_pool_config.png
-.. |http_lb_origin_pool_health_check| image:: images/http_lb_origin_pool_health_check.png
-.. |http_lb_origin_pool_health_check2| image:: images/http_lb_origin_pool_health_check2.png
-.. |http_lb_routes| image:: images/http_lb_routes.png
-.. |http_lb_routes_prefix_1| image:: images/http_lb_routes_prefix_1.png
-.. |http_lb_routes_prefix_pool| image:: images/http_lb_routes_prefix_pool.png
-.. |http_lb_routes_prefix_pool_health| image:: images/http_lb_routes_prefix_pool_health.png
-.. |http_lb_routes_prefix_2| image:: images/http_lb_routes_prefix_2.png
+.. |app-context| image:: ../_static/app-context.png
+.. |http_lb_menu| image:: ../_static/http_lb_menu.png
+.. |http_lb_add| image:: ../_static/http_lb_add.png
+.. |http_lb| image:: ../_static/http_lb.png
+.. |http_lb_origin_pool_config| image:: ../_static/http_lb_origin_pool_config.png
+.. |http_lb_origin_pool_health_check| image:: ../_static/http_lb_origin_pool_health_check.png
+.. |http_lb_origin_pool_health_check2| image:: ../_static/http_lb_origin_pool_health_check2.png
+.. |http_lb_routes| image:: ../_static/http_lb_routes.png
+.. |http_lb_routes_prefix_1| image:: ../_static/http_lb_routes_prefix_1.png
+.. |http_lb_routes_prefix_pool| image:: ../_static/http_lb_routes_prefix_pool.png
+.. |http_lb_routes_prefix_pool_health| image:: ../_static/http_lb_routes_prefix_pool_health.png
+.. |http_lb_routes_prefix_2| image:: ../_static/http_lb_routes_prefix_2.png
