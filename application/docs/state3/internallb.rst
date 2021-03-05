@@ -101,7 +101,7 @@ Exercise 2: Configure Default Origin Server
     #. Click "Continue"
     #. Click "Apply" (This should take you back to the main HTTP LB screen, stop here)
 
-Excercise 3: Configure Custom VIP Configuration 
+Exercise 3: Configure Custom VIP Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Unlike when you created a public HTTP LB this needs to be configured
@@ -135,7 +135,7 @@ to only listen on the internal network of the UDF and AWS sites.
 #. Click on "Apply"
 #. Click on "Save and Exit"
 
-Excercise 4: Verify Internal LB is working 
+Exercise 4: Verify Internal LB is working 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will need to now reconfigure the brews app to use the inventory application.
