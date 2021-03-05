@@ -9,3 +9,7 @@ stay on-premises so we will need to ensure the API server has communication to t
    :caption: Contents:
 
    awssite
+   vsite
+   vk8s
+   deployPods
+   updateHttpLb
