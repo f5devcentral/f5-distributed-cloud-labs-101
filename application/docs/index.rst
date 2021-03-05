@@ -1,12 +1,21 @@
 Multi-cloud Application Services
 =================================
 
-User Story
-~~~~~~~~~~
+Day 0
+~~~~~~
 
-Customer recently started their ecommerce business to go along with their existing store.  
-Their development team wants to move the application into AWS, but the database has to stay 
-on-premises for now.   
+A customer has recently started an e-commerce business to go along with their existing store.  
+The customer's development team has built a client/web application ("Demo Brews") and it's currently 
+deployed in an on-premise data center (ie. the UDF deployment). Due to operational expenses and expected growth the dev team
+is planning on moving the application into AWS.
+
+The customer has multiple architectural goals:
+
+- Due to privacy concerns, the database must remain on-prem.
+- Due the agile nature of the app, the architecture design must allow for new services to be easily added and independently scaled.
+- The customer is comfortable with AWS at this time, but would prefer to not be locked into a single cloud service provider (CSP).
+
+Over the course of this lab, you will help the customer meet these design goals by using the Volterra platform.
 
 .. toctree::
    :maxdepth: 1
