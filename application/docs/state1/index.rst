@@ -12,5 +12,4 @@ In this state we will configure the following VoltConsole components:
    :maxdepth: 1
    :caption: Contents:
 
-   voltconsole
    httplb
