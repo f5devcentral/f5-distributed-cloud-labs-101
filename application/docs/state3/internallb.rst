@@ -121,6 +121,42 @@ to only listen on the internal network of the UDF and AWS sites.
     IP address                        [leave blank, default value]
     TCP Listen Port Choice            Use Default TCP Listen Port (default value)
     ================================= =====
+#. Click on "Add Item" 
+#. Enter the following variables
+    ================================= =====
+    Variable                          Value
+    ================================= =====
+    Select Where to Advertise         Site (default value)
+    Site Network                      Outside Network
+    Site                              [unique name]-udf
+    IP address                        [leave blank, default value]
+    TCP Listen Port Choice            Use Default TCP Listen Port (default value)
+    ================================= =====
+#. Click on "Apply"
+#. Click on "Save and Exit"
+
+Excercise 4: Verify Internal LB is working 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You will need to now reconfigure the brews app to use the inventory application.
+
+From the "stats" page of the brews app.  Click on the gear icon next to inventory.
+
+|brews-app-inventory-settings|
+
+Enter the value for the internal URL "http://inventory.brews.internal" then click on the checkmark icon.
+
+|brews-app-inventory-config|
+
+The "API" application will now use the internal LB to communicate with the inventory service.  
+
+The configuration of the inventory LB is set to prefer the origin of the site.  This should result in the 
+following pattern of traffic.
+
+- AWS API Service -> AWS Inventory Service
+- UDF API Service -> UDF Inventory Service
+
+If you disable the Inventory Service in AWS all traffic will go to the surviving UDF site.
 
 .. |app-context| image:: images/app-context.png
 .. |http_lb_menu| image:: images/http_lb_menu.png
@@ -128,3 +164,5 @@ to only listen on the internal network of the UDF and AWS sites.
 .. |http_lb| image:: images/http_lb.png
 .. |http_lb_origin_pool_config| image:: images/http_lb_origin_pool_config.png
 .. |http_lb_custom_vip| image:: images/http_lb_custom_vip.png
+.. |brews-app-inventory-settings| image:: images/brews-app-inventory-settings.png
+.. |brews-app-inventory-config| image:: images/brews-app-inventory-config.png
