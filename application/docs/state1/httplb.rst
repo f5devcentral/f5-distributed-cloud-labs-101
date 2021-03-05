@@ -5,106 +5,212 @@ Now that you have connected the UDF Site to the Volterra Global Network you
 will expose the applications in the UDF site using a Regional Edge and HTTP
 Load Balancer.
 
-Regional Edge
+Terminology
 ~~~~~~~~~~~~~
 
-A Regional Edge (RE) is part of Voltera Global Network that provides connectivity 
-to services.  
+Regional Edge
+  A Regional Edge (RE) is part of Voltera Global Network that provides connectivity 
+  to services.  
 
-HTTP Load Balancer
-~~~~~~~~~~~~~~~~~~
 
-Start in VoltConsole.
+Demo Brews Application
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
+Now you are ready to set up a HTTP Load Balancer to serve the single-page application, the API server and the static images.
 
-.. note:: This may appear differently if there is an existing LB resource
+Exercise 1: Create an HTTP Load Balancer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-** Brews Single Page Application **
+#. Start in VoltConsole and switch to the Application context. 
 
-At this point you will have to go through the steps of setting up a HTTP LB of creating an origin pool,
-health monitor, and HTTP LB object.
+    |app-context|
 
-- Name: brews
-- Domains: [unique name]-brews.[supplied domain name for your tenant]
-- Select type of Load Balancer: HTTP
-- Automatically Manage DNS Records: Yes/Check
+#. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
 
-.. note::
-  If you are not setup with a delegated domain you can disable the option to automatically manage DNS records.
-  You can supply an arbitrary domain (example.com) and later you can use the following
-  command to verify
+    |http_lb_menu| |http_lb_add|
 
-  .. code-block::
+#. Configure HTTP Load Balancer
+
+    Now you will create a HTTP load balancer configuration. Enter the following variables:
+
+    ================================= =====
+    Variable                          Value
+    ================================= =====
+    Name                              brews
+    Domains                           [unique name]-brews.[supplied domain name for your tenant]
+    Select type of Load Balancer      HTTP
+    Automatically Manage DNS Records  Yes/Check 
+    ================================= =====
+
+    |http_lb|
+
+    .. note::
+      If you are not setup with a delegated domain you can disable the option to automatically manage DNS records.
+      You can supply an arbitrary domain (example.com) and later you can use the following
+      command to verify
+
+      .. code-block::
+        
+        $ curl --resolve [unique-name]-brews.example.com:80:[IP address of ves.io name created by LB] http://[unique-name]-brews.example.com
+
+Exercise 2: Configure Default Origin Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Now you will configure the Default Origin Server used by the load balancer.  
     
-    $ curl --resolve [unique-name]-brews.example.com:80:[IP address of ves.io name created by LB] http://[unique-name]-brews.example.com
+    #. Click on the *Configure* link under the *Default Origin Servers* section.
 
-Under "Origin Pools" click on "Configure" and then "Add item".
+    #. Click the *Add Item* button.
 
-- Origin Pool Method: Origin Pool
+    #. In the Origin Pool drop down, click *Create new pool* 
 
-Under "Origin Pool" then click on "Create new pool" under the pull down menu.
+    #. Enter the following variables:
 
-Use the private IP address for the workload instance that you created in the previous exercise.
+      ================================= =====
+      Variable                          Value
+      ================================= =====
+      Name                              brews-spa-pool
+      Select Type of Origin Server      IP address of Origin Server on given Sites
+      IP                                10.1.1.4
+      Site                              the site name configured in the previous lab
+      Select Network on the site        Outside Network
+      Port                              8081
+      ================================= =====
 
-- Name: spa-http
-- Select Type of Origin Server: IP address of Origin Server on given Sites
-- Enter ip: 10.1.1.4
-- Site: [unique name]-udf
-- Select Network on this site: Outside Network
-- Port: 8081
+      |http_lb_origin_pool_config|
 
-Under "List of Health Checks" select the option to create a new Health Check
+#. Configure Origin Pool Health monitor
+    #. In the *List of Health Check(s)* section click the *Add item* button.
+    #. Click the *Health Check object* dropdown list 
+    #. Click the *Create new healthcheck* button
+    #. Enter the following variables:
 
-- Name: spa-http-health-check
+        ========= =====
+        Variable  Value
+        ========= =====
+        name      brews-spa
+        ========= =====
 
-You wil then need to click on configure under "HTTP Health Check" followed by "Apply".
+        |http_lb_origin_pool_health_check|
 
-Then click on "Continue" to finish creating the Health Check.
+    #. Click the *configure* button under HTTP Health Check and enter the following variables:
 
-After creating the new pool you select the newly created pool.
+        ========= =====
+        Variable  Value
+        ========= =====
+        path      /products
+        ========= =====
 
-Click on "Apply".
+      |http_lb_origin_pool_health_check2|
+    
+    #. Click the *Apply* button
+    #. Click the *Continue* button
+    #. Click the *Continue* button
+    #. Click the *Apply* button
 
-On the main screen you can then click on "Save and Exit".
+Exercise 3: Configure Routes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Now we're ready to configure URL based pool selection for the API server and the static images.  To acheive this we will use 
+    the Load Balancer Routes configuration.  
+    
+    #. In the *Routes Configuration* section toggle the *Show Advanced Fields* button.
+    #. Click the *Configure* link 
 
-** Brews API Service **
+        |http_lb_routes|
 
+    #. Click the *Add item* button
 
-- Name: api
-- Domains: [unique name]-api.[supplied domain name for your tenant]
-- Select type of Load Balancer: HTTP
-- Automatically Manage DNS Records: Yes/Check
+    #. Enter the following variables:
 
-Under "Origin Pools" click on "Configure" and then "Add item".
+        =========== =====
+        Variable    Value
+        =========== =====
+        HTTP Method ANY
+        Prefix      /api/
+        =========== =====
 
-- Origin Pool Method: Origin Pool
+        |http_lb_routes_prefix_1|
 
-Under "Origin Pool" then click on "Create new pool" under the pull down menu.
+    #. Under the *Origin Pools* section Click the *Configure* link
+    #. Click the *Add item* button
+    #. Under the *Origin Pool* section select the dropdown and click *Create new pool*
+    #. Enter the following variables:
 
-Use the private IP address for the workload instance that you created in the previous exercise.
+        ================================= =====
+        Variable                          Value
+        ================================= =====
+        Name                              brews-api-pool
+        Select Type of Origin Server      IP address of Origin Server on given Sites
+        IP                                10.1.1.4
+        Site                              the site name configured in the previous lab
+        Select Network on the site        Outside Network
+        Port                              8000
+        ================================= =====
 
-- Name: api-http
-- Select Type of Origin Server: IP address of Origin Server on given Sites
-- Enter ip: 10.1.1.4
-- Site: [unique name]-udf
-- Select Network on this site: Outside Network
-- Port: 8000
+        |http_lb_routes_prefix_pool|
 
-Under "List of Health Checks" select the option to create a new Health Check
+    #. Under the *List of Health Check(s) section, click the *Add item* button
+    #. In the *Health Check object* dropdown, click the *Create new healthcheck* button 
+    #. Enter the following variables:
 
-- Name: spa-http-health-check
+        =========== =====
+        Variable    Value
+        =========== =====
+        Name        brews-api
+        =========== =====
 
-You wil then need to click on configure under "HTTP Health Check" followed by "Apply".
+    #. Under the *HTTP HealthCheck* section, click the *Configure* link.
+    #. Enter the following variables:
 
-Then click on "Continue" to finish creating the Health Check.
+        =========== =====
+        Variable    Value
+        =========== =====
+        Path        /api/stats
+        =========== =====
 
-After creating the new pool you select the newly created pool.
+        |http_lb_routes_prefix_pool_health|
 
-Click on "Apply".
+    #. Click Continue
+    #. Click Apply
+    #. Under the *Routes* section, click the *Add item* button
+    #. Enter the following variables:
 
-On the main screen you can then click on "Save and Exit".
+        =========== =====
+        Variable    Value
+        =========== =====
+        HTTP Method ANY
+        Prefix      /images/
+        =========== =====
+
+        |http_lb_routes_prefix_2|
+
+    #. Under the *Origin Pools* section, click the *Configure* button
+    #. Under the *Origin Pools* section, click the *Add item* button
+    #. In the *Origin Pool* dropdown, select *brews-api-pool*
+    #. Click Apply 
+
+        You should now have two routes configured:
+          - One for /api/
+          - One for /images/
+
+    #. Click Apply
+
+    #. Click Save and Exit
 
 
 You should now be able to go to the DNS name that you entered 
 previously in a web browser.
+
+
+.. |app-context| image:: images/app-context.png
+.. |http_lb_menu| image:: images/http_lb_menu.png
+.. |http_lb_add| image:: images/http_lb_add.png
+.. |http_lb| image:: images/http_lb.png
+.. |http_lb_origin_pool_config| image:: images/http_lb_origin_pool_config.png
+.. |http_lb_origin_pool_health_check| image:: images/http_lb_origin_pool_health_check.png
+.. |http_lb_origin_pool_health_check2| image:: images/http_lb_origin_pool_health_check2.png
+.. |http_lb_routes| image:: images/http_lb_routes.png
+.. |http_lb_routes_prefix_1| image:: images/http_lb_routes_prefix_1.png
+.. |http_lb_routes_prefix_pool| image:: images/http_lb_routes_prefix_pool.png
+.. |http_lb_routes_prefix_pool_health| image:: images/http_lb_routes_prefix_pool_health.png
+.. |http_lb_routes_prefix_2| image:: images/http_lb_routes_prefix_2.png
