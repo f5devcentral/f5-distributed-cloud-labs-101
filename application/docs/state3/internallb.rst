@@ -71,7 +71,7 @@ Exercise 2: Configure Default Origin Server
         ========= =====
         Variable  Value
         ========= =====
-        name      inventory-spa
+        name      inventory
         ========= =====
 
     #. Click the *configure* button under HTTP Health Check and enter the following variables:
