@@ -106,12 +106,12 @@ Exercise 2: Create AWS VPC Site
 
     |aws_vpc_site_apply|
 
-.. |cloud_creds| image:: ./images/cloud_creds.png
-.. |system_context| image:: ./images/system_context.png
-.. |cloud_creds_menu| image:: ./images/cloud_creds_menu.png
-.. |cloud_creds_add| image:: ./images/cloud_creds_add.png
-.. |aws_vpc_site_menu| image:: ./images/aws_vpc_site_menu.png
-.. |aws_vpc_site_add| image:: ./images/aws_vpc_site_add.png
-.. |aws_vpc_site| image:: ./images/aws_vpc_site.png
-.. |aws_vpc_site_interface| image:: ./images/aws_vpc_site_interface.png
-.. |aws_vpc_site_apply| image:: ./images/aws_vpc_site_apply.png
+.. |cloud_creds| image:: ../_static/cloud_creds.png
+.. |system_context| image:: ../_static/system_context.png
+.. |cloud_creds_menu| image:: ../_static/cloud_creds_menu.png
+.. |cloud_creds_add| image:: ../_static/cloud_creds_add.png
+.. |aws_vpc_site_menu| image:: ../_static/aws_vpc_site_menu.png
+.. |aws_vpc_site_add| image:: ../_static/aws_vpc_site_add.png
+.. |aws_vpc_site| image:: ../_static/aws_vpc_site.png
+.. |aws_vpc_site_interface| image:: ../_static/aws_vpc_site_interface.png
+.. |aws_vpc_site_apply| image:: ../_static/aws_vpc_site_apply.png

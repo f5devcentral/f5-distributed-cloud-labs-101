@@ -27,22 +27,22 @@ Exercise 1: Find your Namespace
         if you have the last name of "Chen," you can find a namespace of
         "eric-chen."  Please note this name and use it in later steps to make it easier for others to distinguish between resources in shared namespaces.
 
-    .. image:: images/find-namespace.png
+    .. image:: ../_static/find-namespace.png
 
 Exercise 2: Create a Site Token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Next you will need to change to the "System" namespace.
 
-    .. image:: images/system-namespace.png
+    .. image:: ../_static/system-namespace.png
 
 #. Once in the "System" namespace you will need to go to the "Site Management" menu and select "Site Tokens".
 
-    .. image:: images/site-tokens-menu.png
+    .. image:: ../_static/site-tokens-menu.png
 
 #. Click on "Add Site Token".
 
-    .. image:: images/add-site-token-button.png
+    .. image:: ../_static/add-site-token-button.png
 
 #. Provide a name for the token.  
 
@@ -55,7 +55,7 @@ Exercise 3: Add a Site
 
 #. From your UDF Deployment find your "volterra" component and click on "Site UI".
 
-    .. image:: images/udf-site-ui.png
+    .. image:: ../_static/udf-site-ui.png
 
 #. Change Password
 
@@ -72,7 +72,7 @@ Exercise 3: Add a Site
 
 #. You will next need to click on "Configure Now".
 
-    .. image:: images/site-ui-configure-now.png
+    .. image:: ../_static/site-ui-configure-now.png
 
 #. You will need to provide the following information.
 
@@ -93,11 +93,11 @@ Exercise 3: Add a Site
 
 #. You will need to go under "System->Site Management->Registrations".
 
-    .. image:: images/registrations-menu.png
+    .. image:: ../_static/registrations-menu.png
 
 #. Click on the "checkmark" icon to accept the registration.
 
-    .. image:: images/registrations-accept.png
+    .. image:: ../_static/registrations-accept.png
 
 #. You can then click on "Accept" to use the default values (we will modify these in a later lab).
 

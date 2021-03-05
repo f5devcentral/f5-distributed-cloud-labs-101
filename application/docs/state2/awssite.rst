@@ -7,72 +7,83 @@ uses a process that automates the steps of deploying the site.  This enables Vol
 to perform the deployment on behalf of the end-user (you can also use Terraform to deploy a 
 site, but that will be covered in a separate lab).
 
-.. note:: 
-  
-  The lab guide should include a recommended AWS region based on the geographic
-  region that you selected to run the lab.  Please be aware that any screen shots
-  that you see may differ from the recommended value.  i.e. if you see "eu-west-1"
-  ignore screenshots that include "us-east-1"
 
-Exercise 1: Deploy AWS Site
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise 1: Verify your AWS Site
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+In the lab pre-work you should have deployed a new AWS site into your UDF ephemeral AWS account.  Let's check that the site is ready.
 
-From the UDF interface click on the "Cloud Accounts" tab.  Copy down the value of API Key/Secret.
-You will use these values later to provision the Volterra node from VoltConsole.
+#. In VoltConsole switch to the *System* context
 
-.. image:: udf-cloud-accounts-api-key.png
+    |system-context|
 
-From VoltConsole go to the "System" namespace, "Site Management" -> "AWS VPC Sites".
+#. Navigate the menu to *Site List*
 
-.. image:: voltconsole-aws-site.png
+    |site_list_menu|
 
-Under "New AWS Site" you will need to provide the following information:
+#. Find your site created in the pre-work step.  It should have a green status indicator next to the name.
 
-- AWS Region: |aws_region|
-- Primary IPv4 CIDR block: 10.0.0.0/16 
-- Change "Ingress Gateway" to "Voltstack Cluster (One Interface)"
-- Click on "Configure" (appears after "Voltstack Cluster (One Interface) ...)
+    |site_list_search|
 
-Under the section for "Nodes" provide the following information
+If you're site is green, you can skip to Exercise 3.
 
-- AWS AZ Name: |aws_zone|
-- Subnet Choices for Inside Interface change to "Subnet for Inside Interface"
-- Internal IPv4 Subnet: 10.0.0.0/24
+Exercise 2: Troubleshooting your AWS Site
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: voltconsole-aws-site-settings2.png
+If you're site deployment was not successful there are a few steps we can take to determine why.
 
-Click on "Apply"
+#. View the Site's Global Status by 
 
-Under "Automatic Deployment" use the select list to click on the "Create new aws cred".  Give 
-the credential a name (i.e. [unique namespace]-cc)  Enter 
-the API Key/Secret that you captured earlier from the UDF Cloud Accounts.  After you fill in the
-Secret Key you will need to click on "Blindfold" then "Apply" and then "Continue"
+    #. clicking the *...* link on your site 
+    #. Click the *Show Global Status* button
 
-The resulting inputs should look something like the following (do not copy these values, yours will
-differ).
+    |show_global_status|
 
-.. image:: voltconsole-aws-site-settings.png
+#. Verify the Site Tunnel Status in the JSON payload
 
-Then click on "Save and Exit"
+    |site_tunnel_status|
 
-In this state the site is ready to be deployed.  You will need to click on "Apply" to start the 
-provisioning of the resource.  You can also use this interface to decommission the resource as well.
+#. Navigate to *Site Manage* -> *AWS VPC Sites*
+ 
+    |aws_vpc_site_menu|
 
-.. image:: voltconsole-aws-site-apply.png
+#. Opem the Terraform Parameters by
 
-In VoltConsole browse to "Sites->Site List" under the "System" namespace to view your sites.
+    #. clicking the *...* link on your site 
+    # Click the *Terraform Parameters* button
 
-If you see the following error
+    |aws_vpc_site_tf_params|
 
-  .. code-block::
+#. Evaluate the Terraform output by Clicking the *Apply Status* tab
 
-    Error: Error launching source instance: PendingVerification: Your request for accessing resources in this region is being validated, and you will not be able to launch additional resources in this region until the validation is complete. We will notify you by email once your request has been validated. While normally resolved within minutes, please allow up to 4 hours for this process to complete. If the issue still persists, please let us know by writing to aws-verification@amazon.com for further assistance.
-          status code: 400, request id: 99a5736b-02c4-4aff-9781-4b559e337375
+    |aws_vpc_site_tf_apply_status|
 
-  You may need to retry the Apply again.  This is due to the AWS account not having used that particular region before.
+#. Close the *AWS VPC Site Terraform Parameters* pop-out by click the *X* in the top right corner
 
-After several minutes you should see both your UDF and AWS sites appear green in VoltConsole.
+#. Destroy and Apply Terraform 
 
-.. image:: voltconsole-site-list.png
+    If your site did not deploy correctly you may need to destroy the site and create it again.
 
+    #. In the *AWS VPC Sites* list, click on the *Destroy* button
+
+        |aws_vpc_site_destroy|
+
+    #. Type *DELETE* then click the *DELETE* button in the *Destory Terraform* prompt
+
+        |aws_vpc_site_destroy_prompt|
+
+    #. Once the site has been destroyed in AWS, you can click the *Apply* button to try the deployment again.
+
+        |aws_vpc_site_apply|
+
+.. |system-context| image:: ../_static/system_context.png
+.. |site_list_menu| image:: ../_static/site_list_menu.png
+.. |site_list_search| image:: ../_static/site_list_search.png
+.. |show_global_status| image:: ../_static/show_global_status.png
+.. |site_tunnel_status| image:: ../_static/site_tunnel_status.png
+.. |aws_vpc_site_menu| image:: ../_static/aws_vpc_site_menu.png
+.. |aws_vpc_site_tf_params| image:: ../_static/aws_vpc_site_tf_params.png
+.. |aws_vpc_site_tf_apply_status| image:: ../_static/aws_vpc_site_tf_apply_status.png
+.. |aws_vpc_site_destroy| image:: ../_static/aws_vpc_site_destroy.png
+.. |aws_vpc_site_destroy_prompt| image:: ../_static/aws_vpc_site_destroy_prompt.png
+.. |aws_vpc_site_apply| image:: ../_static/aws_vpc_site_apply.png
