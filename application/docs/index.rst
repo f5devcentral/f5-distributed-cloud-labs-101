@@ -12,6 +12,7 @@ on-premises for now.
    :maxdepth: 1
    :caption: Contents:
 
+   pre-work/index
    state1/index
    state2/index
    state3/index
