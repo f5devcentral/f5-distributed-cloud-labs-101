@@ -38,8 +38,8 @@ host the SPA and API services while the on-prem site will solely host the databa
 
    awssite
    vsite
+   containerRegistry
    vk8s
-   deployPods
    updateHttpLb
 
 .. |state2| image:: images/state2.png
