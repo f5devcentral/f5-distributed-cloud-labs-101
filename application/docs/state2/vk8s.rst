@@ -139,6 +139,21 @@ Exercise 3: Create Virtual K8s Workload for the API
 
     |vk8s_workloads_containers_api|
 
+#. Configuration
+
+    #. Under the *Configuration* section click the *Add item* button
+    #. Enter the following variables:
+
+        =================================== =====
+        Variable                            Value
+        =================================== =====
+        Select Configuration Parameter Type Environment Variable
+        Name                                MONGO_URL
+        Value                               your_namespace-mongodb.brews.local
+        =================================== =====
+
+        |vk8s_workloads_env|
+
 #. Enter the following variables in the *Deploy Options* section 
 
     =============================== =====
@@ -188,3 +203,4 @@ You should now see your two worloads with 1 Running/Completed Pods per workload.
 .. |vk8s_workloads_containers_api| image:: ../_static/vk8s_workloads_containers_api.png
 .. |vk8s_workloads_advertise| image:: ../_static/vk8s_workloads_advertise.png
 .. |vk8s_workloads_list| image:: ../_static/vk8s_workloads_list.png
+.. |vk8s_workloads_env| image:: ../_static/vk8s_workloads_env.png
