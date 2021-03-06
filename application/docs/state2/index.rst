@@ -40,8 +40,8 @@ host the SPA and API services while the on-prem site will solely host the databa
    vsite
    containerRegistry
    vk8s
-   tcpLb
    originPools
+   tcpLb
    updateHttpLb
 
 .. |state2| image:: images/state2.png
