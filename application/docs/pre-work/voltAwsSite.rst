@@ -12,6 +12,23 @@ Volterra Site
 
 Exercise 1: Create Cloud Credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: 
+  
+  based on the selected region for your UDF deployment we recommend that you use the following
+  AWS region and Availability Zone during this lab.
+
+  ==================== ================
+  Variable             Value
+  ==================== ================
+  Region               |aws_region|
+  Availability Zone    |aws_zone|
+  ==================== ================
+
+  When you access the AWS Console (not required during this lab) make sure that you select 
+  the same region to view any resources created by Volterra.
+ 
+
 In your UDF deployment there is a *Cloud Accounts* tab that contains releative information about the ephemeral AWS account created for you. Take note of your *API Key* and *API Secret*.
 
 |cloud_creds|
