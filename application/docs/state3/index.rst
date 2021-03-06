@@ -31,5 +31,5 @@ This state includes the new internally available Inventory service.
  
     internallb
 
-.. |state3| image:: ../_static/state3.png
-.. |arch3| image:: ../_static/arch3.png
+.. |state3| image:: ../_static/LabAppFlow3.png
+.. |arch3| image:: ../_static/LabArch3.png

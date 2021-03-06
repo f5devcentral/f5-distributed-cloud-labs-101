@@ -1,46 +1,38 @@
-Virtual Kubernetes
-==================
+Custom Regional Edge Site
+==========================
 
-In this section we will create a Virtual K8s configuration in VoltConsole.
+Exercise 1: Create a Regional Edge Virtual Site
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Exercise 1: Create Virtual K8s 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. In VoltConsole ensure you are in the *Application* context and have selected your namespace
+#. Start in VoltConsole and switch to your "Application" namespace.
 
-    |app-context| |lu-ns|
+    |lu-ns|
 
-#. Navigate the menu to go to *Application*->*Virtual K8s*
+#. Using the menu on the left, navigate to "Applications"->"Virtual Sites". Click on "Add virtual site".
 
-    |vk8s_menu|
+    |menu-vs| |add-vs|
 
-#. Click the *Add Virtual K8s* button
+#. Configure the "Virtual Site".
 
-#. Enter the following variables: 
+    ================================= =====
+    Variable                          Value
+    ================================= =====
+    Name                              recs-re
+    Description                       virtual site to deploy 'recs' service
+    Site Type                         RE
+    Site Selector Expression          ves.io/siteName in {ves-io-ny8-nyc, ves-io-wes-sea}
+    ================================= =====
 
-    ======== =====
-    Variable Value
-    ======== =====
-    Name     your_namespace-vk8s
-    ======== =====
+    |vs-selector-expression| |add-vs-diag| |add-vs-button|
 
-#. Click the *Select Vsite Ref* button
+#. Verify your *recs-re* virtual site was created.
 
-#. Select the Virtual Site you created
+    |vs-check| |verify-vs|
 
-#. Click the *Select Vsite Ref* button
+Exercise 2: Deploy the "Recommendations" Workload
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    |vk8s_vsite_ref|
-
-#. Click the *Save and Exit* button
-
-VoltConsole will now create your Virtual K8s cluster.
-
-|vk8s_cluster| 
-
-Exercise 2: Create Virtual K8s Workload for the Single-page App
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Once your Virtual K8s cluster is ready, select the cluster name in the *Virtual K8s* list
+#. Navigate to your vK8s cluster from  in the *Virtual K8s* list
 
     |vk8s_list|
 
@@ -191,17 +183,11 @@ You should now see your two worloads with 1 Running/Completed Pods per workload.
 
 |vk8s_workloads_list|
 
-
-
-.. |app-context| image:: ../_static/app-context.png
-.. |vk8s_menu| image:: ../_static/vk8s_menu.png
-.. |vk8s_vsite_ref| image:: ../_static/vk8s_vsite_ref.png
-.. |vk8s_cluster| image:: ../_static/vk8s_cluster.png
-.. |vk8s_list| image:: ../_static/vk8s_list.png
-.. |k8s_workloads_menu| image:: ../_static/k8s_workloads_menu.png
-.. |vk8s_workloads_containers| image:: ../_static/vk8s_workloads_containers.png
-.. |vk8s_workloads_containers_api| image:: ../_static/vk8s_workloads_containers_api.png
-.. |vk8s_workloads_advertise| image:: ../_static/vk8s_workloads_advertise.png
-.. |vk8s_workloads_list| image:: ../_static/vk8s_workloads_list.png
-.. |vk8s_workloads_env| image:: ../_static/vk8s_workloads_env.png
 .. |lu-ns| image:: ../_static/lu-ns.png
+.. |menu-vs| image:: ../_static/menu-vs.png
+.. |add-vs| image:: ../_static/add-vs.png
+.. |add-vs-diag| image:: ../_static/add-vs-diag.png
+.. |add-vs-button| image:: ../_static/add-vs-button.png
+.. |verify-vs| image:: ../_static/verify-vs.png
+.. |vs-check| image:: ../_static/vs-check.png
+.. |vs-selector-expression| image:: ../_static/vs-selector-expression.png
