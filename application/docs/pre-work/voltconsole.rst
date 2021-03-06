@@ -126,6 +126,9 @@ Exercise 3: Add a Site
         highlight the GPS coordinates.  This will copy the values into your clipboard.
         |geolocation|
 
+        Pick a location that is geographically similar to where you selected your UDF
+        deployment (i.e. for Virginia, USA search for Washington Monument, DC)
+
 This will start the process of loading the Volterra software that is 
 necessary to connect the site to a Volterra Regional Edge site.
 
