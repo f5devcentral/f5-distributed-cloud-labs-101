@@ -56,4 +56,4 @@ the internet through the Volterra Global Network.
    httplb
 
 .. |state1| image:: ../_static/state1.png
-.. |arch1| image:: ../_static/arch1.png
+.. |arch1| image:: ../_static/LabArch1.png
