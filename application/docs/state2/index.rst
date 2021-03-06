@@ -37,11 +37,11 @@ host the SPA and API services while the on-prem site will solely host the databa
    :caption: Contents:
 
    awssite
+   tcpLb
    vsite
    containerRegistry
    vk8s
    originPools
-   tcpLb
    updateHttpLb
 
 .. |state2| image:: ../_static/state2.png
