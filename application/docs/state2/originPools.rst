@@ -60,7 +60,29 @@ Health Check        brews-api
 
 |origin_pools_config_api|
 
-Exercise 3: Troubleshoot Origin Pools
+Exercise 3: Create DynamoDB Origin Pool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this exercise, you will repeat the steps from exercise one but for the DynamoDB service in your UDF site.
+
+The following variables will need to be changed:
+
+=============================== ===============
+Variable                        Value
+=============================== ===============
+Origin Pool Name                brews-dynamodb
+Select Type of Origin Server    IP address of Origin Server on given Sites
+IP address                      10.1.1.4
+Site                            Your UDF site
+Select Network on the site      Outside Network
+Port                            27017
+Health Check                    TCP HealthCheck
+Health Check Name               brews-dynamodb
+=============================== ===============
+
+|origin_pools_config_dynamodb|
+
+Exercise 4: Troubleshoot Origin Pools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Click on the *...* link for the pool you would like to troubleshoot
@@ -83,5 +105,6 @@ Exercise 3: Troubleshoot Origin Pools
 .. |origin_pools_add| image:: ../_static/origin_pools_add.png
 .. |origin_pools_config| image:: ../_static/origin_pools_config.png
 .. |origin_pools_config_api| image:: ../_static/origin_pools_config_api.png
+.. |origin_pools_config_dynamodb| image:: ../_static/origin_pools_config_dynamodb.png
 .. |origin_pools_show_child_objects| image:: ../_static/origin_pools_show_child_objects.png
 .. |origin_pools_show_child_objects_status| image:: ../_static/origin_pools_show_child_objects_status.png
