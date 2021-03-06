@@ -93,11 +93,14 @@ Exercise 2: Configure Default Origin Server
       ================================= =====
       Variable                          Value
       ================================= =====
-      Select Type of Origin Server      K8s Service Nmae of Origin Server on given Sites
+      Select Type of Origin Server      K8s Service Name of Origin Server on given Sites
       Service Name                      inventory.[your namespace]
       Site                              the AWS site name configured in the previous lab
       Select Network on the site        vK8s Networks on Site
       ================================= =====
+
+    .. note:: Be sure to use the value of "[your namespace]" this is how Volterra identifies the resource
+
     #. Click "Continue"
     #. Click "Apply" (This should take you back to the main HTTP LB screen, stop here)
 
@@ -128,7 +131,7 @@ to only listen on the internal network of the UDF and AWS sites.
     ================================= =====
     Select Where to Advertise         Site (default value)
     Site Network                      Outside Network
-    Site                              [unique name]-udf
+    Site                              [unique name]-aws
     IP address                        [leave blank, default value]
     TCP Listen Port Choice            Use Default TCP Listen Port (default value)
     ================================= =====
