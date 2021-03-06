@@ -9,3 +9,4 @@ To help avoid long waits during the lab, please complete the following steps fir
 
    voltconsole
    voltAwsSite
+   delegatedDomains
