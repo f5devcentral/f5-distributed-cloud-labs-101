@@ -118,8 +118,17 @@ Exercise 3: Add a Site
 
 #. You can then click on "Accept" to use the default values (we will modify these in a later lab).
 
-    This will start the process of loading the Volterra software that is 
-    necessary to connect the site to a Volterra Regional Edge site.
+  .. warning:: 
+        
+        Latitude / Longitude are required values.  Make sure they are not set to 0
+
+        One method of finding a location is to search Google Maps, right click and 
+        highlight the GPS coordinates.  This will copy the values into your clipboard.
+        |geolocation|
+
+This will start the process of loading the Volterra software that is 
+necessary to connect the site to a Volterra Regional Edge site.
 
     .. note:: It will take several minutes for this to complete.  You can continue to the next step while you wait for it to complete.
 
+.. |geolocation| image:: ../_static/geolocation.png
