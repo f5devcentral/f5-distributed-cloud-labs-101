@@ -44,5 +44,5 @@ host the SPA and API services while the on-prem site will solely host the databa
    tcpLb
    updateHttpLb
 
-.. |state2| image:: images/state2.png
-.. |arch2| image:: images/arch2.png
+.. |state2| image:: ../_static/state2.png
+.. |arch2| image:: ../_static/arch2.png

@@ -16,7 +16,7 @@ In this state we will configure the following VoltConsole components:
 
 Data Flow and Architecture
 --------------------------
-The logical application data flow now includes the Inventory service.
+The logical application data flow now includes the "Inventory" service.
 
 |state3|
 
@@ -31,5 +31,5 @@ This state includes the new internally available Inventory service.
  
     internallb
 
-.. |state3| image:: images/state2.png
-.. |arch3| image:: images/arch2.png
+.. |state3| image:: ../_static/state3.png
+.. |arch3| image:: ../_static/arch3.png

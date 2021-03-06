@@ -14,7 +14,7 @@ The customer has multiple architectural goals:
 
 - Due to privacy concerns, the database must remain on-prem.
 - Due the agile nature of the app, the architecture design must allow for new services to be easily added and independently scaled.
-- The company would prefer to not be locked into a single cloud service provider (CSP).
+- The dev team would prefer to not be locked into a single cloud service provider (CSP).
 
 Over the course of this lab, we will help the customer meet these design goals with the Volterra platform.
 

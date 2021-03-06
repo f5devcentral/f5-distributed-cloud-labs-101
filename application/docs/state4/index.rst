@@ -18,20 +18,18 @@ In this state we will configure the following VoltConsole components:
 
 Data Flow and Architecture
 --------------------------
-The logical application data flow now includes the Recommendations service.
+The logical application data flow now includes the "Recommendations" service.
 
-|state3|
+|state4|
 
 The architecture is now spread across CEs as well as Volterra REs.
 
-|arch3|
+|arch4|
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   voltconsole
-   httplb
 
-.. |state3| image:: images/state2.png
-.. |arch3| image:: images/arch2.png
+.. |state4| image:: ../_static/state4.png
+.. |arch4| image:: ../_static/arch4.png
