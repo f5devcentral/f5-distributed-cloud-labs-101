@@ -51,11 +51,28 @@ Exercise 2: Create a Site Token
 #. Record the "UID" that is created.  You will later use this when you add a site.
 
 Exercise 3: Add a Site
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 #. From your UDF Deployment find your "volterra" component and click on "Site UI".
 
     .. image:: ../_static/udf-site-ui.png
+
+  .. note:: 
+    
+    If you are unable to access the "Site UI" (blank page).  Please use the following workaround.
+
+    From your UDF Deployment find your "Client" component and click on "web shell" (you can also 
+    use ssh if you have setup an SSH key previously).
+
+    From the web shell run the following two commands
+
+    .. code-block:: shell
+      
+      $ tmux
+      $ ssh admin@10.1.1.6
+
+    When prompted use the following values from "Change Password".  To configure the site type "configure" and follow
+    the prompts with the values below from "Configure Now".
 
 #. Change Password
 
