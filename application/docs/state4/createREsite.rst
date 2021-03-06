@@ -29,12 +29,27 @@ Exercise 1: Create a Regional Edge Virtual Site
 
     |vs-check| |verify-vs|
 
-Exercise 2: Deploy the "Recommendations" Workload
+
+Exercise 2: Add your "Virtual Site" to vK8s (this seems unnecessary)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before we can deploy the "Recommendations" service to the REs, we need to add the virtual site we just
+created to our vK8s cluster.
+
+#. Navigate to your vK8s cluster from the *Virtual K8s* menu item under "Applications". Click on *Select Virtual Sites*.
+
+    |vk8s-select-vs|
+
+#. Add the "recs-re" virtual site you just created.
+
+    |vk8s-add-recs-site|
+
+Exercise 3: Deploy the "Recommendations" Workload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Navigate to your vK8s cluster from  in the *Virtual K8s* list
+#. Navigate to your vK8s cluster from the *Virtual K8s* menu item under "Applications".
 
-    |vk8s_list|
+    |vk8s_deets|
 
 #. Click the Workloads tab
 
@@ -42,12 +57,14 @@ Exercise 2: Deploy the "Recommendations" Workload
 
 #. Click the *Add vK8s workload* button 
 
+    |placeholder|
+
 #. Enter the following variables:
 
     ======================= =====
     Variable                Value
     ======================= =====
-    Name                    brews-spa
+    Name                    brews-recs
     Select Type of Workload Service
     ======================= =====
 
@@ -58,13 +75,13 @@ Exercise 2: Deploy the "Recommendations" Workload
     =============================== =====
     Variable                        Value
     =============================== =====
-    Name                            brews-spa
-    Image Name                      registry.f5demos.com/spa
+    Name                            brews-recs
+    Image Name                      registry.f5demos.com/recs
     Select Container Registry       Private Registry
     Private Registry                Select the private registry you created previously
     =============================== =====
 
-    |vk8s_workloads_containers|
+    |recs-container|
 
 #. Enter the following variables in the *Deploy Options* section 
 
@@ -78,105 +95,53 @@ Exercise 2: Deploy the "Recommendations" Workload
 
 #. Select the Virtual Site you created in the previous section
 
-#. Click the *Apply* button
+    |recs-vs|
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*
+#. Click the *Apply* button.
 
-    |vk8s_workloads_advertise|
+TBD
+#. Under *Advertise Option*, choose *Advertise In Cluster*. Click the *Configure* link.
 
-#. Enter the following variables:
+    |recs-advertise|
 
-    ==========  =====
-    Variable    Value
-    ==========  =====
-    Port        8081
-    ==========  =====
+#. Fill out the dialogue. Click the *Configure* link.
 
-#. Click the *Apply* button
-
-#. Click the *Apply* button
-
-#. Click the *Save and Exit* button
-
-Exercise 3: Create Virtual K8s Workload for the API
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Click the Workloads tab
-
-    |k8s_workloads_menu|
-
-#. Click the *Add vK8s workload* button 
-
-#. Enter the following variables:
-
-    ======================= =====
+    ==========              =====
     Variable                Value
-    ======================= =====
-    Name                    brews-api
-    Select Type of Workload Service
-    ======================= =====
+    ==========              =====
+    Port                    8002
+    Application Protocol    TCP
+    Options                 HTTP/HTTPS Load Balancer
+    ==========              ====
 
-#. Under the *Service* section, click the *Configure* link
+#. Fill out the "Basic Configuration" dialogue for the load balancer.
 
-#. Enter the following variables in the *Containers* section 
+    |recs-lb-basic|
 
-    =============================== =====
-    Variable                        Value
-    =============================== =====
-    Name                            brews-api
-    Image Name                      registry.f5demos.com/api
-    Select Container Registry       Private Registry
-    Private Registry                Select the private registry you created previously
-    =============================== =====
+#. Toggle the "Show Advanced Fields" button in the "Routes Configuration". Remove the pre-populated "Default Route" by clicking the "x".
 
-    |vk8s_workloads_containers_api|
+    |recs-route-toggle| |recs-route-remove|
 
-#. Configuration
+TBD
+#. Click the *Apply* button to save the "Load Balancer" configuration.
 
-    #. Under the *Configuration* section click the *Add item* button
-    #. Enter the following variables:
+#. Click the *Apply* button to save the "Advertise" configuration.
 
-        =================================== =====
-        Variable                            Value
-        =================================== =====
-        Select Configuration Parameter Type Environment Variable
-        Name                                MONGO_URL
-        Value                               your_namespace-mongodb.brews.local
-        =================================== =====
+#. Click the *Apply* button to save the various workload options dialogue.
 
-        |vk8s_workloads_env|
+#. Click the *Save and Exit* button to create the workload.
 
-#. Enter the following variables in the *Deploy Options* section 
+#. Verify the workload.
 
-    =============================== =====
-    Variable                        Value
-    =============================== =====
-    Where to Deploy the workload    Customer Virtual Sites 
-    =============================== =====
+    |rec-wl-verify1|    |rec-wl-verify2|
 
-#. Under *Customer Virtual Sites*, click the *Configure* link
+Exercise 4: Reconfigure the Load Balancer to route to "Recommendations" service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Select the Virtual Site you created in the previous section
+Exercise 5: Reconfigure the SPA to use the "Recommendations" feature.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click the *Apply* button
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*
-
-    |vk8s_workloads_advertise|
-
-#. Enter the following variables:
-
-    ==========  =====
-    Variable    Value
-    ==========  =====
-    Port        8081
-    ==========  =====
-
-#. Click the *Apply* button
-
-#. Click the *Apply* button
-
-#. Click the *Save and Exit* button
 
 
 You should now see your two worloads with 1 Running/Completed Pods per workload.
