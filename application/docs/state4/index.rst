@@ -31,5 +31,5 @@ The architecture is now spread across CEs as well as Volterra REs.
    :caption: Contents:
 
 
-.. |state4| image:: ../_static/state4.png
-.. |arch4| image:: ../_static/arch4.png
+.. |state4| image:: ../_static/LabAppFlow4.png
+.. |arch4| image:: ../_static/LabArch4.png
