@@ -50,6 +50,17 @@ From your UDF Deployment find your "volterra" component and click on "Site UI".
 
 .. image:: udf-site-ui.png
 
+The local Volterra Node UI will prompt you to login:
+
+        =================== =====
+        Variable            Value
+        =================== =====
+        Username            admin
+        Password            Volterra123
+        =================== =====
+    
+Change the default password 
+
 You will next need to click on "Configure Now".
 
 .. image:: site-ui-configure-now.png
