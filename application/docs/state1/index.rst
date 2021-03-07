@@ -1,6 +1,6 @@
 Preparation
 ===========
-The DemoBrews app is currently running in an on-prem data center (the lab's UDF deployment).
+The DemoBrews app is currently running in an on-premise data center (the lab's UDF deployment).
 
 About the App
 -------------
@@ -18,19 +18,19 @@ product descriptions, shopping cart data, etc.
 
 Database Service
 ^^^^^^^^^^^^^^^^
-The customer's database site on-prem. The API service makes queries to the database in order to retrieve assets like
+The customer's database site on-premise. The API service makes queries to the database in order to retrieve assets like
 product descriptions and shopping cart data.
 
-In it's current state, the app's components are restricted to services running in the customer's legacy data center. 
+In its current state, the app's components are restricted to services running in the customer's legacy data center. 
 This makes the application hard to scale and makes consuming resources at other locations impossible.
 
 |state0|
 
 Section Goals
 -------------
-The customer's application is only available through their on-prem data center.
+The customer's application is only available through their on-premise data center.
 In this step, we will publish the application through VoltConsole so all web traffic comes 
-through the Volterra Global Network. This will help us prepare for future states of the project.  
+through the Volterra global network. This will help us prepare for future states of the project.  
 
 In this state we will configure the following VoltConsole components:
 
@@ -39,13 +39,13 @@ In this state we will configure the following VoltConsole components:
 
 App Data Flow and Architecture
 ------------------------------
-Clients will retrieve static content for the SPA from an HTTP load balancer (not pictured). 
+Clients will retrieve static content for the Single Page Application (SPA) from an HTTP load balancer (not pictured). 
 The SPA will interact with an HTTP load balancer to retrieve application data from the API service.
-The API service queries the on-prem database.
+The API service queries the on-premise database.
 
 |state1|
 
-The hosting assets are confined to the customer's on-prem data center. The app will be exposed to
+The hosting assets are confined to the customer's on-premise data center. The app will be exposed to
 the internet through the Volterra Global Network.
 
 |arch1|
