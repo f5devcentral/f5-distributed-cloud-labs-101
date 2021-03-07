@@ -1,5 +1,5 @@
-State 3
-=======
+Inventory Service
+=================
 DemoBrews would like to enable their customers to pick up orders in their brick and mortar stores. 
 In order to determine which products are available at which locations, the dev team has built an "inventory" service.
 Without approval, the dev team used the on-prem data center for testing the service. 

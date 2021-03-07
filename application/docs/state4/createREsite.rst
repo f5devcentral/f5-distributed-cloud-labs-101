@@ -1,18 +1,20 @@
-Custom Regional Edge Site
-==========================
+Deploy the "Recommendations" Service.
+=====================================
 
-Exercise 1: Create a Regional Edge Virtual Site
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise 1: Create a Virtual Site with our target REs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Since we only want to deploy our "Recommendations" service to a select number of Region Edges, we must define 
+a "virtual site" that contains the REs we want to target.
 
 #. Start in VoltConsole and switch to your "Application" namespace.
 
     |lu-ns|
 
-#. Using the menu on the left, navigate to "Applications"->"Virtual Sites". Click on "Add virtual site".
+#. Using the menu on the left, navigate to "Manage"->"Virtual Sites". Click on *Add virtual site*.
 
     |menu-vs| |add-vs|
 
-#. Configure the "Virtual Site".
+#. Fill out the form.
 
     ================================= =====
     Variable                          Value
@@ -29,37 +31,21 @@ Exercise 1: Create a Regional Edge Virtual Site
 
     |vs-check| |verify-vs|
 
-
-Exercise 2: Add your "Virtual Site" to vK8s (this seems unnecessary)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Before we can deploy the "Recommendations" service to the REs, we need to add the virtual site we just
-created to our vK8s cluster.
-
-#. Navigate to your vK8s cluster from the *Virtual K8s* menu item under "Applications". Click on *Select Virtual Sites*.
-
-    |vk8s-select-vs|
-
-#. Add the "recs-re" virtual site you just created.
-
-    |vk8s-add-recs-site|
-
-Exercise 3: Deploy the "Recommendations" Workload
+Exercise 2: Deploy the "Recommendations" Workload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We'll use the "workloads" concept to configure all the pieces we need for the "Recommendations" service -- 
+the k8s deployment, the k8s service exposing the deployment in the cluster, and an HTTP Load Balancer that exposes 
+the k8s service to the internet.
 
-#. Navigate to your vK8s cluster from the *Virtual K8s* menu item under "Applications".
+#. Navigate to your vK8s cluster from the *Virtual K8s* menu item under "Applications". Click the cluster's name.
 
-    |vk8s_deets|
+    |vk8s-deets|
 
-#. Click the Workloads tab
+#. Click the *Workloads* tab followed by the *Add vK8s workload* button.
 
-    |k8s_workloads_menu|
+    |recs-add-wl|
 
-#. Click the *Add vK8s workload* button 
-
-    |placeholder|
-
-#. Enter the following variables:
+#. Fill out the form:
 
     ======================= =====
     Variable                Value
@@ -68,9 +54,9 @@ Exercise 3: Deploy the "Recommendations" Workload
     Select Type of Workload Service
     ======================= =====
 
-#. Under the *Service* section, click the *Configure* link
+#. Under the "Service" section, click the *Configure* link.
 
-#. Enter the following variables in the *Containers* section 
+#. Enter the following variables in the *Containers* section.
 
     =============================== =====
     Variable                        Value
@@ -83,7 +69,7 @@ Exercise 3: Deploy the "Recommendations" Workload
 
     |recs-container|
 
-#. Enter the following variables in the *Deploy Options* section 
+#. Enter the following variables in the *Deploy Options* section. 
 
     =============================== =====
     Variable                        Value
@@ -91,49 +77,50 @@ Exercise 3: Deploy the "Recommendations" Workload
     Where to Deploy the workload    Customer Virtual Sites 
     =============================== =====
 
-#. Under *Customer Virtual Sites*, click the *Configure* link
+#. Under *Customer Virtual Sites*, click the *Configure* link.
 
-#. Select the Virtual Site you created in the previous section
+#. Select the Virtual Site you created in the previous section.
 
     |recs-vs|
 
-#. Click the *Apply* button.
+#. Click the *Apply* button to close the "Deploy" dialogue.
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*. This will create a k8s service.
+#. Under *Advertise Option*, choose *Advertise On Internet*. Click the *Configure* link.
 
     |recs-advertise|
 
-TBD
-#. Click the *Apply* button to save the "Load Balancer" configuration.
+#. Enter the port (8001) for the "Recommendations" service.
 
-#. Click the *Apply* button to save the "Advertise" configuration.
+    |new-recs-advertise-port|
 
-#. Click the *Apply* button to save the various workload options dialogue.
+#. Verify that "HTTP/HTTPS Load Balancer" is selected under "Options to Advertise the workload". Click *Configure*.
 
-#. Click the *Save and Exit* button to create the workload.
+#. Enter the following variables:
+
+    ================================= =====
+    Variable                          Value
+    ================================= =====
+    Domains                           [unique name]-recs.[supplied domain name for your tenant]
+    Select type of Load Balancer      HTTP
+    Automatically Manage DNS Records  Yes/Check 
+    ================================= =====
+
+#. Click the *Show Advanced Fields* toggle in the "Routes" section. Select 'Disable Host Rewrite' for the default route. 
+   
+    |recs-lb-advanced| |recs-stupidness|
+
+#. Click *Apply* to exit the "Routes" dialogue.
+
+#. Click *Apply* to exit the "Advertise" dialogue.
+
+#. Click *Apply* to close the "Workload Options" dialogue. Click *Save and Exit* to create the Workload.
 
 #. Verify the workload.
 
-    |rec-wl-verify1|    |rec-wl-verify2|
-
-Exercise 4: Reconfigure the SPA Load Balancer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Now that our "Recommendations" service is running in the REs, we need to configure method of sending it client traffic.
-We are already using the SPA load balancer to route traffic to various "Origin Pools" based on HTTP URI. To keep a single
-point of ingress into our app let's reconfigure this load balancer.
-
-#. Navigate to *Origin Pools* under the "Management" section in your App namespace.
-
-    |manage-origin|
-
-#. Click on *Create a new Origin Pool*.
-
-#. Follow the dialogue.
-
-#. Create a new "Route" to target the new "Origin Pool".
+    |recs-wl-verify|    |recs-wl-verify2|
 
 
-Exercise 5: Reconfigure the SPA to use the "Recommendations" feature.
+Exercise 3: Reconfigure the SPA to use the "Recommendations" feature.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that "Recommendations" service is online, we need to reconfigure the SPA to use it. 
@@ -148,16 +135,19 @@ Now that "Recommendations" service is online, we need to reconfigure the SPA to 
 
 #. Click on the gear icon for the "Recommendations" service.
 
-    |demo_app_config_db|
+    |demo-app-config-recs|
 
-#. Enter the route we added to the SPA HTTP load balancer.
+#. Enter the domain we added to the "brews-recs" HTTP Load Balancer.
 
-    |demo_app_config_db_url|
+    |demo-app-config-recs-url|
 
 #. Click the button or press Enter
 
 If everything is working correctly, your "Recommendations" card should not turn red.
-When you view product details, you should see some additional brew recommendations.
+HTTP response delay should start being populated in the card.
+When you view product details in the main application, you should see additional brew recommendations.
+
+    |recs-recs|
 
 
 .. |lu-ns| image:: ../_static/lu-ns.png
@@ -168,3 +158,19 @@ When you view product details, you should see some additional brew recommendatio
 .. |verify-vs| image:: ../_static/verify-vs.png
 .. |vs-check| image:: ../_static/vs-check.png
 .. |vs-selector-expression| image:: ../_static/vs-selector-expression.png
+.. |demo-app-config-recs| image:: ../_static/demo-app-config-recs.png
+.. |demo-app-config-recs-url| image:: ../_static/demo-app-config-recs-url.png
+.. |new-recs-advertise-port| image:: ../_static/new-recs-advertise-port.png
+.. |recs-add-wl| image:: ../_static/rec-add-wl.png
+.. |recs-advertise| image:: ../_static/recs-advertise.png
+.. |recs-container| image:: ../_static/recs-container.png
+.. |recs-lb-advanced| image:: ../_static/recs-lb-advanced.png
+.. |recs-stupidness| image:: ../_static/recs-stupidness.png
+.. |recs-vs| image:: ../_static/recs-vs.png
+.. |recs-wl-verify| image:: ../_static/recs-wl-verify.png
+.. |recs-wl-verify2| image:: ../_static/recs-wl-verify2.png
+.. |vk8s-add-recs-site| image:: ../_static/vk8s-add-recs-site.png
+.. |vk8s-deets| image:: ../_static/vk8s-deets.png
+.. |vk8s-select-vs| image:: ../_static/vk8s-select-vs.png
+.. |demo_app_stats| image:: ../_static/demo_app_stats.png
+.. |recs-recs| image:: ../_static/recs-recs.png
