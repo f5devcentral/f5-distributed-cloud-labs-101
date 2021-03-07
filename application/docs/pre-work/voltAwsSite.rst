@@ -94,7 +94,7 @@ Exercise 2: Create AWS VPC Site
 
       .. note:: 
   
-      The maximum site name length is 16 characters. If your namespace is long adjust your site name accordingly.
+        The maximum site name length is 16 characters. If your namespace is long adjust your site name accordingly.
 
 #. Under the *Voltstack Cluster (One Interface)* section, click the *Configure* link.
 
