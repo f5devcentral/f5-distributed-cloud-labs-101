@@ -109,7 +109,7 @@ Exercise 2: Configure Default Origin Server
 
 Exercise 3: Configure Routes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Now we're ready to configure URL-based pool selection for the API server and the static images.  To acheive this we will use 
+    Now we're ready to configure URL-based pool selection for the API server and the static images.  To achieve this we will use 
     the Load Balancer Routes configuration.  
     
     #. In the *Routes Configuration* section toggle the *Show Advanced Fields* button.
