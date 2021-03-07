@@ -2,8 +2,9 @@ Create a TCP Load Balancer
 ==========================
 
 In this section we will create a TCP load balancer so we can present the MongoDB in both the UDF and AWS sites.
+This will be needed so that the API service running in the AWS site can access the on-prem database.
 
-Exercise 1: Create DynamoDB TCP Load Balancer
+Exercise 1: Create MongoDB TCP Load Balancer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. In VoltConsole ensure you are in the *Application* context
@@ -21,7 +22,7 @@ Exercise 1: Create DynamoDB TCP Load Balancer
     ==============================  =====
     Variable                        Value
     ==============================  =====
-    Name                            brews-dynamodb
+    Name                            brews-mongodb
     Listen Port                     27017
     Where to Advertise the VIP      Advertise Customer
     ==============================  =====
@@ -34,7 +35,7 @@ Exercise 1: Create DynamoDB TCP Load Balancer
         ======== =====
         Variable Value
         ======== =====
-        Domain   your_namespace-dyanmodb.brews.local
+        Domain   your_namespace-mongodb.brews.local
         ======== =====
 
         |tcp_lb_config|
@@ -42,7 +43,7 @@ Exercise 1: Create DynamoDB TCP Load Balancer
 
     #. Under the *Origin Pools* section, click the *Configure* link
     #. Click the *Add item* button
-    #. Select the *brews-dyanmodb* pool
+    #. Select the *brews-mongodb* pool
     #. Click the *Apply* button
 
 #. Configure Advertisement 
@@ -75,7 +76,7 @@ Exercise 1: Create DynamoDB TCP Load Balancer
 
 Exercise 2: Configure Demo Application 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Now that we have an internal TCP load balancer for DynamoDB we need to configure the demo application to use it.
+Now that we have an internal TCP load balancer for MongoDB we need to configure the demo application to use it.
 
 #. Open the demo application in your browser
 
@@ -89,7 +90,7 @@ Now that we have an internal TCP load balancer for DynamoDB we need to configure
 
     |demo_app_config_db|
 
-#. Enter the TCP load balancer hostname: *your_namespace-dyanmodb.brews.local*
+#. Enter the TCP load balancer hostname: *your_namespace-mongodb.brews.local*
 
     |demo_app_config_db_url|
 

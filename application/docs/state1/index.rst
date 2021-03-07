@@ -1,10 +1,6 @@
-State 1
-=======
-The DemoBrews app is currently running in an on-prem data center (the lab's UDF deployment). After attending a retreat
-hosted by local AWS account executives, the company's CTO has decided to start migrating assets into AWS. We want to start
-using the company's current cloud presence before the CTO attends another retreat from a competing CSP.
-
-<move to prework?, tell story that we'll first exposing the app?>
+Preparation
+===========
+The DemoBrews app is currently running in an on-prem data center (the lab's UDF deployment).
 
 About the App
 -------------
@@ -25,6 +21,11 @@ Database Service
 The customer's database site on-prem. The API service makes queries to the database in order to retrieve assets like
 product descriptions and shopping cart data.
 
+In it's current state, the app's components are restricted to services running in the customer's legacy data center. 
+This makes the application hard to scale and makes consuming resources at other locations impossible.
+
+|state0|
+
 Section Goals
 -------------
 The customer's application is only available through their on-prem data center.
@@ -38,8 +39,8 @@ In this state we will configure the following VoltConsole components:
 
 App Data Flow and Architecture
 ------------------------------
-The client retrieves static content for the SPA from an HTTP load balancer (not pictured below). 
-The SPA interacts with an HTTP load balancer to retrieve application data from the API service. 
+Clients will retrieve static content for the SPA from an HTTP load balancer (not pictured). 
+The SPA will interact with an HTTP load balancer to retrieve application data from the API service.
 The API service queries the on-prem database.
 
 |state1|
@@ -55,5 +56,6 @@ the internet through the Volterra Global Network.
 
    httplb
 
+.. |state0| image:: ../_static/LabAppFlow0.png
 .. |state1| image:: ../_static/LabAppFlow1.png
 .. |arch1| image:: ../_static/LabArch1.png

@@ -99,28 +99,9 @@ Exercise 3: Deploy the "Recommendations" Workload
 
 #. Click the *Apply* button.
 
-TBD
-#. Under *Advertise Option*, choose *Advertise In Cluster*. Click the *Configure* link.
+#. Under *Advertise Option*, choose *Advertise In Cluster*. This will create a k8s service.
 
     |recs-advertise|
-
-#. Fill out the dialogue. Click the *Configure* link.
-
-    ==========              =====
-    Variable                Value
-    ==========              =====
-    Port                    8002
-    Application Protocol    TCP
-    Options                 HTTP/HTTPS Load Balancer
-    ==========              ====
-
-#. Fill out the "Basic Configuration" dialogue for the load balancer.
-
-    |recs-lb-basic|
-
-#. Toggle the "Show Advanced Fields" button in the "Routes Configuration". Remove the pre-populated "Default Route" by clicking the "x".
-
-    |recs-route-toggle| |recs-route-remove|
 
 TBD
 #. Click the *Apply* button to save the "Load Balancer" configuration.
@@ -135,18 +116,49 @@ TBD
 
     |rec-wl-verify1|    |rec-wl-verify2|
 
-Exercise 4: Reconfigure the Load Balancer to route to "Recommendations" service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise 4: Reconfigure the SPA Load Balancer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Now that our "Recommendations" service is running in the REs, we need to configure method of sending it client traffic.
+We are already using the SPA load balancer to route traffic to various "Origin Pools" based on HTTP URI. To keep a single
+point of ingress into our app let's reconfigure this load balancer.
+
+#. Navigate to *Origin Pools* under the "Management" section in your App namespace.
+
+    |manage-origin|
+
+#. Click on *Create a new Origin Pool*.
+
+#. Follow the dialogue.
+
+#. Create a new "Route" to target the new "Origin Pool".
+
 
 Exercise 5: Reconfigure the SPA to use the "Recommendations" feature.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Now that "Recommendations" service is online, we need to reconfigure the SPA to use it. 
 
+#. Open the demo application in your browser
 
+    .. note:: If you do not remember the FQDN, you can look under *Manage* -> *Load Balancers* to get it.
 
-You should now see your two worloads with 1 Running/Completed Pods per workload.
+#. Click on the information icon
 
-|vk8s_workloads_list|
+    |demo_app_stats|
+
+#. Click on the gear icon for the "Recommendations" service.
+
+    |demo_app_config_db|
+
+#. Enter the route we added to the SPA HTTP load balancer.
+
+    |demo_app_config_db_url|
+
+#. Click the button or press Enter
+
+If everything is working correctly, your "Recommendations" card should not turn red.
+When you view product details, you should see some additional brew recommendations.
+
 
 .. |lu-ns| image:: ../_static/lu-ns.png
 .. |menu-vs| image:: ../_static/menu-vs.png

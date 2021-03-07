@@ -25,7 +25,7 @@ In the lab pre-work you should have deployed a new AWS site into your UDF epheme
 
     |site_list_search|
 
-If you're site is green, you can skip to Exercise 3.
+If you're site is green, you can skip to *Next* page.
 
 Exercise 2: Troubleshooting your AWS Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
