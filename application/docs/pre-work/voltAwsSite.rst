@@ -1,6 +1,6 @@
 Create AWS Volt Site
 ====================
-In this section we will VoltConsole to create an AWS VPC and a new Volterra Site in that VPC.
+In this section we will use VoltConsole to create an AWS VPC and a new Volterra Site in that VPC.
 
 Terminology
 ~~~~~~~~~~~
@@ -15,7 +15,7 @@ Exercise 1: Create Cloud Credentials
 
 .. note:: 
   
-  based on the selected region for your UDF deployment we recommend that you use the following
+  Based on the selected region for your UDF deployment we recommend that you use the following
   AWS region and Availability Zone during this lab.
 
   ==================== ================
