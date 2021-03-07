@@ -59,7 +59,7 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
     ==========  =====
     Variable    Value
     ==========  =====
-    Port        8082
+    Port        8002
     ==========  =====
 
 #. Click the *Apply* button
