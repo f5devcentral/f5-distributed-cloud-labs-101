@@ -71,8 +71,7 @@ Exercise 3: Add a Site
       $ tmux
       $ ssh admin@10.1.1.6
 
-    When prompted, use the following values from "Change Password".  To configure the site type "configure" and follow
-    the prompts with the values below from "Configure Now".
+    When prompted, use the following values from "Change Password".  
 
 #. Change Password
 
@@ -87,7 +86,24 @@ Exercise 3: Add a Site
     
     #. Change the default password 
 
-#. Click on "Configure Now".
+#. To configure the site from the command line, type "configure" and follow
+    the prompts. Customize the example values below with your details.  
+    After completion, skip to "Go back to VoltConsole to "Accept" the registration." below
+
+    =================== =====
+    CLI Variable        Value
+    =================== =====
+    token               56b6a47f-5ec8-47ea-baf4-xxxxxxx
+    site name           [u_name]-udf-site
+    hostname            main-0
+    latitude            [your latitude, example: 47.6]
+    longitude           [your longitude, example: -122.3]
+    default fleet name  [optional]
+    certified hardware  kvm-voltmesh
+    primary outside NIC eth0
+    =================== =====
+
+#. If you are using the GUI, click on "Configure Now".
 
     .. image:: ../_static/site-ui-configure-now.png
 
@@ -97,7 +113,7 @@ Exercise 3: Add a Site
     Variable            Value
     =================== =====
     Token               [use one created previously]
-    Cluster Name        [unique name]+udf
+    Cluster Name        [unique name]_udf
     Hostname            main-0
     Certified Hardware  kvm-voltmesh
     Primary Outside NIC eth0
