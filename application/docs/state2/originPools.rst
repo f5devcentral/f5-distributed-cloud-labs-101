@@ -4,7 +4,7 @@ Origin Pools
 In this section we will create the Origin Pools for the new vK8S deployment.
 
 
-Exercise 1: Create SAP Origin Pools
+Exercise 1: Create SPA Origin Pools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. In VoltConsole ensure you are in the *Application* context
