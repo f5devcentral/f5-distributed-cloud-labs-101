@@ -23,8 +23,8 @@ Exercise 1: Find your Namespace
 
 #. Once you log in, you will need to identify your namespace.  
 
-    .. note:: It will usually be comprised of part of your name.  For example,
-        if you have the last name of "Chen," you can find a namespace of
+    .. note:: It will usually be the user-part of your F5 email address with the period replaced with a hyphen.  For example,
+        if your F5 email address is eric.chen@f5.com  you can find a namespace of
         "eric-chen."  Please note this name and use it in later steps to make it easier for others to distinguish between resources in shared namespaces.
 
     .. image:: ../_static/find-namespace.png
