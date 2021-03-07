@@ -1,14 +1,14 @@
 Internal HTTP Load Balancer
 ===========================
 
-Previously we deployed a Public HTTP Load Balancer to direct traffic to the 
+Previously we deployed a public HTTP Load Balancer to direct traffic to the 
 single-page application.  Next we will deploy an internal/private HTTP Load
 Balancer that will be used to serve the inventory application.
 
 Inventory Application
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Now you are ready to set up a HTTP Load Balancer to serve the inventory application.
+Now you are ready to set up an HTTP Load Balancer to serve the inventory application.
 
 Exercise 1: Create an HTTP Load Balancer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -23,7 +23,7 @@ Exercise 1: Create an HTTP Load Balancer
 
 #. Configure HTTP Load Balancer
 
-    Now you will create a HTTP load balancer configuration. Enter the following variables:
+    Now you will create an HTTP load balancer configuration. Enter the following variables:
 
     ================================= =====
     Variable                          Value
@@ -163,7 +163,7 @@ following pattern of traffic.
 - AWS API Service -> AWS Inventory Service
 - UDF API Service -> UDF Inventory Service
 
-If you disable the Inventory Service in AWS all traffic will go to the surviving UDF site.
+If you disable the Inventory Service in AWS, all traffic will go to the remaining UDF site.
 
 .. |app-context| image:: images/app-context.png
 .. |http_lb_menu| image:: images/http_lb_menu.png
