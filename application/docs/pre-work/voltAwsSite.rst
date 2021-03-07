@@ -51,7 +51,7 @@ In your UDF deployment there is a *Cloud Accounts* tab that contains releative i
     Variable    Value
     ==========  =====
     Name        your_namespace-udf
-    Access Key  ID Access Key from the UDF Cloud Accounts tab
+    Access Key  API Key from your UDF Cloud Accounts tab
     ==========  =====
 
 #. Under the *Secret Access Key* section, click the *Configure* link.
@@ -60,12 +60,16 @@ In your UDF deployment there is a *Cloud Accounts* tab that contains releative i
     ========= =====
     Variable  Value
     ========= =====
-    Type      Paste your API Key from the UDF Cloud Accounts tab
+    Type      Paste your API Secret from the UDF Cloud Accounts tab
     ========= =====
 
-#. Click the *Blindfold* button.
-#. Click the *Apply* button.
+#. Click the *Blindfold* button. This encrypts your AWS cloud account API key.
+#. Click the *Apply* button. This saves the Secret configuration.
 #. Click the *Save and Exit* button.
+
+.. note:: 
+  
+  By design you will not be able to extract the cleartext value of the blindfolded secret.  If you need to change the API secret, you can delete the Cloud Credential and create a new one.
 
 Exercise 2: Create AWS VPC Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
