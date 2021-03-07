@@ -1,7 +1,7 @@
 AWS Site
 ========
 
-Previously for the "on-prem" site you needed to manually provision and configure 
+Previously for the "on-premise" site you needed to manually provision and configure 
 a node for use with VoltConsole.  Deploying a site in AWS, Azure, and Google Cloud Platform
 uses a process that automates the steps of deploying the site.  This enables VoltConsole
 to perform the deployment on behalf of the end-user (you can also use Terraform to deploy a 
@@ -25,7 +25,7 @@ In the lab pre-work you should have deployed a new AWS site into your UDF epheme
 
     |site_list_search|
 
-If you're site is green, you can skip to *Next* page.
+If your site is green, you can skip to *Next* page.
 
 Exercise 2: Troubleshooting your AWS Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,7 +47,7 @@ If you're site deployment was not successful there are a few steps we can take t
  
     |aws_vpc_site_menu|
 
-#. Opem the Terraform Parameters by
+#. Open the Terraform Parameters by
 
     #. clicking the *...* link on your site 
     # Click the *Terraform Parameters* button
