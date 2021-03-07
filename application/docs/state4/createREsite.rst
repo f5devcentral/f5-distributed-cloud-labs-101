@@ -144,7 +144,7 @@ Now that "Recommendations" service is online, we need to reconfigure the SPA to 
 #. Click the button or press Enter
 
 If everything is working correctly, your "Recommendations" card should not turn red.
-HTTP response delay should start being populated in the card.
+*HTTP response time* should start being populated in the card.
 When you view product details in the main application, you should see additional brew recommendations.
 
     |recs-recs|
