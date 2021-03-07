@@ -29,7 +29,7 @@ Exercise 1: Create an HTTP Load Balancer
     Variable                          Value
     ================================= =====
     Name                              inventory
-    Domains                           inventory.brews.internal
+    Domains                           your_namespace-inventory.brews.internal
     Select type of Load Balancer      HTTP
     Automatically Manage DNS Records  No/Un Checked 
     ================================= =====
@@ -98,7 +98,7 @@ Exercise 3: Configure Second Origin Pool (for AWS)
       Variable                          Value
       ================================= =====
       Select Type of Origin Server      K8s Service Name of Origin Server on given Sites
-      Service Name                      inventory.[your namespace]
+      Service Name                      brews-inv.[your namespace]
       Site                              the AWS site name configured in the previous lab
       Select Network on the site        vK8s Networks on Site
       ================================= =====
@@ -151,7 +151,7 @@ From the "stats" page of the brews app.  Click on the gear icon next to inventor
 
 |brews-app-inventory-settings|
 
-Enter the value for the internal URL "http://inventory.brews.internal" then click on the checkmark icon.
+Enter the value for the internal URL "http://your_namespace-inventory.brews.internal" then click on the checkmark icon.
 
 |brews-app-inventory-config|
 
