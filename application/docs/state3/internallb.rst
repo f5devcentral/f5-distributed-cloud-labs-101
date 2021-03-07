@@ -36,8 +36,8 @@ Exercise 1: Create an HTTP Load Balancer
 
     |http_lb|
 
-Exercise 2: Configure Default Origin Server
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise 2: Configure Origin Server (for UDF)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Now you will configure the Default Origin Server used by the load balancer.  
     
@@ -86,7 +86,11 @@ Exercise 2: Configure Default Origin Server
     #. Click the *Continue* button
     #. Click the *Continue* button
     #. Click the *Apply* button
-#.  Configure Second Origin Pool
+
+
+Exercise 3: Configure Second Origin Pool (for AWS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     #.  Under "Origin Servers" click on "Add item"
     #. Enter the following variables:
 
@@ -104,7 +108,7 @@ Exercise 2: Configure Default Origin Server
     #. Click "Continue"
     #. Click "Apply" (This should take you back to the main HTTP LB screen, stop here)
 
-Exercise 3: Configure Custom VIP Configuration 
+Exercise 4: Configure Custom VIP Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Unlike when you created a public HTTP LB this needs to be configured
@@ -138,7 +142,7 @@ to only listen on the internal network of the UDF and AWS sites.
 #. Click on "Apply"
 #. Click on "Save and Exit"
 
-Exercise 4: Verify Internal LB is working 
+Exercise 5: Verify Internal LB is working 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will need to now reconfigure the brews app to use the inventory application.

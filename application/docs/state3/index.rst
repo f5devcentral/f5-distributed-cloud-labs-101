@@ -29,6 +29,7 @@ This state includes the new internally available Inventory service.
     :maxdepth: 1
     :caption: Contents:
  
+    vk8s
     internallb
 
 .. |state3| image:: ../_static/LabAppFlow3.png
