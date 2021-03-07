@@ -20,7 +20,7 @@ Exercise 1: Tag AWS Site
 
     |aws_vpc_site_edit|
 
-#. Under *Lables*, clikc the *More* link 
+#. Under *Labels*, click the *More* link 
 #. Click in the Lables box:
     #. For the *key*, choose *ves.io/app*
     #. For the Value, type the name of your AWS VPC Site name
