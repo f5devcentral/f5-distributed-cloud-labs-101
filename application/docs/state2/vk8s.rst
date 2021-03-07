@@ -177,7 +177,7 @@ Exercise 3: Create Virtual K8s Workload for the API
     ==========  =====
     Variable    Value
     ==========  =====
-    Port        8081
+    Port        8000
     ==========  =====
 
 #. Click the *Apply* button
