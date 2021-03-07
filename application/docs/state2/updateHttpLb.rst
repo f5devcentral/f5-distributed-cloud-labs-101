@@ -11,7 +11,7 @@ Exercise 1: Add SPA Origin Pool to HTTP LB
 
     |app-context| 
 
-#. Navigate the menu to go to *Manage*->*Load Balancer*, then click *HTTP Load Balancers*
+#. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *HTTP Load Balancers*
 
     |http_lb_menu|
 
