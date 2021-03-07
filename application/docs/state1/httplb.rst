@@ -141,7 +141,7 @@ Exercise 3: Configure Routes
         Name                              brews-api-pool
         Select Type of Origin Server      IP address of Origin Server on given Sites
         IP                                10.1.1.4
-        Site                              the site name configured in the previous lab
+        Site                              the UDF site name configured in the previous lab
         Select Network on the site        Outside Network
         Port                              8000
         ================================= =====
