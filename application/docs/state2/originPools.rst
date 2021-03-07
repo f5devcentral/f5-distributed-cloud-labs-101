@@ -11,7 +11,7 @@ Exercise 1: Create SPA Origin Pools
 
     |app-context| 
 
-#. Navigate the menu to go to *Manage*->*Load Balancer*, then click *Origin Pools*
+#. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *Origin Pools*
 
     |origin_pools_menu|
 
