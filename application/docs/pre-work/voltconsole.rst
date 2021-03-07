@@ -23,7 +23,7 @@ Exercise 1: Find your Namespace
 
 #. Once you log in, you will need to identify your namespace.  
 
-    .. note:: It will usually comprise as part of your name.  For example,
+    .. note:: It will usually be comprised of part of your name.  For example,
         if you have the last name of "Chen," you can find a namespace of
         "eric-chen."  Please note this name and use it in later steps to make it easier for others to distinguish between resources in shared namespaces.
 
@@ -32,11 +32,11 @@ Exercise 1: Find your Namespace
 Exercise 2: Create a Site Token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Next you will need to change to the "System" namespace.
+#. Next change to the "System" namespace.
 
     .. image:: ../_static/system-namespace.png
 
-#. Once in the "System" namespace you will need to go to the "Site Management" menu and select "Site Tokens".
+#. Once in the "System" namespace go to the "Site Management" menu and click on "Site Tokens".
 
     .. image:: ../_static/site-tokens-menu.png
 
@@ -71,7 +71,7 @@ Exercise 3: Add a Site
       $ tmux
       $ ssh admin@10.1.1.6
 
-    When prompted use the following values from "Change Password".  To configure the site type "configure" and follow
+    When prompted, use the following values from "Change Password".  To configure the site type "configure" and follow
     the prompts with the values below from "Configure Now".
 
 #. Change Password
@@ -87,11 +87,11 @@ Exercise 3: Add a Site
     
     #. Change the default password 
 
-#. You will next need to click on "Configure Now".
+#. Click on "Configure Now".
 
     .. image:: ../_static/site-ui-configure-now.png
 
-#. You will need to provide the following information.
+#. Enter the following information.
 
     =================== =====
     Variable            Value
@@ -104,11 +104,11 @@ Exercise 3: Add a Site
     Latitude/Longitude      
     =================== =====
 
-#. You can then click on "Save Configuration". 
+#. Click on "Save Configuration". 
 
-#. You will then need to go back to VoltConsole to "Accept" the registration.
+#. Go back to VoltConsole to "Accept" the registration.
 
-#. You will need to go under "System->Site Management->Registrations".
+#. Go to "System->Site Management->Registrations".
 
     .. image:: ../_static/registrations-menu.png
 
@@ -116,7 +116,7 @@ Exercise 3: Add a Site
 
     .. image:: ../_static/registrations-accept.png
 
-#. You can then click on "Accept" to use the default values (we will modify these in a later lab).
+#. Click on "Accept" to use the default values (we will modify these in a later lab).
 
   .. warning:: 
         
