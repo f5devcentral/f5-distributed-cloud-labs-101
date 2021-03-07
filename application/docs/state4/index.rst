@@ -23,7 +23,7 @@ The logical application data flow will now include the "Recommendations" service
 
 |state4|
 
-The architecture is now spread across CEs as well as Volterra multiple Volterra Regional Edges.
+The architecture is now spread across Customer Edges (CEs), as well as Volterra multiple Volterra Regional Edges.
 
 |arch4|
 
