@@ -1,7 +1,7 @@
 Virtual Site
 ============
 
-In this section we will deploy a Virtual Site as a pre-requisit for the Virtual Kubernetes deployment.
+In this section we will deploy a Virtual Site as a prerequisite for the Virtual Kubernetes deployment.
 
 Exercise 1: Tag AWS Site
 ~~~~~~~~~~~~~~~~~~~~~~~~
