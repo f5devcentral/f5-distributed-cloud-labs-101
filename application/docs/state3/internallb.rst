@@ -98,7 +98,7 @@ Exercise 3: Configure Second Origin Pool (for AWS)
       Variable                          Value
       ================================= =====
       Select Type of Origin Server      K8s Service Name of Origin Server on given Sites
-      Service Name                      inventory.[your namespace]
+      Service Name                      brews-inv.[your namespace]
       Site                              the AWS site name configured in the previous lab
       Select Network on the site        vK8s Networks on Site
       ================================= =====
