@@ -9,14 +9,13 @@ Terminology
 ~~~~~~~~~~~~~
 
 Regional Edge
-  A Regional Edge (RE) is part of Voltera Global Network that provides connectivity 
-  to services.  
+  A Regional Edge (RE) is part of Voltera global network that provides connectivity to services.  
 
 
 Demo Brews Application
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Now you are ready to set up a HTTP Load Balancer to serve the single-page application, the API server and the static images.
+Now you are ready to set up an HTTP Load Balancer to serve the single-page application, the API server and the static images.
 
 Exercise 1: Create an HTTP Load Balancer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +44,7 @@ Exercise 1: Create an HTTP Load Balancer
     |http_lb|
 
     .. note::
-      If you are not setup with a delegated domain you can disable the option to automatically manage DNS records.
+      If you are not set up with a delegated domain you can disable the option to automatically manage DNS records.
       You can supply an arbitrary domain (example.com) and later you can use the following
       command to verify
 
@@ -110,7 +109,7 @@ Exercise 2: Configure Default Origin Server
 
 Exercise 3: Configure Routes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Now we're ready to configure URL based pool selection for the API server and the static images.  To acheive this we will use 
+    Now we're ready to configure URL-based pool selection for the API server and the static images.  To acheive this we will use 
     the Load Balancer Routes configuration.  
     
     #. In the *Routes Configuration* section toggle the *Show Advanced Fields* button.
