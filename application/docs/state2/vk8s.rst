@@ -5,9 +5,9 @@ In this section we will create a Virtual K8s configuration in VoltConsole.
 
 Exercise 1: Create Virtual K8s 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. In VoltConsole ensure you are in the *Application* context
+#. In VoltConsole ensure you are in the *Application* context and have selected your namespace
 
-    |app-context| 
+    |app-context| |lu-ns|
 
 #. Navigate the menu to go to *Application*->*Virtual K8s*
 
@@ -204,3 +204,4 @@ You should now see your two worloads with 1 Running/Completed Pods per workload.
 .. |vk8s_workloads_advertise| image:: ../_static/vk8s_workloads_advertise.png
 .. |vk8s_workloads_list| image:: ../_static/vk8s_workloads_list.png
 .. |vk8s_workloads_env| image:: ../_static/vk8s_workloads_env.png
+.. |lu-ns| image:: ../_static/lu-ns.png

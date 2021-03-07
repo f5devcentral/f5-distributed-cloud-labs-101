@@ -1,7 +1,7 @@
 HTTP Load Balancer
 ==================
 
-Now that you have connected the UDF Site to the Volterra Global Network you
+Now that we have connected the UDF Site to the Volterra Global Network we
 will expose the applications in the UDF site using a Regional Edge and HTTP
 Load Balancer.
 
@@ -72,7 +72,7 @@ Exercise 2: Configure Default Origin Server
       Name                              brews-spa-pool
       Select Type of Origin Server      IP address of Origin Server on given Sites
       IP                                10.1.1.4
-      Site                              the site name configured in the previous lab
+      Site                              the UDF site name configured in the previous lab
       Select Network on the site        Outside Network
       Port                              8081
       ================================= =====

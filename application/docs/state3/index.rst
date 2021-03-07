@@ -1,5 +1,5 @@
-State 3
-=======
+Inventory Service
+=================
 DemoBrews would like to enable their customers to pick up orders in their brick and mortar stores. 
 In order to determine which products are available at which locations, the dev team has built an "inventory" service.
 Without approval, the dev team used the on-prem data center for testing the service. 
@@ -31,5 +31,5 @@ This state includes the new internally available Inventory service.
  
     internallb
 
-.. |state3| image:: ../_static/state3.png
-.. |arch3| image:: ../_static/arch3.png
+.. |state3| image:: ../_static/LabAppFlow3.png
+.. |arch3| image:: ../_static/LabArch3.png
