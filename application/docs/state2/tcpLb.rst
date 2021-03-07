@@ -2,7 +2,7 @@ Create a TCP Load Balancer
 ==========================
 
 In this section we will create a TCP load balancer so we can present the MongoDB in both the UDF and AWS sites.
-This will be needed so that the API service running in the AWS site can access the on-prem database.
+This will be needed so that the API service running in the AWS site can access the on-premise database.
 
 Exercise 1: Create MongoDB TCP Load Balancer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,7 +96,7 @@ Now that we have an internal TCP load balancer for MongoDB we need to configure 
 
 #. Click the button or press Enter
 
-If everything is working correctly, you the database cart should not turn red.  You can also add and remove items from your cart for a further test.
+If everything is working correctly, the database cart should not turn red.  You can also add and remove items from your cart for a further test.
 
 .. |app-context| image:: ../_static/app-context.png
 .. |tcp_lb_menu| image:: ../_static/tcp_lb_menu.png
