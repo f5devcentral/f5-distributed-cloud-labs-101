@@ -59,10 +59,10 @@ Exercise 3: Add a Site
 
   .. note:: 
     
-    If you are unable to access the "Site UI" (blank page).  Please use the following workaround.
+    **If you are unable to access the "Site UI" (blank page).  Please use the following workaround.**
 
     From your UDF Deployment find your "Client" component and click on "web shell" (you can also 
-    use ssh if you have setup an SSH key previously).
+    use ssh if you have set up an SSH key previously).
 
     From the web shell run the following two commands
 
