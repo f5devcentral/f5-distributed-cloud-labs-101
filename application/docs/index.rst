@@ -27,3 +27,4 @@ Over the course of this lab, we will help the customer meet these design goals w
    state2/index
    state3/index
    state4/index
+   state5/index
