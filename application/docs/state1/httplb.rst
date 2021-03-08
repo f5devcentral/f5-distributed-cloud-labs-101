@@ -9,7 +9,7 @@ Terminology
 ~~~~~~~~~~~~~
 
 Regional Edge
-  A Regional Edge (RE) is part of Voltera global network that provides connectivity to services.  
+  A Regional Edge (RE) is part of Volterra global network that provides connectivity to services.  
 
 
 Demo Brews Application

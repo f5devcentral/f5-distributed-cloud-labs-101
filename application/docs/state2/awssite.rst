@@ -68,7 +68,7 @@ If you're site deployment was not successful there are a few steps we can take t
 
         |aws_vpc_site_destroy|
 
-    #. Type *DELETE* then click the *DELETE* button in the *Destory Terraform* prompt
+    #. Type *DELETE* then click the *DELETE* button in the *Destroy Terraform* prompt
 
         |aws_vpc_site_destroy_prompt|
 

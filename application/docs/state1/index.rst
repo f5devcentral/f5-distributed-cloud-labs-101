@@ -13,7 +13,7 @@ A client's browser or mobile app retrieves all relevant assets (javascript, css,
 
 API Service
 ^^^^^^^^^^^^
-The client's SPA retrieves contents by interacting with the API service. This includes retrieving product images,
+The client's SPA retrieves application content by interacting with the API service. This includes retrieving product images,
 product descriptions, shopping cart data, etc.
 
 Database Service
