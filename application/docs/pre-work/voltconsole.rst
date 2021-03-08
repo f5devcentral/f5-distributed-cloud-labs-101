@@ -79,8 +79,6 @@ there is a known issue with using the Site UI and CLI is the workaround.
 
 #. From your UDF Deployment find your "Client" component and click on "Web Shell".
 
-    .. image:: ../_static/udf-site-ui.png
-
     From the web shell run the following two commands
 
     .. code-block:: shell
