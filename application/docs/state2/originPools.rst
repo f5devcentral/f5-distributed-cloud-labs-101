@@ -95,7 +95,7 @@ Exercise 4: Troubleshoot Origin Pools
 
 #. Select your AWS Site
 
-#. Validate that the JSON payload shows that *Validation* is *Sucessful* and *Operational* is *Installed*
+#. Validate that the JSON payload shows that *Validation* is *Successful* and *Operational* is *Installed*
 
     |origin_pools_show_child_objects_status|
 

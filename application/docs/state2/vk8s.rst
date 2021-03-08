@@ -187,7 +187,7 @@ Exercise 3: Create Virtual K8s Workload for the API
 #. Click the *Save and Exit* button
 
 
-You should now see your two worloads with 1 Running/Completed Pods per workload.
+You should now see your two workloads with 1 Running/Completed Pods per workload.
 
 |vk8s_workloads_list|
 

@@ -8,7 +8,7 @@ DemoBrews is a company that specializing specialty craft beers.
 The company has a fledgling e-commerce business to go along with their existing stores.  
 The customer's dev team has built and maintains a web application.
 The app is deployed in an expensive on-premise data center (ie. the UDF deployment).
-Due to onging operational expenses the company would like to move the application "to the cloud".
+Due to ongoing operational expenses the company would like to move the application "to the cloud".
 
 The customer has multiple architectural goals:
 
