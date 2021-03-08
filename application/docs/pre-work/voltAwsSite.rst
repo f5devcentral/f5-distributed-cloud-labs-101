@@ -1,5 +1,5 @@
-Create AWS Volt Site
-====================
+Create AWS Volterra Site
+========================
 In this section we will use VoltConsole to create an AWS VPC and a new Volterra Site in that VPC.
 
 Terminology
@@ -29,7 +29,9 @@ Exercise 1: Create Cloud Credentials
   the same region to view any resources created by Volterra.
  
 
-In your UDF deployment there is a *Cloud Accounts* tab that contains releative information about the ephemeral AWS account created for you. Take note of your *API Key* and *API Secret*.
+In your UDF deployment there is a *Cloud Accounts* tab that contains related information about the 
+ephemeral AWS account created for you. Take note of your *API Key* and *API Secret*.  If you are 
+using a UDF Course to access this lab the information will be at the bottom of the "Documentation" tab.
 
 |cloud_creds|
 
@@ -69,7 +71,8 @@ In your UDF deployment there is a *Cloud Accounts* tab that contains releative i
 
 .. note:: 
   
-  By design you will not be able to extract the cleartext value of the blindfolded secret.  If you need to change the API secret, you can delete the Cloud Credential and create a new one.
+  By design you will not be able to extract the cleartext value of the blindfolded secret.  
+  If you need to change the API secret, you can delete the Cloud Credential and create a new one.
 
 Exercise 2: Create AWS VPC Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
