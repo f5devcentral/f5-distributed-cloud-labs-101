@@ -43,7 +43,7 @@ If you're site deployment was not successful there are a few steps we can take t
 
     |site_tunnel_status|
 
-#. Navigate to *Site Manage* -> *AWS VPC Sites*
+#. Navigate to *Site Management* -> *AWS VPC Sites*
  
     |aws_vpc_site_menu|
 
