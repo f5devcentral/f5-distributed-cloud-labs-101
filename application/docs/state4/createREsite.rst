@@ -3,7 +3,7 @@ Deploy the "Recommendations" Service.
 
 Exercise 1: Create a Virtual Site with our target REs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Since we only want to deploy our "Recommendations" service to a select number of Region Edges, we must define 
+Since we only want to deploy our "recommendations" service to a select number of Region Edges, we must define 
 a "virtual site" that contains the REs we want to target.
 
 #. Start in VoltConsole and switch to your "Application" namespace.
@@ -27,13 +27,13 @@ a "virtual site" that contains the REs we want to target.
 
     |vs-selector-expression| |add-vs-diag| |add-vs-button|
 
-#. Verify your *recs-re* virtual site was created.
+#. Verify your "recs-re" virtual site was created.
 
     |vs-check| |verify-vs|
 
 Exercise 2: Deploy the "Recommendations" Workload
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We'll use the "workloads" concept to configure all the pieces we need for the "Recommendations" service -- 
+We'll use the "workloads" concept to configure all the pieces we need for the "recommendations" service -- 
 the k8s deployment, the k8s service exposing the deployment in the cluster, and an HTTP Load Balancer that exposes 
 the k8s service to the internet.
 
@@ -79,7 +79,7 @@ the k8s service to the internet.
 
 #. Under *Customer Virtual Sites*, click the *Configure* link.
 
-#. Select the Virtual Site you created in the previous section.
+#. Select the Virtual Site of REs you created in the previous section.
 
     |recs-vs|
 
@@ -105,15 +105,24 @@ the k8s service to the internet.
     Automatically Manage DNS Records  Yes/Check 
     ================================= =====
 
+    |recs-lb|
+
 #. Click the *Show Advanced Fields* toggle in the "Routes" section. Select 'Disable Host Rewrite' for the default route. 
    
     |recs-lb-advanced| |recs-stupidness|
+
+    .. note:: 
+  
+        The default route configuration, to rewrite the "Host" header with the name of an upstream server, is not applicable when 
+        the service is hosted on Regional Edges. 
 
 #. Click *Apply* to exit the "Routes" dialogue.
 
 #. Click *Apply* to exit the "Advertise" dialogue.
 
-#. Click *Apply* to close the "Workload Options" dialogue. Click *Save and Exit* to create the Workload.
+#. Click *Apply* to close the "Service" dialogue.
+ 
+#. Click *Save and Exit* to create the Workload.
 
 #. Verify the workload.
 
@@ -123,11 +132,11 @@ the k8s service to the internet.
 Exercise 3: Reconfigure the SPA to use the "Recommendations" feature.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that "Recommendations" service is online, we need to reconfigure the SPA to use it. 
+Now that "recommendations" service is online, we need to reconfigure the SPA to use it. 
 
 #. Open the demo application in your browser
 
-    .. note:: If you do not remember the FQDN, you can look under *Manage* -> *Load Balancers* to get it.
+    .. note:: If you do not remember the FQDN, you can look under *Manage* -> *HTTP Load Balancers* to find it.
 
 #. Click on the information icon
 
@@ -144,7 +153,7 @@ Now that "Recommendations" service is online, we need to reconfigure the SPA to 
 #. Click the button or press Enter
 
 If everything is working correctly, your "Recommendations" card should not turn red.
-*HTTP response time* should start being populated in the card.
+HTTP response time statistics should start being populated in the card.
 When you view product details in the main application, you should see additional brew recommendations.
 
     |recs-recs|
@@ -174,3 +183,4 @@ When you view product details in the main application, you should see additional
 .. |vk8s-select-vs| image:: ../_static/vk8s-select-vs.png
 .. |demo_app_stats| image:: ../_static/demo_app_stats.png
 .. |recs-recs| image:: ../_static/recs-recs.png
+.. |recs-lb| image:: ../_static/recs-lb.png
