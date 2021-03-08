@@ -3,7 +3,7 @@ Create AWS Volterra Site
 In this section we will use VoltConsole to create an AWS VPC and a new Volterra Site in that VPC.
 
 Terminology
-~~~~~~~~~~~
+-----------
 
 VPC
     VPC is a Virtual Private Cloud.
@@ -11,7 +11,7 @@ Volterra Site
     A Volterra Site is a physical or cloud location where Volterra Nodes are deployed. 
 
 Exercise 1: Create Cloud Credentials
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 .. note:: 
   
@@ -39,7 +39,7 @@ using a UDF Course to access this lab the information will be at the bottom of t
 
     |system_context|
 
-#. Navigate the menu to go to "Manage"->"Site Management" and click on "Cloud Credentials".
+#. Navigate the menu to *Manage* -> *Site Management* -> *Cloud Credentials*
 
     |cloud_creds_menu|
 
@@ -74,10 +74,51 @@ using a UDF Course to access this lab the information will be at the bottom of t
   By design you will not be able to extract the cleartext value of the blindfolded secret.  
   If you need to change the API secret, you can delete the Cloud Credential and create a new one.
 
-Exercise 2: Create AWS VPC Site
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise 2: Create Network Policy
+---------------------------------
 
-#. Navigate the menu to go to "Manage"->"Site Management" and click on "Cloud Credentials".
+#. Navigate the menu to *Security* -> *Firewall* -> *Network Policies*
+
+    |network_policy_menu|
+
+#. Click the *Add network policy* button
+#. Enter the following variables:
+
+    ========= =====
+    Variable  Value
+    ========= =====
+    Name      your_namespace-aws
+    ========= =====
+
+#. Under the *IPv4 Prefix List* click the *Add item* button
+#. For the prefix, enter: 10.0.0.0/8
+
+    |network_policy_config|
+
+#. Under the *Connections to Policy Endpoints* section, click the *Configure* link
+#. Click the *Add item* button
+#. Enter the following variables:
+
+    ======================= =====
+    Variable                Value
+    ======================= =====
+    Name                    your_namespace-mongodb
+    Action                  Allow
+    Select Other Endpoint   IPv4 Prefix List
+    ======================= =====
+
+#. Under the *IPv4 Prefix List* section, click the *Add item* button
+#. For the prefix, enter: 10.0.0.0/8
+#. Click the *Apply* button to exit the *Ingress Rules* dialogue
+#. Click the *Save and Exit* button to exit the *Network policy* dialogue
+
+    |ingress_rules|
+
+
+Exercise 3: Create AWS VPC Site
+-------------------------------
+
+#. Navigate the menu to *Manage* -> *Site Management* -> *Cloud Credentials*
 
     |aws_vpc_site_menu|
 
@@ -107,12 +148,14 @@ Exercise 2: Create AWS VPC Site
 
 #. Enter the following variables:
 
-    =========== =====
-    Variable    Value
-    =========== =====
-    AWS AZ Name Availability zone in the same AWS region selected in the previous step
-    IPv4 Subnet 10.0.0.0/24
-    =========== =====
+    ======================= =====
+    Variable                Value
+    ======================= =====
+    AWS AZ Name             Availability zone in the same AWS region selected in the previous step
+    IPv4 Subnet             10.0.0.0/24
+    Manage Network Policy   Active Network Policies
+    Network Policy          your_namespace-aws
+    ======================= =====
 
     |aws_vpc_site_interface|
 
@@ -143,3 +186,6 @@ Exercise 2: Create AWS VPC Site
 .. |aws_vpc_site| image:: ../_static/aws_vpc_site.png
 .. |aws_vpc_site_interface| image:: ../_static/aws_vpc_site_interface.png
 .. |aws_vpc_site_apply| image:: ../_static/aws_vpc_site_apply.png
+.. |network_policy_menu| image:: ../_static/network_policy_menu.png
+.. |ingress_rules| image:: ../_static/ingress_rules.png
+.. |network_policy_config| image:: ../_static/network_policy_config.png
