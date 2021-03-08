@@ -52,7 +52,7 @@ using a UDF Course to access this lab the information will be at the bottom of t
     ==========  =====
     Variable    Value
     ==========  =====
-    Name        your_namespace-udf
+    Name        your_namespace-aws
     Access Key  API Key from your UDF Cloud Accounts tab
     ==========  =====
 
