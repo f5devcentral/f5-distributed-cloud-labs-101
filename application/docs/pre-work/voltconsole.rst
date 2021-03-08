@@ -123,9 +123,9 @@ there is a known issue with using the Site UI and CLI is the workaround.
             ? Please type your new password *****
             ? Please retype your new password *****
 
-#. To configure the site from the command line, type "configure" and follow
-    the prompts. Customize the example values below with your details.  
-    After completion, skip to "Go back to VoltConsole to "Accept" the registration." below
+#. Configure the site from the command line: 
+    Type "configure" and follow the prompts. Customize the example values below with your details.  
+    After completion, skip to the "Accept Registration" exercise below.
 
     =================== =====
     CLI Variable        Value
