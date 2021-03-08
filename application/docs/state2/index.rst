@@ -36,13 +36,8 @@ host the SPA and API services while the on-premise site will solely host the dat
    :maxdepth: 1
    :caption: Contents:
 
-   awssite
-   vsite   
+   awssite   
    tcpLb
-   containerRegistry
-   vk8s
-   originPools
-   updateHttpLb
 
 .. |state2| image:: ../_static/LabAppFlow2.png
 .. |arch2| image:: ../_static/LabArch2.png

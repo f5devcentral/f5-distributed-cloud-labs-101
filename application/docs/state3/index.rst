@@ -1,36 +1,45 @@
-Inventory Service
-=================
-DemoBrews would like to enable their customers to pick up orders in their brick and mortar stores. 
-In order to determine which products are available at which locations, the dev team has built an "inventory" service.
-Without approval, the dev team used the on-premise data center for testing the service. 
-The production Inventory service will need to run at each site and be accessed by the API service.  
+Virtual Kubernetes
+==============
+We just learned the DemoBrews marketing division launched an effective viral marketing campaign which included several references 
+to the client application and website. The on-premise infrastructure is already running at capacity so we need to help 
+the dev team move the application to the AWS site as soon as possible.
 
 Section Goals
 -------------
-We will connect the API service to the inventory service in each site, with a preference for the site 
-local inventory service.  
+In this section we'll take the first steps to spanning the customer's application between sites.
+Initially, we will deploy the SPA and API services to the AWS site. 
+Next, we will expose the front-end (SPA) service and API services to the internet using both on-premise 
+and AWS origin servers. Since the database must stay on-premise we will also need to ensure the API server 
+in AWS can securely communicate with the database.
 
-In this state we will configure the following VoltConsole components:
-- HTTP Load Balancer
-- Origin Pool
+In this section we will configure the following VoltConsole components:
+
+- Virtual Site
+- Virtual k8s (vK8s)
+- 2 x vK8s Workloads
+- editing existing Origin Pools
+
 
 Data Flow and Architecture
 --------------------------
-The logical application data flow now includes the "Inventory" service.
+The logical application data flow will change subtly from its earlier state.
+The SPA and API services will now target services presented to each respective site.
 
-|state3|
+|state2|
 
-The architecture continues to be spread across CEs and rely on the Volterra ADN. 
-This state includes the new internally available Inventory service.
+The architecture will now be spread across Customer Edge (CE) sites -- the on-premise and AWS sites. Each site will 
+host the SPA and API services while the on-premise site will solely host the database.
 
-|arch3|
+|arch2|
 
 .. toctree::
-    :maxdepth: 1
-    :caption: Contents:
- 
-    vk8s
-    internallb
+   :maxdepth: 1
+   :caption: Contents:
 
-.. |state3| image:: ../_static/LabAppFlow3.png
-.. |arch3| image:: ../_static/LabArch3.png
+   vsite   
+   containerRegistry
+   vk8s
+   updateHttpLb
+
+.. |state2| image:: ../_static/LabAppFlow2.png
+.. |arch2| image:: ../_static/LabArch2.png

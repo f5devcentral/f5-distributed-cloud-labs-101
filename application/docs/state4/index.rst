@@ -1,38 +1,36 @@
-Recommendations Service
-========================
-The DemoBrews executive team has determined the company can increase 
-revenue per transaction by adding a "recommendations" service to the app. 
-Being in a rush to launch the service, the dev team skipped the required regression 
-and load testing procedures for adding functionality to the API service.
-For speed, the service will need to be deployed to two geographically diverse Volterra Regional Edges (REs).
+Inventory Service
+=================
+DemoBrews would like to enable their customers to pick up orders in their brick and mortar stores. 
+In order to determine which products are available at which locations, the dev team has built an "inventory" service.
+Without approval, the dev team used the on-premise data center for testing the service. 
+The production Inventory service will need to run at each site and be accessed by the API service.  
 
 Section Goals
 -------------
-We will deploy the "recommendations" service to Seattle and New York based Regional Edges.
-We will then expose the service to the internet using an HTTP load balancer.
+We will connect the API service to the inventory service in each site, with a preference for the site 
+local inventory service.  
 
-In this section we will configure the following VoltConsole components:
-
-- Virtual Site as a deployment target for our vK8s workload
-- vk8s workload containing the "recommendations" service
-- HTTP load balancer
+In this state we will configure the following VoltConsole components:
+- HTTP Load Balancer
+- Origin Pool
 
 Data Flow and Architecture
 --------------------------
-The logical application data flow will now include the "Recommendations" service.
+The logical application data flow now includes the "Inventory" service.
 
-|state4|
+|state3|
 
-The architecture is now spread across Customer Edges (CEs) and multiple Volterra Regional Edges (REs).
+The architecture continues to be spread across CEs and rely on the Volterra ADN. 
+This state includes the new internally available Inventory service.
 
-|arch4|
+|arch3|
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+    :maxdepth: 1
+    :caption: Contents:
+ 
+    vk8s
+    internallb
 
-   createREsite
-
-
-.. |state4| image:: ../_static/LabAppFlow4.png
-.. |arch4| image:: ../_static/LabArch4.png
+.. |state3| image:: ../_static/LabAppFlow3.png
+.. |arch3| image:: ../_static/LabArch3.png
