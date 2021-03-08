@@ -50,19 +50,36 @@ Exercise 2: Create a Site Token
 
 #. Record the "UID" that is created.  You will later use this when you add a site.
 
-Exercise 3: Add a Site
-~~~~~~~~~~~~~~~~~~~~~~
+Exercise 3: Retrieve latitude/longitude
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. From your UDF Deployment find your "volterra" component and click on "Site UI".
+Volterra uses the latitude/longitude of a site to assist in finding the closest
+geographic Regional Edge locations.  The following is a meant to help you find
+a location that is close to the UDF deployment location that you selected.
+
+One method of finding a location is to search Google Maps, right click and 
+highlight the GPS coordinates.  This will copy the values into your clipboard.
+|geolocation|
+
+Pick a location that is geographically similar to where you selected your UDF
+deployment (i.e. for Virginia, USA search for Washington Monument, DC)
+
+You could also use a regional office (vs. your home address) as a location
+https://www.f5.com/company/contact/regional-offices
+
+Once you have a reasonable set of latitude/longitude you can proceed.
+
+Exercise 4a: Add a Site (via CLI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following will use the CLI to configure your site.  You can also
+use the UI to configure a site, but at the time that this was published
+there is a known issue with using the Site UI and CLI is the workaround.
+
+
+#. From your UDF Deployment find your "Client" component and click on "Web Shell".
 
     .. image:: ../_static/udf-site-ui.png
-
-  .. note:: 
-    
-    **If you are unable to access the "Site UI" (blank page).  Please use the following workaround.**
-
-    From your UDF Deployment find your "Client" component and click on "web shell" (you can also 
-    use ssh if you have set up an SSH key previously).
 
     From the web shell run the following two commands
 
@@ -86,6 +103,29 @@ Exercise 3: Add a Site
     
     #. Change the default password 
 
+        The result should look like the following.
+
+        .. code-block::
+            
+            ubuntu@ubuntu:~$ ssh admin@10.1.1.6
+
+            UNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED
+            All actions performed on this device are audited
+            admin@10.1.1.6's password: 
+
+            ...
+                                                                                                                                                            
+            WELCOME IN VOLTERRA NODE LOGIN SHELL
+            This allows to:
+            - configure Volterra Node registration information
+            - factory reset Volterra Node
+            - collect debug information for support
+            Use TAB to select various options.
+            You must change password during first login:
+            ? Please type your current password ***********
+            ? Please type your new password *****
+            ? Please retype your new password *****
+
 #. To configure the site from the command line, type "configure" and follow
     the prompts. Customize the example values below with your details.  
     After completion, skip to "Go back to VoltConsole to "Accept" the registration." below
@@ -94,7 +134,7 @@ Exercise 3: Add a Site
     CLI Variable        Value
     =================== =====
     token               56b6a47f-5ec8-47ea-baf4-xxxxxxx
-    site name           [u_name]-udf-site
+    site name           [u_name]-udf
     hostname            main-0
     latitude            [your latitude, example: 47.6]
     longitude           [your longitude, example: -122.3]
@@ -102,6 +142,55 @@ Exercise 3: Add a Site
     certified hardware  kvm-voltmesh
     primary outside NIC eth0
     =================== =====
+
+    The output should look similar to the following.
+
+    .. code-block::
+        
+        >>> configure
+        ? What is your token? 56b6a47f-5ec8-47ea-baf4-xxxxxxx
+        ? What is your site name? [optional] [unique name]-udf
+        ? What is your hostname? [optional] main-0
+        ? What is your latitude? [optional] 47.6
+        ? What is your longitude? [optional] -122.3
+        ? What is your default fleet name? [optional] 
+        ? Select certified hardware: kvm-voltmesh
+        ? Select primary outside NIC: eth0
+
+#. Type 'y' + 'enter' when prompted
+
+   .. code-block::
+    
+    certifiedHardware: kvm-voltmesh
+    clusterName: [unique name]-udf
+    hostname: main-0
+    latitude: 47.6
+    longitude: -122.3
+    primaryOutsideNic: eth0
+    token: 56b6a47f-5ec8-47ea-baf4-xxxxxxx
+    ? Confirm configuration? (y/N) 
+
+Exercise 4b: Configure Site using CLI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you used the CLI to configure your site you can skip to Exercise 4: Accept Registration.
+
+#. From your UDF Deployment find your "volterra" component and click on "Site UI".
+
+    .. image:: ../_static/udf-site-ui.png  
+
+#. Change Password
+
+    #. The local Volterra Node UI will prompt you to login:
+
+        =================== =====
+        Variable            Value
+        =================== =====
+        Username            admin
+        Password            Volterra123
+        =================== =====
+    
+    #. Change the default password 
 
 #. If you are using the GUI, click on "Configure Now".
 
@@ -122,6 +211,11 @@ Exercise 3: Add a Site
 
 #. Click on "Save Configuration". 
 
+
+
+Exercise 5: Accept Registration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #. Go back to VoltConsole to "Accept" the registration.
 
 #. Go to "System->Site Management->Registrations".
@@ -133,17 +227,6 @@ Exercise 3: Add a Site
     .. image:: ../_static/registrations-accept.png
 
 #. Click on "Accept" to use the default values (we will modify these in a later lab).
-
-  .. warning:: 
-        
-        Latitude / Longitude are required values.  Make sure they are not set to 0
-
-        One method of finding a location is to search Google Maps, right click and 
-        highlight the GPS coordinates.  This will copy the values into your clipboard.
-        |geolocation|
-
-        Pick a location that is geographically similar to where you selected your UDF
-        deployment (i.e. for Virginia, USA search for Washington Monument, DC)
 
 This will start the process of loading the Volterra software that is 
 necessary to connect the site to a Volterra Regional Edge site.
