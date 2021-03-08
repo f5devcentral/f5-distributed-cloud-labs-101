@@ -2,10 +2,9 @@ AWS Site
 ========
 
 Previously for the "on-premise" site you needed to manually provision and configure 
-a node for use with VoltConsole.  Deploying a site in AWS, Azure, and Google Cloud Platform
-uses a process that automates the steps of deploying the site.  This enables VoltConsole
-to perform the deployment on behalf of the end-user (you can also use Terraform to deploy a 
-site, but that will be covered in a separate lab).
+a node for use with VoltConsole.  As you discovered in the "Pre-Work" section, deploying 
+a site in AWS, Azure, and Google Cloud Platform can be done in an automated fashion in VoltConsole
+(you can also use Terraform to deploy a site, but that will be covered in a separate lab).
 
 
 Exercise 1: Verify your AWS Site

@@ -3,6 +3,22 @@ Virtual Kubernetes
 
 In this section we will create a Virtual K8s configuration in VoltConsole.
 
+Terminology
+~~~~~~~~~~~~~
+
+Virtual Kubernetes (vK8s)
+    Volterra supports a Kubernetes compatible API for centralized orchestration of applications across a grouping of sites (Customer Sites or Volterra Regional Edge).
+    While not all K8s APIs are supported, the API is compatible with common tasks for deployments.
+    This distributed control plane within the Volterra global infrastructure can manage scheduling and scaling of applications across multiple (tens to hundreds of thousands of) sites, 
+    where each site in itself is also a Volterra managed physical K8s cluster.
+
+vK8s Workload
+    A vK8s Workload can be used to deploy application components in Virtual Kubernetes.
+    A Workload encapsulates all the operational characteristics of Kubernetes workload, storage, and network objects 
+    (deployments, statefulsets, jobs, persistent volume claims, configmaps, secrets, and services) configuration, 
+    as well as configuration related to where the workload is deployed and how it is advertised using L7 or L4 load balancers. 
+
+
 Exercise 1: Create Virtual K8s 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. In VoltConsole ensure you are in the *Application* context and have selected your namespace

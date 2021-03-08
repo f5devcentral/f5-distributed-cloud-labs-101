@@ -48,6 +48,9 @@ The API service queries the on-premise database.
 The hosting assets are confined to the customer's on-premise data center. The app will be exposed to
 the internet through the Volterra Global Network.
 
+.. note:: The AWS site you previously created is not yet used.
+
+
 |arch1|
 
 .. toctree::

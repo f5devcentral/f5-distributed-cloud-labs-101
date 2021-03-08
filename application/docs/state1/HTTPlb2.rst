@@ -9,7 +9,7 @@ Terminology
 HTTP Load Balancer
     Volterra's reverse proxy and HTTP load balancer concepts allow for flow control of
     application and API traffic between services, to the internet, and from clients on the internet.
-    HTTP load balancers allow for steering decisions based on URI or other HTTP based criteria.
+    HTTP Load Balancers allow for steering decisions based on URI or other HTTP based criteria.
 
 Exercise 1: HTTP Load Balancer Basic Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,9 +36,9 @@ Exercise 1: HTTP Load Balancer Basic Configuration
     |lb-basic|
 
     .. note::
-      If you are not set up with a delegated domain you can disable the option to automatically manage DNS records.
+      If your tenant does not use a delegated domain you can disable the option to automatically manage DNS records.
       You can supply an arbitrary domain (example.com) and later you can use the following
-      command to verify
+      command to verify.
 
       .. code-block::
         
@@ -104,8 +104,9 @@ We will need 2 separate routes to send traffic to the API service -- "/api/" and
 
 #. Notice that in the "VIP Creation" section *Advertise On Internet* has been selected by default.
 
-#. Click "*Save and Exit* to create the HTTP Load Balancer.
+    |lb-vip|
 
+#. Click "*Save and Exit* to create the HTTP Load Balancer.
 
 Once the HTTP Load Balancer has been deployed, you should now be able to go to the DNS name that you entered 
 previously in a web browser.
@@ -130,4 +131,5 @@ previously in a web browser.
 .. |lb-op-api| image:: ../_static/lb-op-api.png
 .. |lb-route2| image:: ../_static/lb-route2.png
 .. |lb-route-advanced| image:: ../_static/lb-route-advanced.png
+.. |lb-vip| image:: ../_static/lb-vip.png
 

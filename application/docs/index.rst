@@ -4,7 +4,7 @@ Multi-cloud Application Services
 Background
 ~~~~~~~~~~
 
-DemoBrews is a company that specializing specialty craft beers. 
+DemoBrews is a company that specializing in selling craft beers. 
 The company has a fledgling e-commerce business to go along with their existing stores.  
 The customer's dev team has built and maintains a web application.
 The app is deployed in an expensive on-premise data center (ie. the UDF deployment).
