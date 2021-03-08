@@ -54,7 +54,7 @@ Exercise 3: Retrieve latitude/longitude
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Volterra uses the latitude/longitude of a site to assist in finding the closest
-geographic Regional Edge locations.  The following is a meant to help you find
+geographic Regional Edge locations.  The following is meant to help you find
 a location that is close to the UDF deployment location that you selected.
 
 One method of finding a location is to search Google Maps, right click and 
