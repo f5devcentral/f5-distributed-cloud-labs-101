@@ -39,7 +39,7 @@ host the SPA and API services while the on-premise site will solely host the dat
    vsite   
    containerRegistry
    vk8s
-   updateHttpLb
+   updateOrigPool
 
 .. |state2| image:: ../_static/LabAppFlow2.png
 .. |arch2| image:: ../_static/LabArch2.png
