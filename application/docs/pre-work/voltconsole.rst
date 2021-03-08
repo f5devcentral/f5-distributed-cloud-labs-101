@@ -54,7 +54,7 @@ Exercise 3: Retrieve latitude/longitude
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Volterra uses the latitude/longitude of a site to assist in finding the closest
-geographic Regional Edge locations.  The following is a meant to help you find
+geographic Regional Edge locations.  The following is meant to help you find
 a location that is close to the UDF deployment location that you selected.
 
 One method of finding a location is to search Google Maps, right click and 
@@ -124,9 +124,9 @@ there is a known issue with using the Site UI and CLI is the workaround.
             ? Please type your new password *****
             ? Please retype your new password *****
 
-#. To configure the site from the command line, type "configure" and follow
-    the prompts. Customize the example values below with your details.  
-    After completion, skip to "Go back to VoltConsole to "Accept" the registration." below
+#. Configure the site from the command line: 
+    Type "configure" and follow the prompts. Customize the example values below with your details.  
+    After completion, skip to the "Accept Registration" exercise below.
 
     =================== =====
     CLI Variable        Value
