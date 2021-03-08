@@ -27,7 +27,7 @@ a "virtual site" that contains the REs we want to target.
 
     |vs-selector-expression| |add-vs-diag| |add-vs-button|
 
-#. Verify your *recs-re* virtual site was created.
+#. Verify your "recs-re" virtual site was created.
 
     |vs-check| |verify-vs|
 
@@ -79,7 +79,7 @@ the k8s service to the internet.
 
 #. Under *Customer Virtual Sites*, click the *Configure* link.
 
-#. Select the Virtual Site you created in the previous section.
+#. Select the Virtual Site of REs you created in the previous section.
 
     |recs-vs|
 
