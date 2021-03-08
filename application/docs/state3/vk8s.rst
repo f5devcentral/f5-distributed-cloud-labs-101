@@ -94,11 +94,15 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
 
 #. Enter the following variables:
 
-    ==========  =====
-    Variable    Value
-    ==========  =====
-    Port        8081
-    ==========  =====
+    ======================  =====
+    Variable                Value
+    ======================  =====
+    Port                    8081
+    Show Advance Fields     Toggle On
+    Different than Port     80
+    ======================  =====
+
+    |vk8s_advertise_port|
 
 #. Click the *Apply* button
 
@@ -204,4 +208,5 @@ You should now see your two workloads with 1 Running/Completed Pods per workload
 .. |vk8s_workloads_advertise| image:: ../_static/vk8s_workloads_advertise.png
 .. |vk8s_workloads_list| image:: ../_static/vk8s_workloads_list.png
 .. |vk8s_workloads_env| image:: ../_static/vk8s_workloads_env.png
+.. |vk8s_advertise_port| image:: ../_static/vk8s_advertise_port.png
 .. |lu-ns| image:: ../_static/lu-ns.png
