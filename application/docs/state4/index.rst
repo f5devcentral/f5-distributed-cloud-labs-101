@@ -13,9 +13,9 @@ We will then expose the service to the internet using an HTTP load balancer.
 
 In this section we will configure the following VoltConsole components:
 
-- A virtual site as a deployment target for our vK8s workload
+- Virtual Site as a deployment target for our vK8s workload
 - vk8s workload containing the "recommendations" service
-- reconfigured the SPA HTTP load balancer.
+- HTTP load balancer
 
 Data Flow and Architecture
 --------------------------
@@ -23,7 +23,7 @@ The logical application data flow will now include the "Recommendations" service
 
 |state4|
 
-The architecture is now spread across Customer Edges (CEs), as well as Volterra multiple Volterra Regional Edges.
+The architecture is now spread across Customer Edges (CEs) and multiple Volterra Regional Edges (REs).
 
 |arch4|
 
