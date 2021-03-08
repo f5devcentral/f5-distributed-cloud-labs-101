@@ -83,6 +83,7 @@ there is a known issue with using the Site UI and CLI is the workaround.
 
     .. code-block:: shell
       
+      $ tmux
       $ ssh admin@10.1.1.6
 
     When prompted, use the following values from "Change Password".  
