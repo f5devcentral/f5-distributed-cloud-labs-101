@@ -34,8 +34,8 @@ through the Volterra global network. This will help us prepare for future states
 
 In this state we will configure the following VoltConsole components:
 
-- HTTP Load Balancer
 - 2 x Origin Pools
+- HTTP Load Balancer
 
 App Data Flow and Architecture
 ------------------------------
