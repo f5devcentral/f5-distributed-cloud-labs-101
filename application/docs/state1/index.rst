@@ -54,7 +54,8 @@ the internet through the Volterra Global Network.
    :maxdepth: 1
    :caption: Contents:
 
-   httplb
+   originPools
+   HTTPlb2
 
 .. |state0| image:: ../_static/LabAppFlow0.png
 .. |state1| image:: ../_static/LabAppFlow1.png
