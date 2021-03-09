@@ -1,10 +1,12 @@
-Create a TCP Load Balancer
+Create TCP Load Balancer
 ==========================
 
 In this section we will create a TCP load balancer so we can present the MongoDB in both the UDF and AWS sites.
 This will be needed so that the API service running in the AWS site can access the on-premise database.
 
-Exercise 1: Create DynamoDB Origin Pool
+
+
+Exercise 1: Create MongoDB Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. In VoltConsole ensure you are in the *Application* context

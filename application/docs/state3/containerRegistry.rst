@@ -1,9 +1,16 @@
-Private Container Registry
-===========================
+Create Private Container Registry
+=================================
 
 The DemoBrews dev team builds their container based services in a private container registry.
 In order for vK8s to pull images from this registry we need to specify its location
 and authentication information in VoltConsole.
+
+Terminology
+~~~~~~~~~~~~~
+
+Container Registry
+    A Container Registry object is used to configure a private docker/container image registry from which the application container images are fetched.
+    By defining a Container Registry object, you can use private container images in vK8s and Workload deployments.
 
 Exercise 1: Create the Container Registry
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

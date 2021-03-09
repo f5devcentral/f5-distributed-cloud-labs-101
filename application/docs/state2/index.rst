@@ -1,24 +1,21 @@
-Site Spanning
-==============
+Service Stitching 
+==================
 We just learned the DemoBrews marketing division launched an effective viral marketing campaign which included several references 
-to the client application and website. The on-premise infrastructure is already running at capacity so we need to help 
-the dev team move the application to the AWS site as soon as possible.
+to the website. The on-premise infrastructure is already running at capacity so we need to help 
+the dev team move application components to the AWS site as soon as possible. Ultimately, DemoBrews needs SPA and API traffic 
+to ingress to either site. The MongoDB must remain solely at the on-prem location. The first step in building the needed architecture
+is making the MongoDB service securely available to either Customer Edge site.
 
 Section Goals
 -------------
-In this section we'll take the first steps to spanning the customer's application between sites.
-Initially, we will deploy the SPA and API services to the AWS site. 
-Next, we will expose the front-end (SPA) service and API services to the internet using both on-premise 
-and AWS origin servers. Since the database must stay on-premise we will also need to ensure the API server 
-in AWS can securely communicate with the database.
+In this section we'll take the first steps to spanning the customer's application between sites. After verifying
+the AWS Customer Edge is ready for configuration, we'll build a TCP Load Balancer to publish the MongoDB service
+in each site. In order to accomplish this securely without 1-arm VoltStack implementation, we'll add a Network Policy.
 
 In this section we will configure the following VoltConsole components:
 
-- Virtual Site
-- Virtual k8s (vK8s)
-- 2 x vK8s Workloads
-- editing existing Origin Pools
-
+- Network Policy
+- TCP Load Balancer
 
 Data Flow and Architecture
 --------------------------

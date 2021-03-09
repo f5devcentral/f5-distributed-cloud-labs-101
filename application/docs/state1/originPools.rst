@@ -2,19 +2,20 @@ Create Origin Pools
 ====================
 
 Before we create an HTTP load balancer to expose our services on the internet, 
-we'll define Origin Pools for our application's services.
+we'll define "Origin Pools" for our application's services.
 
 Terminology
 ~~~~~~~~~~~~~
 
 Origin Pool
   An origin pool is a mechanism to configure a set of application endpoints grouped together into a resource pool.
-  These endpoints could be IP:port tuples within a give site or a service as discovered by one of Volterra's many supported service discovery methods.
-  This object is used in a load balancer configuration.
+  These endpoints could be IP:port tuples within a give site or a service discovered by one of Volterra's many service discovery methods.
+  These objects will be used the next step.
   
 
 Exercise 1: Create SPA Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We will first create an Origin Pool that refers to the single-page application service running in our UDF site.
 
 #. Start in VoltConsole and switch to the Application context. 
 
@@ -69,8 +70,7 @@ Exercise 1: Create SPA Origin Pool
 
 Exercise 2: Create API Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In this exercise, you will repeat the steps from exercise one but for the API service.
+In this exercise, you will repeat the steps from the previous exercise for the API service.
 
 Use the following variables:
 
@@ -92,7 +92,7 @@ In the *List of Health Check(s)* section, create a new "HTTP healthcheck" name "
 Exercise 3: Troubleshoot Origin Pools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click on the *...* link for the pool you would like to troubleshoot
+#. Click on the 3 dots (*...*) link for the pool you would like to troubleshoot.
 
 #. Click the *Show Child Objects* button
 

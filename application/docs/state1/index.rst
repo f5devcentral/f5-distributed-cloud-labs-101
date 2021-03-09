@@ -1,6 +1,6 @@
-Preparation
-===========
-The DemoBrews app is currently running in an on-premise data center (the lab's UDF deployment).
+Expose the Application
+=======================
+The DemoBrews app is currently running in an on-premise data center (the lab's UDF deployment). 
 
 About the App
 -------------
@@ -30,7 +30,7 @@ Section Goals
 -------------
 The customer's application is only available through their on-premise data center.
 In this step, we will publish the application through VoltConsole so all web traffic comes 
-through the Volterra global network. This will help us prepare for future states of the project.  
+through the Volterra Global Network. This will help us prepare for future states of the project.  
 
 In this state we will configure the following VoltConsole components:
 
@@ -47,6 +47,9 @@ The API service queries the on-premise database.
 
 The hosting assets are confined to the customer's on-premise data center. The app will be exposed to
 the internet through the Volterra Global Network.
+
+.. note:: The AWS site you previously created is not yet used.
+
 
 |arch1|
 
