@@ -29,7 +29,7 @@ Exercise 1: Create an HTTP Load Balancer
     Variable                          Value
     ================================= =====
     Name                              inventory
-    Domains                           your_namespace-inventory.brews.internal
+    Domains                           your_namespace-inventory.brews.local
     Select type of Load Balancer      HTTP
     Automatically Manage DNS Records  No/Un Checked 
     ================================= =====
@@ -150,7 +150,7 @@ You will need to now reconfigure the "brews" app to use the inventory applicatio
 
 |brews-app-inventory-settings|
 
-#. Enter the value for the internal URL "http://your_namespace-inventory.brews.internal". Click on the checkmark icon.
+#. Enter the value for the internal URL "http://your_namespace-inventory.brews.local". Click on the checkmark icon.
 
 |brews-app-inventory-config|
 
