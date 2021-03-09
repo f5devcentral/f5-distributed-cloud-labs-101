@@ -171,10 +171,10 @@ there is a known issue with using the Site UI and CLI is the workaround.
     token: 56b6a47f-5ec8-47ea-baf4-xxxxxxx
     ? Confirm configuration? (y/N) 
 
-Exercise 4b: Configure Site using CLI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise 4b: Configure Site using Site UI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you used the CLI to configure your site you can skip to Exercise "Accept Registration".
+If you used the CLI to configure your site you can skip to Exercise 5 "Accept Registration".
 
 #. From your UDF Deployment find your "volterra" component and click on "Site UI".
 
