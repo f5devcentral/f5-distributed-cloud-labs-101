@@ -109,7 +109,7 @@ We will need 2 separate routes to send traffic to the API service -- "/api/" and
 #. Click "*Save and Exit* to create the HTTP Load Balancer.
 
 Once the HTTP Load Balancer has been deployed, you should now be able to go to the DNS name that you entered 
-previously in a web browser.
+previously in a web browser.  The FQDN we used in our example is http://labuser-brews.gsa.f5demos.com.  Your FQDN should follow the format of [unique name]-brews.[supplied domain name for your tenant].
 
 
 .. |app-context| image:: ../_static/app-context.png
