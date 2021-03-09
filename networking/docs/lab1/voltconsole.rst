@@ -13,14 +13,14 @@ Exercise 1: Find your Namespace
 You should have already been granted access to a Volterra tenant.
 
 After you login you will need to identify the namespace that has been 
-allocated to you.  It will usually comprise as part of your name.  For example
-if you have the last name of "chen" you can find that there is a namespace of
-"eric-chen".  Take note of this name and use it in later steps to make it 
+allocated to you.  It will be the user part of your F5 email address with "." replaced by "-".  
+For example if your email address is a.hooley@f5.com, there is a namespace of
+"a-hooley".  Take note of this name and use it in later steps to make it 
 easier for others to distinguish between resources in shared namespaces.
 
 .. image:: find-namespace.png
 
-.. note:: Namespace is a term that is commonly used in Kubernetes.  It can be thought of as a grouping of resources.
+.. note:: Namespace is a term commonly used in Kubernetes.  It can be thought of as a grouping of resources.
 
 Exercise 2: Create a Site Token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
