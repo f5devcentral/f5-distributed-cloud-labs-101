@@ -5,7 +5,6 @@ In this section we will create a TCP load balancer so we can present the MongoDB
 This will be needed so that the API service running in the AWS site can access the on-premise database.
 
 
-
 Exercise 1: Create MongoDB Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -4,15 +4,6 @@ Create Origin Pools
 Before we create an HTTP load balancer to expose our services on the internet, 
 we'll define "Origin Pools" for our application's services.
 
-Terminology
-~~~~~~~~~~~~~
-
-Origin Pool
-  An origin pool is a mechanism to configure a set of application endpoints grouped together into a resource pool.
-  These endpoints could be IP:port tuples within a give site or a service discovered by one of Volterra's many service discovery methods.
-  These objects will be used the next step.
-  
-
 Exercise 1: Create SPA Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We will first create an Origin Pool that refers to the single-page application service running in our UDF site.

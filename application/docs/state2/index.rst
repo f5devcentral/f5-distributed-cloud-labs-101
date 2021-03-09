@@ -14,8 +14,20 @@ in each site. In order to accomplish this securely without 1-arm VoltStack imple
 
 In this section we will configure the following VoltConsole components:
 
-- Network Policy
 - TCP Load Balancer
+
+Terminology
+------------
+
+Virtual Host
+   In Volterra terminology, a Virtual Host is the collection of configuration objects that make up a reverse proxy.
+   This includes a domain, one of several different types of proxies (TCP, UDP, HTTP, various SNI/mTLS variants), Routing rules, 
+   an Advertisement policy, and WAF.
+
+TCP Load Balancer
+   A TCP Load Balancer encompasses rules and policies for a given Virtual Host or network routing rules.
+   A TCP Load Balancer is used to connect across isolated networks and in load balancing. 
+
 
 Data Flow and Architecture
 --------------------------

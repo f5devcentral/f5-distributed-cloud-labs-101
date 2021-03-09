@@ -17,6 +17,15 @@ In this section we will configure the following VoltConsole components:
 - vk8s workload containing the "recommendations" service
 - HTTP load balancer
 
+Terminology
+-----------
+
+Region Edge
+   Regional Edge sites provide Volterra functionality for customer sites and applications from several POPs distributed throughout the world.
+   These services include global load balancing, application security, volumetric DDoS, and points of ingress into the Volterra Global Network.
+   Additionally, limited compute resources are available to customers to run their own edge services. 
+ 
+
 Data Flow and Architecture
 --------------------------
 The logical application data flow will now include the "Recommendations" service.
