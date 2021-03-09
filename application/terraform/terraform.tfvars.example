@@ -1,0 +1,6 @@
+aws_region = "us-west-2"
+az1 = "a"
+az2 = "b"
+prefix     = "udf"
+ssh_key    = "udf-key"
+trusted_ip = "192.0.2.10/32"
