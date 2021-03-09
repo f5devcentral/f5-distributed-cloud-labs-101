@@ -10,9 +10,9 @@ data center (your UDF deployment) and an AWS site hosted in the UDF cloud creden
 
 Section Goals
 -------------
-The customer's application is only available through their on-premise data center.
+The customer's application is only available through their on-prem data center.
 We need to create a Volterra site in the on-prem data center in order to expose the application
-to the Volterra Global Network. In addition, we will create a VoltStack site in AWS for future application growth. 
+to the Volterra Global Network. In addition, we will create a VoltStack site in AWS for future application growth.
 
 In this section we will configure the following VoltConsole components:
 
