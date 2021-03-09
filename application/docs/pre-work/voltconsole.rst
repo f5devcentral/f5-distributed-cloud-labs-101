@@ -3,7 +3,7 @@ VoltConsole
 
 VoltConsole is a SaaS control-plane for Volterra services that provides a UI and API for managing network, security, and compute services.
 
-VoltConsole can manage "sites" in existing on-premises data centers and sites in AWS, Azure, and GCP cloud environments.
+VoltConsole can manage "sites" in existing on-prem data centers and sites in AWS, Azure, and GCP cloud environments.
 
 Using VoltConsole, an end-user can centrally manage a distributed application environment.
 
@@ -21,11 +21,14 @@ Exercise 1: Find your Namespace
     .. note:: Each Volterra tenant has a unique login URL.  
         If you are unsure which tenant you belong to, please post a question in the lab chat. 
 
+
+    .. note:: The VoltConsole GUI has a relatively short timeout. This is not configurable. We have an enhancement request to allow this to be configured.
+
 #. Once you log in, you will need to identify your namespace.  
 
     .. note:: It will usually be the user-part of your F5 email address with the period replaced with a hyphen.  For example,
-        if your F5 email address is eric.chen @ f5.com  you can find a namespace of
-        "eric-chen."  Please note this name and use it in later steps to make it easier for others to distinguish between resources in shared namespaces.
+        if your F5 email address is a.hooley @ f5.com  you can find a namespace of
+        "a-hooley."  Please note this name and use it in later steps to make it easier for others to distinguish between resources in shared namespaces.
 
     .. image:: ../_static/find-namespace.png
 
@@ -171,7 +174,7 @@ there is a known issue with using the Site UI and CLI is the workaround.
 Exercise 4b: Configure Site using CLI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you used the CLI to configure your site you can skip to Exercise 4: Accept Registration.
+If you used the CLI to configure your site you can skip to Exercise "Accept Registration".
 
 #. From your UDF Deployment find your "volterra" component and click on "Site UI".
 
