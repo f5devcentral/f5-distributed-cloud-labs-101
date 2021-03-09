@@ -22,7 +22,7 @@ Exercise 1: Tag AWS Site
 #. Under *Labels*, click the *More* link. 
 #. Click in the Labels box:
     #. For the *key*, choose *ves.io/siteName*.
-    #. For the Value, type your_namespace-aws.
+    #. For the Value, type your_namespace-aws. (you will see a select option, but you can type also)
 
         |aws_vpc_site_label|
 
@@ -51,7 +51,7 @@ Exercise 2: Create Virtual Site
     Name                            your_namespace-vsite
     Site Type                       CE
     Site Selector Expression Key    ves.io/siteName
-    Site Selector Expression Value  your AWS VPC Site name
+    Site Selector Expression Value  your AWS VPC Site name (you will see a select option, but you can type also)
     ============================== =====
 
     |virtual_sites_add_form|
