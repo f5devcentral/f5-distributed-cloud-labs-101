@@ -121,7 +121,7 @@ Using the "Web Shell" or "ssh" from the Client UDF component run the following c
 
 .. code-block::
   
-  $ cd ~/f5-volterra-labs-101/application/Terraform
+  $ cd ~/f5-volterra-labs-101/application/terraform/
   $ terraform apply -auto-approve
 
 After a few minutes you should get output similar to the following.
