@@ -1,7 +1,7 @@
 AWS Site Verification
 ======================
 
-Previously for the "on-premise" (UDF) site you needed to manually provision and configure 
+Previously for the "on-prem" (UDF) site you needed to manually provision and configure 
 a node for use with VoltConsole.  As you discovered in the "Pre-Work" section, deploying 
 a site in AWS, Azure, and Google Cloud Platform can be done in an automated fashion in VoltConsole
 (you can also use Terraform to deploy a site, but that will be covered in a separate lab).
