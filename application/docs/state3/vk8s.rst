@@ -100,6 +100,7 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
     ======================  =====
     Port                    8081
     Show Advance Fields     Toggle On
+    Target Port             Different than Port
     Different than Port     80
     ======================  =====
 
@@ -173,9 +174,11 @@ Exercise 3: Create Virtual K8s Workload for the API
 
 #. Click the *Apply* button to close the "Deploy Options" dialogue.
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*.
+#. Under *Advertise Option*, choose *Advertise In Cluster*. (default is *Advertise in Cluster*)
 
     |vk8s_workloads_advertise|
+
+#. Click on *Configure*
 
 #. Enter the following variables:
 
