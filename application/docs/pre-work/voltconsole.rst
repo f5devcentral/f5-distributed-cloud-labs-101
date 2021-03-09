@@ -20,6 +20,15 @@ Exercise 1: Find your Namespace
 
     .. note:: Each Volterra tenant has a unique login URL.  
         If you are unsure which tenant you belong to, please post a question in the lab chat. 
+    
+
+   Use volterra.io select login:
+
+    .. image:: ../_static/volterralogin.png
+
+   F5 teams, wil need to select Teams or Organization Plans, if you are a customer select Free or Individual Plans
+
+    .. image:: ../_static/volterralogin_team.png
 
 #. Once you log in, you will need to identify your namespace.  
 
