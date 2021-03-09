@@ -114,8 +114,33 @@ Exercise 2: Create Network Policy
 
     |ingress_rules|
 
+Exercise 3: Create AWS VPC via Terraform
+-----------------------------------------
 
-Exercise 3: Create AWS VPC Site
+Using the "Web Shell" or "ssh" from the Client UDF component run the following commands.
+
+.. code-block::
+  
+  $ cd ~/f5-volterra-labs-101/application/Terraform
+  $ terraform apply -auto-approve
+
+After a few minutes you should get output similar to the following.
+
+.. code-block::
+      
+    Apply complete! Resources: 18 added, 0 changed, 0 destroyed.
+
+    Outputs:
+
+    AWS_CONSOLE = "https://123456789.signin.aws.amazon.com/console?region=us-east-1"
+    AWS_INSTANCE = "192.0.2.10"
+    EXTERNAL_SUBNET_ID = "subnet-abcd"
+    _VPC_ID = "vpc-1234"
+
+Take note of the VPC_ID and EXTERNAL_SUBNET_ID values.  You will use those next to create an 
+AWS Site in the Volterra Console.
+
+Exercise 4: Create AWS VPC Site
 -------------------------------
 
 #. Navigate the menu to *Manage* -> *Site Management* -> *Cloud Credentials*.
@@ -132,13 +157,12 @@ Exercise 3: Create AWS VPC Site
       Variable                          Value
       ================================= =====
       Name                              your_namespace-aws
-      AWS Regional                      One of the AWS regions listed in the UDF Cloud Accounts tab
-      Primary IPv4 CIDR block           10.0.0.0/16
+      AWS Region                        |aws_region|
+      Select Existing or create new VPC Select Existing VPC
+      Existing VPC ID                   [output from terraform]
       Select Ingress Gateway            Voltstack Cluster
       Automatic deployment              The Cloud Credentials created in Exercise 1
       ================================= =====
-
-      |aws_vpc_site|
 
       .. note:: 
   
@@ -151,13 +175,12 @@ Exercise 3: Create AWS VPC Site
     ======================= =====
     Variable                Value
     ======================= =====
-    AWS AZ Name             Availability zone in the same AWS region selected in the previous step
-    IPv4 Subnet             10.0.0.0/24
+    AWS AZ Name             |aws_zone|
+    Select Existing or ..   Select Existing Subnet
+    Existing Subnet ID      [output from terraform]
     Manage Network Policy   Active Network Policies
     Network Policy          your_namespace-aws
     ======================= =====
-
-    |aws_vpc_site_interface|
 
 #. Click *Apply*.
 

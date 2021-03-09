@@ -56,7 +56,7 @@ html_static_path = ['_static']
 
 import f5_sphinx_theme
 html_theme = 'f5_sphinx_theme'
-html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
+html_sidebars = {'**': [ 'localtoc.html', 'globaltoc.html']}
 import json
 
 aws_region = "us-west-2"
