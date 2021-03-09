@@ -55,7 +55,7 @@ Exercise 2: Configure Origin Server (for UDF)
       Name                              inventory-pool
       Select Type of Origin Server      IP address of Origin Server on given Sites
       IP                                10.1.1.4
-      Site                              the site name configured in the previous lab
+      Site                              your_namespace-udf
       Select Network on the site        Outside Network
       Port                              8082
       ================================= =====
