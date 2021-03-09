@@ -85,7 +85,6 @@ Exercise 2: Configure Origin Server (for UDF)
     #. Click the *Apply* button.
     #. Click the *Continue* button.
     #. Click the *Continue* button.
-    #. Click the *Apply* button.
 
 
 Exercise 3: Configure Second Origin Pool (for AWS)
