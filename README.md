@@ -9,7 +9,7 @@ The main UDF blueprint is:
 Volterra Lab 101
 https://udf.f5.com/b/0eb04e3f-13db-445c-846e-513afa954333 (Limited to F5 employees at this time)
 
-This can also be adapted to run outside of UDF (requires VoltMesh node and [Single Page Application Demo](https://github.com/f5devcentral/spa-demo-app) and a VoltStack node in another site)
+This can also be adapted to run outside of UDF (requires VoltMesh node and [Single-Page Application Demo](https://github.com/f5devcentral/spa-demo-app) and a VoltStack node in another site)
 
 ## Lab Guide
 
