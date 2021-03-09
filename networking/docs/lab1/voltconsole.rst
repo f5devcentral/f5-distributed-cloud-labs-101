@@ -3,7 +3,7 @@ VoltConsole
 
 VoltConsole is a SaaS control-plane for Volterra services that provides a UI and API for managing network, security, and compute services.
 
-It can be used to manage "sites" in existing on-premises data centers as well as manage sites in AWS, Azure, and GCP cloud environments.
+It can be used to manage "sites" in existing on-prem data centers as well as manage sites in AWS, Azure, and GCP cloud environments.
 
 Using VoltConsole an end-user can centrally manage a distributed application environment.
 
@@ -14,7 +14,7 @@ You should have already been granted access to a Volterra tenant.
 
 After you login you will need to identify the namespace that has been 
 allocated to you.  It will be the user part of your F5 email address with "." replaced by "-".  
-For example if your email address is a.hooley@f5.com, there is a namespace of
+For example if your email address is a.hooley @ f5.com, there is a namespace of
 "a-hooley".  Take note of this name and use it in later steps to make it 
 easier for others to distinguish between resources in shared namespaces.
 
