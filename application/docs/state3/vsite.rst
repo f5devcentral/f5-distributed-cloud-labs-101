@@ -35,7 +35,7 @@ Exercise 2: Create Virtual Site
 
     |app-context|
 
-#. Navigate the menu to go to *Manage*->*Virtual Sites*.
+#. Navigate the menu to go to "Manage"->"Virtual Sites".
 
     |virtual_sites_menu|
 
@@ -61,7 +61,7 @@ Exercise 2: Create Virtual Site
 Exercise 3: Check your Virtual Site Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Navigate the menu to go to *Applications*->*Virtual Sites*.
+#. Navigate the menu to go to "Applications"->"Virtual Sites".
 
     |app_virtual_sites_menu|
 
