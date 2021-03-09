@@ -104,6 +104,8 @@ Exercise 3: Troubleshoot Origin Pools
 
 #. Validate that the JSON payload shows that *Validation* is *Successful* and *Operational* is *Installed*
 
+If Validation isn't Successful and Operational isn't Installed, you can verify the IP addresses, ports and healthcheck on the Origin Pool configuration.
+
     |origin_pools_show_child_objects_status|
 
 .. |app-context| image:: ../_static/app-context.png
