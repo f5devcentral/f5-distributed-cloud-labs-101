@@ -52,7 +52,7 @@ Exercise 2: Configure Origin Server (for UDF)
       ================================= =====
       Variable                          Value
       ================================= =====
-      Name                              inventory-pool
+      Name                              brews-inventory
       Select Type of Origin Server      IP address of Origin Server on given Sites
       IP                                10.1.1.4
       Site                              your_namespace-udf
