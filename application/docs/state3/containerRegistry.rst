@@ -28,7 +28,13 @@ Exercise 1: Create the Container Registry
     Password                          f5demosPass! 
     ================================= =====
 
-    |diag| |blind| |apply| |save|
+
+
+    |diag| |blind| 
+    
+    .. warning:: Click on the "Blindfold" button, do not click on the radio button!
+    
+    |apply| |save|
 
 #. Verify the Container Registry was created.
 
