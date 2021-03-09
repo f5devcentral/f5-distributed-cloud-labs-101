@@ -59,7 +59,7 @@ If you're site deployment was not successful there are a few steps we can take t
 
 #. Close the *AWS VPC Site Terraform Parameters* pop-out by click the *X* in the top right corner.
 
-#. Destroy and Apply Terraform. 
+#. Destroy and Apply Terraform
 
     If your site did not deploy correctly you may need to destroy the site and create it again.
 

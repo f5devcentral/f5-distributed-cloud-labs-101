@@ -48,9 +48,9 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
 
 #. Select the Virtual Site you created in the previous section.
 
-#. Click the *Apply* button.
+#. Click the *Apply* button to close the "Customer Virtual Sites" dialogue.
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*.
+#. Under *Advertise Option*, choose *Advertise In Cluster*. Click the "*Edit* button.
 
     |vk8s_workloads_advertise|
 
@@ -62,11 +62,11 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
     Port        8002
     ==========  =====
 
-#. Click the *Apply* button.
+#. Click the *Apply* button to close the "Advertise In Cluster" dialogue.
 
-#. Click the *Apply* button.
+#. Click the *Apply* button to close the "Service" dialogue.
 
-#. Click the *Save and Exit* button.
+#. Click the *Save and Exit* button to create the Workload.
 
 .. |k8s_workloads_menu| image:: ../_static/k8s_workloads_menu.png
 .. |vk8s_workloads_advertise| image:: ../_static/vk8s_workloads_advertise.png

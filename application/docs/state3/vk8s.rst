@@ -186,7 +186,7 @@ Exercise 3: Create Virtual K8s Workload for the API
 
 #. Select the Virtual Site you created in the previous section.
 
-#. Click the *Apply* button.
+#. Click the *Apply* button to close the "Deploy Options" dialogue.
 
 #. Under *Advertise Option*, choose *Advertise In Cluster*.
 
@@ -200,11 +200,11 @@ Exercise 3: Create Virtual K8s Workload for the API
     Port        8000
     ==========  =====
 
-#. Click the *Apply* button.
+#. Click the *Apply* button to close the "Advertise Options" dialogue.
 
-#. Click the *Apply* button.
+#. Click the *Apply* button to close the "Service" dialogue.
 
-#. Click the *Save and Exit* button.
+#. Click the *Save and Exit* button to create the Workload.
 
 
 You should now see your two workloads with 1 Running/Completed Pods per workload.
