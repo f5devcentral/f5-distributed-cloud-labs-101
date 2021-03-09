@@ -9,21 +9,21 @@ Exercise 1: Add SPA Origin Pool to HTTP LB
 
 In this exercise you will add the new vK8s SPA service to the existing brew-spa origin pool. 
 
-#. In VoltConsole ensure you are in the *Application* context
+#. In VoltConsole ensure you are in the *Application* context.
 
     |app-context| 
 
-#. Navigate the menu to *Manage* -> *Origin Pools*
+#. Navigate the menu to *Manage* -> *Origin Pools*.
 
     |origin_pools_menu|
 
-#. Select the *...* link for the *brew-spa* *Origin Pool*
+#. Select the *...* link for the *brew-spa* *Origin Pool*.
 
-#. Click the *Edit* button
+#. Click the *Edit* button.
 
     |origin_pools_edit|
 
-#. Under the *Origin Servers* section, click the *Add item* button
+#. Under the *Origin Servers* section, click the *Add item* button.
 #. Enter the following variables:
 
     =============================== =====
@@ -38,7 +38,7 @@ In this exercise you will add the new vK8s SPA service to the existing brew-spa 
 
     |origin_pools_vk8s_spa|
 
-#. Click the *Save and Exit* button to close the *Origin Pool* dialogue 
+#. Click the *Save and Exit* button to close the *Origin Pool* dialogue.
 
 Exercise 2: Add API Origin Pool to HTTP LB
 ------------------------------------------
@@ -66,8 +66,8 @@ Now that we have updated the SPA and API origin pools we need to check the healt
 
     |virtual_hosts_http_lb_menu|
 
-#. Click on your brews load balancer
-#. Click on the *Origin Servers* tab
+#. Click on your "brews" load balancer.
+#. Click on the *Origin Servers* tab.
 
 You should see three origin pools that are green:
 
