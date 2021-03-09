@@ -1,23 +1,22 @@
 Virtual Kubernetes
-==============
-We just learned the DemoBrews marketing division launched an effective viral marketing campaign which included several references 
-to the client application and website. The on-premise infrastructure is already running at capacity so we need to help 
-the dev team move the application to the AWS site as soon as possible.
+===================
+With the environment prepped, the DemoBrews dev team is focused on getting the application deployed.
+The DemoBrews CTO recently attended a weekend retreat with the local Azure account team. 
+She has started engaging engineering teams on what it would take to switch Cloud Service Providers (CSPs) away from AWS.
+The Dev team demands that we design a deployment procedure that allows for scaling across sites in different CSPs.
 
 Section Goals
 -------------
-In this section we'll take the first steps to spanning the customer's application between sites.
-Initially, we will deploy the SPA and API services to the AWS site. 
-Next, we will expose the front-end (SPA) service and API services to the internet using both on-premise 
-and AWS origin servers. Since the database must stay on-premise we will also need to ensure the API server 
-in AWS can securely communicate with the database.
+Initially, we will deploy the SPA and API services to the AWS site using the Virtual Site and Virtual Kubernetes abstractions. 
+Next, we will expose the front-end (SPA) service and API services running in the AWS site to the internet along with the on-premise 
+versions of those services.
 
 In this section we will configure the following VoltConsole components:
 
 - Virtual Site
 - Virtual k8s (vK8s)
 - 2 x vK8s Workloads
-- editing existing Origin Pools
+- Update existing Origin Pools
 
 
 Data Flow and Architecture

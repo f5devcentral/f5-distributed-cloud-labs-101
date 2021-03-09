@@ -207,6 +207,11 @@ You should now see your two workloads with 1 Running/Completed Pods per workload
 
 |vk8s_workloads_list|
 
+.. note:: 
+
+    The vK8s Workload target is the Virtual Site abstraction. If DemoBrews spun up a new Customer Edge
+    site, regardless of CSP, and tagged the site with the correct site selector the workload would be
+    deployed to the new site and the service would be exposed via the HTTP Load Balancer automatically.
 
 
 .. |app-context| image:: ../_static/app-context.png
