@@ -34,7 +34,7 @@ Select Network on the site      Outside Network
 Port                            27017
 =============================== ===============
 
-|origin_pools_config_dynamodb|
+|origin_pools_config_mongodb|
 
 #. Under the *List of Health Check(s)* section, click the *Select healthcheck* dropdown.
 
@@ -157,4 +157,4 @@ If everything is working correctly, the database cart should not turn red.  You 
 .. |demo_app_config_db_url| image:: ../_static/demo_app_config_db_url.png
 .. |origin_pools_menu| image:: ../_static/origin_pools_menu.png
 .. |origin_pools_add| image:: ../_static/origin_pools_add.png
-.. |origin_pools_config_dynamodb| image:: ../_static/origin_pools_config_dynamodb.png
+.. |origin_pools_config_mongodb| image:: ../_static/origin_pools_config_mongodb.png

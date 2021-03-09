@@ -113,7 +113,7 @@ If "Validation" isn't "Successful" and "Operational" isn't "Installed", you can 
 .. |origin_pools_add| image:: ../_static/origin_pools_add.png
 .. |origin_pools_config| image:: ../_static/origin_pools_config.png
 .. |origin_pools_config_api| image:: ../_static/origin_pools_config_api.png
-.. |origin_pools_config_dynamodb| image:: ../_static/origin_pools_config_dynamodb.png
+.. |origin_pools_config_mongodb| image:: ../_static/origin_pools_config_mongodb.png
 .. |origin_pools_show_child_objects| image:: ../_static/origin_pools_show_child_objects.png
 .. |origin_pools_show_child_objects_status| image:: ../_static/origin_pools_show_child_objects_status.png
 .. |http_lb_origin_pool_health_check| image:: ../_static/http_lb_origin_pool_health_check.png
