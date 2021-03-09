@@ -98,8 +98,8 @@ Exercise 3: Configure Second Origin Pool (for AWS)
       ================================= =====
       Select Type of Origin Server      K8s Service Name of Origin Server on given Sites
       Service Name                      brews-inv.[your namespace]
-      Site                              the AWS site name configured in the previous lab
-      Select Network on the site        vK8s Networks on Site
+      Site                              Virtual Site
+      Select Network on the site        your_namespace-vsite
       ================================= =====
 
     .. note:: Be sure to use the value of "[your namespace]" this is how Volterra identifies the resource
