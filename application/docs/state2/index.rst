@@ -1,5 +1,5 @@
-Service Stitching 
-==================
+Publish a Service 
+===============================
 We just learned the DemoBrews marketing division launched an effective viral marketing campaign which included several references 
 to the website. The on-premise infrastructure is already running at capacity so we need to help 
 the dev team move application components to the AWS site as soon as possible. Ultimately, DemoBrews needs SPA and API traffic 

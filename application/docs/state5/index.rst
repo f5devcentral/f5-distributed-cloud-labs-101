@@ -1,5 +1,5 @@
-Recommendations Service
-========================
+Use REs to Host a Service
+==========================
 The DemoBrews executive team has determined the company can increase 
 revenue per transaction by adding a "recommendations" service to the app. 
 Being in a rush to launch the service, the dev team skipped the required regression 

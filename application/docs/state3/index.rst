@@ -1,4 +1,4 @@
-Deploy Workload to vK8s
+Deploy Workloads to vK8s
 ========================
 With the environment prepped, the DemoBrews dev team is focused on getting the application deployed.
 The DemoBrews CTO recently attended a weekend retreat with the local Azure account team. 
