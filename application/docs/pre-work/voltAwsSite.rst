@@ -168,6 +168,8 @@ Exercise 4: Create AWS VPC Site
   
         The maximum site name length is 16 characters. If your namespace is long adjust your site name accordingly.
 
+    |aws_vpc_site|
+
 #. Under the *Voltstack Cluster (One Interface)* section, click the *Configure* link.
 
 #. Enter the following variables:
@@ -178,9 +180,9 @@ Exercise 4: Create AWS VPC Site
     AWS AZ Name             |aws_zone|
     Select Existing or ..   Select Existing Subnet
     Existing Subnet ID      [output from terraform]
-    Manage Network Policy   Active Network Policies
-    Network Policy          your_namespace-aws
     ======================= =====
+
+    |aws_vpc_site_interface|
 
 #. Click *Apply*.
 
