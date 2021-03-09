@@ -116,9 +116,9 @@ the k8s service to the internet.
         The default route configuration, to rewrite the "Host" header with the name of an upstream server, is not applicable when 
         the service is hosted on Regional Edges. 
 
-#. Click *Apply* to exit the "Routes" dialogue.
+#. Click *Apply* to close the "HTTP/HTTPS Load Balancer" dialogue.
 
-#. Click *Apply* to exit the "Advertise" dialogue.
+#. Click *Apply* to close the "Advertise On Internet" dialogue.
 
 #. Click *Apply* to close the "Service" dialogue.
  

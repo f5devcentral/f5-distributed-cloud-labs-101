@@ -39,28 +39,28 @@ Exercise 1: Create an HTTP Load Balancer
 Exercise 2: Configure Origin Server (for UDF)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Now you will configure the Default Origin Server used by the load balancer.  
-    
-    #. Click on the *Configure* link under the *Default Origin Servers* section.
+Now you will configure the Default Origin Server used by the load balancer.  
 
-    #. Click the *Add Item* button.
+#. Click on the *Configure* link under the *Default Origin Servers* section.
 
-    #. In the Origin Pool drop down, click *Create new pool*. 
+#. Click the *Add Item* button.
 
-    #. Enter the following variables:
+#. In the Origin Pool drop down, click *Create new pool*. 
 
-      ================================= =====
-      Variable                          Value
-      ================================= =====
-      Name                              brews-inventory
-      Select Type of Origin Server      IP address of Origin Server on given Sites
-      IP                                10.1.1.4
-      Site                              your_namespace-udf
-      Select Network on the site        Outside Network
-      Port                              8082
-      ================================= =====
+#. Enter the following variables:
 
-      |http_lb_origin_pool_config|
+    ================================= =====
+    Variable                          Value
+    ================================= =====
+    Name                              brews-inventory
+    Select Type of Origin Server      IP address of Origin Server on given Sites
+    IP                                10.1.1.4
+    Site                              your_namespace-udf
+    Select Network on the site        Outside Network
+    Port                              8082
+    ================================= =====
+
+    |http_lb_origin_pool_config|
 
 #. Configure Origin Pool Health monitor
     #. In the *List of Health Check(s)* section click the *Add item* button.
@@ -82,9 +82,9 @@ Exercise 2: Configure Origin Server (for UDF)
         path      /api/stats
         ========= =====
     
-    #. Click the *Apply* button.
-    #. Click the *Continue* button.
-    #. Click the *Continue* button.
+    #. Click the *Apply* button to close the "HTTP Health Check" dialogue.
+    #. Click the *Continue* button to close the "Health Check" dialogue.
+    #. Click the *Continue* button to close the "Origin Pool" dialogue.
 
 
 Exercise 3: Configure Second Origin Pool (for AWS)
@@ -105,7 +105,7 @@ Exercise 3: Configure Second Origin Pool (for AWS)
     .. note:: Be sure to use the value of "[your namespace]" this is how Volterra identifies the resource
 
     #. Click *Continue*.
-    #. Click *Apply* (This should take you back to the main HTTP LB screen, stop here).
+    #. Click *Apply* to return to the HTTP Load Balancer dialogue. Stop here.
 
 Exercise 4: Configure Custom VIP Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -138,8 +138,8 @@ to only listen on the internal network of the UDF and AWS sites.
     IP address                        [leave blank, default value]
     TCP Listen Port Choice            Use Default TCP Listen Port (default value)
     ================================= =====
-#. Click on *Apply*.
-#. Click on *Save and Exit*.
+#. Click on *Apply* to close the "Advertise Custom" dialogue.
+#. Click on *Save and Exit* to create the HTTP Load Balancer.
 
 Exercise 5: Verify Internal LB is working 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
