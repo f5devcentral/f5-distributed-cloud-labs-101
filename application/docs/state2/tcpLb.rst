@@ -148,6 +148,8 @@ Now that we have an internal TCP load balancer for MongoDB we need to configure 
 
 If everything is working correctly, the database cart should not turn red.  You can also add and remove items from your cart for a further test.
 
+|demo_app_cart|
+
 .. |app-context| image:: ../_static/app-context.png
 .. |tcp_lb_menu| image:: ../_static/tcp_lb_menu.png
 .. |tcp_lb_config| image:: ../_static/tcp_lb_config.png
@@ -158,3 +160,4 @@ If everything is working correctly, the database cart should not turn red.  You 
 .. |origin_pools_menu| image:: ../_static/origin_pools_menu.png
 .. |origin_pools_add| image:: ../_static/origin_pools_add.png
 .. |origin_pools_config_mongodb| image:: ../_static/origin_pools_config_mongodb.png
+.. |demo_app_cart| image:: ../_static/demo_app_cart.png

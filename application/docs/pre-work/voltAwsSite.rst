@@ -204,6 +204,9 @@ Exercise 4: Create AWS VPC Site
 
     |aws_vpc_site_apply|
 
+The creation of the AWS site may take up to 10 or 15 minutes.  
+You can proceed to the next section and we will verify the AWS site was created later in the lab.
+
 .. |cloud_creds| image:: ../_static/cloud_creds.png
 .. |system_context| image:: ../_static/system_context.png
 .. |cloud_creds_menu| image:: ../_static/cloud_creds_menu.png

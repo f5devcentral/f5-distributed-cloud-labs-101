@@ -148,13 +148,16 @@ You will need to now reconfigure the "brews" app to use the inventory applicatio
 
 #. Navigate to the "stats" page of the brews app. Click on the gear icon next to "inventory".
 
-|brews-app-inventory-settings|
+    |brews-app-inventory-settings|
 
 #. Enter the value for the internal URL "http://your_namespace-inventory.brews.local". Click on the checkmark icon.
 
-|brews-app-inventory-config|
+    |brews-app-inventory-config|
 
 The "API" application will now use the internal LB to communicate with the inventory service.  
+When you view a product page you should now see an option for In Store or Delivery:
+
+    |demo_app_inventory|
 
 The configuration of the inventory LB is set to prefer the origin of the site.  This should result in the 
 following pattern of traffic.
@@ -172,3 +175,5 @@ If you disable the Inventory Service in AWS, all traffic will go to the remainin
 .. |http_lb_custom_vip| image:: images/http_lb_custom_vip.png
 .. |brews-app-inventory-settings| image:: images/brews-app-inventory-settings.png
 .. |brews-app-inventory-config| image:: images/brews-app-inventory-config.png
+.. |demo_app_inventory| image:: ../_static/demo_app_inventory.png 
+                        :width: 400

@@ -77,7 +77,9 @@ You should see three origin pools that are green:
 
 |http_lb_origin_health|
 
-You should be able to open a browser and check the demo application. 
+You should be able to open a browser and check that the demo application looks like the screen shot below:
+
+|demo_app|
 
 .. |app-context| image:: ../_static/app-context.png
 .. |origin_pools_menu| image:: ../_static/origin_pools_menu.png
@@ -85,3 +87,4 @@ You should be able to open a browser and check the demo application.
 .. |origin_pools_vk8s_spa| image:: ../_static/origin_pools_vk8s_spa.png
 .. |virtual_hosts_http_lb_menu| image:: ../_static/virtual_hosts_http_lb_menu.png
 .. |http_lb_origin_health| image:: ../_static/http_lb_origin_health.png
+.. |demo_app| image:: ../_static/demo_app.png
