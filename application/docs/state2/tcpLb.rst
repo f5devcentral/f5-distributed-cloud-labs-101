@@ -49,6 +49,7 @@ Name                            brews-mongodb
 Health Check                    TCP HealthCheck
 =============================== ===============
 
+#. Click on the "Configure" button to open the dialog to adjust timeout settings then click "Apply"
 #. Click the *Continue* button to close the *Health Check Parameters* dialogue. 
 
 #. Click the *Save and Exit* button to close the *Origin Pool* dialogue.
