@@ -1,5 +1,5 @@
-Virtual Kubernetes
-===================
+Deploy Workload to vK8s
+========================
 With the environment prepped, the DemoBrews dev team is focused on getting the application deployed.
 The DemoBrews CTO recently attended a weekend retreat with the local Azure account team. 
 She has started engaging engineering teams on what it would take to switch Cloud Service Providers (CSPs) away from AWS.
@@ -38,7 +38,7 @@ host the SPA and API services while the on-premise site will solely host the dat
    vsite   
    containerRegistry
    vk8s
-   updateHttpLb
+   updateOrigPool
 
 .. |state2| image:: ../_static/LabAppFlow2.png
 .. |arch2| image:: ../_static/LabArch2.png

@@ -4,6 +4,11 @@
 
 This Lab environment highlights some of the basic concepts of Volterra.
 
+The main UDF blueprint is:
+
+Volterra Lab 101
+https://udf.f5.com/b/0eb04e3f-13db-445c-846e-513afa954333
+
 ## Lab Guide
 
 Please see the `docs` directory in the `networking` or `application` directories.
