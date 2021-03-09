@@ -77,11 +77,11 @@ using a UDF Course to access this lab the information will be at the bottom of t
 Exercise 2: Create Network Policy
 ---------------------------------
 
-#. Navigate the menu to *Security* -> *Firewall* -> *Network Policies*
+#. Navigate the menu to *Security* -> *Firewall* -> *Network Policies*.
 
     |network_policy_menu|
 
-#. Click the *Add network policy* button
+#. Click the *Add network policy* button.
 #. Enter the following variables:
 
     ========= =====
@@ -90,13 +90,13 @@ Exercise 2: Create Network Policy
     Name      your_namespace-aws
     ========= =====
 
-#. Under the *IPv4 Prefix List* click the *Add item* button
-#. For the prefix, enter: 10.0.0.0/8
+#. Under the *IPv4 Prefix List* click the *Add item* button.
+#. For the prefix, enter: 10.0.0.0/8.
 
     |network_policy_config|
 
-#. Under the *Connections to Policy Endpoints* section, click the *Configure* link
-#. Click the *Add item* button
+#. Under the *Connections to Policy Endpoints* section, click the *Configure* link.
+#. Click the *Add item* button.
 #. Enter the following variables:
 
     ======================= =====
@@ -107,10 +107,10 @@ Exercise 2: Create Network Policy
     Select Other Endpoint   IPv4 Prefix List
     ======================= =====
 
-#. Under the *IPv4 Prefix List* section, click the *Add item* button
-#. For the prefix, enter: 10.0.0.0/8
-#. Click the *Apply* button to exit the *Ingress Rules* dialogue
-#. Click the *Save and Exit* button to exit the *Network policy* dialogue
+#. Under the *IPv4 Prefix List* section, click the *Add item* button.
+#. For the prefix, enter: "10.0.0.0/8".
+#. Click the *Apply* button to exit the *Ingress Rules* dialogue.
+#. Click the *Save and Exit* button to exit the *Network policy* dialogue.
 
     |ingress_rules|
 
@@ -118,7 +118,7 @@ Exercise 2: Create Network Policy
 Exercise 3: Create AWS VPC Site
 -------------------------------
 
-#. Navigate the menu to *Manage* -> *Site Management* -> *Cloud Credentials*
+#. Navigate the menu to *Manage* -> *Site Management* -> *Cloud Credentials*.
 
     |aws_vpc_site_menu|
 
@@ -163,7 +163,7 @@ Exercise 3: Create AWS VPC Site
 
 #. Under the *Site Node Parameters* enter the following variables:
 
-    .. Note:: This step is optional for the lab unless you would like to SSH into the node
+    .. Note:: This step is optional for the lab unless you would like to SSH into the node.
 
     =============== =====
     Variable        Value

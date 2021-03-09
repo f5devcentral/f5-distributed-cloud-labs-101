@@ -3,16 +3,16 @@ Virtual Kubernetes
 
 In this section we will create an additional Virtual K8s workload.
 
-First start by going to the Virtual K8s that you previously created
-
 Exercise 1: Create Virtual K8s Workload for the Inventory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click the Workloads tab
+#. Navigate to the Virtual K8s cluster you created earlier under "Applications" -> "Virtual K8s". Click on the cluster name.
+ 
+#. Click the Workloads tab.
 
     |k8s_workloads_menu|
 
-#. Click the *Add vK8s workload* button 
+#. Click the *Add vK8s workload* button. 
 
 #. Enter the following variables:
 
@@ -23,9 +23,9 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
     Select Type of Workload Service
     ======================= =====
 
-#. Under the *Service* section, click the *Configure* link
+#. Under the *Service* section, click the *Configure* link.
 
-#. Enter the following variables in the *Containers* section 
+#. Enter the following variables in the *Containers* section:
 
     =============================== =====
     Variable                        Value
@@ -36,7 +36,7 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
     Private Registry                Select the private registry you created previously
     =============================== =====
 
-#. Enter the following variables in the *Deploy Options* section 
+#. Enter the following variables in the *Deploy Options* section: 
 
     =============================== =====
     Variable                        Value
@@ -44,13 +44,13 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
     Where to Deploy the workload    Customer Virtual Sites 
     =============================== =====
 
-#. Under *Customer Virtual Sites*, click the *Configure* link
+#. Under *Customer Virtual Sites*, click the *Configure* link.
 
-#. Select the Virtual Site you created in the previous section
+#. Select the Virtual Site you created in the previous section.
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*
+#. Under *Advertise Option*, choose *Advertise In Cluster*.
 
     |vk8s_workloads_advertise|
 
@@ -62,11 +62,11 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
     Port        8002
     ==========  =====
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Click the *Save and Exit* button
+#. Click the *Save and Exit* button.
 
 .. |k8s_workloads_menu| image:: ../_static/k8s_workloads_menu.png
 .. |vk8s_workloads_advertise| image:: ../_static/vk8s_workloads_advertise.png

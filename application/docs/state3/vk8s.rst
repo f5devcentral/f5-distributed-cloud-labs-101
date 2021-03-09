@@ -21,15 +21,15 @@ vK8s Workload
 
 Exercise 1: Create Virtual K8s 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. In VoltConsole ensure you are in the *Application* context and have selected your namespace
+#. In VoltConsole ensure you are in the *Application* context and have selected your namespace.
 
     |app-context| |lu-ns|
 
-#. Navigate the menu to go to *Application*->*Virtual K8s*
+#. Navigate the menu to go to *Application*->*Virtual K8s*.
 
     |vk8s_menu|
 
-#. Click the *Add Virtual K8s* button
+#. Click the *Add Virtual K8s* button.
 
 #. Enter the following variables: 
 
@@ -39,15 +39,15 @@ Exercise 1: Create Virtual K8s
     Name     your_namespace-vk8s
     ======== =====
 
-#. Click the *Select Vsite Ref* button
+#. Click the *Select Vsite Ref* button.
 
-#. Select the Virtual Site you created
+#. Select the Virtual Site you created.
 
-#. Click the *Select Vsite Ref* button
+#. Click the *Select Vsite Ref* button.
 
     |vk8s_vsite_ref|
 
-#. Click the *Save and Exit* button
+#. Click the *Save and Exit* button.
 
 VoltConsole will now create your Virtual K8s cluster.
 
@@ -56,15 +56,15 @@ VoltConsole will now create your Virtual K8s cluster.
 Exercise 2: Create Virtual K8s Workload for the Single-page App
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Once your Virtual K8s cluster is ready, select the cluster name in the *Virtual K8s* list
+#. Once your Virtual K8s cluster is ready, select the cluster name in the *Virtual K8s* list.
 
     |vk8s_list|
 
-#. Click the Workloads tab
+#. Click the Workloads tab.
 
     |k8s_workloads_menu|
 
-#. Click the *Add vK8s workload* button 
+#. Click the *Add vK8s workload* button.
 
 #. Enter the following variables:
 
@@ -75,9 +75,9 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
     Select Type of Workload Service
     ======================= =====
 
-#. Under the *Service* section, click the *Configure* link
+#. Under the *Service* section, click the *Configure* link.
 
-#. Enter the following variables in the *Containers* section 
+#. Enter the following variables in the *Containers* section.
 
     =============================== =====
     Variable                        Value
@@ -90,7 +90,7 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
 
     |vk8s_workloads_containers|
 
-#. Enter the following variables in the *Deploy Options* section 
+#. Enter the following variables in the *Deploy Options* section.
 
     =============================== =====
     Variable                        Value
@@ -98,13 +98,13 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
     Where to Deploy the workload    Customer Virtual Sites 
     =============================== =====
 
-#. Under *Customer Virtual Sites*, click the *Configure* link
+#. Under *Customer Virtual Sites*, click the *Configure* link.
 
-#. Select the Virtual Site you created in the previous section
+#. Select the Virtual Site you created in the previous section.
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*
+#. Under *Advertise Option*, choose *Advertise In Cluster*.
 
     |vk8s_workloads_advertise|
 
@@ -120,20 +120,20 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
 
     |vk8s_advertise_port|
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Click the *Save and Exit* button
+#. Click the *Save and Exit* button.
 
 Exercise 3: Create Virtual K8s Workload for the API
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click the Workloads tab
+#. Click the *Workloads* tab.
 
     |k8s_workloads_menu|
 
-#. Click the *Add vK8s workload* button 
+#. Click the *Add vK8s workload* button.
 
 #. Enter the following variables:
 
@@ -144,9 +144,9 @@ Exercise 3: Create Virtual K8s Workload for the API
     Select Type of Workload Service
     ======================= =====
 
-#. Under the *Service* section, click the *Configure* link
+#. Under the *Service* section, click the *Configure* link.
 
-#. Enter the following variables in the *Containers* section 
+#. Enter the following variables in the *Containers* section.
 
     =============================== =====
     Variable                        Value
@@ -161,7 +161,7 @@ Exercise 3: Create Virtual K8s Workload for the API
 
 #. Configuration
 
-    #. Under the *Configuration* section click the *Add item* button
+    #. Under the *Configuration* section click the *Add item* button.
     #. Enter the following variables:
 
         =================================== =====
@@ -174,7 +174,7 @@ Exercise 3: Create Virtual K8s Workload for the API
 
         |vk8s_workloads_env|
 
-#. Enter the following variables in the *Deploy Options* section 
+#. Enter the following variables in the *Deploy Options* section:
 
     =============================== =====
     Variable                        Value
@@ -182,13 +182,13 @@ Exercise 3: Create Virtual K8s Workload for the API
     Where to Deploy the workload    Customer Virtual Sites 
     =============================== =====
 
-#. Under *Customer Virtual Sites*, click the *Configure* link
+#. Under *Customer Virtual Sites*, click the *Configure* link.
 
-#. Select the Virtual Site you created in the previous section
+#. Select the Virtual Site you created in the previous section.
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*
+#. Under *Advertise Option*, choose *Advertise In Cluster*.
 
     |vk8s_workloads_advertise|
 
@@ -200,11 +200,11 @@ Exercise 3: Create Virtual K8s Workload for the API
     Port        8000
     ==========  =====
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Click the *Apply* button
+#. Click the *Apply* button.
 
-#. Click the *Save and Exit* button
+#. Click the *Save and Exit* button.
 
 
 You should now see your two workloads with 1 Running/Completed Pods per workload.

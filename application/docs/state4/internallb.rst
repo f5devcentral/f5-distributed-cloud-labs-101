@@ -45,7 +45,7 @@ Exercise 2: Configure Origin Server (for UDF)
 
     #. Click the *Add Item* button.
 
-    #. In the Origin Pool drop down, click *Create new pool* 
+    #. In the Origin Pool drop down, click *Create new pool*. 
 
     #. Enter the following variables:
 
@@ -64,8 +64,8 @@ Exercise 2: Configure Origin Server (for UDF)
 
 #. Configure Origin Pool Health monitor
     #. In the *List of Health Check(s)* section click the *Add item* button.
-    #. Click the *Health Check object* dropdown list 
-    #. Click the *Create new healthcheck* button
+    #. Click the *Health Check object* dropdown list. 
+    #. Click the *Create new healthcheck* button.
     #. Enter the following variables:
 
         ========= =====
@@ -82,16 +82,16 @@ Exercise 2: Configure Origin Server (for UDF)
         path      /api/stats
         ========= =====
     
-    #. Click the *Apply* button
-    #. Click the *Continue* button
-    #. Click the *Continue* button
-    #. Click the *Apply* button
+    #. Click the *Apply* button.
+    #. Click the *Continue* button.
+    #. Click the *Continue* button.
+    #. Click the *Apply* button.
 
 
 Exercise 3: Configure Second Origin Pool (for AWS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    #.  Under "Origin Servers" click on "Add item"
+    #. Under "Origin Servers" click on *Add item*
     #. Enter the following variables:
 
       ================================= =====
@@ -105,8 +105,8 @@ Exercise 3: Configure Second Origin Pool (for AWS)
 
     .. note:: Be sure to use the value of "[your namespace]" this is how Volterra identifies the resource
 
-    #. Click "Continue"
-    #. Click "Apply" (This should take you back to the main HTTP LB screen, stop here)
+    #. Click *Continue*.
+    #. Click *Apply* (This should take you back to the main HTTP LB screen, stop here).
 
 Exercise 4: Configure Custom VIP Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,10 +114,10 @@ Exercise 4: Configure Custom VIP Configuration
 Unlike when you created a public HTTP LB this needs to be configured
 to only listen on the internal network of the UDF and AWS sites.  
     
-#. Under VIP Configuration click on "Show Advanced Fields"
-#. From the Select menu change the value to "Advertise Custom"
+#. Under VIP Configuration click on *Show Advanced Fields*.
+#. From the "Select" menu change the value to "Advertise Custom"
    |http_lb_custom_vip|
-#. Click on "Configure" under "Advertise Custom"
+#. Click on *Configure* under "Advertise Custom".
 #. Enter the following variables:
     ================================= =====
     Variable                          Value
@@ -128,8 +128,8 @@ to only listen on the internal network of the UDF and AWS sites.
     IP address                        [leave blank, default value]
     TCP Listen Port Choice            Use Default TCP Listen Port (default value)
     ================================= =====
-#. Click on "Add Item" 
-#. Enter the following variables
+#. Click on *Add Item*. 
+#. Enter the following variables:
     ================================= =====
     Variable                          Value
     ================================= =====
@@ -139,19 +139,19 @@ to only listen on the internal network of the UDF and AWS sites.
     IP address                        [leave blank, default value]
     TCP Listen Port Choice            Use Default TCP Listen Port (default value)
     ================================= =====
-#. Click on "Apply"
-#. Click on "Save and Exit"
+#. Click on *Apply*.
+#. Click on *Save and Exit*.
 
 Exercise 5: Verify Internal LB is working 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You will need to now reconfigure the brews app to use the inventory application.
+You will need to now reconfigure the "brews" app to use the inventory application.
 
-From the "stats" page of the brews app.  Click on the gear icon next to inventory.
+#. Navigate to the "stats" page of the brews app. Click on the gear icon next to "inventory".
 
 |brews-app-inventory-settings|
 
-Enter the value for the internal URL "http://your_namespace-inventory.brews.internal" then click on the checkmark icon.
+#. Enter the value for the internal URL "http://your_namespace-inventory.brews.internal". Click on the checkmark icon.
 
 |brews-app-inventory-config|
 

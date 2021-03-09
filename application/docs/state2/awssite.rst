@@ -31,43 +31,43 @@ Exercise 2: Troubleshooting your AWS Site
 
 If you're site deployment was not successful there are a few steps we can take to determine why.
 
-#. View the Site's Global Status by 
+#. View the Site's Global Status by: 
 
     #. clicking the *...* link on your site 
     #. Click the *Show Global Status* button
 
     |show_global_status|
 
-#. Verify the Site Tunnel Status in the JSON payload
+#. Verify the Site Tunnel Status in the JSON payload.
 
     |site_tunnel_status|
 
-#. Navigate to *Site Management* -> *AWS VPC Sites*
+#. Navigate to *Site Management* -> *AWS VPC Sites*.
  
     |aws_vpc_site_menu|
 
-#. Open the Terraform Parameters by
+#. Open the Terraform Parameters by:
 
     #. clicking the *...* link on your site 
     # Click the *Terraform Parameters* button
 
     |aws_vpc_site_tf_params|
 
-#. Evaluate the Terraform output by Clicking the *Apply Status* tab
+#. Evaluate the Terraform output by Clicking the *Apply Status* tab.
 
     |aws_vpc_site_tf_apply_status|
 
-#. Close the *AWS VPC Site Terraform Parameters* pop-out by click the *X* in the top right corner
+#. Close the *AWS VPC Site Terraform Parameters* pop-out by click the *X* in the top right corner.
 
-#. Destroy and Apply Terraform 
+#. Destroy and Apply Terraform. 
 
     If your site did not deploy correctly you may need to destroy the site and create it again.
 
-    #. In the *AWS VPC Sites* list, click on the *Destroy* button
+    #. In the *AWS VPC Sites* list, click on the *Destroy* button.
 
         |aws_vpc_site_destroy|
 
-    #. Type *DELETE* then click the *DELETE* button in the *Destroy Terraform* prompt
+    #. Type *DELETE* then click the *DELETE* button in the *Destroy Terraform* prompt.
 
         |aws_vpc_site_destroy_prompt|
 

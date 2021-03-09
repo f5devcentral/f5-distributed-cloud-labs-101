@@ -13,7 +13,7 @@ Virtual Site
 Exercise 1: Tag AWS Site
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. In VoltConsole switch to the *System* context
+#. In VoltConsole switch to the *System* context.
 
     |system-context|
 
@@ -22,32 +22,32 @@ Exercise 1: Tag AWS Site
     |aws_vpc_site_menu|
 
 #. Edit the AWS VPC Site:
-    #. Click the *...* button for your site
-    #. Click the *Edit* button
+    #. Click the *...* button for your site.
+    #. Click the *Edit* button.
 
     |aws_vpc_site_edit|
 
-#. Under *Labels*, click the *More* link 
+#. Under *Labels*, click the *More* link. 
 #. Click in the Labels box:
-    #. For the *key*, choose *ves.io/siteName*
-    #. For the Value, type your_namespace-aws
+    #. For the *key*, choose *ves.io/siteName*.
+    #. For the Value, type your_namespace-aws.
 
         |aws_vpc_site_label|
 
-#. Click the *Save and Exit* button
+#. Click the *Save and Exit* button.
 
 
 Exercise 2: Create Virtual Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. In VoltConsole switch to the *Application* context
+#. In VoltConsole switch to the *Application* context.
 
     |app-context|
 
-#. Navigate the menu to go to *Manage*->*Virtual Sites*
+#. Navigate the menu to go to *Manage*->*Virtual Sites*.
 
     |virtual_sites_menu|
 
-#. Click the *Add virtual site* button
+#. Click the *Add virtual site* button.
 
     |virtual_sites_add|
 
@@ -64,16 +64,16 @@ Exercise 2: Create Virtual Site
 
     |virtual_sites_add_form|
 
-#. Click the *Add virtual site* button
+#. Click the *Add virtual site* button.
 
 Exercise 3: Check your Virtual Site Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Navigate the menu to go to *Applications*->*Virtual Sites*
+#. Navigate the menu to go to *Applications*->*Virtual Sites*.
 
     |app_virtual_sites_menu|
 
-#. You should see your virtual site listed with a *Total Site* count of *1*
+#. You should see your virtual site listed with a *Total Site* count of *1*.
 
     |app_virtual_sites_list|
 

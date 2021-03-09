@@ -9,15 +9,15 @@ This will be needed so that the API service running in the AWS site can access t
 Exercise 1: Create MongoDB Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. In VoltConsole ensure you are in the *Application* context
+#. In VoltConsole ensure you are in the *Application* context.
 
     |app-context| 
 
-#. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *Origin Pools*
+#. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *Origin Pools*.
 
     |origin_pools_menu|
 
-#. Click the *Add Origin Pool* button
+#. Click the *Add Origin Pool* button.
 
     |origin_pools_add|
     
@@ -36,9 +36,9 @@ Port                            27017
 
 |origin_pools_config_dynamodb|
 
-#. Under the *List of Health Check(s)* section, click the *Select healthcheck* dropdown
+#. Under the *List of Health Check(s)* section, click the *Select healthcheck* dropdown.
 
-#. Click the *Create new Healthcheck* button
+#. Click the *Create new Healthcheck* button.
 
 #. Enter the following variables:
 
@@ -56,15 +56,15 @@ Health Check                    TCP HealthCheck
 Exercise 2: Create MongoDB TCP Load Balancer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. In VoltConsole ensure you are in the *Application* context
+#. In VoltConsole ensure you are in the *Application* context.
 
     |app-context| 
 
-#. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *TCP Load Balancers*
+#. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *TCP Load Balancers*.
 
     |tcp_lb_menu|
 
-#. Click the *Add TCP Load Balancer* button
+#. Click the *Add TCP Load Balancer* button.
 
 #. Enter the following variables:
 
@@ -80,8 +80,8 @@ Exercise 2: Create MongoDB TCP Load Balancer
 
 #. Configure Domains
 
-    #. Under the *Domains* section click the *Add item* button
-    #. Enter a domain 
+    #. Under the *Domains* section click the *Add item* button.
+    #. Enter a domain: 
 
         ======== =====
         Variable Value
@@ -91,16 +91,16 @@ Exercise 2: Create MongoDB TCP Load Balancer
 
 #. Configure Origin Pools
 
-    #. Under the *Origin Pools* section, click the *Configure* link
-    #. Click the *Add item* button
-    #. Select the *brews-mongodb* pool
-    #. Click the *Apply* button to close the *Origin Pools* dialogue
+    #. Under the *Origin Pools* section, click the *Configure* link.
+    #. Click the *Add item* button.
+    #. Select the *brews-mongodb* pool.
+    #. Click the *Apply* button to close the *Origin Pools* dialogue.
 
 #. Configure Advertisement 
 
-    #. Under *Advertise Custom* click the *Configure* link
+    #. Under *Advertise Custom* click the *Configure* link.
     #. You will need to add two sites:
-        #. Your UDF site
+        #. Your UDF site:
             
             =========================== =====
             Variable                    Value
@@ -109,7 +109,7 @@ Exercise 2: Create MongoDB TCP Load Balancer
             Site Reference              Your UDF site
             =========================== =====
 
-        #. Your AWS site
+        #. Your AWS site:
 
             =========================== =====
             Variable                    Value
@@ -120,23 +120,23 @@ Exercise 2: Create MongoDB TCP Load Balancer
 
         |tcp_lb_advertise|
 
-    #. Click the *Apply* button to exit the *Advertise Custom* dialogue
+    #. Click the *Apply* button to exit the *Advertise Custom* dialogue.
 
-#. CLick the *Save and Exit* button to exit the *TCP Load Balancer* dialogue
+#. CLick the *Save and Exit* button to exit the *TCP Load Balancer* dialogue.
 
 Exercise 2: Configure Demo Application 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Now that we have an internal TCP load balancer for MongoDB we need to configure the demo application to use it.
 
-#. Open the demo application in your browser
+#. Open the demo application in your browser.
 
     .. note:: If you do not remember the FQDN, you can look under *Manage* -> *Load Balancers* to get it.
 
-#. Click on the information icon
+#. Click on the information icon.
 
     |demo_app_stats|
 
-#. Click on the gear icon for the database 
+#. Click on the gear icon for the database. 
 
     |demo_app_config_db|
 
@@ -144,7 +144,7 @@ Now that we have an internal TCP load balancer for MongoDB we need to configure 
 
     |demo_app_config_db_url|
 
-#. Click the button or press Enter
+#. Click the button or press Enter.
 
 If everything is working correctly, the database cart should not turn red.  You can also add and remove items from your cart for a further test.
 
