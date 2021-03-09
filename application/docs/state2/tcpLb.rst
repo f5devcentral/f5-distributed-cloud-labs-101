@@ -74,14 +74,14 @@ Exercise 2: Create MongoDB TCP Load Balancer
     ==============================  =====
     Name                            brews-mongodb
     Listen Port                     27017
-    Where to Advertise the VIP      Advertise Customer
+    Where to Advertise the VIP      Advertise Custom
     ==============================  =====
 
     |tcp_lb_config|
 
 #. Configure Domains
 
-    #. Under the *Domains* section click the *Add item* button.
+    #. Under the *Domains* section (above the port configuration) click the *Add item* button.
     #. Enter a domain: 
 
         ======== =====
@@ -107,15 +107,19 @@ Exercise 2: Create MongoDB TCP Load Balancer
             Variable                    Value
             =========================== =====
             Select Where to Advertise   Site
+            Site Network                Outside Network
             Site Reference              Your UDF site
             =========================== =====
 
         #. Your AWS site:
 
+            Click on "Add Item" to input your second site.
+
             =========================== =====
             Variable                    Value
             =========================== =====
             Select Where to Advertise   Site
+            Site Network                Outside Network
             Site Reference              Your AWS Site
             =========================== =====
 
