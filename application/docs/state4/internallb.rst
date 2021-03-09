@@ -29,7 +29,7 @@ Exercise 1: Create an HTTP Load Balancer
     Variable                          Value
     ================================= =====
     Name                              inventory
-    Domains                           your_namespace-inventory.brews.internal
+    Domains                           your_namespace-inventory.brews.local
     Select type of Load Balancer      HTTP
     Automatically Manage DNS Records  No/Un Checked 
     ================================= =====
@@ -52,10 +52,10 @@ Exercise 2: Configure Origin Server (for UDF)
       ================================= =====
       Variable                          Value
       ================================= =====
-      Name                              inventory-pool
+      Name                              brews-inventory
       Select Type of Origin Server      IP address of Origin Server on given Sites
       IP                                10.1.1.4
-      Site                              the site name configured in the previous lab
+      Site                              your_namespace-udf
       Select Network on the site        Outside Network
       Port                              8082
       ================================= =====
@@ -85,7 +85,6 @@ Exercise 2: Configure Origin Server (for UDF)
     #. Click the *Apply* button.
     #. Click the *Continue* button.
     #. Click the *Continue* button.
-    #. Click the *Apply* button.
 
 
 Exercise 3: Configure Second Origin Pool (for AWS)
@@ -99,8 +98,8 @@ Exercise 3: Configure Second Origin Pool (for AWS)
       ================================= =====
       Select Type of Origin Server      K8s Service Name of Origin Server on given Sites
       Service Name                      brews-inv.[your namespace]
-      Site                              the AWS site name configured in the previous lab
-      Select Network on the site        vK8s Networks on Site
+      Site                              Virtual Site
+      Select Network on the site        your_namespace-vsite
       ================================= =====
 
     .. note:: Be sure to use the value of "[your namespace]" this is how Volterra identifies the resource
@@ -151,7 +150,7 @@ You will need to now reconfigure the "brews" app to use the inventory applicatio
 
 |brews-app-inventory-settings|
 
-#. Enter the value for the internal URL "http://your_namespace-inventory.brews.internal". Click on the checkmark icon.
+#. Enter the value for the internal URL "http://your_namespace-inventory.brews.local". Click on the checkmark icon.
 
 |brews-app-inventory-config|
 
