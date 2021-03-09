@@ -3,14 +3,6 @@ Create HTTP Loadbalancer
 Now that we've defined our Origin Pools for the SPA and API service, we need to attach the pools to an HTTP Load Balancer.
 The HTTP Load Balancer will direct traffic to our pools based on URI through the concept of "Routes". 
 
-Terminology
-~~~~~~~~~~~~~
-
-HTTP Load Balancer
-    Volterra's reverse proxy and HTTP load balancer concepts allow for flow control of
-    application and API traffic between services, to the internet, and from clients on the internet.
-    HTTP Load Balancers allow for steering decisions based on URI or other HTTP based criteria.
-
 Exercise 1: HTTP Load Balancer Basic Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

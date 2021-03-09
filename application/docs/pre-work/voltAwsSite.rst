@@ -1,14 +1,8 @@
 Create AWS Volterra Site
 ========================
 In this section we will use VoltConsole to create an AWS VPC and a new Volterra Site in that VPC.
+Before building the Volterra Sites, we will create a VPC and associated network policies.
 
-Terminology
------------
-
-VPC
-    VPC is a Virtual Private Cloud.
-Volterra Site
-    A Volterra Site is a physical or cloud location where Volterra Nodes are deployed. 
 
 Exercise 1: Create Cloud Credentials
 ------------------------------------

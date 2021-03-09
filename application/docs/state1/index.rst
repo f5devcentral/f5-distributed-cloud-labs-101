@@ -37,6 +37,19 @@ In this state we will configure the following VoltConsole components:
 - 2 x Origin Pools
 - HTTP Load Balancer
 
+Terminology
+------------
+
+HTTP Load Balancer
+    Volterra's reverse proxy and HTTP load balancer concepts allow for flow control of
+    application and API traffic between services, to the internet, and from clients on the internet.
+    HTTP Load Balancers allow for steering decisions based on URI or other HTTP based criteria.
+
+Origin Pool
+    An origin pool is a mechanism to configure a set of application endpoints grouped together into a resource pool.
+    These endpoints could be IP:port tuples within a give site or a service discovered by one of Volterra's many service discovery methods.
+    These objects will be used the next step.
+
 App Data Flow and Architecture
 ------------------------------
 Clients will retrieve static content for the Single Page Application (SPA) from an HTTP load balancer (not pictured). 

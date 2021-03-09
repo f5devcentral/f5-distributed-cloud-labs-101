@@ -2,14 +2,6 @@ Virtual Site
 ============
 In this section we will deploy a Virtual Site as a prerequisite for the Virtual Kubernetes deployment.
 
-Terminology
-~~~~~~~~~~~~~
-
-Virtual Site
-    A Virtual Site is an abstraction for a group of Volterra sites. 
-    Instead of performing configuration on each site, a Virtual Site allows for performing a given 
-    configuration on a set of site. Virtual Sites are defined by "label expressions" -- ie. tagging.
-
 Exercise 1: Tag AWS Site
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
