@@ -15,6 +15,8 @@ In this exercise you will add the new vK8s SPA service to the existing brew-spa 
 
 #. Navigate the menu to *Manage* -> *Origin Pools*.
 
+   .. warning:: Make sure you go to "Manage" and not "Virtual Hosts" (scroll down)
+
     |origin_pools_menu|
 
 #. Select the *...* link for the *brew-spa* *Origin Pool*.
@@ -66,8 +68,9 @@ Now that we have updated the SPA and API origin pools we need to check the healt
 
     |virtual_hosts_http_lb_menu|
 
-#. Click on your "brews" load balancer.
+#. Click on your "brews-lb" load balancer.
 #. Click on the *Origin Servers* tab.
+#. Click on the *Refresh* link
 
 You should see three origin pools that are green:
 
