@@ -28,7 +28,7 @@ Exercise 1: Create an HTTP Load Balancer
     ================================= =====
     Variable                          Value
     ================================= =====
-    Name                              inventory
+    Name                              inventory-lb
     Domains                           your_namespace-inventory.brews.local
     Select type of Load Balancer      HTTP
     Automatically Manage DNS Records  No/Un Checked 
@@ -57,7 +57,7 @@ Now you will configure the Default Origin Server used by the load balancer.
     IP                                10.1.1.4
     Site                              your_namespace-udf
     Select Network on the site        Outside Network
-    Port                              8082
+    Port                              8002
     ================================= =====
 
     |http_lb_origin_pool_config|
@@ -71,7 +71,7 @@ Now you will configure the Default Origin Server used by the load balancer.
         ========= =====
         Variable  Value
         ========= =====
-        name      inventory
+        name      brews-inventory
         ========= =====
 
     #. Click the *configure* button under HTTP Health Check and enter the following variables:
@@ -98,8 +98,8 @@ Exercise 3: Configure Second Origin Pool (for AWS)
       ================================= =====
       Select Type of Origin Server      K8s Service Name of Origin Server on given Sites
       Service Name                      brews-inv.[your namespace]
-      Site                              Virtual Site
-      Select Network on the site        your_namespace-vsite
+      Virtual Site                      your_namespace-vsite
+      Select Network on the site        vK8s Network on Site
       ================================= =====
 
     .. note:: Be sure to use the value of "[your namespace]" this is how Volterra identifies the resource
