@@ -98,10 +98,10 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
     ======================  =====
     Variable                Value
     ======================  =====
-    Port                    80
+    Port                    8081
     Show Advance Fields     Toggle On
     Target Port             Different than Port
-    Different than Port     8081
+    Different than Port     80
     ======================  =====
 
     |vk8s_advertise_port|
