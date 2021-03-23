@@ -104,7 +104,7 @@ Exercise 4: Configure Site using Site UI
     Variable            Value
     =================== =====
     Token               [use one created previously]
-    Cluster Name        [unique name]_udf
+    Cluster Name        [unique name]-udf
     Hostname            main-0
     Certified Hardware  kvm-voltmesh
     Primary Outside NIC eth0
