@@ -137,7 +137,7 @@ AWS Site in the Volterra Console.
 Exercise 4: Create AWS VPC Site
 -------------------------------
 
-#. Navigate the menu to *Manage* -> *Site Management* -> *Cloud Credentials*.
+#. Navigate the menu to *Manage* -> *Site Management* -> *AWS VPC Sites*.
 
     |aws_vpc_site_menu|
 
