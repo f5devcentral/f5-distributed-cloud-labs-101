@@ -84,13 +84,11 @@ Now you will configure the Default Origin Server used by the load balancer.
     
     #. Click the *Apply* button to close the "HTTP Health Check" dialogue.
     #. Click the *Continue* button to close the "Health Check" dialogue.
-    #. Click the *Continue* button to close the "Origin Pool" dialogue.
-
 
 Exercise 3: Configure Second Origin Pool (for AWS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    #. Under "Origin Servers" click on *Add item*
+    #. Starting in the "Origin Pool" dialogue, in the "Origin Servers" section click on *Add item*
     #. Enter the following variables:
 
       ================================= =====
