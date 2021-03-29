@@ -101,8 +101,7 @@ Exercise 2: Create Network Policy
     Select Other Endpoint   IPv4 Prefix List
     ======================= =====
 
-#. Under the *IPv4 Prefix List* section, click the *Add item* button.
-#. For the prefix, enter: "10.0.0.0/8".
+#. Under the *IPv4 Prefix List* section enter: "10.0.0.0/8".
 #. Click the *Apply* button to exit the *Ingress Rules* dialogue.
 #. Click the *Save and Exit* button to exit the *Network policy* dialogue.
 
@@ -152,9 +151,9 @@ Exercise 4: Create AWS VPC Site
       ================================= =====
       Name                              your_namespace-aws
       AWS Region                        |aws_region|
-      Select Existing or create new VPC Select Existing VPC
+      Select Existing or create new VPC Existing VPC ID
       Existing VPC ID                   [output from terraform]
-      Select Ingress Gateway            Voltstack Cluster
+      Select Ingress Gateway            Voltstack Cluster (One Interface)
       Automatic deployment              The Cloud Credentials created in Exercise 1
       ================================= =====
 
@@ -180,7 +179,7 @@ Exercise 4: Create AWS VPC Site
 
     |aws_vpc_site_interface|
 
-#. Click *Apply*.
+#. Click *Apply* to exit the "Voltstack Cluster (One Interface) dialogue.
 
 #. Under the *Site Node Parameters* enter the following variables:
 

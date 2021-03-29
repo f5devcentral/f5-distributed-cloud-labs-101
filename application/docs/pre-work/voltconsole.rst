@@ -27,7 +27,7 @@ Exercise 1: Find your Namespace
 #. Once you log in, you will need to identify your namespace.  
 
     .. note:: It will usually be the user-part of your F5 email address with the period replaced with a hyphen.  For example,
-        if your F5 email address is a.hooley @ f5.com  you can find a namespace of
+        if your F5 email address is "a.hooley@f5.com" you can find a namespace of
         "a-hooley."  Please note this name and use it in later steps to make it easier for others to distinguish between resources in shared namespaces.
 
     .. image:: ../_static/find-namespace.png
@@ -65,10 +65,9 @@ highlight the GPS coordinates.  This will copy the values into your clipboard.
 |geolocation|
 
 Pick a location that is geographically similar to where you selected your UDF
-deployment (i.e. for Virginia, USA search for Washington Monument, DC)
-
-You could also use a regional office (vs. your home address) as a location
-https://www.f5.com/company/contact/regional-offices
+deployment (i.e. for Virginia, USA search for Washington Monument, DC).
+You could also use an `F5 regional office <https://www.f5.com/company/contact/regional-offices>`_ 
+(vs. your home address) as a location.
 
 Once you have a reasonable set of latitude/longitude you can proceed.
 
@@ -92,7 +91,7 @@ Exercise 4: Configure Site using Site UI
         Password            Volterra123
         =================== =====
     
-    #. Change the default password 
+    #. Change the default password. Hit 'refresh' on your browser if you receive a UDF access error.
 
 #. If you are using the GUI, click on "Configure Now".
 
@@ -103,12 +102,12 @@ Exercise 4: Configure Site using Site UI
     =================== =====
     Variable            Value
     =================== =====
-    Token               [use one created previously]
+    Token               [UID of one created previously]
     Cluster Name        [unique name]-udf
     Hostname            main-0
     Certified Hardware  kvm-voltmesh
     Primary Outside NIC eth0
-    Latitude/Longitude      
+    Latitude/Longitude  [Coordinates determined earlier]    
     =================== =====
 
 #. Click on "Save Configuration". 
