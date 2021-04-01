@@ -1,5 +1,5 @@
 data "template_file" "workload_tfvars" {
-  template = "${file("../workload/terraform.tfvars.example")}"
+  template = file("../workload/terraform.tfvars.example")
   vars = {
     prefix         = var.prefix
     region         = var.aws_region
@@ -10,6 +10,6 @@ data "template_file" "workload_tfvars" {
   }
 }
 resource "local_file" "workload_tfvars" {
-  content  = "${data.template_file.workload_tfvars.rendered}"
+  content  = data.template_file.workload_tfvars.rendered
   filename = "../workload/terraform.tfvars"
 }
