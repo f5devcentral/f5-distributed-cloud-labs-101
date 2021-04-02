@@ -27,7 +27,10 @@ Change "Select Global Networks to Connect" to "Connect Global Networks".
 
 Click on "Edit Global Network Connections".
 
-- Select Network Connection Type: Direct, Site Local Inside to a Global Network
-- Global Virtual Network: system/[unique name]-global
+* Select Network Connection Type: Direct, Site Local Inside to a Global Network
+* Global Virtual Network: system/[unique name]-global
+* Select "Manage Static Routes" for "Managed Static Routes for Inside Network"
+    * Select "Simple Static Route" (default)
+    * Simple Static Route: 10.0.3.0/24
 
 Click on Apply and save your changes.
