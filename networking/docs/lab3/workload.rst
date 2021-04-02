@@ -12,6 +12,9 @@ Before we can deploy the frontend application we will need to identify the IP ad
 of the Volterra Gateway.  This IP address will be used for internal DNS resolution as
 well as the IP address of the VIP that was configured on the TCP Load Balancer previously.
 
+Make sure that your Volterra Gateway is fully up/online before deploying the workload resources
+the Volterra Gatway is used as the internet gateway for the workload VM).
+
 From the UDF console you will need to find the "Cloud Accounts" tab that contains  the
 username/password that you will be using to access the AWS Console.
 
