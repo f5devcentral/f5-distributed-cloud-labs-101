@@ -21,11 +21,16 @@ Under the System namespace go to Manage -> Site Management -> AWS VPC Sites
 Scroll to the right of your AWS site and click on the three dots "..." to 
 select "Edit"
 
-Under "Network Config" click on "Edit" and click on "Show Advanced Settings"
+Under "Networking Config" click on "Configure" 
+next to (Ingress/Egress Gateway (2 interfaces))
+
+This will open a new sub menu.
+
+Next to "Advanced Options" click on "Show Advanced Fields"
 
 Change "Select Global Networks to Connect" to "Connect Global Networks".
 
-Click on "Edit Global Network Connections".
+Then click on "Configure" under "Global Network Connections"
 
 * Select Network Connection Type: Direct, Site Local Inside to a Global Network
 * Global Virtual Network: system/[unique name]-global
