@@ -81,6 +81,7 @@ Under "New AWS Site" you will need to provide the following information:
 
 Under the section for "Nodes" provide the following information
 
+- Click on "Show Advanced Fields" (top right)
 - AWS AZ Name: |aws_zone|
 - Subnet Choices for Inside Interface change to "Subnet for Inside Interface"
 - Change from "New Subnet" to "Existing Subnet ID"
