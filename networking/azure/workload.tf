@@ -1,16 +1,15 @@
 # Create public IPs
 resource "azurerm_public_ip" "workload" {
   name                = "workload_pip"
-  resource_group_name = var.resource_group
+  resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   allocation_method   = "Dynamic"
-  depends_on          = [azurerm_resource_group.rg]
 }
 
 # Create NIC
 resource "azurerm_network_interface" "workload" {
   name                = "workload-nic"
-  resource_group_name = var.resource_group
+  resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
 
   ip_configuration {
@@ -23,7 +22,7 @@ resource "azurerm_network_interface" "workload" {
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "workload" {
   name                = "workload"
-  resource_group_name = var.resource_group
+  resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   size                = "Standard_DS1_v2"
 
