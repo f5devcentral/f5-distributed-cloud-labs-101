@@ -118,61 +118,59 @@ Exercise 4: Test your connections
 From UDF you should now be able to connect to ``http://10.2.2.4:8080/txt``
 
 .. code-block::
-    
-    ubuntu@ubuntu:~$ curl 10.2.2.4:8080/txt
-    ================================================
+   
+   ubuntu@ubuntu:~$ curl 10.2.2.4:8080/txt
+   ================================================
     ___ ___   ___                    _
-    | __| __| |   \ ___ _ __  ___    /_\  _ __ _ __
-    | _||__ \ | |) / -_) '  \/ _ \  / _ \| '_ \ '_ \
-    |_| |___/ |___/\___|_|_|_\___/ /_/ \_\ .__/ .__/
-                                        |_|  |_|
-    ================================================
+   | __| __| |   \ ___ _ __  ___    /_\  _ __ _ __
+   | _||__ \ | |) / -_) '  \/ _ \  / _ \| '_ \ '_ \
+   |_| |___/ |___/\___|_|_|_\___/ /_/ \_\ .__/ .__/
+                                         |_|  |_|
+   ================================================
 
-        Node Name: Azure Environment
+         Node Name: Azure Environment
         Short Name: workload
 
-        Server IP: 10.2.2.4
-        Server Port: 8080
+         Server IP: 10.2.2.4
+       Server Port: 8080
 
-        Client IP: 10.1.1.4
-        Client Port: 36242
+         Client IP: 10.1.1.4
+       Client Port: 36242
 
-    Client Protocol: HTTP
+   Client Protocol: HTTP
     Request Method: GET
-        Request URI: /txt
+       Request URI: /txt
 
-        host_header: 10.2.2.4
+       host_header: 10.2.2.4
         user-agent: curl/7.58.0
-
+      
 You should also be able to run ``ssh ubuntu@10.2.2.4`` from the "Client" host 
 in UDF (the ssh key is installed on the Client already).
 
 Once on that host you should be able to connect to ``http://10.1.1.4:8080/txt``
 
 .. code-block::
-    
-    azureuser@workload:~$ curl 10.1.1.4:8080/txt
-    ================================================
+   
+   ================================================
     ___ ___   ___                    _
-    | __| __| |   \ ___ _ __  ___    /_\  _ __ _ __
-    | _||__ \ | |) / -_) '  \/ _ \  / _ \| '_ \ '_ \
-    |_| |___/ |___/\___|_|_|_\___/ /_/ \_\ .__/ .__/
-                                        |_|  |_|
-    ================================================
+   | __| __| |   \ ___ _ __  ___    /_\  _ __ _ __
+   | _||__ \ | |) / -_) '  \/ _ \  / _ \| '_ \ '_ \
+   |_| |___/ |___/\___|_|_|_\___/ /_/ \_\ .__/ .__/
+                                         |_|  |_|
+   ================================================
 
-        Node Name: UDF Environment
+         Node Name: UDF Environment
         Short Name: ubuntu
 
-        Server IP: 10.1.1.4
-        Server Port: 8080
+         Server IP: 10.1.1.4
+       Server Port: 8080
 
-        Client IP: 10.2.2.4
-        Client Port: 59304
+         Client IP: 10.2.2.4
+       Client Port: 32860
 
-    Client Protocol: HTTP
+   Client Protocol: HTTP
     Request Method: GET
-        Request URI: /txt
+       Request URI: /txt
 
-        host_header: 10.1.1.4
+       host_header: 10.1.1.4
         user-agent: curl/7.58.0
-
