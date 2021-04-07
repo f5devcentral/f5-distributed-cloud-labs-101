@@ -9,7 +9,7 @@ Exercise 1: Tag AWS Site
 
     |system-context|
 
-#. Navigate the menu to go to "Manage"->"Site Management" and click on "Cloud Credentials".
+#. Navigate the menu to go to "Manage"->"Site Management" and click on "AWS VPC Site".
 
     |aws_vpc_site_menu|
 
