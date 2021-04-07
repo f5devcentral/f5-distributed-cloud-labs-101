@@ -102,7 +102,7 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
     ======================  =====
     Port                    8081
     Show Advance Fields     Toggle On
-    Target Port             Different than Port
+    Port Information        Different than Port
     Different than Port     80
     ======================  =====
 
