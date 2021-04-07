@@ -21,7 +21,7 @@ Next create a static route to the Volterra Gateway in your UDF site.
 
 .. code-block:: shell
   
-  ubuntu@ubuntu:~$ sudo ip route add 10.0.0.0/16 via 10.1.1.6
+  ubuntu@ubuntu:~$ sudo ip route add 10.0.0.0/8 via 10.1.1.6
 
 Repeat the previous test.
 
