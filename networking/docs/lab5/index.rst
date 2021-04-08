@@ -2,7 +2,7 @@ Lab 5: AWS Networking
 =====================
 
 During this lab you will use VoltConsole to connect to an AWS network via a 
-Global Network.  This assumes that you have completed Lab 2 and 3.
+Global Network.  This assumes that you have completed all previous labs (1-4).
 
 .. toctree::
    :maxdepth: 1
