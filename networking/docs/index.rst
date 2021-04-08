@@ -49,4 +49,4 @@ NGINX resources.
    lab4/index
    lab5/index
    lab6/index
-
+   lab7/index

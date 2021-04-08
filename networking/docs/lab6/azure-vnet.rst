@@ -85,7 +85,8 @@ From the Azure Console Bash Cloud Shell run the following command.
     "password": "[password]",
     "tenant": "yyy-yyy"
   }
-Copy the JSON output (starting with "{" ending with "}") of this command and keep it safe.  
+
+Copy the JSON output (starting with "{" ending with "}") of this command and keep it safe.
 This credential enables read/write access to your Azure Subscription.
 
 You will also need to retrieve your subscription ID.  You can use the following command
