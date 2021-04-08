@@ -15,6 +15,7 @@ You will need to provide the following information.
 - Fleet Name: [unique namespace]-udf
 - Fleet Label: [unique namespace]-udf
 - Network Connectors: [unique namespace]-global-connector
+- Network Connectors: [unique namespace]-snat-connector
 
 Then click on "Save and Exit"
 

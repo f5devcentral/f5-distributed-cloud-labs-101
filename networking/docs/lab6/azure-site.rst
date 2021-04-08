@@ -115,7 +115,7 @@ modify the outbound port rules to create a new rule that allows access to all de
 Exercise 4: Test your connections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From UDF you should now be able to connect to ``http://10.2.2.4:8080/txt``
+From UDF on the "Global Network Client" you should now be able to connect to ``http://10.2.2.4:8080/txt``
 
 .. code-block::
    
@@ -144,10 +144,10 @@ From UDF you should now be able to connect to ``http://10.2.2.4:8080/txt``
        host_header: 10.2.2.4
         user-agent: curl/7.58.0
       
-You should also be able to run ``ssh ubuntu@10.2.2.4`` from the "Client" host 
+You should also be able to run ``ssh ubuntu@10.2.2.4`` from the "Global Network Client" host 
 in UDF (the ssh key is installed on the Client already).
 
-Once on that host you should be able to connect to ``http://10.1.1.4:8080/txt``
+Once on that host you should be able to connect to ``http://10.1.20.5/txt`` (the Global Network Client in UDF)
 
 .. code-block::
    
@@ -159,18 +159,18 @@ Once on that host you should be able to connect to ``http://10.1.1.4:8080/txt``
                                          |_|  |_|
    ================================================
 
-         Node Name: UDF Environment
+         Node Name: UDF Environment (demo app)
         Short Name: ubuntu
 
-         Server IP: 10.1.1.4
-       Server Port: 8080
+         Server IP: 10.1.20.5
+       Server Port: 80
 
-         Client IP: 10.2.2.4
+         Client IP: 10.0.3.xx
        Client Port: 32860
 
    Client Protocol: HTTP
     Request Method: GET
        Request URI: /txt
 
-       host_header: 10.1.1.4
+       host_header: 10.1.20.5
         user-agent: curl/7.58.0

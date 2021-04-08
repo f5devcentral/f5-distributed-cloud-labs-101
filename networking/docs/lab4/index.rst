@@ -20,8 +20,5 @@ routing can be used when an application is unable to work with a proxied resourc
    virtual-network
    network-connector
    fleet
-   aws-routing
-   site-routing
-
 
 
