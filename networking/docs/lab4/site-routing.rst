@@ -1,33 +1,21 @@
 Site Routing
 ============
 
-In your UDF site you need to manually configure routing.  Since we are unable
-to modify the overall route table in UDF we will use a static route on the 
-Ubuntu Client to emulate making a network change.  This could also be done with
-dynamic routing protocols like BGP in environments that support those protocols.
+The "Global Network Client" in your UDF environment is configured to use the 
+Volterra Gateway as its default gateway.
 
-Static Route
-~~~~~~~~~~~~
+Login to the "Global Network Client" via web shell or ssh.
 
-On your Ubuntu Client first start by trying to connect to the workload instance 
-that you previously created.
+Exercise 1: Connect to AWS workload
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: shell
-  
-  ubuntu@ubuntu:~$ curl 10.0.3.XX:8080/txt -m 3
-  curl: (28) Connection timed out after 3001 milliseconds
-
-Next create a static route to the Volterra Gateway in your UDF site.
-
-.. code-block:: shell
-  
-  ubuntu@ubuntu:~$ sudo ip route add 10.0.0.0/8 via 10.1.1.6
-
-Repeat the previous test.
+Try to connect to the AWS workload VM.  Use the IP address that is output from the 
+"workload" terraform.  If you forgot the IP you can run ``terraform output`` in the 
+"workload" directory.
 
 .. code-block::
 
-    ubuntu@ubuntu:~$ curl 10.0.3.XX:8080/txt -m 3
+    ubuntu@ubuntu:~$ curl 10.0.3.XX:8080/txt 
     ================================================
     ___ ___   ___                    _
     | __| __| |   \ ___ _ __  ___    /_\  _ __ _ __
@@ -51,3 +39,43 @@ Repeat the previous test.
 
         host_header: 10.0.3.XX
         user-agent: curl/7.58.0
+
+Exercise 2: Connect back to UDF from AWS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You should also be able to run ``ssh ubuntu@10.0.3.xx`` from the "Global Network Client" host 
+in UDF (the ssh key is installed on the Client already).
+
+Once on that host you should be able to connect to ``http://10.1.20.5/txt`` (the Global Network Client in UDF)
+
+.. code-block::
+   
+   ================================================
+    ___ ___   ___                    _
+   | __| __| |   \ ___ _ __  ___    /_\  _ __ _ __
+   | _||__ \ | |) / -_) '  \/ _ \  / _ \| '_ \ '_ \
+   |_| |___/ |___/\___|_|_|_\___/ /_/ \_\ .__/ .__/
+                                         |_|  |_|
+   ================================================
+
+         Node Name: UDF Environment (demo app)
+        Short Name: ubuntu
+
+         Server IP: 10.1.20.5
+       Server Port: 80
+
+         Client IP: 10.0.3.xx
+       Client Port: 32860
+
+   Client Protocol: HTTP
+    Request Method: GET
+       Request URI: /txt
+
+       host_header: 10.1.20.5
+        user-agent: curl/7.58.0
+
+Exercise 3: Connect to the Internet
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You should also be able to access the internet from this host and see
+the connections logged in the "Flow Table" when viewing your site dashboard.
