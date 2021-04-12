@@ -70,7 +70,7 @@ You will need to provide the following information.
 - Token: [use one created previously]
 - Cluster Name: [unique name]+udf
 - Hostname: main-0
-- Certified Hardware: kvm-voltmesh
+- Certified Hardware: kvm-multi-nic-voltmesh
 - Primary Outside NIC: eth0
 - Latitude/Longitude
 
