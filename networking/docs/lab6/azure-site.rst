@@ -165,7 +165,7 @@ Once on that host you should be able to connect to ``http://10.1.20.5/txt`` (the
          Server IP: 10.1.20.5
        Server Port: 80
 
-         Client IP: 10.0.3.xx
+         Client IP: 10.2.2.4
        Client Port: 32860
 
    Client Protocol: HTTP
