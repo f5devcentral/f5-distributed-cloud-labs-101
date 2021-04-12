@@ -98,7 +98,7 @@ click on "Add"
 - Route name: volterra_gateway
 - Address prefix: 0.0.0.0/0
 - Next hop type: Virtual Appliance
-- Next hop address: 10.2.1.1
+- Next hop address: 10.2.1.4
 
 Click on "OK"
 
