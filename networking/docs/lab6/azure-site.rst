@@ -144,7 +144,7 @@ From UDF on the "Global Network Client" you should now be able to connect to ``h
        host_header: 10.2.2.4
         user-agent: curl/7.58.0
       
-You should also be able to run ``ssh ubuntu@10.2.2.4`` from the "Global Network Client" host 
+You should also be able to run ``ssh azureuser@10.2.2.4`` from the "Global Network Client" host 
 in UDF (the ssh key is installed on the Client already).
 
 Once on that host you should be able to connect to ``http://10.1.20.5/txt`` (the Global Network Client in UDF)
