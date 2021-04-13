@@ -8,3 +8,7 @@ variable "location" {
   default     = "eastus"
 }
 
+variable "trusted_ip" {
+  description = "IP address of trusted source for mgmt/testing"
+  default = "192.0.2.10/32"
+}

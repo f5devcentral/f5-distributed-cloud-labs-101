@@ -28,11 +28,41 @@ resource "azurerm_network_security_rule" "f5demo" {
   protocol                    = "*"
   source_port_range           = "*"
   destination_port_range      = "*"
-  source_address_prefix       = "141.156.165.123/32"
+  source_address_prefix       = var.trusted_ip
   destination_address_prefix  = "*"
   resource_group_name         = azurerm_resource_group.rg.name
   network_security_group_name = azurerm_network_security_group.f5demo.name
 }
+
+resource "azurerm_network_security_rule" "block_dns" {
+  name                        = "block_dns"
+  priority                    = 150
+  direction                   = "Inbound"
+  access                      = "Deny"
+  protocol                    = "*"
+  source_port_range           = "*"
+  destination_port_range      = "53"
+  source_address_prefix       = "*"
+  destination_address_prefix  = "*"
+  resource_group_name         = azurerm_resource_group.rg.name
+  network_security_group_name = azurerm_network_security_group.f5demo.name
+}
+
+resource "azurerm_network_security_rule" "allow_dns" {
+  name                        = "allow_dns"
+  priority                    = 149
+  direction                   = "Inbound"
+  access                      = "Allow"
+  protocol                    = "*"
+  source_port_range           = "*"
+  destination_port_range      = "53"
+  source_address_prefix       = "10.0.0.0/8"
+  destination_address_prefix  = "*"
+  resource_group_name         = azurerm_resource_group.rg.name
+  network_security_group_name = azurerm_network_security_group.f5demo.name
+}
+
+
 
 resource "azurerm_virtual_network" "f5demo" {
   name                = "f5demo_vnet"
@@ -73,4 +103,9 @@ resource "azurerm_route_table" "workload" {
 resource "azurerm_subnet_route_table_association" "workload" {
   subnet_id      = azurerm_subnet.workload.id
   route_table_id = azurerm_route_table.workload.id
+}
+
+resource "azurerm_subnet_network_security_group_association" "f5demo" {
+  subnet_id                 = azurerm_subnet.external.id
+  network_security_group_id = azurerm_network_security_group.f5demo.id
 }
