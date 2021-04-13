@@ -11,7 +11,7 @@ resource "google_compute_firewall" "workload" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22","8080"]
+    ports    = ["22", "8080"]
   }
 
 }
@@ -28,7 +28,7 @@ resource "google_compute_instance" "workload" {
 
 
   network_interface {
-    network = google_compute_network.internal.id
+    network    = google_compute_network.internal.id
     subnetwork = google_compute_subnetwork.workload.id
     access_config {
       // Ephemeral IP

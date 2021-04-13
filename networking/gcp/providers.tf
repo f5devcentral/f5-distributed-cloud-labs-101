@@ -2,13 +2,13 @@ terraform {
   required_providers {
     google = {
       source = "hashicorp/google"
-#      version = "3.64.0"
+      #      version = "3.64.0"
     }
   }
 }
 
 provider "google" {
   # Configuration options
-  region = var.region
+  region  = var.region
   project = var.project
 }
