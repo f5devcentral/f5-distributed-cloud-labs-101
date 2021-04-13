@@ -60,6 +60,10 @@ You will use the IP address next to configure your workload instance.
 
 .. image:: aws-console-private-ip.png
 
+You can alternately get this same information from VoltConsole by clicking on the "Nodes" tab for your
+site and selecting the node.
+
+.. image:: volt-console-nodes.png
 
 Deploy Workload
 ~~~~~~~~~~~~~~~

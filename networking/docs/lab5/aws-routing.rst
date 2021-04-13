@@ -39,3 +39,39 @@ Then click on "Configure" under "Global Network Connections"
     * Simple Static Route: 10.0.3.0/24
 
 Click on Apply and save your changes.
+
+Verify Routes
+~~~~~~~~~~~~~
+
+You can verify that the routes have been applied by using the "Tools" that is part of
+your site in VoltConsole.  
+
+When viewing your site click on "Tools" (far right, you may need to scroll).
+
+Select the tool "Show Routes".
+
+For "Virtual Network Type" specify "VIRTUAL_NETWORK_SITE_LOCAL_INSIDE".
+
+Click on "Show routes".
+
+You should get JSON ouput.  In particular look for an entry for 10.1.20.0/24.  
+The entry for 10.1.20.6/32 is for the Volterra Gateway in UDF.
+
+.. code-block:: javascript
+    
+    ...
+        {
+            "prefix": "10.1.20.0/24",
+            "nh": 91,
+            "flags": "",
+            "label": 263,
+            "nh_info": "Mpls Tunnel to 10.101.82.12, encapsulation type MPLSoUDP"
+        },
+        {
+            "prefix": "10.1.20.6/32",
+            "nh": 91,
+            "flags": "",
+            "label": 263,
+            "nh_info": "Mpls Tunnel to 10.101.82.12, encapsulation type MPLSoUDP"
+        },
+    ...
