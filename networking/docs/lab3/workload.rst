@@ -52,7 +52,7 @@ there would be multiple instances).
   from running "terraform output" previously should contain the region (i.e. us-east-1).  You can
   also try "us-west-2" (fallback value).
 
-Take note of the private ip of the internal interface.  It should be on the 10.0.3.0/24 network.
+Take note of the private ip of the internal interface.  It should be on the 10.0.5.0/24 network.
 You will use the IP address next to configure your workload instance.
 
 .. image:: aws-console-private-ip.png
@@ -79,7 +79,7 @@ run "terraform apply" and enter the private IP when prompted for the Volterra Ga
   
   ubuntu@ubuntu:~/f5-volterra-labs-101/networking/workload$ terraform apply
   var.volterra_gateway
-    Enter a value: 10.0.3.XX
+    Enter a value: 10.0.5.XX
 
 Enter "yes" when prompted.
 
