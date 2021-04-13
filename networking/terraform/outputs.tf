@@ -5,11 +5,11 @@ output "EXTERNAL_SUBNET_ID" {
   value = aws_subnet.f5-volterra-management-1.id
 }
 
-output "INTERNAL_SUBNET_ID" {
+output "WORKLOAD_SUBNET_ID" {
   value = aws_subnet.f5-volterra-internal-1.id
 }
 
-output "INTERNAL2_SUBNET_ID" {
+output "INTERNAL_SUBNET_ID" {
   value = aws_subnet.f5-volterra-internal-3.id
 }
 

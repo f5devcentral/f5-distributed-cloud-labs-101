@@ -64,6 +64,8 @@ Exercise 3: Check HTTP LB Origin Servers
 
 Now that we have updated the SPA and API origin pools we need to check the health of the origin pools in the HTTP Load Balancer. 
 
+Please be sure to reload your "brews" application in a web browser to generate some traffic first.
+
 #. Navigate the menu to *Virtual Hosts* -> *HTTP Load Balancers*
 
     |virtual_hosts_http_lb_menu|

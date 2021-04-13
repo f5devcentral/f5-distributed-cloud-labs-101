@@ -10,7 +10,7 @@ a "virtual site" that contains the REs we want to target.
 
     |lu-ns|
 
-#. Using the menu on the left, navigate to "Manage"->"Virtual Sites". Click on *Add virtual site*.
+#. Using the menu on the left, navigate to "Manage"->"Virtual Sites". Click on *Save and Exit*.
 
     |menu-vs| |add-vs|
 
@@ -25,7 +25,7 @@ a "virtual site" that contains the REs we want to target.
     Site Selector Expression          ves.io/siteName in {ves-io-ny8-nyc, ves-io-wes-sea}
     ================================= =====
 
-    |vs-selector-expression| |add-vs-diag| |add-vs-button|
+    |vs-selector-expression| |add-vs-diag|
 
 #. Verify your "recs-re" virtual site was created.
 

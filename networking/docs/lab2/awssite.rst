@@ -24,7 +24,7 @@ Run the following commands to deploy the VPC.
     AWS_CONSOLE = "https://XXXXX.signin.aws.amazon.com/console?region=us-east-1"
     AWS_INSTANCE = "192.0.2.10"
     EXTERNAL_SUBNET_ID = "subnet-0f8ec509e82e4d3f5"
-    INTERNAL2_SUBNET_ID = "subnet-06c3611948fc6fc83"
+    WORKLOAD_SUBNET_ID = "subnet-06c3611948fc6fc83"
     INTERNAL_SUBNET_ID = "subnet-066c974f0e37f0326"
     _VPC_ID = "vpc-05767b378021fdc6c"  
 
@@ -81,11 +81,12 @@ Under "New AWS Site" you will need to provide the following information:
 
 Under the section for "Nodes" provide the following information
 
+- Click on "Show Advanced Fields" (top right)
 - AWS AZ Name: |aws_zone|
 - Subnet Choices for Inside Interface change to "Subnet for Inside Interface"
 - Change from "New Subnet" to "Existing Subnet ID"
 - Enter the value of "INTERNAL_SUBNET_ID"
-- Under "Workload Subnet" also change to "Existing Subnet ID" and enter "INTERNAL2_SUBNET_ID"
+- Under "Workload Subnet" also change to "Existing Subnet ID" and enter "WORKLOAD_SUBNET_ID"
 - Under "Subnet for Outside Interface" also change to "Existing Subnet ID" and enter "EXTERNAL_SUBNET_ID"
 
 Click on "Apply"

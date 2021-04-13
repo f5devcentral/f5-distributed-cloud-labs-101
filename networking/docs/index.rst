@@ -48,4 +48,5 @@ NGINX resources.
    lab3/index
    lab4/index
    lab5/index
-
+   lab6/index
+   lab7/index

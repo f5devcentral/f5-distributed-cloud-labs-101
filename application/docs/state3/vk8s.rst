@@ -85,6 +85,8 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
 
 #. Under *Customer Virtual Sites*, click the *Configure* link.
 
+|vk8s_workloads_deploy|
+
 #. Select the Virtual Site you created in the previous section.
 
 #. Click the *Apply* button.
@@ -100,7 +102,7 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
     ======================  =====
     Port                    8081
     Show Advance Fields     Toggle On
-    Target Port             Different than Port
+    Port Information        Different than Port
     Different than Port     80
     ======================  =====
 
@@ -168,6 +170,8 @@ Exercise 3: Create Virtual K8s Workload for the API
     Where to Deploy the workload    Customer Virtual Sites 
     =============================== =====
 
+    |vk8s_workloads_deploy|
+
 #. Under *Customer Virtual Sites*, click the *Configure* link.
 
 #. Select the Virtual Site you created in the previous section.
@@ -214,6 +218,7 @@ You should now see your two workloads with 1 Running/Completed Pods per workload
 .. |k8s_workloads_menu| image:: ../_static/k8s_workloads_menu.png
 .. |vk8s_workloads_containers| image:: ../_static/vk8s_workloads_containers.png
 .. |vk8s_workloads_containers_api| image:: ../_static/vk8s_workloads_containers_api.png
+.. |vk8s_workloads_deploy| image:: ../_static/vk8s_workloads_deploy.png
 .. |vk8s_workloads_advertise| image:: ../_static/vk8s_workloads_advertise.png
 .. |vk8s_workloads_list| image:: ../_static/vk8s_workloads_list.png
 .. |vk8s_workloads_env| image:: ../_static/vk8s_workloads_env.png
