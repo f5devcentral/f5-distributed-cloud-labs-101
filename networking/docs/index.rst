@@ -50,3 +50,4 @@ NGINX resources.
    lab5/index
    lab6/index
    lab7/index
+   lab8/index
