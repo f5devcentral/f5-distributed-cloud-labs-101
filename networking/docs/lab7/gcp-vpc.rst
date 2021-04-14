@@ -86,4 +86,4 @@ For the name enter "[unique name]-gcp".
 For the Cloud Credential Type: "GCP Credentials" 
 
 For the Secret value enter the contents of the "key.json" file that you created earlier
- and then click on "Blindfold"
+and then click on "Blindfold"

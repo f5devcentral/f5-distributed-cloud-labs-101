@@ -78,7 +78,7 @@ Click on "Create"
 Exercise 3: Test your connections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From UDF on the "Global Network Client" you should now be able to connect to ``http://10.2.2.4:8080/txt``
+From UDF on the "Global Network Client" you should now be able to connect to ``http://10.3.2.2:8080/txt``
 
 .. code-block::
    
