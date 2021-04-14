@@ -7,7 +7,7 @@ Lab 7: GCP Networking
 
 During this lab you will use VoltConsole to
 
-- Create an GCP VPC site
+- Create a GCP VPC 
 - Connect GCP site to Global Network 
 
 This is a continuation of Lab 4.
