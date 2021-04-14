@@ -67,7 +67,7 @@ add the following information (replace with relevant information).
 You should now be able to run ``terraform apply -auto-approve`` to build out 
 your VPC.
 
-Exercise 2: Create Volterra Azure Cloud Credential
+Exercise 2: Create Volterra GCP Cloud Credential
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From Google Cloud Shell export the key for the service ID that you created previously.

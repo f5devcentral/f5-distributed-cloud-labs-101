@@ -67,7 +67,7 @@ From the Google Cloud Console go to VPC Networks -> Routes.
 
 Click on "Create Routes".
 
-- Name: volterra_gateway
+- Name: volterra-gateway
 - Network: [unique name]-internal
 - Destination IP Range: 0.0.0.0/0
 - Next hop: Specify IP address

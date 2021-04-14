@@ -1,4 +1,4 @@
-Lab 7: Optional Exercises
+Lab 8: Optional Exercises
 =========================
 
 In case you managed to complete all the previous labs in record time the following
