@@ -623,13 +623,3 @@ TASK: 9: Clean-Up & End of Lab
    :width: 800px
 .. |image043| image:: media/lab01-043.png
    :width: 800px
-.. |image044| image:: media/lab01-044.png
-   :width: 800px
-.. |image045| image:: media/lab01-045.png
-   :width: 800px
-.. |image046| image:: media/lab01-046.png
-   :width: 800px
-.. |image047| image:: media/lab01-047.png
-   :width: 800px
-.. |image048| image:: media/lab01-048.png
-   :width: 800px
