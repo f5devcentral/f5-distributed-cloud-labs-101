@@ -3,7 +3,7 @@ Lab 1: Volterra Application Firewall Deployment
 
 The purpose of this lab is to extend the participant's ability to navigate the 
 Volterra console and assign an Application Firewall via Rule-based WAF configurations. 
-This an entry-level security configuration which is part of Volterra's current multi-layer 
+This is an entry-level security configuration which is part of Volterra's current multi-layer 
 security approach.   
 
 Volterra's current multi-layer security approach leverages both a **Rule-Based WAF** and a 
@@ -384,7 +384,7 @@ TASK: 7: Testing and Adjsuting WAF Configuration (WAF Object)
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. Now append the following as your query string to your URL and brwose again:               |
+| 2. Now append the following as your query string to your URL and browse again:               |
 |                                                                                              |
 |    **/?cmd=cat%20/etc/passwd**                                                               |
 |                                                                                              |
