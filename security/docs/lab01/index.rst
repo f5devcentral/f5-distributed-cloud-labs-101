@@ -98,7 +98,7 @@ Details on all the parameters and how they can be configured for this object is 
 Specification under WAF object or WAF-Rules object documentation on https://volterra.io 
 
 TASK 3: Volterra Console (General Navigation)
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. Login to the Volterra Console: **https://www.volterra.io** and complete authentication.   |
 |                                                                                              |
@@ -149,7 +149,7 @@ TASK 3: Volterra Console (General Navigation)
 +----------------------------------------------------------------------------------------------+
 
 TASK 4: Before you begin the Lab  
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. For purposes of lab localization, participants need to identify their tenant's delegated  |
 |    delegated Public DNS subdomain.                                                           |
@@ -163,11 +163,9 @@ TASK 4: Before you begin the Lab
 | *Note: The localized subdomain under .f5demos.com has been delegated to this Volterra*       |
 | *tenant. This enables auto generation of Public DNS hostnames.*                              |
 +----------------------------------------------------------------------------------------------+
-| |image044|                                                                                   |
-+----------------------------------------------------------------------------------------------+
 
 TASK 5: Configuring Web Application Firewall
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. The following describes the configuration workflow for creating an application firewall   |
 |    which fundamentally involves the following key steps:                                     |
@@ -269,7 +267,7 @@ TASK 5: Configuring Web Application Firewall
 +----------------------------------------------------------------------------------------------+
 
 TASK: 6: Building a HTTP Load Balancer and Origin Pool
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. Remaining in the **App** view, select **Manage** > **Load Balancers** from left           |
 |    navigation then select **HTTP Load Balancers** from the flyout menu.                      |
@@ -355,7 +353,7 @@ TASK: 6: Building a HTTP Load Balancer and Origin Pool
 +----------------------------------------------------------------------------------------------+
 
 TASK: 7: Attaching a WAF Configuration (WAF Object) & Completing HTTP Load Balancer
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. After returning to the **New: HTTP Load Balancer** window, scroll to the **Security**     |
 |    **Configuration** section.                                                                |
@@ -385,7 +383,7 @@ TASK: 7: Attaching a WAF Configuration (WAF Object) & Completing HTTP Load Balan
 +----------------------------------------------------------------------------------------------+
 
 TASK: 8: Testing and Adjusting WAF Configuration (WAF Object)
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. In a new browser window, navigate to the hostname defined in Task 6, Step 3.  This        |
 |    should be **http://<username>-app.<delegated domain>**. Confirm its successful.           |
@@ -442,7 +440,7 @@ TASK: 8: Testing and Adjusting WAF Configuration (WAF Object)
 +----------------------------------------------------------------------------------------------+
 
 TASK: 9: Reviewing Analytics & Security Events 
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. In the Volterra Console, use the left navigation menu to navigate to **Virtual Hosts** >  |
 |    **HTTP Load Balancers**.                                                                  |
@@ -496,7 +494,7 @@ TASK: 9: Reviewing Analytics & Security Events
 +----------------------------------------------------------------------------------------------+
 
 TASK: 10: Clean-Up & End of Lab
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. In the Volterra Console, use the left navigation menu to navigate to **Manage** > **Load**|
 |    **Balancers** and select **HTTP Load Balancers**.                                         |
