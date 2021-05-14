@@ -98,7 +98,6 @@ Details on all the parameters and how they can be configured for this object is 
 Specification under WAF object or WAF-Rules object documentation on https://volterra.io 
 
 TASK 3: Volt Console (General Navigation)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. Login to the Volterra Console: **https://www.volterra.io** and complete authentication.   |
@@ -147,7 +146,6 @@ TASK 3: Volt Console (General Navigation)
 +----------------------------------------------------------------------------------------------+
 
 TASK 4: Configuring Web Application Firewall  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. The following describes the configuration workflow for creating an appplication firewall  |
@@ -250,7 +248,6 @@ TASK 4: Configuring Web Application Firewall
 +----------------------------------------------------------------------------------------------+
 
 TASK: 5: Building a HTTP Load Balancer and Origin Pool
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. Remaining in the **App** view, select **Manage** > **Load Balancers** from left           |
@@ -333,13 +330,12 @@ TASK: 5: Building a HTTP Load Balancer and Origin Pool
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 10. Rewiew the Origin Pool configuration and click the **Apply** button.                     |
+| 10. Review the Origin Pool configuration and click the **Apply** button.                     |
 +----------------------------------------------------------------------------------------------+
 | |image026|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 TASK: 6: Attaching a WAF Configuration (WAF Object) & Completing HTTP Load Balancer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. After returning to the **New: HTTP Load Balancer** window, scroll to the **Security**     |
@@ -373,8 +369,7 @@ TASK: 6: Attaching a WAF Configuration (WAF Object) & Completing HTTP Load Balan
 | |image030|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK: 7: Testing and Adjsuting WAF Configuration (WAF Object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TASK: 7: Testing and Adjusting WAF Configuration (WAF Object)
 
 +----------------------------------------------------------------------------------------------+
 | 1. In a new browser window, navigate to the hostname defined in Task 5, Step 3.  This        |
@@ -430,7 +425,6 @@ TASK: 7: Testing and Adjsuting WAF Configuration (WAF Object)
 +----------------------------------------------------------------------------------------------+
 
 TASK: 8: Reviewing Analytics & Security Events 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. In the Volterra Console, use the left navigation menu to navigate to **Virtual Hosts** >  |
@@ -490,7 +484,6 @@ TASK: 8: Reviewing Analytics & Security Events
 +----------------------------------------------------------------------------------------------+
 
 TASK: 9: Clean-Up & End of Lab
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. In the Volterra Console, use the left navigation menu to naigate to **Manage** > **Load** |
