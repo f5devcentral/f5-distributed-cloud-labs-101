@@ -95,7 +95,7 @@ way of routes, monitoring is not based on these WAF objects. All monitoring for 
 virtual-host basis to provide insights into application.
 
 Details on all the parameters and how they can be configured for this object is covered in the API 
-Specification under WAF object or WAF-Rules object documentation on https://volterra.io 
+Specification under WAF object or WAF-Rules object documentation on https://www.volterra.io 
 
 TASK 3: Volterra Console (General Navigation)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -286,7 +286,7 @@ TASK: 6: Building a HTTP Load Balancer and Origin Pool
 |                                                                                              |
 |    **Basic Configuration** section:                                                          |
 |                                                                                              |
-|    * **Domains**: <username>-app.<Recorded Delegated Domain> Task 4, Step 3                  |
+|    * **Domains**: <username>-app.<Delegated Domain> Recorded in Task 4, Step 3               |
 |                                                                                              |
 |    * **Select Type of Load Balancer**: HTTP                                                  |
 |                                                                                              |
@@ -623,4 +623,6 @@ TASK: 10: Clean-Up & End of Lab
 .. |image042| image:: media/lab01-042.png
    :width: 800px
 .. |image043| image:: media/lab01-043.png
+   :width: 800px
+.. |image044| image:: media/lab01-044.png
    :width: 800px
