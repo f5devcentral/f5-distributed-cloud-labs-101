@@ -192,6 +192,23 @@ TASK: 6: Testing
 | |image013|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
+TASK: 7: Clean-Up & End of Lab
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++----------------------------------------------------------------------------------------------+
+| 1. In the Volterra Console, use the left navigation menu to naigate to **Manage** > **Load** |
+|    **Balancers** and select **HTTP Load Balancers**.                                         |
+|                                                                                              |
+| 2. In the updated right window, locate the row of the HTTP Load Balancer created in Task 5,  |
+|    Step 3 and click the three dots **...** at the far right of the row, and then click       |
+|    **Delete** in the resulting pop-up window.                                                |
++----------------------------------------------------------------------------------------------+
+| |image041|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 7. This concludes this Lab, feel free to run through the lab again as needed.                |
++----------------------------------------------------------------------------------------------+
+
 .. |image001| image:: media/lab02-001.png
    :width: 800px
 .. |image002| image:: media/lab02-002.png
@@ -217,4 +234,6 @@ TASK: 6: Testing
 .. |image012| image:: media/lab02-012.png
     :width: 800px
 .. |image013| image:: media/lab02-013.png
+    :width: 800px
+.. |image041| image:: media/lab02-041.png
     :width: 800px

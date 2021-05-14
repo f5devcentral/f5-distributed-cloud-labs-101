@@ -485,6 +485,7 @@ TASK: 8: Reviewing Analytics & Security Events
 
 TASK: 9: Clean-Up & End of Lab
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 +----------------------------------------------------------------------------------------------+
 | 1. In the Volterra Console, use the left navigation menu to naigate to **Manage** > **Load** |
 |    **Balancers** and select **HTTP Load Balancers**.                                         |
@@ -495,6 +496,9 @@ TASK: 9: Clean-Up & End of Lab
 +----------------------------------------------------------------------------------------------+
 | |image041|                                                                                   |
 +----------------------------------------------------------------------------------------------+
+
+.. warning::  If you are going to procede to Lab 2, skip this steps 3-4 for now.  We will be 
+              reusing the loadbalancer objects & configurations.
 
 +----------------------------------------------------------------------------------------------+
 | 3. In the Volterra Console, use the left navigation menu to naigate to **Manage** > **Load** |
