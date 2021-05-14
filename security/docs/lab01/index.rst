@@ -163,6 +163,8 @@ TASK 4: Before you begin the Lab
 | *Note: The localized subdomain under .f5demos.com has been delegated to this Volterra*       |
 | *tenant. This enables auto generation of Public DNS hostnames.*                              |
 +----------------------------------------------------------------------------------------------+
+| |image044|                                                                                   |
++----------------------------------------------------------------------------------------------+
 
 TASK 5: Configuring Web Application Firewall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
