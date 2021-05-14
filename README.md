@@ -13,7 +13,7 @@ This can also be adapted to run outside of UDF (requires VoltMesh node and [Sing
 
 ## Lab Guide
 
-Please see the `docs` directory in the `networking` or `application` directories.
+Please see the `docs` directory in the `networking`, `application`, or `security` directories.
 
 ## Development
 Please run the following commands to setup a development environment:
@@ -41,7 +41,7 @@ Please refer to the [F5 DevCentral Community Code of Conduct](code_of_conduct.md
 [Apache License 2.0](LICENSE)
 
 ## Copyright
-Copyright 2014-2020 F5 Networks Inc.
+Copyright 2014-2021 F5 Networks Inc.
 
 
 ### F5 Networks Contributor License Agreement
