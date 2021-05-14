@@ -7,45 +7,45 @@ This an entry-level security configuration which is part of Volterra's current m
 security approach.   
 
 Volterra's current multi-layer security approach leverages both a **Rule-Based WAF** and a 
-**Behavioral Firewall**. This can be further exteneded through using a combination of 
-the Rules-Based WAF, Behavioral Analysis(Behavioral Firewall), and **Fast ACLs** from the
+**Behavioral Firewall**. This can be further extended through using a combination of 
+the Rules-Based WAF, Behavioral Analysis (Behavioral Firewall), and **Fast ACLs** from the
 Network Firewall section to enable **Application DOS Protection**. These additional topics
 will be addressed in specific labs.  
 
 Objective:
 ----------
 
--  Gain an navigational understanding of Volterra Console and its key menus
+-  Gain a navigational understanding of Volterra Console and its key menus
 
 -  Gain an initial understanding of Volterra's Application Firewall - Rule-Based WAF configuration
 
--  Deploy and verfiy security configuration within Volterra Console 
+-  Deploy and verify security configurations within the Volterra Console 
 
 Lab Requirements:
 -----------------
 
 -  All Lab requirements will be noted in the tasks that follow
 
--  Estimated completion time: 20 minutes
+-  Estimated completion time: 25 minutes
 
 Lab 1 Tasks:
------------------
+------------
 
-TASK 1: Quick Intro - Rules-based WAFs (Concept Review)
+TASK 1: Quick Intro - Rules-Based WAFs (Concept Review)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The rules engine (currently based-on ModSec) is the centerpiece of Volterra's WAFs current approach
-to application security and decision of what rules to configure assumes a high degree of
+The rules engine (currently based on ModSec) is the centerpiece of Volterra's WAFs current approach
+to application security and the decision of what rules to configure presumes a high degree of
 knowledge of the rules. If for some reason, a needed rule is excluded then the application
 will be vulnerable. If unwanted rules are added, then it adds extra processing per request 
-and this adds to latency. To solve this problem of rules knowledge and make it extremely easy
+and this adds latency. To solve this problem of rules knowledge and make it extremely easy
 to configure, we created a rules processing engine that automates the inclusion and exclusion
 of rules.
 
-There are two types of rules for each waf-object that are supported by the system 
+There are two types of rules for each WAF-object that are supported by the system 
 **core-rule-set** and a **volterra-rule-set**. There are two ways the rules can be enabled:
 
 :**Implicit**: User provides a list of technologies. For example, programming languages used,
-               content management systems used, types of servers, etc that are used by the 
+               content management systems used, types of servers, etc. that are used by the 
                endpoints (or services) for a given virtual-host. Volterra has an algorithmic 
                engine that will use this information to automatically figure out rules to 
                include and exclude from both the rule set.
@@ -56,15 +56,15 @@ In addition to configuring the rules, the decision needs to be made on whether t
 attacks or just generate an alert and let the security or application experts decide what
 actions to take:
 
-:**Monitoring mode**: This will generate an alert on a security event. No attack is 
+:**Monitoring mode**: This will generate an alert based on a security event. No attack is 
                       blocked in this mode.
-:**Blocking Mode**: This will configure the WAF to be Inline-mode and deny client requests 
+:**Blocking Mode**: This will configure the WAF to be in Inline-mode and deny client requests 
                     that match certain rules.
 
 TASK 2: Quick Intro - Configuring Rules-based WAFs (Concept Review)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The user can configure a **Web Application Firewall** per **virtual host** by attaching **WAF**
-**object** or **WAF-rules object** to a **virtual-host** object:
+**object** or **WAF-Rules object** to a **virtual-host** object:
 
 :**WAF object**: Is a mechanism to make users life easy and is described earlier as 
                  the implicit mode. The idea is that instead of enabling all the rules 
@@ -74,7 +74,7 @@ The user can configure a **Web Application Firewall** per **virtual host** by at
 
 :**WAF-Rules object**: Is a mechanism for advanced users and is described earlier as the explicit 
                        mode. One can select rules in core-rule-set or volterra-rule-set to be 
-                       enabled/disabled by configuring the waf-rules-object appropriately. 
+                       enabled/disabled by configuring the WAF-rules-object appropriately. 
 
 The built-in rules processor takes the WAF object and automatically creates a WAF-rules object that 
 contains the detailed configuration information that can be used by the WAF. The processing engine
@@ -86,25 +86,28 @@ works on the basis of the following information:
                                  (SQL injection, XSS, Protocol, etc.)
 
 Automatically generated WAF-rules object cannot be modified by users and this object is owned by the 
-system. However the user can always copy this auto-generated WAF-rules object and further tune it.
+system. However, the user can always copy this auto-generated WAF-rules object and further tune it.
 
 Individual WAF or WAF-Rules objects can be shared by multiple virtual hosts within a namespace. In 
 addition, these objects can also be attached to virtual host or per route basis. Since WAF objects 
-can be shared with multiple virtual hosts and multiple wafs can be configured to given virtual-host by 
+can be shared with multiple virtual hosts and multiple WAFs can be configured to given virtual-host by 
 way of routes, monitoring is not based on these WAF objects. All monitoring for a WAF is done on a per 
-virtual-host to provide insights into application.
+virtual-host basis to provide insights into application.
 
 Details on all the parameters and how they can be configured for this object is covered in the API 
 Specification under WAF object or WAF-Rules object documentation on https://volterra.io 
 
-TASK 3: Volt Console (General Navigation)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TASK 3: Volterra Console (General Navigation)
+
 +----------------------------------------------------------------------------------------------+
 | 1. Login to the Volterra Console: **https://www.volterra.io** and complete authentication.   |
 |                                                                                              |
-| 2. **Log In** > **Teams or Organization Plans** (This is specfic to region) > **Next**       |
+| 2. **Log In** > **Teams or Organization Plans** <Enter your Volterra Tenant ID> then click   |
+|    **Next**.                                                                                 |
 |                                                                                              |
-| 3. **Log in with Azure** (You must have completed your account onboarding process.)          |
+| 3. **Log in with Azure** (Participants must have completed the account onboarding process.)  |
+|                                                                                              |
+| *Note: Participants must have their Volterra Tenant ID to complete login and lab.*           |
 |                                                                                              |
 | *Note: Logging on as Tenant Owner provides tenant-wide administration priviledges.*          |
 +----------------------------------------------------------------------------------------------+
@@ -119,14 +122,14 @@ TASK 3: Volt Console (General Navigation)
 | 4. Review the **Volt Console** as presented. Your focused view maybe different.              |
 |                                                                                              |
 | 5. Click the **App** tab at the top of the left navigation. It is the **App View** and is    |
-|    more centric to **Devops** **Personas**.                                                  |
+|    more centric to **DevOps** **Personas**.                                                  |
 +----------------------------------------------------------------------------------------------+
 | |image004|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
 | 6. Click the **Shared** tab at the top of the left navigation. This is the **Shared View**   |
-|    and is more centric to **Secops Personas** and is where the bulk of all **shared**        |
+|    and is more centric to **SecOps Personas** and is where the bulk of all **shared**        |
 |    application security configurations will be made.                                         |
 +----------------------------------------------------------------------------------------------+
 | |image005|                                                                                   |
@@ -134,7 +137,7 @@ TASK 3: Volt Console (General Navigation)
 
 +----------------------------------------------------------------------------------------------+
 | 7. Click the **System** tab at the top of the left navigation.  This is the **System View**  |
-|    and is more centric to **Netops Personas**.                                               |
+|    and is more centric to **NetOps Personas**.                                               |
 +----------------------------------------------------------------------------------------------+
 | |image006|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -145,13 +148,31 @@ TASK 3: Volt Console (General Navigation)
 | |image007|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 4: Configuring Web Application Firewall  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TASK 4: Before you begin the Lab  
+
 +----------------------------------------------------------------------------------------------+
-| 1. The following describes the configuration workflow for creating an appplication firewall  |
-|    which fundametally involves the following key steps:                                      |
+| 1. For purposes of lab localization, participants need to identify their tenant's delegated  |
+|    delegated Public DNS subdomain.                                                           |
 |                                                                                              |
-|    Choosing a prefferred creation approach (one of the below):                               |
+| 2. Click the **System** tab at the top of the left navigation. Navigate to **Manage** >      |
+|    **Networking** > **Delegated Domains**.                                                   |
+|                                                                                              |
+| 3. In the updated right panel, locate the value of the domain that is under **.f5demos.com** |
+|    Record the full delegated domain as it will be used later in the lab.                     |
+|                                                                                              |
+| *Note: The localized subdomain under .f5demos.com has been delegated to this Volterra*       |
+| *tenant. This enables auto generation of Public DNS hostnames.*                              |
++----------------------------------------------------------------------------------------------+
+| |image044|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 5: Configuring Web Application Firewall
+
++----------------------------------------------------------------------------------------------+
+| 1. The following describes the configuration workflow for creating an application firewall   |
+|    which fundamentally involves the following key steps:                                     |
+|                                                                                              |
+|    Choosing a preferred creation approach (one of the below):                                |
 |                                                                                              |
 |    * **Create WAF Rules**: Creating a WAF Rules object in this manner is a process of        |
 |      *manual* selection of the rule ID/lists from the Core Rules Set (CRS) and Volterra      |
@@ -160,7 +181,7 @@ TASK 4: Configuring Web Application Firewall
 |    * **Create WAF**: Create application firewall object which *auto-generates* a WAF Rules   |
 |      object based on selected or excluded criteria and the configured application settings.  |
 |                                                                                              |
-|    You will then peform the following next step:                                             |
+|    You will then perform the following next step:                                            |
 |                                                                                              |
 |    * **Attach WAF**: Attach the WAF Rules Object or WAF Object to the Virtual Host.          |
 +----------------------------------------------------------------------------------------------+
@@ -172,7 +193,7 @@ TASK 4: Configuring Web Application Firewall
 |    the *namespace* dropdown.                                                                 |
 |                                                                                              |
 |    *Note: For shared configurations, the shared namespace is automatically selected when*    |
-|    * using the shared view. (for more global configurations).*                               |
+|    * using the Shared view. (for more global configurations).*                               |
 +----------------------------------------------------------------------------------------------+
 | |image009|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -247,8 +268,8 @@ TASK 4: Configuring Web Application Firewall
 | |image017|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK: 5: Building a HTTP Load Balancer and Origin Pool
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TASK: 6: Building a HTTP Load Balancer and Origin Pool
+
 +----------------------------------------------------------------------------------------------+
 | 1. Remaining in the **App** view, select **Manage** > **Load Balancers** from left           |
 |    navigation then select **HTTP Load Balancers** from the flyout menu.                      |
@@ -267,18 +288,16 @@ TASK: 5: Building a HTTP Load Balancer and Origin Pool
 |                                                                                              |
 |    **Basic Configuration** section:                                                          |
 |                                                                                              |
-|    * **Domains**: <username>-app.amer-ent.f5demos.com                                        |
+|    * **Domains**: <username>-app.<Recorded Delegated Domain> Task 4, Step 3                  |
 |                                                                                              |
-|      *Note: The subdomain .amer-ent.f5demos.com has been delagted to this Volterra tenant.*  |
-|      *As a result, DNS hostnames can be auto generated*                                      |
-|                                                                                              |
-|    * **Select Type of Load Balancer**: HTTPS with Automatic Certificate                      |
+|    * **Select Type of Load Balancer**: HTTP                                                  |
 |                                                                                              |
 |      *Note: Volterra has been integrated with Let's Encrypt.  If the Automatic Certificate*  |
 |      *option is selected, a certificate will be generated and maintained based on the*       |
-|      *selected hostname.*                                                                    |
+|      *selected hostname. This should not be used in general labs to respect Let's Encrypt*   |
+|      *cert creation rate-limiting https://letsencrypt.org/docs/rate-limits/*                 |
 |                                                                                              |
-|    * Check the option for **HTTP Redirect to HTTPS**                                         |
+|    * Check the option for **Automatically Manage DNS Records**.                              |
 +----------------------------------------------------------------------------------------------+
 | |image019|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -335,8 +354,8 @@ TASK: 5: Building a HTTP Load Balancer and Origin Pool
 | |image026|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK: 6: Attaching a WAF Configuration (WAF Object) & Completing HTTP Load Balancer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TASK: 7: Attaching a WAF Configuration (WAF Object) & Completing HTTP Load Balancer
+
 +----------------------------------------------------------------------------------------------+
 | 1. After returning to the **New: HTTP Load Balancer** window, scroll to the **Security**     |
 |    **Configuration** section.                                                                |
@@ -344,7 +363,7 @@ TASK: 6: Attaching a WAF Configuration (WAF Object) & Completing HTTP Load Balan
 | 2. Select **Specify WAF Intent** from the **Select Web Application Firewall (WAF) Config**   |
 |    dropdown menu.                                                                            |
 |                                                                                              |
-|    *Note: If you were editting rather than creating a HTTP Load Balancer, a WAF Object*      |
+|    *Note: If you were editing rather than creating a HTTP Load Balancer, a WAF Object*       |
 |    *could be attached in a similar manner.*                                                  |
 |                                                                                              |
 |    *Note: Alternatively, a more manually controlled WAF Rules Object could also be assigned.*|
@@ -360,32 +379,30 @@ TASK: 6: Attaching a WAF Configuration (WAF Object) & Completing HTTP Load Balan
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. After creating the HTTP Load Balancer, the available HTTP Load Balancers will be          |
-|    displayed. You may note the DNS Domain Verification is still pending.  Refresh the screen |
-|    or wait for the auomatic refresh (1min) until your Certificate is valid as shown below.   |
+| 4. After creating the HTTP Load Balancer, the created HTTP Load Balancer will be displayed.  |
 +----------------------------------------------------------------------------------------------+
 | |image029|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK: 8: Testing and Adjusting WAF Configuration (WAF Object)
+
++----------------------------------------------------------------------------------------------+
+| 1. In a new browser window, navigate to the hostname defined in Task 6, Step 3.  This        |
+|    should be **http://<username>-app.<delegated domain>**. Confirm its successful.           |
 |                                                                                              |
+|    *Note: It make takes a few seconds for the deployment to be ready to test.*               |
++----------------------------------------------------------------------------------------------+
 | |image030|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK: 7: Testing and Adjusting WAF Configuration (WAF Object)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
-| 1. In a new browser window, navigate to the hostname defined in Task 5, Step 3.  This        |
-|    should be **<username>-app.amer-ent.f5demos.com**. Confirm its successful.                |
-+----------------------------------------------------------------------------------------------+
-| |image031|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 2. Now append the following as your query string to your URL and brwose again:               |
+| 2. Now append the following as your query string to your URL and browse again:               |
 |                                                                                              |
 |    **/?cmd=cat%20/etc/passwd**                                                               |
 |                                                                                              |
 | 3. What was your result? (AWAF Block Page, Nothing ???)                                      |
 +----------------------------------------------------------------------------------------------+
-| |image031a|                                                                                  |
+| |image031|                                                                                  |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
@@ -393,8 +410,8 @@ TASK: 7: Testing and Adjusting WAF Configuration (WAF Object)
 |    **Security** > **App Firewalls**.                                                         |
 |                                                                                              |
 | 5. In the resulting **App Firewalls** list window, find the row of the App Firewall created  |
-|    in Task 4, step 5 and navigating to the end of the row, clicking the three dots *...* and | 
-|    then clicking **Edit** in the pop-up window.                                              |    
+|    in Task 4, step 5 and navigating to the end of the row, clicking the three dots *...* and |
+|    then clicking **Edit** in the pop-up window.                                              |
 +----------------------------------------------------------------------------------------------+
 | |image032|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -416,43 +433,38 @@ TASK: 7: Testing and Adjusting WAF Configuration (WAF Object)
 
 +----------------------------------------------------------------------------------------------+
 | 9. In a fresh (incognito) browser window, navigate to the hostname again with the appended   |
-|    query string **<username>-app.amer-ent.f5demos.com/?cmd=cat%20/etc/passwd**.  You should  |
-|    now see the Volterra block page as shown below.                                           |
+|    query string **http://<username>-app.<delegated domain>/?cmd=cat%20/etc/passwd**.         |
+|    You should now see the Volterra block page as shown below.                                |
 |                                                                                              |
 |    *Note: It make takes a few seconds for the policy to apply.*                              |
 +----------------------------------------------------------------------------------------------+
 | |image035|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK: 8: Reviewing Analytics & Security Events 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TASK: 9: Reviewing Analytics & Security Events 
+
 +----------------------------------------------------------------------------------------------+
 | 1. In the Volterra Console, use the left navigation menu to navigate to **Virtual Hosts** >  |
 |    **HTTP Load Balancers**.                                                                  |
 |                                                                                              |
-| 2. In the updated right window, hover over the HTTP Load Balancer create in Task 5, Step 3   |
+| 2. In the updated right window, hover over the HTTP Load Balancer created in Task 6, Step 3  |
 |    and click the **General Monitoring** link.                                                |
-|                                                                                              |
-|    *Note: This is summary view of all created HTTP Load Balancers.*                          |
-|                                                                                              |
-|    *Note: Because Redirect HTTP to HTTPS was selected during HTTP Load Balancer creation,*   |
-|    *a redirect HTTP Load Balancer is also present.*                                          |
 +----------------------------------------------------------------------------------------------+
 | |image036|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Review the available anayltics regarding this HTTP Load Balancer, when complete use the   |
+| 3. Review the available analytics regarding this HTTP Load Balancer, when complete use the   |
 |    the drop menu which currently shows **General Monitoring** to select **Security**         |
 |    **Monitoring**.                                                                           |
-|                                                                                              |   
-|    *Note: You can refresh the site or script curl the site to add addtional statistics.*     |
+|                                                                                              |
+|    *Note: You can refresh the site or script curl the site to add additional statistics.*    |
 +----------------------------------------------------------------------------------------------+
 | |image037|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. In the Security Monoring, **Dashboard** you can review applicable security event          |
+| 4. In the Security Monitoring, **Dashboard** you can review applicable security event        |
 |    information.                                                                              |
 |                                                                                              |
 | 5. In the bottom right of the Dashboard view, find the **Recent WAF and Policy Events**      |
@@ -462,7 +474,7 @@ TASK: 8: Reviewing Analytics & Security Events
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 6. The resulting window provides additional anayltics, details and actions that can be used. |
+| 6. The resulting window provides additional analytics, details and actions that can be used. |
 |    Expand the latest security event by clicking the **>** symbol to review additional        |
 |    security detail.                                                                          |
 +----------------------------------------------------------------------------------------------+
@@ -470,41 +482,37 @@ TASK: 8: Reviewing Analytics & Security Events
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 7. You can scroll through the exapnded security detail view located here for additional      |
-|    information reagarding the event.                                                         |
+| 7. You can scroll through the expanded security detail view located here for additional      |
+|    information regarding the event.                                                          |
 +----------------------------------------------------------------------------------------------+
 | |image040|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **STOP**: Proir to executing the clean-up steps that follow, complete any additional review  |
+| **STOP**: Prior to executing the clean-up steps that follow, complete any additional review  |
 | you wish to do. Enjoy!                                                                       |
 +----------------------------------------------------------------------------------------------+
 | |imageSTOP|                                                                                  |
 +----------------------------------------------------------------------------------------------+
 
-TASK: 9: Clean-Up & End of Lab
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TASK: 10: Clean-Up & End of Lab
 
 +----------------------------------------------------------------------------------------------+
-| 1. In the Volterra Console, use the left navigation menu to naigate to **Manage** > **Load** |
+| 1. In the Volterra Console, use the left navigation menu to navigate to **Manage** > **Load**|
 |    **Balancers** and select **HTTP Load Balancers**.                                         |
 |                                                                                              |
-| 2. In the updated right window, locate the row of the HTTP Load Balancer created in Task 5,  |
+| 2. In the updated right window, locate the row of the HTTP Load Balancer created in Task 6,  |
 |    Step 3 and click the three dots **...** at the far right of the row, and then click       |
 |    **Delete** in the resulting pop-up window.                                                |
 +----------------------------------------------------------------------------------------------+
 | |image041|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-.. warning::  If you are going to procede to Lab 2, skip this steps 3-4 for now.  We will be 
-              reusing the loadbalancer objects & configurations.
-
 +----------------------------------------------------------------------------------------------+
-| 3. In the Volterra Console, use the left navigation menu to naigate to **Manage** > **Load** |
+| 3. In the Volterra Console, use the left navigation menu to navigate to **Manage** > **Load**|
 |    **Balancers** and select **Origin Pools**.                                                |
 |                                                                                              |
-| 4. In the updated right window, locate the row of the Origin Pool created in Task 5, Step 7  |
+| 4. In the updated right window, locate the row of the Origin Pool created in Task 6, Step 7  |
 |    and click the three dots **...** at the far right of the row, and then click              |
 |    **Delete** in the resulting pop-up window.                                                |
 +----------------------------------------------------------------------------------------------+
@@ -512,10 +520,10 @@ TASK: 9: Clean-Up & End of Lab
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 5. In the Volterra Console, use the left navigation menu to naigate to **Security** > **App**|
-|    **Firewall** and select **App Firewalls**.                                                |
+| 5. In the Volterra Console, use the left navigation menu to navigate to **Security** >       |
+|    **App Firewall** and select **App Firewalls**.                                            |
 |                                                                                              |
-| 6. In the updated right window, locate the row of the App Firewall created in Task 4, Step 5 |
+| 6. In the updated right window, locate the row of the App Firewall created in Task 5, Step 5 |
 |    and click the three dots **...** at the far right of the row, and then click              |
 |    **Delete** in the resulting pop-up window.                                                |
 +----------------------------------------------------------------------------------------------+
@@ -593,8 +601,6 @@ TASK: 9: Clean-Up & End of Lab
 .. |image030| image:: media/lab01-030.png
    :width: 800px
 .. |image031| image:: media/lab01-031.png
-   :width: 800px
-.. |image031a| image:: media/lab01-031a.png
    :width: 800px
 .. |image032| image:: media/lab01-032.png
    :width: 800px
