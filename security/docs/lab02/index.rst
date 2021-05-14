@@ -88,9 +88,7 @@ TASK 4: Creating a Service Policy
 | 1. The following describes the configuration workflow for creating an appplication firewall   |
 |    which fundametally involves the following key steps:                                       |
 |                                                                                               |
-|    Choosing a prefferred creation approach (one of the below):                                |
-|                                                                                               |
-|    * **Create Service Policy**: In case of client coming from public internet, implicit       | 
+|    **Create Service Policy**: In case of client coming from public internet, implicit         | 
 |    labels like Geo-IP Country or Geo-IP City Geo-IP Region can be used. The Geo-IP data is    | 
 |    sourced from the MaxMind free database. Geo-IP label can be used with the keys             | 
 |    geoip.ves.io/country or geoip.ves.io/city or geoip.ves.io/region and the value as the      | 
@@ -138,7 +136,7 @@ TASK 4: Creating a Service Policy
 |                                                                                              |
 | 7. Click the **Save and Exit** button.                                                       |
 +----------------------------------------------------------------------------------------------+
-| |image009|                                                                                    |
+| |image009|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 TASK: 5: Attaching Service Policy to Load Balancer
