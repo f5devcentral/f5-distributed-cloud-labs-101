@@ -36,7 +36,7 @@ Lab 2 Tasks:
 -----------------
 
 TASK 1: Quick Intro - Intent Based Service Policy (Concept Review)
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (Block and Allow: IP Prefix, ASN, Geo)
 
 Traditionally application policies are attached to a proxy construct like a load balancer. 
@@ -56,7 +56,7 @@ An application may be comprised of many microservices or VMs. As a result, an ap
 Service policy works at request level for HTTP/HTTPS proxy, SNI level for TCP proxy with SNI, and IP level for TCP/UDP proxy. Policy is designed from the point of view of the proxy. The policy can be designed for a single proxy or a set of proxies or all proxies matching a given label expression.
 
 TASK 3: Volt Console (General Navigation)
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +----------------------------------------------------------------------------------------------+
 | 1. Login to the Volterra Console: **https://www.volterra.io** and complete authentication.   |
 |                                                                                              |
@@ -83,7 +83,7 @@ TASK 3: Volt Console (General Navigation)
 +----------------------------------------------------------------------------------------------+
 
 TASK 4: Creating a Service Policy
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 +-----------------------------------------------------------------------------------------------+
 | 1. The following describes the configuration workflow for creating an appplication firewall   |
 |    which fundametally involves the following key steps:                                       |
@@ -142,7 +142,7 @@ TASK 4: Creating a Service Policy
 +----------------------------------------------------------------------------------------------+
 
 TASK: 5: Attaching Service Policy to Load Balancer
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. note:: We are going to use the load balancer created in Lab 01.
 
 +----------------------------------------------------------------------------------------------+
@@ -176,7 +176,7 @@ TASK: 5: Attaching Service Policy to Load Balancer
 +----------------------------------------------------------------------------------------------+
 
 TASK: 6: Testing
-
+~~~~~~~~~~~~~~~~
 .. note::  I am assuming you have some form of VPN that will allow you to test your site form
            Geographic regions outside of your own; Tor Browser, Hola, CyberGhost, etc.
 
