@@ -76,6 +76,27 @@ You will need to provide the following information.
 
 .. image:: site-ui-device-configuration.png
 
+.. note:: 
+        
+        Volterra uses the latitude/longitude of a site to assist in finding the closest
+        geographic Regional Edge locations.  The following is meant to help you find
+        a location that is close to the UDF deployment location that you selected.
+
+        One method of finding a location is to search Google Maps, right click and 
+        highlight the GPS coordinates.  This will copy the values into your clipboard.
+
+        .. image:: geolocation.png
+
+        Pick a location that is geographically similar to where you selected your UDF
+        deployment (i.e. for Virginia, USA search for Washington Monument, DC)
+
+        You could also use a regional office (vs. your home address) as a location
+        https://www.f5.com/company/contact/regional-offices
+
+        Once you have a reasonable set of latitude/longitude you can proceed.
+
+        FYI the F5 Seattle office coordinates:  47.6, -122.3
+
 You can then click on "Save Configuration". 
 
 You will then need to go back to VoltConsole to "Accept" the registration.
