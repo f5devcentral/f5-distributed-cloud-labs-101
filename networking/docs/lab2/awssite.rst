@@ -94,7 +94,7 @@ Click on "Apply"
 Under "Automatic Deployment" use the select list to click on the "Create new aws cred".  Give 
 the credential a name (i.e. [unique namespace]-cc)  Enter 
 the API Key/Secret that you captured earlier from the UDF Cloud Accounts.  After you fill in the
-Secret Key you will need to click on "Blindfold" then "Apply" and then "Continue"
+Secret Key you will need to click on "Blindfold" button (do not click on the radio button) then "Apply" and then "Continue"
 
 The resulting inputs should look something like the following (do not copy these values, yours will
 differ).
