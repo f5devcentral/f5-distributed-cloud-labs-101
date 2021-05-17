@@ -53,7 +53,7 @@ docker run -d --dns ${var.volterra_gateway} --net=host --restart=always \
 -e F5DEMO_COLOR=ffd734 \
 -e F5DEMO_NODENAME_SSL='AWS Environment (Backend App)' \
 -e F5DEMO_COLOR_SSL=a0bf37 \
--e F5DEMO_BACKEND_URL="https://backend.example.local:8443/txt" \
+-e F5DEMO_BACKEND_URL="https://backend.example.local:9443/txt" \
 -e F5DEMO_BRAND=volterra \
 -e F5DEMO_PONG_URL=http://backend.example.local:8080/pong/extended \
 public.ecr.aws/y9n2y5q5/f5-demo-httpd:openshift
