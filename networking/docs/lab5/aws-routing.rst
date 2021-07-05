@@ -34,6 +34,7 @@ Then click on "Configure" under "Global Network Connections"
 
 * Select Network Connection Type: Direct, Site Local Inside to a Global Network
 * Global Virtual Network: system/[unique name]-global
+* Click on Apply
 * Select "Manage Static Routes" for "Managed Static Routes for Inside Network"
     * Select "Simple Static Route" (default)
     * Simple Static Route: 10.0.3.0/24
