@@ -42,7 +42,7 @@ Under "Origin Pool" then click on "Create new pool" under the pull down menu.
 
 - Name: backend-tcp
 - Select Type of Origin Server: IP address of Origin Server on given Sites
-- Enter ip: 10.1.1.4
+- Enter ip: 10.1.20.5
 - Site: [unique name]-udf
 - Port: 8443
 - Select Network on this site: Outside Network
