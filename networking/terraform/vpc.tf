@@ -22,18 +22,7 @@ resource "aws_subnet" "f5-volterra-management-1" {
   availability_zone       = "${var.aws_region}${var.az1}"
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-management-1"
-  }
-}
-
-resource "aws_subnet" "f5-volterra-management-2" {
-  vpc_id                  = aws_vpc.f5-volterra-vpc.id
-  cidr_block              = "10.0.1.0/24"
-  map_public_ip_on_launch = "true"
-  availability_zone       = "${var.aws_region}${var.az2}"
-
-  tags = {
-    Name = "${var.prefix}-f5-volterra-management-2"
+    Name = "${var.prefix}-f5-volterra-outside-1"
   }
 }
 
@@ -48,17 +37,6 @@ resource "aws_subnet" "f5-volterra-internal-1" {
   }
 }
 
-resource "aws_subnet" "f5-volterra-internal-2" {
-  vpc_id                  = aws_vpc.f5-volterra-vpc.id
-  cidr_block              = "10.0.4.0/24"
-  map_public_ip_on_launch = "false"
-  availability_zone       = "${var.aws_region}${var.az2}"
-
-  tags = {
-    Name = "${var.prefix}-f5-volterra-internal-2"
-  }
-}
-
 resource "aws_subnet" "f5-volterra-internal-3" {
   vpc_id                  = aws_vpc.f5-volterra-vpc.id
   cidr_block              = "10.0.5.0/24"
@@ -66,23 +44,9 @@ resource "aws_subnet" "f5-volterra-internal-3" {
   availability_zone       = "${var.aws_region}${var.az1}"
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-internal-3"
+    Name = "${var.prefix}-f5-volterra-workload-1"
   }
 }
-
-resource "aws_subnet" "f5-volterra-internal-4" {
-  vpc_id                  = aws_vpc.f5-volterra-vpc.id
-  cidr_block              = "10.0.6.0/24"
-  map_public_ip_on_launch = "false"
-  availability_zone       = "${var.aws_region}${var.az2}"
-
-  tags = {
-    Name = "${var.prefix}-f5-volterra-internal-4"
-  }
-}
-
-
-
 
 
 resource "aws_internet_gateway" "f5-volterra-vpc-gw" {
@@ -112,17 +76,6 @@ resource "aws_route_table_association" "f5-volterra-management-1" {
   subnet_id      = aws_subnet.f5-volterra-management-1.id
   route_table_id = aws_route_table.f5-volterra-vpc-external-rt.id
 }
-
-resource "aws_route_table_association" "f5-volterra-management-2" {
-  subnet_id      = aws_subnet.f5-volterra-management-2.id
-  route_table_id = aws_route_table.f5-volterra-vpc-external-rt.id
-}
-
-
-# resource "aws_main_route_table_association" "f5-external-vpc-association-subnet" {
-#   vpc_id         = "${aws_vpc.terraform-vpc.id}"
-#   route_table_id = "${aws_route_table.rt1.id}"
-# }
 
 
 resource "aws_security_group" "volterra-vpc" {
