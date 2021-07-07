@@ -95,7 +95,7 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
 
     |vk8s_workloads_advertise|
 
-#. Enter the following variables:
+#. Click on the *Configure* link, and enter the following variables:
 
     ======================  =====
     Variable                Value

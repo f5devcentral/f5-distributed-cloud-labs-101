@@ -56,7 +56,7 @@ Exercise 2: Create Virtual Site
 
     |virtual_sites_add_form|
 
-#. Click the *Add virtual site* button.
+#. Click the *Save and Exit* button.
 
 Exercise 3: Check your Virtual Site Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
