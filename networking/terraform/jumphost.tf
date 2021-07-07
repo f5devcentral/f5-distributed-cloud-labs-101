@@ -32,7 +32,7 @@ docker run -d -p 80:80 --net host -e F5DEMO_APP=website -e F5DEMO_NODENAME="AWS 
               EOF
 
   tags = {
-    Name = "${var.prefix}-f5-jumphost-1"
+    Name = "${var.prefix}-f5-volterra-networking-jumphost-1"
   }
 }
 
