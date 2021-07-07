@@ -22,3 +22,10 @@ data "aws_caller_identity" "current" {}
 output "AWS_CONSOLE" {
   value = "https://${data.aws_caller_identity.current.account_id}.signin.aws.amazon.com/console?region=${var.aws_region}"
 }
+
+output "AWS_BUCKET_URL" {
+  value = aws_s3_bucket.tf_s3_bucket.bucket_domain_name
+}
+output "AWS_ENDPOINT_URL" {
+  value = aws_vpc_endpoint.interface-s3.dns_entry[0].dns_name
+}

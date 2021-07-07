@@ -73,6 +73,7 @@ From VoltConsole go to the "System" namespace, "Site Management" -> "AWS VPC Sit
 
 Under "New AWS Site" you will need to provide the following information:
 
+- Name: [unique name]-awsnet (name is limited to 16 characters, adjust as needed)
 - AWS Region: |aws_region|
 - Change from "New VPC Parameters" to "Existing VPC ID"
 - Existing VPC ID specify the "_VPC_ID" value that you collected earlier

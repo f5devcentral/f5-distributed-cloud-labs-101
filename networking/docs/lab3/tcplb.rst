@@ -42,10 +42,10 @@ Under "Origin Pool" then click on "Create new pool" under the pull down menu.
 
 - Name: backend-tcp
 - Select Type of Origin Server: IP address of Origin Server on given Sites
-- Enter ip: 10.1.1.4
+- Enter ip: 10.1.20.5
 - Site: [unique name]-udf
 - Port: 8443
-- Select Network on this site: Outside Network
+- Select Network on this site: Inside Network
 
 Under "List of Health Checks" select the option to create a new Health Check
 
@@ -63,7 +63,7 @@ Under "Where to advertise the VIP" change to "Advertise Custom" then click on "C
 Under "Custom Advertise VIP Configuration" leave "Select where to advertise" on "Site".
 
 - Site Network: Inside
-- Site Reference: [unique name]-aws
+- Site Reference: [unique name]-awsnet
 
 Click on "Apply".
 
