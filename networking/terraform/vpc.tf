@@ -11,7 +11,7 @@ resource "aws_vpc" "f5-volterra-vpc" {
   enable_classiclink   = "false"
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-vpc"
+    Name = "${var.prefix}-f5-volterra-networking-vpc"
   }
 }
 
@@ -22,7 +22,7 @@ resource "aws_subnet" "f5-volterra-management-1" {
   availability_zone       = "${var.aws_region}${var.az1}"
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-outside-1"
+    Name = "${var.prefix}-f5-volterra-networking-outside-1"
   }
 }
 
@@ -33,7 +33,7 @@ resource "aws_subnet" "f5-volterra-internal-1" {
   availability_zone       = "${var.aws_region}${var.az1}"
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-internal-1"
+    Name = "${var.prefix}-f5-volterra-networking-internal-1"
   }
 }
 
@@ -44,7 +44,7 @@ resource "aws_subnet" "f5-volterra-internal-3" {
   availability_zone       = "${var.aws_region}${var.az1}"
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-workload-1"
+    Name = "${var.prefix}-f5-volterra-networking-workload-1"
   }
 }
 
@@ -53,7 +53,7 @@ resource "aws_internet_gateway" "f5-volterra-vpc-gw" {
   vpc_id = aws_vpc.f5-volterra-vpc.id
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-igw"
+    Name = "${var.prefix}-f5-volterra-networking-igw"
   }
 }
 
@@ -61,7 +61,7 @@ resource "aws_route_table" "f5-volterra-vpc-external-rt" {
   vpc_id = aws_vpc.f5-volterra-vpc.id
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-external-rt"
+    Name = "${var.prefix}-f5-volterra-networking-external-rt"
   }
 }
 
