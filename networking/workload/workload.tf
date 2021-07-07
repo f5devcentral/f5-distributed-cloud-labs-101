@@ -60,7 +60,7 @@ public.ecr.aws/y9n2y5q5/f5-demo-httpd:openshift
 EOF
 
   tags = {
-    Name = "${var.prefix}-f5-frontend-1"
+    Name = "${var.prefix}-f5-volterra-networking-frontend-1"
   }
 }
 
