@@ -50,7 +50,7 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
 
 #. Click the *Apply* button to close the "Customer Virtual Sites" dialogue.
 
-#. Under *Advertise Option*, choose *Advertise In Cluster*. Click the "*Edit* button.
+#. Under *Advertise Option*, choose *Advertise In Cluster*. Click the *Configure* button.
 
     |vk8s_workloads_advertise|
 
