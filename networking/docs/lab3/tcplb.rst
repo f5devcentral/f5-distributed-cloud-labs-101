@@ -45,7 +45,7 @@ Under "Origin Pool" then click on "Create new pool" under the pull down menu.
 - Enter ip: 10.1.20.5
 - Site: [unique name]-udf
 - Port: 8443
-- Select Network on this site: Outside Network
+- Select Network on this site: Inside Network
 
 Under "List of Health Checks" select the option to create a new Health Check
 
