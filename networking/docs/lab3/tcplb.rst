@@ -63,7 +63,7 @@ Under "Where to advertise the VIP" change to "Advertise Custom" then click on "C
 Under "Custom Advertise VIP Configuration" leave "Select where to advertise" on "Site".
 
 - Site Network: Inside
-- Site Reference: [unique name]-aws
+- Site Reference: [unique name]-awsnet
 
 Click on "Apply".
 
