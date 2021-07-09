@@ -33,7 +33,7 @@ resource "aws_subnet" "f5-volterra-internal-1" {
   availability_zone       = "${var.aws_region}${var.az1}"
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-networking-internal-1"
+    Name = "${var.prefix}-f5-volterra-networking-workload-1"
   }
 }
 
@@ -44,7 +44,7 @@ resource "aws_subnet" "f5-volterra-internal-3" {
   availability_zone       = "${var.aws_region}${var.az1}"
 
   tags = {
-    Name = "${var.prefix}-f5-volterra-networking-workload-1"
+    Name = "${var.prefix}-f5-volterra-networking-internal-1"
   }
 }
 
