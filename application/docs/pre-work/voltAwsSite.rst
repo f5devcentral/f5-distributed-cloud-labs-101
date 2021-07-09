@@ -51,6 +51,7 @@ using a UDF Course to access this lab the information will be at the bottom of t
     ==========  =====
 
 #. Under the *Secret Access Key* section, click the *Configure* link.
+#. Select *Text* type *DO NOT SELECT* Blindfold type 
 #. Enter the following variables:
 
     ========= =====
@@ -59,7 +60,13 @@ using a UDF Course to access this lab the information will be at the bottom of t
     Type      Paste your API Secret from the UDF Cloud Accounts tab
     ========= =====
 
-#. Click the *Blindfold* button. This encrypts your AWS cloud account API key.
+    |blind| 
+    
+    .. warning:: Click on the "Blindfold" button, do not click on the radio button!
+    
+    |apply| |save|
+
+#. Click the *Blindfold* BLUE button. This encrypts your AWS cloud account API key.
 #. Click the *Apply* button. This saves the Secret configuration.
 #. Click the *Save and Exit* button.
 
@@ -213,3 +220,7 @@ You can proceed to the next section and we will verify the AWS site was created 
 .. |network_policy_menu| image:: ../_static/network_policy_menu.png
 .. |ingress_rules| image:: ../_static/ingress_rules.png
 .. |network_policy_config| image:: ../_static/network_policy_config.png
+.. |cloud_creds_button| image:: ../_static/cloud_creds_button.png
+.. |apply| image:: ../_static/cr3-apply.png
+.. |blind| image:: ../_static/cr3-blind.png
+.. |save| image:: ../_static/cr3-save.png

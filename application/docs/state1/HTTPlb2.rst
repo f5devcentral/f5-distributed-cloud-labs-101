@@ -91,6 +91,7 @@ We will need 2 separate routes to send traffic to the API service -- "/api/" and
     |lb-route2|
 
     .. note:: You should now have 2 routes created in the "Routes" dialogue.
+    .. warning :: Don't forget for the second route, to configure an Origin Pool
 
 #. Click *Apply* to exit the "Routes" dialogue.
 
