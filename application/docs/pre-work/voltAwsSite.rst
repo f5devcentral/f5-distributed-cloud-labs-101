@@ -41,12 +41,12 @@ using a UDF Course to access this lab the information will be at the bottom of t
 
     |cloud_creds_add|
 
-#. Enter the following variables, substituting your information:
+#. Enter the following variables, substituting [your_namespace] with your information:
 
     ==========  =====
     Variable    Value
     ==========  =====
-    Name        your_namespace-aws
+    Name        [your_namespace]-aws
     Access Key  API Key from your UDF Cloud Accounts tab
     ==========  =====
 
@@ -58,8 +58,10 @@ using a UDF Course to access this lab the information will be at the bottom of t
     ========= =====
     Type      Paste your API Secret from the UDF Cloud Accounts tab
     ========= =====
-
-#. Click the *Blindfold* button. This encrypts your AWS cloud account API key.
+    
+    |cloud_account_blindfold|
+    
+#. Click the *Blindfold* Blue button. This encrypts your AWS cloud account API key.
 #. Click the *Apply* button. This saves the Secret configuration.
 #. Click the *Save and Exit* button.
 
