@@ -156,23 +156,23 @@ data "aws_network_acls" "udf_acl" {
 }
 resource "aws_network_acl_rule" "tcp_53" {
   network_acl_id = aws_vpc.f5-volterra-vpc.default_network_acl_id
-  rule_number    = 101
+  rule_number    = 90
   egress         = false
   protocol       = "tcp"
   rule_action    = "allow"
   cidr_block     = "10.0.0.0/8"
-  from_port      = 0
+  from_port      = 53
   to_port        = 53
 }
 
 resource "aws_network_acl_rule" "udp_53" {
   network_acl_id = aws_vpc.f5-volterra-vpc.default_network_acl_id
-  rule_number    = 102
+  rule_number    = 91
   egress         = false
   protocol       = "udp"
   rule_action    = "allow"
   cidr_block     = "10.0.0.0/8"
-  from_port      = 0
+  from_port      = 53
   to_port        = 53
 }
 
@@ -183,7 +183,7 @@ resource "aws_network_acl_rule" "deny_tcp_53" {
   protocol       = "tcp"
   rule_action    = "deny"
   cidr_block     = "0.0.0.0/0"
-  from_port      = 0
+  from_port      = 53
   to_port        = 53
 }
 
@@ -194,6 +194,6 @@ resource "aws_network_acl_rule" "deny_udp_53" {
   protocol       = "udp"
   rule_action    = "deny"
   cidr_block     = "0.0.0.0/0"
-  from_port      = 0
+  from_port      = 53
   to_port        = 53
 }
