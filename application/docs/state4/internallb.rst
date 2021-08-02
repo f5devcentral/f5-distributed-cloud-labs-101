@@ -165,6 +165,14 @@ following pattern of traffic.
 
 If you disable the Inventory Service in AWS, all traffic will go to the remaining UDF site.
 
+
+Packet flow
+~~~~~~~~~~~
+
+Below is the packet flow for the architecture you just deployed in Volterra.
+
+|flow_state4|
+
 .. |app-context| image:: images/app-context.png
 .. |http_lb_menu| image:: images/http_lb_menu.png
 .. |http_lb_add| image:: images/http_lb_add.png
@@ -173,5 +181,6 @@ If you disable the Inventory Service in AWS, all traffic will go to the remainin
 .. |http_lb_custom_vip| image:: images/http_lb_custom_vip.png
 .. |brews-app-inventory-settings| image:: images/brews-app-inventory-settings.png
 .. |brews-app-inventory-config| image:: images/brews-app-inventory-config.png
-.. |demo_app_inventory| image:: ../_static/demo_app_inventory.png 
-                        :width: 400
+.. |demo_app_inventory| image:: ../_static/demo_app_inventory.png
+                    :width: 400
+.. |flow_state4| image:: ../_static/packet-flow-state4.gif

@@ -53,7 +53,7 @@ For the DemoBrews application, we want to send traffic not related to the API se
 #. Click the *Apply* button to exit the "Origin Pools" dialogue.
 
 Exercise 3: Configure Routes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Now we're ready to configure URL-based pool selection for the API service and static images.
 We will need 2 separate routes to send traffic to the API service -- "/api/" and "/images/".
     
@@ -110,6 +110,13 @@ The demo app should look like the screen shot below:
 |demo_app| 
 
 
+Packet flow
+~~~~~~~~~~~
+
+Below is the packet flow for the architecture you just deployed in Volterra.
+
+|flow_state1|
+
 .. |app-context| image:: ../_static/app-context.png
 .. |http_lb_menu| image:: ../_static/http_lb_menu.png
 .. |http_lb_add| image:: ../_static/http_lb_add.png
@@ -132,3 +139,4 @@ The demo app should look like the screen shot below:
 .. |lb-vip| image:: ../_static/lb-vip.png
 .. |demo_app| image:: ../_static/demo_app.png
 
+.. |flow_state1| image:: ../_static/packet-flow-state1.gif

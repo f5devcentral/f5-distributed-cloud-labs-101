@@ -154,6 +154,13 @@ If everything is working correctly, the database cart should not turn red.  You 
 
 |demo_app_cart|
 
+Packet flow
+~~~~~~~~~~~
+
+Below is the packet flow for the architecture you just deployed in Volterra.
+
+|flow_state2|
+
 .. |app-context| image:: ../_static/app-context.png
 .. |tcp_lb_menu| image:: ../_static/tcp_lb_menu.png
 .. |tcp_lb_config| image:: ../_static/tcp_lb_config.png
@@ -165,3 +172,4 @@ If everything is working correctly, the database cart should not turn red.  You 
 .. |origin_pools_add| image:: ../_static/origin_pools_add.png
 .. |origin_pools_config_mongodb| image:: ../_static/origin_pools_config_mongodb.png
 .. |demo_app_cart| image:: ../_static/demo_app_cart.png
+.. |flow_state2| image:: ../_static/packet-flow-state2.gif
