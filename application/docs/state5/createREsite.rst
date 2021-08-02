@@ -159,6 +159,13 @@ When you view product details in the main application, you should see additional
     |recs-recs|
 
 
+Packet flow
+~~~~~~~~~~~
+
+Below is the packet flow for the architecture you just deployed in Volterra.
+
+|flow_state5|
+
 .. |lu-ns| image:: ../_static/lu-ns.png
 .. |menu-vs| image:: ../_static/menu-vs.png
 .. |add-vs| image:: ../_static/add-vs.png
@@ -184,3 +191,4 @@ When you view product details in the main application, you should see additional
 .. |demo_app_stats| image:: ../_static/demo_app_stats.png
 .. |recs-recs| image:: ../_static/recs-recs.png
 .. |recs-lb| image:: ../_static/recs-lb.png
+.. |flow_state5| image:: ../_static/packet-flow-state5.gif

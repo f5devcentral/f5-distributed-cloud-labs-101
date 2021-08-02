@@ -86,6 +86,14 @@ You should be able to open a browser and check that the demo application looks l
 
 |demo_app|
 
+
+Packet flow
+-----------
+
+Below is the packet flow for the architecture you just deployed in Volterra.
+
+|flow_state3|
+
 .. |app-context| image:: ../_static/app-context.png
 .. |origin_pools_menu| image:: ../_static/origin_pools_menu.png
 .. |origin_pools_edit| image:: ../_static/origin_pools_edit.png
@@ -93,3 +101,4 @@ You should be able to open a browser and check that the demo application looks l
 .. |virtual_hosts_http_lb_menu| image:: ../_static/virtual_hosts_http_lb_menu.png
 .. |http_lb_origin_health| image:: ../_static/http_lb_origin_health.png
 .. |demo_app| image:: ../_static/demo_app.png
+.. |flow_state3| image:: ../_static/packet-flow-state3.gif
