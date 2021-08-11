@@ -84,12 +84,40 @@ You can run some commands to explore what is in the container.
     ce-multi-aws          ce-single-2nic-azure  ce-single-azure       hello-cloud           self-serve
     ce-multi-azure        ce-single-2nic-gcp    ce-single-gcp         hello-edge            views
 
+Docker Container files
+~~~~~~~~~~~~~~~~~~~~~~
+
 In a different terminal window you can copy into the container your API Certificate and terraform parameters file.
 
 .. code-block:: shell
   
   $ docker cp /Users/labuser/Downloads/[tenant name].console.ves.volterra.io.api-creds.p12 terraform-cli:/var/tmp
   $ docker cp /Users/labuser/Downloads/system-labuser-aws.json terraform-cli:/var/tmp
+
+Docker Container environment variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To execute the terraform code you will need to set environment variables that will allow you to authenticate to both Volterra and AWS.
+
+Volterra requires the following set of environment variables.
+
+.. code-block::
+    
+    export VES_P12_PASSWORD=[password for api certificate]
+    export VOLT_API_P12_FILE=/var/tmp/[tenant name].console.ves.volterra.io.api-creds.p12
+    export VOLT_API_URL=https://[tenant name].console.ves.volterra.io/api
+    export TF_VAR_akar_api_url=https://[tenant name].console.ves.volterra.io/api
+
+For AWS you will need to specify 
+
+.. code-block::
+    
+    export AWS_ACCESS_KEY_ID="[AWS Key]"
+    export AWS_SECRET_ACCESS_KEY="[AWS secret key]"
+    export AWS_SESSION_TOKEN="[AWS session for STS tokens]"
+
+Docker Container terraform apply
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can then change into the desired template to deploy the site.
 
