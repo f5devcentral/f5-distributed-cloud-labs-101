@@ -92,6 +92,8 @@ Under the section for "Nodes" provide the following information
 
 Click on "Apply"
 
+.. note:: The lab uses "Automatic Deployment".  If you would like to explore using an "Assisted Deployment" see the optional lab exercise here: :ref:`Assisted Deployment`
+
 Under "Automatic Deployment" use the select list to click on the "Create new aws cred".  Give 
 the credential a name (i.e. [unique namespace]-cc)  Enter 
 the API Key/Secret that you captured earlier from the UDF Cloud Accounts.  After you fill in the
