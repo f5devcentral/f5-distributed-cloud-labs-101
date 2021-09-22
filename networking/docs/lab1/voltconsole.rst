@@ -67,6 +67,8 @@ You will next need to click on "Configure Now".
 
 You will need to provide the following information.
 
+.. warning:: Make sure you select "kvm-multi-nic-voltmesh" you will be unable to complete the lab unless you select the correct image.
+
 - Token: [use one created previously]
 - Cluster Name: [unique name]+udf
 - Hostname: main-0
