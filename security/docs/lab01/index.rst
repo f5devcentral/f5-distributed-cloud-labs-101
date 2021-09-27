@@ -102,10 +102,10 @@ TASK 3: Volterra Console (General Navigation)
 +----------------------------------------------------------------------------------------------+
 | 1. Login to the Volterra Console: **https://www.volterra.io** and complete authentication.   |
 |                                                                                              |
-| 2. **Log In** > **Teams or Organization Plans** <Enter your Volterra Tenant ID> then click   |
-|    **Next**.                                                                                 |
+| 2. **Log In** > **I'm a member of a team account** <Enter your Volterra Tenant ID>           |
+|    then click **Next**.                                                                      |
 |                                                                                              |
-| 3. **Log in with Azure** (Participants must have completed the account onboarding process.)  |
+| 3. **Sign in with Azure** (Participants must have completed the account onboarding process.) |
 |                                                                                              |
 | *Note: Participants must have their Volterra Tenant ID to complete login and lab.*           |
 |                                                                                              |
