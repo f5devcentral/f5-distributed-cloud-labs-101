@@ -6,11 +6,13 @@ in AWS to communicate with the backend application that is on-prem.
 
 The frontend application makes use of DNS to determine the IP address of the backend
 application.  In the on-prem environment the name "backend.example.local" resolves to
-the backend IP of 10.1.1.4.
+the backend IP of 10.1.20.5.
 
 In the AWS environment we want to resolve the name "backend.example.local" to resolve to
 the IP address of the Volterra Gateway (VG).  The VG will host a Virtual IP (VIP) that will
 host a TCP Load Balancer that will proxy traffic back to the original backend application.
+
+.. image:: tcplb-lab.png
 
 Application Name Space
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -21,50 +23,109 @@ Click on the first namespace and use the search to find your own namespace.
 
 .. image:: app-namespace-select.png
 
-Navigate the menu to go to "Manage"->"TCP Load Balancers" and click on "Add TCP Load Balancers".
+Exercise 1: Origin Pool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: This may appear differently if there is an existing LB resource
+#. In VoltConsole ensure you are in the *Application* context.
 
-.. image:: add-tcp-lb.png
+    |app-context| 
 
-At this point you will have to go through the steps of setting up a TCP LB of creating an origin pool,
-health monitor, and TCP LB object.
+#. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *Origin Pools*.
 
-- Name: [unique name]-backend-tcp
-- Domains: backend.example.local
-- Listen Port: 9443
+    |origin_pools_menu|
 
-Under "Origin Pools" click on "Configure" and then "Add item".
+#. Click the *Add Origin Pool* button.
 
-- Origin Pool Method: Origin Pool
+    |origin_pools_add|
+    
+#. Enter the following variables:
 
-Under "Origin Pool" then click on "Create new pool" under the pull down menu.
+=============================== ===============
+Variable                        Value
+=============================== ===============
+Origin Pool Name                backend-tcp
+Select Type of Origin Server    IP address of Origin Server on given Sites
+IP address                      10.1.20.5
+Site                            Your UDF site
+Select Network on the site      Inside Network
+Port                            8443
+=============================== ===============
 
-- Name: backend-tcp
-- Select Type of Origin Server: IP address of Origin Server on given Sites
-- Enter ip: 10.1.20.5
-- Site: [unique name]-udf
-- Port: 8443
-- Select Network on this site: Inside Network
+#. Under the *List of Health Check(s)* section, click the *Select healthcheck* dropdown.
 
-Under "List of Health Checks" select the option to create a new Health Check
+#. Click the *Create new Healthcheck* button.
 
-- Name: backend-tcp-health-check
-- Health Check: TCP Healthcheck
+#. Enter the following variables:
 
-You wil then need to click on configure under "TCP Health Check" followed by "Apply".
+=============================== ===============
+Variable                        Value
+=============================== ===============
+Name                            backend-tcp-health-check
+Health Check                    TCP HealthCheck
+=============================== ===============
 
-Then click on "Continue" to finish creating the Health Check.
+#. Click on the "Configure" button to open the dialog to adjust timeout settings then click "Apply"
+#. Click the *Continue* button to close the *Health Check Parameters* dialogue. 
 
-After creating the new pool you select the newly created pool.
+#. Click the *Save and Exit* button to close the *Origin Pool* dialogue.
 
-Under "Where to advertise the VIP" change to "Advertise Custom" then click on "Configure" next to "Advertise Custom".
+Exercise 2: Create Backend TCP Load Balancer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Under "Custom Advertise VIP Configuration" leave "Select where to advertise" on "Site".
+#. In VoltConsole ensure you are in the *Application* context.
 
-- Site Network: Inside
-- Site Reference: [unique name]-awsnet
+    |app-context| 
 
-Click on "Apply".
+#. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *TCP Load Balancers*.
 
-On the main screen you can then click on "Save and Exit".
+    |tcp_lb_menu|
+
+#. Click the *Add TCP Load Balancer* button.
+
+#. Enter the following variables:
+
+    ==============================  =====
+    Variable                        Value
+    ==============================  =====
+    Name                            backend
+    Domain                          backend.example.local
+    Listen Port                     9443
+    Where to Advertise the VIP      Advertise Custom
+    ==============================  =====
+
+    |tcp_lb_config|
+
+#. Configure Origin Pools
+
+    #. Under the *Origin Pools* section, click the *Configure* link.
+    #. Click the *Add item* button.
+    #. Select the *backend-tcp* pool.
+    #. Click the *Apply* button to close the *Origin Pools* dialogue.
+
+#. Configure Advertisement 
+
+    #. Under *Advertise Custom* click the *Configure* link.
+    #. You will need to add a site:
+            
+            =========================== =====
+            Variable                    Value
+            =========================== =====
+            Select Where to Advertise   Site
+            Site Network                Inside Network
+            Site Reference              [unique name]-awsnet
+            =========================== =====
+
+
+        |tcp_lb_advertise|
+
+    #. Click the *Apply* button to exit the *Advertise Custom* dialogue.
+
+#. CLick the *Save and Exit* button to exit the *TCP Load Balancer* dialogue.
+
+.. |app-context| image:: app-context.png
+.. |tcp_lb_menu| image:: tcp_lb_menu.png
+.. |tcp_lb_config| image:: tcp_lb_config.png
+.. |tcp_lb_advertise| image:: tcp_lb_advertise.png
+.. |origin_pools_menu| image:: origin_pools_menu.png
+.. |origin_pools_add| image:: origin_pools_add.png
+.. |origin_pools_config_mongodb| origin_pools_config_mongodb.png
