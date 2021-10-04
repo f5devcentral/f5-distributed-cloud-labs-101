@@ -505,8 +505,8 @@ TASK: 9: Reviewing Analytics & Security Events
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **STOP**: Prior to executing the clean-up steps that follow, complete any additional review  |
-| you wish to do. Enjoy!                                                                       |
+| **STOP**: If you are planning on doing **Lab 2** right away, please skip the clean-up steps! |
+|                                                                                              |
 +----------------------------------------------------------------------------------------------+
 | |imageSTOP|                                                                                  |
 +----------------------------------------------------------------------------------------------+
