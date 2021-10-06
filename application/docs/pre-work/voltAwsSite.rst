@@ -91,13 +91,13 @@ Exercise 2: Create Network Policy
     Name      your_namespace-aws
     ========= =====
 
-#. Under the *IPv4 Prefix List* click the *Add item* button.
-#. For the prefix, enter: 10.0.0.0/8.
+#. Under the *IPv4 Prefix List*.
+#. For the prefix, enter: "10.0.0.0/8".
 
     |network_policy_config|
 
 #. Under the *Connections to Policy Endpoints* section, click the *Configure* link.
-#. Click the *Add item* button.
+#. Click the *Add item* button under Ingress Rules.
 #. Enter the following variables:
 
     ======================= =====
@@ -108,7 +108,7 @@ Exercise 2: Create Network Policy
     Select Other Endpoint   IPv4 Prefix List
     ======================= =====
 
-#. Under the *IPv4 Prefix List* section, click the *Add item* button.
+#. Under the *IPv4 Prefix List* section.
 #. For the prefix, enter: "10.0.0.0/8".
 #. Click the *Apply* button to exit the *Ingress Rules* dialogue.
 #. Click the *Save and Exit* button to exit the *Network policy* dialogue.
