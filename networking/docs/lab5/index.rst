@@ -10,7 +10,7 @@ Global Network.  This assumes that you have completed all previous labs (1-4).
 
    aws-routing
    site-routing
-   privatelink
+
 
 
 
