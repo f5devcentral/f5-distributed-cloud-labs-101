@@ -12,6 +12,8 @@ Exercise 1: Find your Namespace
 
 You should have already been granted access to a Volterra tenant.
 
+.. note:: Tenant creation generates an invitation email with links to access your tenant. Log in via the provided URL; you may need to update your password before continuing.
+
 After you login you will need to identify the namespace that has been 
 allocated to you.  It will be the user part of your F5 email address with "." replaced by "-".  
 For example if your email address is a.hooley @ f5.com, there is a namespace of
