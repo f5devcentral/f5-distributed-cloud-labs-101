@@ -88,7 +88,9 @@ Exercise 2: Configure Route table
 In this next exercise we will update an Azure Route Table to direct traffic from
 the workload subnet to the Volterra Gateway.
 
-From the Azure Portal find your resource group that you created via terraform and 
+First look in the resource group that was created by Volterra.  It should be called [unique name]-azure-site.  Find the inside interface of the Volterra gateway.  It should be on the 10.2.1.x network.  You will need this value later.
+
+From the Azure Portal find your resource group that you created via terraform ([unique name]-azure) and 
 open up the "workload_rt" object (Route Table) and then click on "Routes"
 
 .. image:: workload_rt.png
@@ -98,7 +100,7 @@ click on "Add"
 - Route name: volterra_gateway
 - Address prefix: 0.0.0.0/0
 - Next hop type: Virtual Appliance
-- Next hop address: 10.2.1.4
+- Next hop address: 10.2.1.X (use the IP address of the inside interface of the Volterra gateway)
 
 Click on "OK"
 
