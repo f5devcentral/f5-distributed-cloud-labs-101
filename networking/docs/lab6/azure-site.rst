@@ -105,7 +105,9 @@ Click on "OK"
 Exercise 3: Modify Network Security Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the ``[unique-name]-volterra-site`` find the Volterra Gateway resource (virtual machine).
+From the Azure Portal.
+
+In the ``[unique-name]-azure-site`` find the Volterra Gateway resource (virtual machine).
 
 Under Networking find the Network Security Group that is associated with the interface and 
 modify the outbound port rules to create a new rule that allows access to all destinations.
