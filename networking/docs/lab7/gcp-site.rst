@@ -26,6 +26,7 @@ After you select "Ingress/Egresss Gateway (Two Interface) click on "Configure"
 - Select existing subnet or create new subnet: Existing Subnet
 - VPC Subnet Name: [unique name]-external
 
+From the GCP Portal take note of the Volterra gateway inside interface IP address.  It will be on the 10.3.1.x network. 
 
 Next you will configure routes to enable access to the "workload" VM in your GCP site.
 
@@ -44,10 +45,37 @@ Next you will configure static routes.
 
 - Manage Static Routes for Inside Network: Manage Static Routes
 
+Next you will configure static routes.
+
+- Manage Static Routes for Inside Network: Manage Static Routes
+
 You should now see new options.  
 
-- Static Route Config Mode: Simple Static Route
-- Simple Static Route: 10.3.2.0/24
+- Static Route Config Mode: Custom Static Route
+
+You should now see a "Configure" option under Static Route Config Mode
+
+Click on "Configure".
+
+- Subnets: Click on "Add Item"
+
+- Version: IPv4 Subnet
+- Prefix: 10.3.2.0
+- Prefix Length: 24
+
+You will now configure the Nexthop section.
+
+- Type: User Configured
+- Version: IPv4 Address (default)
+- IPv4 Address: 10.3.1.1
+- Network Interface: [leave blank]
+
+Next you will configure "Attributes"
+
+- Install Host OS
+- Install Forwarding
+
+Click on "Apply"
 
 Under "Select Automatic or Assisted 
 
@@ -71,7 +99,7 @@ Click on "Create Routes".
 - Network: [unique name]-internal
 - Destination IP Range: 0.0.0.0/0
 - Next hop: Specify IP address
-- Next hop IP address address: 10.3.1.2
+- Next hop IP address address: 10.3.1.X (use the IP address of the inside interface of the Volterra gateway)
 
 Click on "Create"
 
