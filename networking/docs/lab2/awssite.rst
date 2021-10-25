@@ -84,7 +84,7 @@ Under the section for "Nodes" provide the following information
 
 - Click on "Show Advanced Fields" (top right)
 - AWS AZ Name: |aws_zone|
-- Subnet Choices for Inside Interface change to "Subnet for Inside Interface"
+- Select the "Specify Subnet" option under the 'Subnet for Inside Interface' dialog box
 - Change from "New Subnet" to "Existing Subnet ID"
 - Enter the value of "INTERNAL_SUBNET_ID"
 - Under "Workload Subnet" also change to "Existing Subnet ID" and enter "WORKLOAD_SUBNET_ID"
