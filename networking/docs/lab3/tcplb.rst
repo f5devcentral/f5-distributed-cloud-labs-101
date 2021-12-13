@@ -37,6 +37,8 @@ Exercise 1: Origin Pool
 #. Click the *Add Origin Pool* button.
 
     |origin_pools_add|
+
+
     
 #. Enter the following variables:
 
@@ -44,14 +46,25 @@ Exercise 1: Origin Pool
 Variable                        Value
 =============================== ===============
 Origin Pool Name                backend-tcp
+Port                            8443
+=============================== ===============
+
+#. Click on "Add Item" under "Origin Servers*"
+
+#. Enter the following variables 
+
+=============================== ===============
+Variable                        Value
+=============================== ===============
 Select Type of Origin Server    IP address of Origin Server on given Sites
 IP address                      10.1.20.5
 Site                            Your UDF site
 Select Network on the site      Inside Network
-Port                            8443
 =============================== ===============
 
-#. Under the *List of Health Check(s)* section, click the *Select healthcheck* dropdown.
+#. Under the *List of Health Check(s)* section, click on "Add Item"
+
+#. Click the *Select healthcheck* dropdown.
 
 #. Click the *Create new Healthcheck* button.
 
@@ -88,12 +101,27 @@ Exercise 2: Create Backend TCP Load Balancer
     Variable                        Value
     ==============================  =====
     Name                            backend
+    ==============================  =====
+
+#. Under "Domains" click on "Add item"
+
+#. Enter the following variables:
+
+    ==============================  =====
+    Variable                        Value
+    ==============================  =====
     Domain                          backend.example.local
+    ==============================  =====    
+
+
+#. After "Domains" enter the following variables
+
+    ==============================  =====
+    Variable                        Value
+    ==============================  =====
     Listen Port                     9443
     Where to Advertise the VIP      Advertise Custom
     ==============================  =====
-
-    |tcp_lb_config|
 
 #. Configure Origin Pools
 
@@ -120,7 +148,9 @@ Exercise 2: Create Backend TCP Load Balancer
 
     #. Click the *Apply* button to exit the *Advertise Custom* dialogue.
 
-#. CLick the *Save and Exit* button to exit the *TCP Load Balancer* dialogue.
+    |tcp_lb_config|
+
+#. Click the *Save and Exit* button to exit the *TCP Load Balancer* dialogue.
 
 .. |app-context| image:: app-context.png
 .. |tcp_lb_menu| image:: tcp_lb_menu.png

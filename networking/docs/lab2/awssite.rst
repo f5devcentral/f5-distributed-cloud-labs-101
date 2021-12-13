@@ -80,6 +80,10 @@ Under "New AWS Site" you will need to provide the following information:
 - Change "Ingress Gateway" to "Ingress/Egress Gateway (Two Interface)"
 - Click on "Configure" (appears after "Select Ingress Gateway...)
 
+Under the section "Ingress/Egress Gateway (two interface) Nodes in AZ*"
+
+- Click on "Add Item"
+
 Under the section for "Nodes" provide the following information
 
 - Click on "Show Advanced Fields" (top right)
@@ -89,6 +93,8 @@ Under the section for "Nodes" provide the following information
 - Enter the value of "INTERNAL_SUBNET_ID"
 - Under "Workload Subnet" also change to "Existing Subnet ID" and enter "WORKLOAD_SUBNET_ID"
 - Under "Subnet for Outside Interface" also change to "Existing Subnet ID" and enter "EXTERNAL_SUBNET_ID"
+
+Click on "Add Item"
 
 Click on "Apply"
 

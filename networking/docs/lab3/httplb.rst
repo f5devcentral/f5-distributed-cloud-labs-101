@@ -42,10 +42,30 @@ We will first create an Origin Pool that refers to the frontend application serv
     Variable                          Value
     ================================= =====
     Name                              frontend-http
+    ================================= =====
+
+#. Click on "Add Item" under Origin Servers
+
+#. Enter the following variables:
+
+
+    ================================= =====
+    Variable                          Value
+    ================================= =====
     Select Type of Origin Server      IP address of Origin Server on given Sites
     IP                                10.0.3.XX
     Site                              [unique name]-awsnet
     Select Network on the site        Inside Network
+    ================================= =====
+
+#. Click on "Add Item"
+
+#. Continue adding the following variables:
+
+
+    ================================= =====
+    Variable                          Value
+    ================================= =====    
     Port                              8080
     ================================= =====
 
@@ -104,13 +124,11 @@ Exercise 3: Configure Default Origin Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We'll next configure the "Default Origin Servers". 
     
-#. Click on the *Configure* link under the *Default Origin Servers* section.
+#. Click on the *Add Item* link under the *Default Origin Servers* section.
 
-#. Click the *Add Item* button.
-
-#. The "Select Origin Pool Method" will be set to "Origin Pool". Under the "Origin Pool" dropdown menu select the "brews-spa-pool" you created earlier.
+#. The "Select Origin Pool Method" will be set to "Origin Pool". Under the "Origin Pool" dropdown menu select the "frontend-http" you created earlier.
  
-#. Click the *Apply* button to exit the "Origin Pools" dialogue.
+#. Click the *Add Item* button to exit the "Origin Pools" dialogue.
 
 #. Notice that in the "VIP Creation" section *Advertise On Internet* has been selected by default.
 
