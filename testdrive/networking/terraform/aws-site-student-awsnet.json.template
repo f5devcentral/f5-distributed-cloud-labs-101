@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "name": "student-awsnet",
+    "namespace": null,
+    "labels": {},
+    "annotations": {},
+    "description": null,
+    "disable": null
+  },
+  "spec": {
+    "vpc": {
+      "vpc_id": "${vpc_id}"
+    },
+    "ingress_egress_gw": {
+      "az_nodes": [
+        {
+          "aws_az_name": "us-east-1a",
+          "inside_subnet": {
+            "existing_subnet_id": "${inside_subnet}"
+          },
+          "workload_subnet": {
+            "existing_subnet_id": "${workload_subnet}"
+          },
+          "outside_subnet": {
+            "existing_subnet_id": "${outside_subnet}"
+          },
+          "disk_size": null
+        }
+      ],
+      "no_network_policy": {},
+      "no_forward_proxy": {},
+      "aws_certified_hw": "aws-byol-multi-nic-voltmesh",
+      "inside_static_routes": {
+        "static_route_list": [
+          {
+            "simple_static_route": "10.0.3.0/24"
+          }
+        ]
+      },
+      "no_outside_static_routes": {},
+      "global_network_list": {
+        "global_network_connections": [
+          {
+            "sli_to_global_dr": {
+              "global_vn": {
+                "tenant": "f5-sales-public-qdpwiibg",
+                "namespace": "system",
+                "name": "student-global"
+              }
+            }
+          }
+        ]
+      },
+      "allowed_vip_port": {
+        "use_http_https_port": {}
+      },
+      "allowed_vip_port_sli": {
+        "use_http_https_port": {}
+      }
+    },
+    "aws_cred": {
+      "tenant": "f5-sales-public-qdpwiibg",
+      "namespace": "system",
+      "name": "student-aws"
+    },
+    "instance_type": "t3.xlarge",
+    "disk_size": null,
+    "aws_region": "us-east-1",
+    "ssh_key": null,
+    "address": null,
+    "coordinates": null,
+    "logs_streaming_disabled": {},
+    "sw": {
+      "default_sw_version": {}
+    },
+    "os": {
+      "default_os_version": {}
+    },
+    "no_worker_nodes": {}
+  }
+}
