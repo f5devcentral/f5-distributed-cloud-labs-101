@@ -1,0 +1,91 @@
+F5 Volterra Networking 101
+==========================
+
+This Lab environment highlights some of the basic concepts of VoltMesh.
+
+During the lab you will be emulating a customer that needs to extend an
+existing on-prem internal application to a Public Cloud environment.
+The goal is to securely extend the application into the cloud environment
+and have it highly available in both on-prem/cloud simultaneously.
+
+Narrative
+~~~~~~~~~
+
+In this example we are starting with an "on-prem" Data Center.
+
+.. image:: on-prem.png
+
+The "frontend" application has a requirement that it must be able to 
+communicate with the "backend".  The "backend" could be a database, legacy system, etc.
+
+The goal is to extend the environment into AWS and still allow the "frontend" to
+connect to the backend.  The following topology is deployed where VoltMesh is deployed
+in both the on-prem and AWS environment.
+
+.. image:: lab-topology.png
+
+Once you have deployed the AWS environment and deployed two VoltMesh sites you will utilize
+a Volterra TCP Load Balancer to privately connect from AWS to on-prem and a HTTP Load Balancer 
+to connect publicly from a Regional Edge (AnyCast IP) to the frontend in AWS.
+
+.. image:: lab-flow.png
+
+Lab Environment
+~~~~~~~~~~~~~~~
+
+The on-prem environment is emulated by using a UDF environment that contains NGINX
+resources.
+
+The cloud environment is emulated by using a UDF Cloud Account in AWS that contains
+NGINX resources.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   lab1/index
+   lab2/index
+   lab3/index
+
+Video resources
+~~~~~~~~~~~~~~~
+
+The following are optional resources that can you you complete the lab.
+
+The first two videos will help you with connecting to the lab environment.
+
+The "Walkthrough" video is a step-by-step narrated walkthrough of the lab.
+There are bookmarks below that can allow you to jump to specific parts of the 
+video in case you run into issues with particular sections of the lab.
+
+Joining UDF Course
+
+.. raw:: html
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/UEOziDKNHbo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Joining Volterra tenant
+
+.. raw:: html
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/onKw3aKSdIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Lab Walkthrough (narrated)
+
+.. raw:: html
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/cUEgNEPLfK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The following are bookmarks to specific sections of the video that correspond to the lab.
+
+- `VoltConsole <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=82s>`_
+- `Add Site Token <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=127s>`_
+- `AWS Site Terraform <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=341s>`_
+- `Create AWS Site <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=500s>`_
+- `Create Load Balancer Summary <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=762s>`_
+- `Create TCP Origin Pool <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=808s>`_
+- `Create TCP Load Balancer <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=923s>`_
+- `Deploy workload VM <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=996s>`_
+- `Create HTTP Origin Pool <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=1130s>`_
+- `Create HTTP Load Balancer <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=1224s>`_
+- `Verify Configuration <https://www.youtube.com/watch?v=cUEgNEPLfK0&t=1314s>`_
