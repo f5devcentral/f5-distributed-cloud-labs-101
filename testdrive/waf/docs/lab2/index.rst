@@ -9,7 +9,8 @@ in AWS (webserver with an EIP).
    :maxdepth: 1
    :caption: Contents:
 
-   wafpolicy
+   wafPolicy
+   originPool
    creatinglb
 
 
