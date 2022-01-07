@@ -1,5 +1,5 @@
-Lab 3: Protecting a Private Endpoint
-====================================
+Lab 3: Deploying an AWS VPC Site
+================================
 
 In the previous lab you learned how to protect a resource that is already on the Public Internet.
 
@@ -10,11 +10,6 @@ to secure traffic that is going to an endpoint that is not directly exposed to t
    :maxdepth: 1
    :caption: Contents:
 
-   voltmesh
-   privateorigin
-   viponvoltmesh
-
-
-
+   vpcSite
 
 
