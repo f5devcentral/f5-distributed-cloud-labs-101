@@ -5,6 +5,8 @@ In the previous lab exercises we were connecting to a Volterra Load Balancer tha
 
 In the next lab exercise we will deploy a Load Balancer on the VoltMesh node that was deployed in the AWS VPC (Customer Edge location).
 
+.. image:: ../_static/testdrive-volterra-waf-local-vip.png
+
 Exercise 1: HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

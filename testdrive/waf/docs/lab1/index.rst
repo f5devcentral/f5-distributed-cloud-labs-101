@@ -8,6 +8,7 @@ During this lab you will be introduced to VoltConsole
    :caption: Contents:
 
    voltConsole
+   labEnvironment
 
 
 

@@ -4,6 +4,8 @@ Update HTTP Load Balancer on Volterra Regional Edge
 We will now update the HTTP load balancer that we previously created to connect to
 the "Private Endpoint" via the VoltMesh node that is deployed in the AWS lab environment.
 
+.. image:: ../_static/testdrive-volterra-waf-hybrid-vip.png
+
 Exercise 1: HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

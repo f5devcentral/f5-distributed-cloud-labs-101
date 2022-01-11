@@ -1,6 +1,12 @@
 Creating HTTP Load Balancer on Volterra Regional Edge
 =====================================================
 
+In this exercise we will be creating a "Global VIP" that will existing on the Volterra Global Network.
+
+It will protect a public resource that exists in the lab's AWS Lab Environment.
+
+.. image:: ../_static/testdrive-volterra-waf-global-vip.png
+
 Exercise 1: HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
