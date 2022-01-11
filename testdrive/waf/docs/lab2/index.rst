@@ -11,7 +11,7 @@ in AWS (webserver with an EIP).
 
    wafPolicy
    originPool
-   creatinglb
+   httpLB
 
 
 
