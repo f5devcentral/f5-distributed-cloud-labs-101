@@ -16,6 +16,8 @@ We will create a blocking WAF policy.
 
 #. Start in VoltConsole and switch to the Application context. 
 
+   Verify that you have your ``studentXXX`` namespace selected
+
     |app-context|
 
 #. Navigate the menu to go to "Security"->"App Firewall". Click on *Add App Firewall*.

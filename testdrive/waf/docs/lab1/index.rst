@@ -7,7 +7,7 @@ During this lab you will be introduced to VoltConsole
    :maxdepth: 1
    :caption: Contents:
 
-   voltconsole
+   voltConsole
 
 
 

@@ -7,9 +7,16 @@ are not directly connected to the Internet and/or enforce WAF policies locally
 within the local network.
 
 When we deploy VoltMesh outside of a Regional Edge we refer to these locations as
-"Customer Edges".  In the following exercise we will review what the process is to
+"Customer Edge".  In the following exercise we will review what the process is to
 deploy a Customer Edge.  In our existing lab environment we have already deployed 
 a shared Volterra AWS VPC Site.
+
+Once a VoltMesh node has been deployed into a Customer Edge it help provide two
+additional topologies for Volterra WAF protection.
+
+#. Enabling Volterra to protect a resource from the Regional Edge (additional DDoS protection)
+   that is not directly attached to the internet.
+#. Allow Volterra to provide WAF protection for "internal" and/or "local"
 
 Exercise 1: Introduction to Volterra AWS VPC Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
