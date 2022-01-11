@@ -106,4 +106,4 @@ We can view details of successful requests and blocks by navigating to "Apps & A
 
 You should now see a block page.  
 
-Congratulations you have completed the lab!
+In the next lab we will look at how to handle WAF Exclusion rules.
