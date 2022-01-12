@@ -16,8 +16,6 @@ Exercise 1: HTTP Load Balancer Configuration
 
 #. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
 
-    |http_lb_menu| |http_lb_add|
-
 #. Enter the following variables:
 
     ================================= =====
@@ -28,8 +26,6 @@ Exercise 1: HTTP Load Balancer Configuration
     Select type of Load Balancer      HTTP
     Automatically Manage DNS Records  No/Unchecked 
     ================================= =====
-
-    |lb-basic|
 
 Exercise 3: Configure Default Origin Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,7 +52,10 @@ we could opt to use the "Inside" interface that does not have an AWS EIP attache
 #. Next to "Custom Advertise VIP Configuration" click on "Show Advanced Fields"
 #. Click on "Add Item"
 #. For "Site Network" click on "Outside Network" 
-#. For "Site Reference" select `student-aws`
+#. For "Site Reference" select `student-awsnet`
+
+   .. image:: ../_static/lb-local-vip-advertise.png
+      :width: 75%
 #. Click on "Add Item" to return to previous screen
 
 
@@ -85,7 +84,8 @@ Exercise 5: Verify Configuration
 
 The private demo app should look like the following:
 
-.. image:: frontend-public-vip-private.png
+.. image:: ../_static/screenshot-local-vip-private.png
+    :width: 50%
 
 In this topology we are sending traffic to the AWS EIP that attached to the VoltMesh node in the AWS VPC.
 
@@ -93,19 +93,8 @@ We then connect to the AWS resource via it's Private IP address.
 
 Try adding the following to the URL "?cat%20/etc/passwd".
 
-Exercise 6: Performance and Security 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You should see a block page.  This is similar behavior to what we saw in the previous lab,
+but in this case the enforcement of the WAF policy is occurring on the VoltMesh node
+that is deployed in the AWS Lab Environment and not in the Volterra Regional Edge.
 
-We can view details of successful requests and blocks by navigating to "Apps & APIs"
-
-#. Click on "Apps & APIs"->"Performance" and click on your "local" Load Balancer.
-
-   You will allow you to see a  health score of your application as well as end to end latency of the connection.
-
-#. Click on "Requests" in the upper page navigation
-
-   You should be able to view logs for individual requests.
-
-You should now see a block page.  
-
-In the next lab we will look at how to handle WAF Exclusion rules.
+In the next lab we will look at how to customize our WAF policy.

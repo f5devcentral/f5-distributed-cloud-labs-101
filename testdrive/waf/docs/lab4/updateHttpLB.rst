@@ -31,7 +31,8 @@ Exercise 5: Verify Configuration
 
 The private demo app should look like the following:
 
-.. image:: frontend-public-vip-private-pool.png
+.. image:: ../_static/screenshot-global-vip-private.png
+    :width: 50%
 
 In this topology we are sending traffic to an AnyCast IP that is hosted in Volterra's Regional Edge.
 

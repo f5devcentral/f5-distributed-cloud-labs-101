@@ -69,6 +69,6 @@ We will first create an Origin Pool that refers to the "Private Endpoint" site i
 
 .. |op-add-pool| image:: ../_static/op-add-pool.png
 .. |op-api-pool| image:: ../_static/op-api-pool.png
-.. |op-pool-basic| image:: ../_static/op-pool-basic.png
+.. |op-pool-basic| image:: ../_static/op-pool-basic-private.png
 .. |op-spa-check| image:: ../_static/op-spa-check.png
 .. |op-tshoot| image:: ../_static/op-tshoot.png
