@@ -24,28 +24,28 @@ Exercise 1: HTTP Load Balancer Configuration
     Variable                          Value
     ================================= =====
     Name                              global
-    Domains                           studentXX.sales-public.f5demos.com
+    Domains                           studentXXX.sales-public.f5demos.com
     Select type of Load Balancer      HTTP
     Automatically Manage DNS Records  Yes/Check 
     ================================= =====
 
     |lb-basic|
 
-Exercise 3: Configure Default Origin Server
+Exercise 2: Configure Default Origin Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We'll next configure the "Default Origin Servers". 
     
 #. Click on the *Add Items* link under the *Default Origin Servers* section.
 
 #. The "Select Origin Pool Method" will be set to "Origin Pool". Under the "Origin Pool" dropdown menu select the "public" pool you created earlier.
+
+   .. image:: /_static/lb-pool-public.png
  
 #. Click the *Add Item* button to exit the "Origin Pools" dialogue.
 
 #. Notice that in the "VIP Creation" section *Advertise On Internet* has been selected by default.
 
-    |lb-vip|
-
-Exercise 4: Configure WAF Policy
+Exercise 3: Configure WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Under the *Security Configuration* section 
@@ -65,12 +65,15 @@ Once the HTTP Load Balancer has been deployed, you should now be able to go to t
 previously in a web browser.  The FQDN we used in our example is http://studentXX.sales-public.f5demos.com.  
 Your FQDN should follow the format of [unique name].[supplied domain name for your tenant].
 
-Exercise 5: Verify Configuration
+.. note:: If you are having challenges connecting to the "f5demos.com" name you can also try connecting to the "ves.io" name.
+
+Exercise 4: Verify Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The public demo app should look like the following:
 
-.. image:: frontend-public-vip.png
+.. image:: ../_static/screenshot-global-vip-public.png
+  :width: 50%
 
 In this topology we are sending traffic to an AnyCast IP that is hosted in Volterra's Regional Edge.
 
@@ -78,7 +81,11 @@ We then connect to the AWS resource via it's Public IP address.
 
 Try adding the following to the URL "?cat%20/etc/passwd".
 
-Exercise 6: Performance and Security 
+You should see a block page.
+
+.. image:: ../_static/screenshot-global-vip-public-cat-etc-passwd.png
+
+Exercise 5: Performance and Security 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We can view details of successful requests and blocks by navigating to "Apps & APIs"
@@ -87,12 +94,29 @@ We can view details of successful requests and blocks by navigating to "Apps & A
 
    You will allow you to see a  health score of your application as well as end to end latency of the connection.
 
+   .. image:: ../_static/screenshot-global-vip-performance-dashboard.png
+       :width: 50%
+
 #. Click on "Requests" in the upper page navigation
 
    You should be able to view logs for individual requests.
 
-You should now see a block page.  
+   .. image:: ../_static/screenshot-global-vip-public-requests.png
+       :width: 50%
+
+#. Click on "Security Monitoring"->"Security Events"
+   You will be able to see details of the security events.
+
+   .. image:: ../_static/screenshot-global-vip-public-security-events.png
+
+   Clicking on the arrow to the left of a security event will expand the details.
+
+   .. image:: ../_static/screenshot-global-vip-public-security-events-details.png
+       :width: 50%
+
 
 Next we will demonstrate how we 
 can securely connect to your private AWS resources via a VoltMesh node.
 
+.. |app-context| image:: ../_static/app-context.png
+.. |lb-basic| image:: ../_static/lb-basic.png

@@ -18,8 +18,6 @@ We will first create an Origin Pool that refers to the "Public Endpoint" site in
     |app-context|
 
 #. Navigate the menu to go to "Security"->"Load Balancers"->"Origin Pools". Click on *Add Origin Pool*.
- 
-    |op-add-pool|
 
 #. Enter the following variables:
 
@@ -65,17 +63,13 @@ We will first create an Origin Pool that refers to the "Public Endpoint" site in
     name      http
     ========= =====
 
-    |op-spa-check|
-
-#. Click the *configure* button under "HTTP Health Check" and enter the following variables:
+#. Click the *Configure* button under "HTTP Health Check" and enter the following variables ("/" is the default):
 
     ========= =====
     Variable  Value
     ========= =====
     path      /
     ========= =====
-
-    |http_lb_origin_pool_health_check2|
 
 #. Click *Apply* to exit the "Health Check HTTP Parameters" dialogue.
 #. Click *Continue* to return to the "Origin Pool" configuration.

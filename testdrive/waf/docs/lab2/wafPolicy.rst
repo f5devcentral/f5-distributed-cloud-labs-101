@@ -36,4 +36,8 @@ We will create a blocking WAF policy.
     In this mode we have change the policy to block attacks that are included in 
     the default policy.  Later we will look at how we can customize these settings.
 
+    .. image:: ../_static/blocking-app-firewall-policy.png
+
 #. Click the *Save and Exit* button to create the policy
+
+.. |app-context| image:: ../_static/app-context.png

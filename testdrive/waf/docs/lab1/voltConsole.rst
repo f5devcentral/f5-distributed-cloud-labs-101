@@ -43,7 +43,7 @@ Exercise 2: Find your Namespace
 
 #. Once you log in, you will need to identify your namespace.  
 
-  You should only see two namespaces.  One for "demo-app" and one for ``studentXXX``.
+  You should only see one namespace named ``studentXXX``.
 
   Throughout the lab you should use your assigned student number when prompted to create resources
 
