@@ -13,11 +13,9 @@ Exercise 1: Create Public Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We will first create an Origin Pool that refers to the "Public Endpoint" site in our lab environment.
 
-#. Start in VoltConsole and switch to the Application context. 
+#. Start in VoltConsole and switch to the "Web App & API Protection" context. [You should already be here from previous lab]
 
-    |app-context|
-
-#. Navigate the menu to go to "Security"->"Load Balancers"->"Origin Pools". Click on *Add Origin Pool*.
+#. Navigate the menu to go to "Manage"->"Load Balancers"->"Origin Pools". Click on *Add Origin Pool*.
 
 #. Enter the following variables:
 

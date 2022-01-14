@@ -9,18 +9,22 @@ the "Private Endpoint" via the VoltMesh node that is deployed in the AWS lab env
 Exercise 1: HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Start in VoltConsole and switch to the Application context. 
-
-    |app-context|
+#. Start in VoltConsole and switch to the "Web App & API Protection" context. [You should already be here from previous lab]
 
 #. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and look for the Load Balancer named *global* that you previously created.
 
-    |http_lb_menu| |http_lb_add|
-
 #. Click on the three dots "..." to the right of the name of your *global* Load Balancer and select the "Manage Configuration" option.
+   
+   .. image:: ../_static/screenshot-global-vip-actions-manage.png
 #. Click on "Edit Configuration" in the upper right of the screen (after your *global* Load Balancer is loaded).
+   
+   .. image:: ../_static/screenshot-global-vip-edit-config.png
 #. Under "Default Origin Servers" find you previous "public" Origin pool and click on the three dots "..." to the right under "Actions"
+   
+   .. image:: ../_static/screenshot-global-vip-edit-config-pools.png
 #. Change the selection of "Origin Pool" to "private" from "public" and click "Apply"
+   
+   .. image:: ../_static/screenshot-global-vip-edit-config-pools-select.png
 #. Click "*Save and Exit* to update the HTTP Load Balancer.
 
 You should now be able to go to the DNS name that you entered 

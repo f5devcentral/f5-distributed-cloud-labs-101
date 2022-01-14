@@ -10,13 +10,9 @@ It will protect a public resource that exists in the lab's AWS Lab Environment.
 Exercise 1: HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Start in VoltConsole and switch to the Application context. 
-
-    |app-context|
+#. Start in VoltConsole and switch to the "Web App & API Protection" context. [You should already be here from previous lab]
 
 #. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
-
-    |http_lb_menu| |http_lb_add|
 
 #. Enter the following variables:
 
@@ -88,11 +84,16 @@ You should see a block page.
 Exercise 5: Performance and Security 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#. Start in VoltConsole and switch to the "Web App & API Protection" context. [You should already be here from previous lab]
+
 We can view details of successful requests and blocks by navigating to "Apps & APIs"
 
-#. Click on "Apps & APIs"->"Performance" and click on your "global" Load Balancer.
+#. Click on "Apps & APIs"->"Performance" and click on your "global" Load Balancer (bottom right)
 
-   You will allow you to see a  health score of your application as well as end to end latency of the connection.
+   .. image:: ../_static/performance-overview.png
+       :width: 50%
+
+   You will see a  health score of your application as well as end to end latency of the connection.
 
    .. image:: ../_static/screenshot-global-vip-performance-dashboard.png
        :width: 50%
@@ -104,7 +105,8 @@ We can view details of successful requests and blocks by navigating to "Apps & A
    .. image:: ../_static/screenshot-global-vip-public-requests.png
        :width: 50%
 
-#. Click on "Security Monitoring"->"Security Events"
+#. Click on "Apps & APIs"->"Security" and click on your "global" Load Balancer (bottom right)
+#. Click on "Security Events"
    You will be able to see details of the security events.
 
    .. image:: ../_static/screenshot-global-vip-public-security-events.png
