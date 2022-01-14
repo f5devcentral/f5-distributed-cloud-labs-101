@@ -12,7 +12,7 @@ when you trigger a WAF block.
    
    [Go Back]
    
-We can use the reported support ID to disable specific signatures.  
+We can use the reported support ID to disable specific signatures.  Copy the value into your clipboard (i.e. highlight support ID in Chrome and select "Copy" / Ctrl-C)
 
 Exercise 1: Generate Cross Site Scripting (XSS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -23,18 +23,23 @@ Exercise 1: Generate Cross Site Scripting (XSS)
 
 #. Retrieve the "support ID" that is displayed.
 #. From the Volterra Console go back to "Security Events" (from Lab 2 / Exercise 6)
-#. Change the timespan to "Last one hour"   
+#. Click on "Refresh" (on the page) until you see a request that matches the time of your most recent request.
+
+   .. image:: ../_static/screenshot-global-vip-public-security-events-refresh.png   
 #. Click on "Add Filter" under Security events
+   
+   .. image:: ../_static/screenshot-global-vip-public-security-events-add-filter.png
+
 #. Select "req_id"
    
-   .. warning:: If you do not see "req_id" you may need to do a hard reset of your 
-                web browser window to view the Keys.  
-                You can do this with Chrome Developer tools enabled and the 
-                following directions: https://developers.google.com/web/updates/2015/05/hard-reload
+   .. warning:: If you do not see "req_id" you may need refresh your browser window.  Also ensure that you see at least one event on the page.
 #. Select the Operator "In"
-#. Select the value that matches the support ID.
+#. Paste in the support ID.
    
-   .. image:: ../_static/filter-security-events-req-id.png
+   .. image:: ../_static/screenshot-global-vip-public-security-events-paste-req-id.png
+#. Click on "Assign..."
+   
+   .. image:: ../_static/screenshot-global-vip-public-security-events-paste-req-id-assign.png
 #. At the bottom of the page you should see the desired Security Event.  Scroll to the far right to look for the "Actions" column and click on the three dots "..."
 #. Select "Create Exception Rule" from the "Actions" menu
    

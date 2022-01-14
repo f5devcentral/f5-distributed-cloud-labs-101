@@ -14,15 +14,14 @@ Exercise 1: Create WAF Policy
 
 We will create a blocking WAF policy.
 
-#. Start in VoltConsole and switch to the Application context. 
+#. Start in VoltConsole and switch to the "Web App & API Protection" context. 
 
-   Verify that you have your ``studentXXX`` namespace selected
+   It can be access either from the main Home page or via the "Select Service" menu on a Page 
 
     |app-context|
 
-#. Navigate the menu to go to "Security"->"App Firewall". Click on *Add App Firewall*.
- 
-    |op-add-pool|
+#. Navigate the menu to go to "Manage"->"App Firewall". Click on *Add App Firewall*.
+
 
 #. Enter the following variables:
 
@@ -41,3 +40,4 @@ We will create a blocking WAF policy.
 #. Click the *Save and Exit* button to create the policy
 
 .. |app-context| image:: ../_static/app-context.png
+    :width: 25%

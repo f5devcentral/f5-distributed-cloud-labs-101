@@ -10,9 +10,7 @@ In the next lab exercise we will deploy a Load Balancer on the VoltMesh node tha
 Exercise 1: HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Start in VoltConsole and switch to the Application context. 
-
-    |app-context|
+#. Start in VoltConsole and switch to the "Web App & API Protection" context. [You should already be here from previous lab]
 
 #. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
 
@@ -46,8 +44,10 @@ node that is deployed in AWS.  This will allow us to access the VIP via the Publ
 that is attached to that interface.  If we wished to only have the service available within the AWS VPC
 we could opt to use the "Inside" interface that does not have an AWS EIP attached.
 
-#. Under "VIP Creation" click on "Advanced Fields".
+#. Under "VIP Configuration" click on "Show Advanced Fields".
 #. From "Where to Advertise the VIP" select "Advertise Custom"
+   
+   .. image:: ../_static/screenshot-local-vip-advertise-custom.png
 #. Click on "Configure" under "Advertise Custom"
 #. Next to "Custom Advertise VIP Configuration" click on "Show Advanced Fields"
 #. Click on "Add Item"

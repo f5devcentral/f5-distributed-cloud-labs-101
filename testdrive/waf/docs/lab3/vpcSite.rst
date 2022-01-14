@@ -27,10 +27,12 @@ Exercise 1: Introduction to Volterra AWS VPC Site
 
    Click on "AWS VPC Sites"
 
-#. Find the "student-aws" site
+   .. image:: ../_static/menu-cloud-edge-sites.png
+
+#. Find the "student-awsnet" site
 
    In this lab environment we have already deployed a shared AWS VPC Site that we will 
-   use in this lab.  Click on the "student-aws"
+   use in this lab.  Click on the "student-awsnet"
 
    You will be able to observe several metrics about the health of the site.
 
@@ -55,3 +57,10 @@ following F5 Volterra Simulator:
 
 -https://simulator.f5.com/s/cloud2cloud_via_sites_brownfield
 
+You can emulate the steps that were used to create the Volterra VPC Site in the lab environment by starting
+with the "3. Connect AWS VPC Site" https://simulator.f5.com/s/cloud2cloud_via_sites_brownfield/nav/aws/005/0
+
+Clicking on the "Next" button in the top right will allow you to see similar steps that were used to create the site.
+
+.. image:: ../_static/volterra-simulator-vpc-site.png
+   :width: 50%

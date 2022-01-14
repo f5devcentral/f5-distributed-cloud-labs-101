@@ -34,17 +34,18 @@ Terminology
 Namespace
     Namespace is a term that is commonly used in Kubernetes.  It can be thought of as a grouping of resources.
 
-Exercise 2: Find your Namespace
+Exercise 2: Select your Persona
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Please log into your assigned Volterra tenant. https://f5-sales-public.console.ves.volterra.io/
 
     .. note:: The VoltConsole GUI has a relatively short timeout. This is not configurable. We have an enhancement request to allow this to be configured.
 
-#. Once you log in, you will need to identify your namespace.  
+#. When you first login you will need to select your "persona"
 
-  You should only see one namespace named ``studentXXX``.
+   Enter your persona as "SecOps" and level as "Intermediate".  You can change these settings after logging in as well.
 
-  Throughout the lab you should use your assigned student number when prompted to create resources
+   Your persona will highlight workflows within Volterra.  You will be able to access all services, but making use of
+   personas can focus your view on particular tasks that are relevant to your role.
 
-    .. image:: ../_static/find-namespace.png  
+#. Several tooltips will appear.  You can close these out.
