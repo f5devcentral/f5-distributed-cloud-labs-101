@@ -39,5 +39,13 @@ We will create a blocking WAF policy.
 
 #. Click the *Save and Exit* button to create the policy
 
+Video Walkthrough 
+~~~~~~~~~~~~~~~~~
+Optional Video you can watch if you get stuck
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 .. |app-context| image:: ../_static/app-context.png
     :width: 25%

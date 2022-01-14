@@ -78,3 +78,7 @@ the requests log.
 #. Observe that this request is blocked.  Volterra WAF can exclude signatures by both signature ID and path; and these exclusions are tied to a specific HTTP Load Balancer
 
 Congratulations you have completed the lab!
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=523" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

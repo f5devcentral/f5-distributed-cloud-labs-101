@@ -46,3 +46,7 @@ being applied in the Regional Edge.
 
 In the next exercise we will look at a third topology of deploying a WAF policy that will be enforced within the AWS VPC
 on the VoltMesh node (in the Customer Edge).
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=366" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

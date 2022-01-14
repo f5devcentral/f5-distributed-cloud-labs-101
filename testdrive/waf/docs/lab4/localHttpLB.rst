@@ -98,3 +98,7 @@ but in this case the enforcement of the WAF policy is occurring on the VoltMesh 
 that is deployed in the AWS Lab Environment and not in the Volterra Regional Edge.
 
 In the next lab we will look at how to customize our WAF policy.
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
