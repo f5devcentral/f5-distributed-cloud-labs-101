@@ -1,7 +1,7 @@
 Create WAF Policy
 =================
 
-Volterra WAF shares the same WAF engine that is used by F5 BIG-IP WAF and F5 NGINX App.
+Volterra WAF shares the same WAF engine that is used by F5 BIG-IP WAF and F5 NGINX App Protect.
 
 The Volterra WAF engine provides preset categories of rules to protect your web 
 applications, provides the ability to run in a monitor or blocking mode, prevent 
@@ -39,5 +39,17 @@ We will create a blocking WAF policy.
 
 #. Click the *Save and Exit* button to create the policy
 
+Video Walkthrough 
+~~~~~~~~~~~~~~~~~
+Optional Video you can watch if you get stuck
+
+Note that each of the videos will start at a specific timestamp.  
+
+The entire video is 10 minutes total from start to finish.
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 .. |app-context| image:: ../_static/app-context.png
-    :width: 25%
+    :width: 75%

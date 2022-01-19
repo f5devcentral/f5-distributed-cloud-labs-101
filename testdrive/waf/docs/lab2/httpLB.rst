@@ -1,7 +1,7 @@
 Creating HTTP Load Balancer on Volterra Regional Edge
 =====================================================
 
-In this exercise we will be creating a "Global VIP" that will existing on the Volterra Global Network.
+In this exercise we will be creating a "Global VIP" that will exist on the Volterra Global Network.
 
 It will protect a public resource that exists in the lab's AWS Lab Environment.
 
@@ -12,7 +12,7 @@ Exercise 1: HTTP Load Balancer Configuration
 
 #. Start in VoltConsole and switch to the "Web App & API Protection" context. [You should already be here from previous lab]
 
-#. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
+#. Navigate the menu to go to "Manage"->"Load Balancers" -> "HTTP Load Balancers" and click on "Add HTTP Load Balancer".
 
 #. Enter the following variables:
 
@@ -39,7 +39,7 @@ We'll next configure the "Default Origin Servers".
  
 #. Click the *Add Item* button to exit the "Origin Pools" dialogue.
 
-#. Notice that in the "VIP Creation" section *Advertise On Internet* has been selected by default.
+#. Notice that in the "VIP Configuration" section *Advertise On Internet* has been selected by default.
 
 Exercise 3: Configure WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,7 +75,7 @@ In this topology we are sending traffic to an AnyCast IP that is hosted in Volte
 
 We then connect to the AWS resource via it's Public IP address.  
 
-Try adding the following to the URL "?cat%20/etc/passwd".
+Try adding the following to the URL "/?cat%20/etc/passwd".
 
 You should see a block page.
 
@@ -120,5 +120,14 @@ We can view details of successful requests and blocks by navigating to "Apps & A
 Next we will demonstrate how we 
 can securely connect to your private AWS resources via a VoltMesh node.
 
+Video Walkthrough 
+~~~~~~~~~~~~~~~~~
+Optional Video you can watch if you get stuck
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=108" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 .. |app-context| image:: ../_static/app-context.png
 .. |lb-basic| image:: ../_static/lb-basic.png
+

@@ -25,17 +25,17 @@ Exercise 1: HTTP Load Balancer Configuration
     Automatically Manage DNS Records  No/Unchecked 
     ================================= =====
 
-Exercise 3: Configure Default Origin Server
+Exercise 2: Configure Default Origin Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We'll next configure the "Default Origin Servers".   
     
 #. Click on the *Add Items* link under the *Default Origin Servers* section.
 
-#. The "Select Origin Pool Method" will be set to "Origin Pool". Under the "Origin Pool" dropdown menu select the "public" pool you created earlier.
+#. The "Select Origin Pool Method" will be set to "Origin Pool". Under the "Origin Pool" dropdown menu select the "private" pool you created earlier.
  
 #. Click the *Add Item* button to exit the "Origin Pools" dialogue.
 
-Exercise 4: Configure Local VIP
+Exercise 3: Configure Local VIP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Previously we configured a VIP that was advertised on F5's Regional Edge (PoP) locations.
@@ -56,10 +56,11 @@ we could opt to use the "Inside" interface that does not have an AWS EIP attache
 
    .. image:: ../_static/lb-local-vip-advertise.png
       :width: 75%
-#. Click on "Add Item" to return to previous screen
+#. Click on "Add Item" 
+#. Click on "Apply" to return to previous screen
 
 
-Exercise 5: Configure WAF Policy
+Exercise 4: Configure WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Under the *Security Configuration* section 
@@ -87,6 +88,19 @@ The private demo app should look like the following:
 .. image:: ../_static/screenshot-local-vip-private.png
     :width: 50%
 
+
+Exercise 6: Verify DNS
+~~~~~~~~~~~~~~~~~~~~~~
+
+You can verify that you are connecting directly to AWS by comparing the DNS of the two hosts.
+
+.. code-block:: 
+
+    dig +short student001.aws.lab.f5demos.com
+    192.0.2.10
+    $ dig -x 192.0.2.10 +short
+    ec2-192-0-2-10.compute-1.amazonaws.com.
+
 In this topology we are sending traffic to the AWS EIP that attached to the VoltMesh node in the AWS VPC.
 
 We then connect to the AWS resource via it's Private IP address.  
@@ -98,3 +112,7 @@ but in this case the enforcement of the WAF policy is occurring on the VoltMesh 
 that is deployed in the AWS Lab Environment and not in the Volterra Regional Edge.
 
 In the next lab we will look at how to customize our WAF policy.
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

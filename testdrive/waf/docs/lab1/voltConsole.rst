@@ -17,7 +17,7 @@ The following is a video that covers the steps involved.
 
 .. raw:: html
   
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/onKw3aKSdIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/AGV6z1-7NdU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 **VoltConsole**
@@ -49,3 +49,14 @@ Exercise 2: Select your Persona
    personas can focus your view on particular tasks that are relevant to your role.
 
 #. Several tooltips will appear.  You can close these out.
+
+Exercise 3: Identity your Namespace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Click on "Account Settings" by expanding the "Account" icon in the top right of the screen and 
+   clicking on "Account Settings"
+
+   .. image:: ../_static/screenshot-account-settings.png
+#. Next click on "My Namespaces" and take note of the `studentxxx` namespace that you have been assigned.  Each student will have a unique number.
+
+   .. image:: ../_static/screenshot-mynamespaces.png 

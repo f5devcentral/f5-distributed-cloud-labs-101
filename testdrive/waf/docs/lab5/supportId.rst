@@ -41,13 +41,13 @@ Exercise 1: Generate Cross Site Scripting (XSS)
    
    .. image:: ../_static/screenshot-global-vip-public-security-events-paste-req-id-assign.png
 #. At the bottom of the page you should see the desired Security Event.  Scroll to the far right to look for the "Actions" column and click on the three dots "..."
-#. Select "Create Exception Rule" from the "Actions" menu
+#. Select "Create WAF Exclusion Rule" from the "Actions" menu
    
    .. image:: ../_static/create-exception-rule-action.png
       :width: 75%
 
-Exercise 2: Creating Exception Rule
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Exercise 2: Creating WAF Exclusion Rule
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Take note of the list of security IDs that are listed.
 
@@ -78,3 +78,7 @@ the requests log.
 #. Observe that this request is blocked.  Volterra WAF can exclude signatures by both signature ID and path; and these exclusions are tied to a specific HTTP Load Balancer
 
 Congratulations you have completed the lab!
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=523" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

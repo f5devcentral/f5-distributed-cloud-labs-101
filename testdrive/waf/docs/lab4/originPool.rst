@@ -30,7 +30,7 @@ We will first create an Origin Pool that refers to the "Private Endpoint" site i
     ================================= =====
     Select Type of Origin Server      DNS Name of Origin Server on given Sites
     DNS Name                          private.lab.f5demos.internal
-    Site                              student-aws
+    Site                              student-awsnet
     ================================= =====
     
     |op-pool-basic|

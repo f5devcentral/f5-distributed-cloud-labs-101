@@ -39,11 +39,7 @@ Exercise 1: Introduction to Volterra AWS VPC Site
    In this deployment a VoltMesh node has been deployed into an existing VPC in our
    shared AWS lab environment.
 
-#. Browse back to "AWS VPC Sites"
-#. Click on "Add AWS VPC Site"
-   This dialog can be used by a Network/Cloud Engineer to deploy a VoltMesh node into 
-   AWS.  The process is fully automated and there are similar dialogs for automating 
-   deployments into Azure and Google as well.  
+#. Browse back to "AWS VPC Sites" 
 
    VoltMesh nodes can also be deployed into VMWare and KVM environments as well through
    a site registration process. 
@@ -64,3 +60,11 @@ Clicking on the "Next" button in the top right will allow you to see similar ste
 
 .. image:: ../_static/volterra-simulator-vpc-site.png
    :width: 50%
+
+Video Walkthrough 
+~~~~~~~~~~~~~~~~~
+Optional Video you can watch if you get stuck
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=244" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
