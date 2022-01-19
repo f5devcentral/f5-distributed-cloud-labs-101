@@ -43,9 +43,13 @@ Video Walkthrough
 ~~~~~~~~~~~~~~~~~
 Optional Video you can watch if you get stuck
 
+Note that each of the videos will start at a specific timestamp.  
+
+The entire video is 10 minutes total from start to finish.
+
 .. raw:: html
    
    <iframe width="560" height="315" src="https://www.youtube.com/embed/s-BHH0Qayfc?start=41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 .. |app-context| image:: ../_static/app-context.png
-    :width: 25%
+    :width: 75%

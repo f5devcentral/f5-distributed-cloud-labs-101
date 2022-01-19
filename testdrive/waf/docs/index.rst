@@ -1,7 +1,7 @@
 F5 Volterra WAF 101
 ===================
 
-`Last updated: 2022-01-18 9:00 PM ET`
+`Last updated: 2022-01-19 2:00 AM ET`
 
 F5’s  Volterra SaaS Web Application Firewall (WAF) can help you mitigate application threats 
 with an updated WAF engine that inherits the shared  capabilities of F5 BIG-IP Advanced WAF, 

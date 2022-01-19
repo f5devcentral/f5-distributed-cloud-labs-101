@@ -49,3 +49,14 @@ Exercise 2: Select your Persona
    personas can focus your view on particular tasks that are relevant to your role.
 
 #. Several tooltips will appear.  You can close these out.
+
+Exercise 3: Identity your Namespace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Click on "Account Settings" by expanding the "Account" icon in the top right of the screen and 
+   clicking on "Account Settings"
+
+   .. image:: ../_static/screenshot-account-settings.png
+#. Next click on "My Namespaces" and take note of the `studentxxx` namespace that you have been assigned.  Each student will have a unique number.
+
+   .. image:: ../_static/screenshot-mynamespaces.png 

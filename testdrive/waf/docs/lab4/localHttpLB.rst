@@ -51,13 +51,13 @@ we could opt to use the "Inside" interface that does not have an AWS EIP attache
 #. Click on "Configure" under "Advertise Custom"
 #. Next to "Custom Advertise VIP Configuration" click on "Show Advanced Fields"
 #. Click on "Add Item"
-#. Click on "Apply" to return to previous screen
 #. For "Site Network" click on "Outside Network" 
 #. For "Site Reference" select `student-awsnet`
 
    .. image:: ../_static/lb-local-vip-advertise.png
       :width: 75%
-#. Click on "Add Item" to return to previous screen
+#. Click on "Add Item" 
+#. Click on "Apply" to return to previous screen
 
 
 Exercise 4: Configure WAF Policy

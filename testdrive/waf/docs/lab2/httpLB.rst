@@ -1,7 +1,7 @@
 Creating HTTP Load Balancer on Volterra Regional Edge
 =====================================================
 
-In this exercise we will be creating a "Global VIP" that will existing on the Volterra Global Network.
+In this exercise we will be creating a "Global VIP" that will exist on the Volterra Global Network.
 
 It will protect a public resource that exists in the lab's AWS Lab Environment.
 
@@ -75,7 +75,7 @@ In this topology we are sending traffic to an AnyCast IP that is hosted in Volte
 
 We then connect to the AWS resource via it's Public IP address.  
 
-Try adding the following to the URL "?cat%20/etc/passwd".
+Try adding the following to the URL "/?cat%20/etc/passwd".
 
 You should see a block page.
 
