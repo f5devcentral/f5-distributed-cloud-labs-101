@@ -31,7 +31,7 @@ We'll next configure the "Default Origin Servers".
     
 #. Click on the *Add Items* link under the *Default Origin Servers* section.
 
-#. The "Select Origin Pool Method" will be set to "Origin Pool". Under the "Origin Pool" dropdown menu select the "public" pool you created earlier.
+#. The "Select Origin Pool Method" will be set to "Origin Pool". Under the "Origin Pool" dropdown menu select the "private" pool you created earlier.
  
 #. Click the *Add Item* button to exit the "Origin Pools" dialogue.
 
