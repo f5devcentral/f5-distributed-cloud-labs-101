@@ -12,7 +12,7 @@ Exercise 1: HTTP Load Balancer Configuration
 
 #. Start in VoltConsole and switch to the "Web App & API Protection" context. [You should already be here from previous lab]
 
-#. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
+#. Navigate the menu to go to "Manage"->"Load Balancers" -> "HTTP Load Balancers" and click on "Add HTTP Load Balancer".
 
 #. Enter the following variables:
 
@@ -39,7 +39,7 @@ We'll next configure the "Default Origin Servers".
  
 #. Click the *Add Item* button to exit the "Origin Pools" dialogue.
 
-#. Notice that in the "VIP Creation" section *Advertise On Internet* has been selected by default.
+#. Notice that in the "VIP Configuration" section *Advertise On Internet* has been selected by default.
 
 Exercise 3: Configure WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

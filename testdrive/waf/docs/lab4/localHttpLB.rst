@@ -25,7 +25,7 @@ Exercise 1: HTTP Load Balancer Configuration
     Automatically Manage DNS Records  No/Unchecked 
     ================================= =====
 
-Exercise 3: Configure Default Origin Server
+Exercise 2: Configure Default Origin Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We'll next configure the "Default Origin Servers".   
     
@@ -35,7 +35,7 @@ We'll next configure the "Default Origin Servers".
  
 #. Click the *Add Item* button to exit the "Origin Pools" dialogue.
 
-Exercise 4: Configure Local VIP
+Exercise 3: Configure Local VIP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Previously we configured a VIP that was advertised on F5's Regional Edge (PoP) locations.
@@ -51,6 +51,7 @@ we could opt to use the "Inside" interface that does not have an AWS EIP attache
 #. Click on "Configure" under "Advertise Custom"
 #. Next to "Custom Advertise VIP Configuration" click on "Show Advanced Fields"
 #. Click on "Add Item"
+#. Click on "Apply" to return to previous screen
 #. For "Site Network" click on "Outside Network" 
 #. For "Site Reference" select `student-awsnet`
 
@@ -59,7 +60,7 @@ we could opt to use the "Inside" interface that does not have an AWS EIP attache
 #. Click on "Add Item" to return to previous screen
 
 
-Exercise 5: Configure WAF Policy
+Exercise 4: Configure WAF Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Under the *Security Configuration* section 
@@ -86,6 +87,19 @@ The private demo app should look like the following:
 
 .. image:: ../_static/screenshot-local-vip-private.png
     :width: 50%
+
+
+Exercise 6: Verify DNS
+~~~~~~~~~~~~~~~~~~~~~~
+
+You can verify that you are connecting directly to AWS by comparing the DNS of the two hosts.
+
+.. code-block:: 
+
+    dig +short student001.aws.lab.f5demos.com
+    192.0.2.10
+    $ dig -x 192.0.2.10 +short
+    ec2-192-0-2-10.compute-1.amazonaws.com.
 
 In this topology we are sending traffic to the AWS EIP that attached to the VoltMesh node in the AWS VPC.
 
