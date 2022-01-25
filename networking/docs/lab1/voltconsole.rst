@@ -7,6 +7,27 @@ It can be used to manage "sites" in existing on-prem data centers as well as man
 
 Using VoltConsole an end-user can centrally manage a distributed application environment.
 
+Exercise 0: Choose your Persona
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If this is your first time accessing the platform you will be prompted to choose a persona.  Select "NetOps".
+
+If you have used the platform please update your persona to "NetOps" (it is OK if you don't, but some of the screenshots may differ)
+
+To change your persona click on "Account Settings" by clicking on the upper right of the screen.
+
+.. image:: account-settings.png
+
+Click on "Edit work domains & skills"
+
+.. image:: edit-work-domain-skills.png
+
+Select "NetOps" and "Intermediate"      
+
+.. image:: select-netops-intermediate.png
+
+Click on "Save changes"
+
 Exercise 1: Find your Namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -20,6 +41,14 @@ For example if your email address is a.hooley @ f5.com, there is a namespace of
 "a-hooley".  Take note of this name and use it in later steps to make it 
 easier for others to distinguish between resources in shared namespaces.
 
+You will need to be in the "Load Balancers" menu to view find your namespace.
+
+You can access it either from the Home Page or from the Menu.
+
+.. image:: click-load-balancers.png
+
+You can then click on "Namespace" under "Load Balancers" and search for your namespace using the method described earlier (based on your F5 email)        
+
 .. image:: find-namespace.png
 
 .. note:: Namespace is a term commonly used in Kubernetes.  It can be thought of as a grouping of resources.
@@ -27,11 +56,11 @@ easier for others to distinguish between resources in shared namespaces.
 Exercise 2: Create a Site Token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Next you will need to change to the "System" namespace.
+Next you will need to change to the "Cloud and Edge Sites" menu.
 
-.. image:: system-namespace.png
+.. image:: cloud-and-edge-sites-menu.png
 
-Once in the "System" namespace you will need to go to the "Site Management"
+Once in the "Cloud and Edge Sites" menu you will need to go to the "Site Management"
 menu and select "Site Tokens".
 
 .. image:: site-tokens-menu.png
