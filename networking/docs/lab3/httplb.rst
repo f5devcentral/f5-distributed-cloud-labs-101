@@ -26,9 +26,7 @@ Exercise 1:  Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We will first create an Origin Pool that refers to the frontend application service running in our AWS site.
 
-#. Start in VoltConsole and switch to the Application context. 
-
-    |app-context|
+#. Start in VoltConsole and switch to the "Load Balancers" menu. 
 
 #. Navigate the menu to go to "Manage"->"Load Balancers"->"Origin Pools". Click on *Add Origin Pool*.
  
@@ -93,10 +91,6 @@ We will first create an Origin Pool that refers to the frontend application serv
 
 Exercise 2: HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Start in VoltConsole and switch to the Application context. 
-
-    |app-context|
 
 #. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
 

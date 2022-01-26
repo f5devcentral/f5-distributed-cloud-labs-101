@@ -67,7 +67,11 @@ You will use these values later to provision the Volterra node from VoltConsole.
 
 .. image:: udf-cloud-accounts-api-key.png
 
-From VoltConsole go to the "System" namespace, "Site Management" -> "AWS VPC Sites".
+From VoltConsole go to the "Cloud and Edge Sites" menu.
+
+.. image:: menu-cloud-sites.png
+
+Then click on "AWS VPC Sites"
 
 .. image:: voltconsole-aws-site.png
 
