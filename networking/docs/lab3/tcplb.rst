@@ -14,21 +14,19 @@ host a TCP Load Balancer that will proxy traffic back to the original backend ap
 
 .. image:: tcplb-lab.png
 
-Application Name Space
-~~~~~~~~~~~~~~~~~~~~~~
+Load Balancers
+~~~~~~~~~~~~~~
 
-Up to this point we have been using the "System" namespace to access resources.  We will now 
-change to the "Application Namespace".  Start by clicking on the upper right "App" icon.
-Click on the first namespace and use the search to find your own namespace.
+Next we will change to the "Load Balancers" menu.
 
-.. image:: app-namespace-select.png
+.. image:: menu-load-balancer.png
+
+Ensure that you are still in your assigned namespace.
+
+.. image:: your-namespace.png
 
 Exercise 1: Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. In VoltConsole ensure you are in the *Application* context.
-
-    |app-context| 
 
 #. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *Origin Pools*.
 
@@ -84,10 +82,6 @@ Health Check                    TCP HealthCheck
 
 Exercise 2: Create Backend TCP Load Balancer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. In VoltConsole ensure you are in the *Application* context.
-
-    |app-context| 
 
 #. Navigate the menu to go to *Manage* -> *Load Balancer*, then click *TCP Load Balancers*.
 
