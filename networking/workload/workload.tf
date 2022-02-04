@@ -7,7 +7,7 @@ data "aws_instance" "volterra_gateway" {
 
   filter {
     name   = "tag-key"
-    values = ["ves.io/site_name"]
+    values = ["ves-io-site-name"]
   }
 
   filter {
