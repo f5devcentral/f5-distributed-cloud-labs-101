@@ -139,7 +139,7 @@ Exercise 3: Create Backend TCP Load Balancer
 #. Configure Origin Pools
 
     #. Under the *Origin Pools* section, click the *Add Item* link.
-    #. Select the *backend-tcp* pool.
+    #. Select the *backend* pool.
     #. Click the *Add Item* button to close the *Origin Pools* dialogue.
 
 #. Configure Advertisement 
