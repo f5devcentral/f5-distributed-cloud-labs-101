@@ -7,13 +7,13 @@ to access frontend application that will allow you to explore the AWS environmen
 We will first access the AWS environment by connecting directly to an EC2 instance 
 that is directly exposed on the Public Internet.
 
-Afterwards we will connect via a secure tunnel through a VoltMesh node
+Afterwards we will connect via a secure tunnel through a Distributed Cloud Mesh node
 to an EC2 instance that does not have a Public IP.
 
 You will first create an origin pool for your frontend application in AWS.
 
 Afterwards you will create a HTTP Load Balancer that will reference your origin pool 
-and expose the service on Volterra's Regional Edge.
+and expose the service on Distributed Cloud's Regional Edge.
 
 In the following lab we will add an additional "backend" resource that will allow us 
 to connect to our "on-prem" site.
@@ -23,7 +23,7 @@ to connect to our "on-prem" site.
 Regional Edge
 ~~~~~~~~~~~~~
 
-A Regional Edge (RE) is part of Voltera Global Network that provides connectivity 
+A Regional Edge (RE) is part of Distributed Cloud Global Network that provides connectivity 
 to services.  Previously when we deployed the UDF / AWS sites these were considered
 "Customer Edge (CE)" and they make use of RE to communicate (each CE is associated with 
 two RE).
@@ -33,13 +33,17 @@ Exercise 1:  Public Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We will first create an Origin Pool that refers to the frontend application service running in our AWS site.
 
-#. Start in VoltConsole and switch to the Application context. 
 
-    |app-context|
+#. Start in Distributed Cloud Console and switch to the "Load Balancers" context. It can be access either from the Home page or an internal page.
+
+   .. image:: ./load-balancers-menu.png
+       :width: 50%
 
 #. Navigate the menu to go to "Manage"->"Load Balancers"->"Origin Pools". Click on *Add Origin Pool*.
- 
-    |op-add-pool|
+
+  .. image:: ./menu-manage-load-balancers-origin.png
+      :width: 50%
+
 
 #. Enter the following variables:
 
@@ -49,12 +53,24 @@ We will first create an Origin Pool that refers to the frontend application serv
     Variable                          Value
     ================================= =====
     Name                              frontend-public
-    Select Type of Origin Server      Public DNS Name of Origin Server
-    DNS Name                          jumphost.lab.f5demos.com
-    Port                              80
+    ================================= =====
+
+#. Click on "Add Item" under Origin Servers
+
+#. Enter the following information 
+
+    ================================= =====
+    Variable                          Value
+    ================================= =====   
+    Select Type of Origin Server      Public DNS Name of Origin Server (default)
+    DNS Name                          public.lab.f5demos.com
     ================================= =====
 
     |op-pool-basic|
+
+#. Click on "Add Item" to return to the previous screen
+
+#. Enter "80" for the "Port"
 
 #. Under the *List of Health Check(s)* section, click the *Add item* button.
 
@@ -68,8 +84,6 @@ We will first create an Origin Pool that refers to the frontend application serv
     name      http
     ========= =====
 
-    |op-spa-check|
-
 #. Click the *configure* button under "HTTP Health Check"
 
 #. Click *Apply* to exit the "Health Check HTTP Parameters" dialogue.
@@ -78,10 +92,6 @@ We will first create an Origin Pool that refers to the frontend application serv
 
 Exercise 2: HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Start in VoltConsole and switch to the Application context. 
-
-    |app-context|
 
 #. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "Add HTTP Load Balancers".
 
@@ -104,13 +114,11 @@ Exercise 3: Configure Default Origin Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We'll next configure the "Default Origin Servers". 
     
-#. Click on the *Configure* link under the *Default Origin Servers* section.
-
-#. Click the *Add Item* button.
+#. Click on the *Add Item* link under the *Default Origin Servers* section.
 
 #. The "Select Origin Pool Method" will be set to "Origin Pool". Under the "Origin Pool" dropdown menu select the "fronted-public" you created earlier.
  
-#. Click the *Apply* button to exit the "Origin Pools" dialogue.
+#. Click the *Add Item* button to exit the "Origin Pools" dialogue.
 
 #. Notice that in the "VIP Creation" section *Advertise On Internet* has been selected by default.
 
@@ -131,7 +139,7 @@ In this topology we are sending traffic to an AnyCast IP that is hosted in Volte
 We then connect to the AWS resource via it's Public IP address.  Next we will demonstrate how we 
 can securely connect to your private AWS resources via a VoltMesh node.
 
-Exercise 3: Private Origin Pool
+Exercise 4: Private Origin Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this exercise we will create a new origin pool that connects to our AWS site via Volterra's 
@@ -143,44 +151,48 @@ Global Network.
 
 #. Enter the following variables:
 
-    Use the private IP address for the workload instance that you created in the previous exercise.
-
     ================================= =====
     Variable                          Value
     ================================= =====
     Name                              frontend-private
+    ================================= =====
+
+#. Click on "Add Item" under Origin Servers
+
+    ================================= =====
+    Variable                          Value
+    ================================= =====
     Select Type of Origin Server      DNS Name of Origin Server on given Sites
     DNS Name                          jumphost.lab.f5demos.internal
     Site                              student-awsnet
     Select Network on the site        Inside Network
-    Port                              8080
     ================================= =====
 
     .. image:: op-pool-basic-private.png
 
+    Click on "Add Item" to return to the previous screen
+
+#. Enter "8080" for the Port
 #. Select the http health check that you previously created
 
     .. image:: existing-health-check.png 
 
 #. Click the *Save and Exit* button to create the Origin Pool.
 
-Exercise 4: Edit HTTP Load Balancer Configuration
+Exercise 5: Edit HTTP Load Balancer Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Start in VoltConsole and switch to the Application context. 
-
-    |app-context|
 
 #. Navigate the menu to go to "Manage"->"HTTP Load Balancers" and click on "..." next to the HTTP LB 
    that you previously created.
 
    .. image:: edit-http-lb.png
 
-   then click on "Edit"
+   then click on "Manage Configuration"
 
-#. Next to "Default Origin Servers" click on "Edit" under Origin Pools
+#. In the upper right click on "Edit Configuration"
 
-   .. image:: edit-origin-pool.png 
+#. Under "Default Origin Servers" click on "..." under the Actions column for your original Origin Pool (frontend-public) and select "Edit"
    
 #. Select your "frontend-private" pool.
 
@@ -190,12 +202,12 @@ Exercise 4: Edit HTTP Load Balancer Configuration
 
    .. image:: f5-demo-container.png
 
-Exercise 5: Review General Monitoring Stats
+Exercise 6: Review General Monitoring Stats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We can also view analytics of our HTTP Load Balancer.
 
-#. Navigate the menu to go to "Virtual Hosts"->"HTTP Load Balancers" and click on "General Monitoring" after hovering your mouse over "frontend"
+#. Navigate the menu to go to "Virtual Hosts"->"HTTP Load Balancers" and click on "Performance Monitoring" after hovering your mouse over "frontend"
 
   .. image:: http_lb_stats.png
 
