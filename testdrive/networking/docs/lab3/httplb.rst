@@ -47,8 +47,6 @@ We will first create an Origin Pool that refers to the frontend application serv
 
 #. Enter the following variables:
 
-    Use the private IP address for the workload instance that you created in the previous exercise.
-
     ================================= =====
     Variable                          Value
     ================================= =====

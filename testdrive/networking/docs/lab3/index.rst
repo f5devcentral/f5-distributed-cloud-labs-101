@@ -13,11 +13,13 @@ The following video will also review the process: https://youtu.be/onKw3aKSdIA
 
 In the "Live" lab environment there is an existing "on-prem" site "student-udf" and "cloud" site "student-awsnet".
 
-This next lab will create a Volterra Load Balancer resource that will enable
+This next lab will create a Distributed Cloud Load Balancer resource that will enable
 you to access both sites from a local Virtual IP.
 
-- Create TCP LB with domain studentXX.backend.example.local on port 8443 to 10.1.20.5 on UDF site
-- Create HTTP LB with delegated domain to IP of workload host in AWS on port 8080
+- Use "F5 Simulator" to experience how to deploy a Distributed Cloud AWS Site via the Distributed Cloud Console
+- Create HTTP LB with delegated domain to an existing "Public" resource in the shared AWS lab environment
+- Update HTTP LB to point to an existing "Private" source in the shared AWS lab environment
+- Create TCP LB with domain studentXXX.example.internal on port 8443 to 10.1.20.5 on UDF site
 
 .. toctree::
    :maxdepth: 1

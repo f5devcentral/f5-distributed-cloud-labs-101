@@ -139,7 +139,7 @@ Exercise 3: Create Backend TCP Load Balancer
 #. Configure Origin Pools
 
     #. Under the *Origin Pools* section, click the *Add Item* link.
-    #. Select the *backend-tcp* pool.
+    #. Select the *backend* pool.
     #. Click the *Add Item* button to close the *Origin Pools* dialogue.
 
 #. Configure Advertisement 
@@ -195,7 +195,7 @@ Using the "In Container Diagnostic Services"
 You should see an output.  Now try repeating the same but using the IP address that you retrieved in Exercise 4.
 
 #. Click on "Run Command"
-#. Enter "curl -sk https://10.0.3.XX" (replace XX with the value your retrieved in Exercise 4)
+#. Enter "curl -sk https://10.0.5.XX" (replace XX with the value your retrieved in Exercise 4)
 #. Click on Run Command
 
 You should see an error.  This is because Distributed Cloud is expecting an SNI value.  This allows you to re-use
