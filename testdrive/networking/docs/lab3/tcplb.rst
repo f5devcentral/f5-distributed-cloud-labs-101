@@ -195,7 +195,7 @@ Using the "In Container Diagnostic Services"
 You should see an output.  Now try repeating the same but using the IP address that you retrieved in Exercise 4.
 
 #. Click on "Run Command"
-#. Enter "curl -sk https://10.0.3.XX" (replace XX with the value your retrieved in Exercise 4)
+#. Enter "curl -sk https://10.0.5.XX" (replace XX with the value your retrieved in Exercise 4)
 #. Click on Run Command
 
 You should see an error.  This is because Distributed Cloud is expecting an SNI value.  This allows you to re-use
