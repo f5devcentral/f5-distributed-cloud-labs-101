@@ -31,7 +31,7 @@ Exercise 1: Create Virtual K8s Workload for the Inventory
     Variable                        Value
     =============================== =====
     Name                            brews-inv
-    Image Name                      registry.f5demos.com/inv
+    Image Name                      f5demos.azurecr.io/inv
     Select Container Registry       Private Registry
     Private Registry                Select the private registry you created previously
     =============================== =====
