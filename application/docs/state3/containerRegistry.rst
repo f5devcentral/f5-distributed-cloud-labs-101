@@ -43,8 +43,8 @@ Exercise 1: Create the Container Registry
 .. |ns| image:: ../_static/cr3-ns.png
 .. |cr| image:: ../_static/cr3-cr.png
 .. |add| image:: ../_static/cr3-add.png
-.. |diag| image:: ../_static/cr3-diag.png
-.. |apply| image:: ../_static/cr3-apply.png
-.. |blind| image:: ../_static/cr3-blind.png
+.. |diag| image:: ../_static/cr3-diag-new.png
+.. |apply| image:: ../_static/cr3-apply-new.png
+.. |blind| image:: ../_static/cr3-blind-new.png
 .. |save| image:: ../_static/cr3-save.png
 .. |verify| image:: ../_static/cr3-verify.png
