@@ -21,11 +21,11 @@ Exercise 1: Create the Container Registry
 
     ================================= =====
     Variable                          Value
-    ================================= =====
+    ================================= ===== 
     Name                              f5demos
-    Server FQDN                       registry.f5demos.com
-    User Name                         labuser
-    Password                          f5demosPass! 
+    Server FQDN                       f5demos.azurecr.io
+    User Name                         1e21992e-4283-4afe-9a89-b3b314f1fd55
+    Password                          MeszATg~US6QGw5G7S74~0gX2ky_XClhHB 
     ================================= =====
 
 

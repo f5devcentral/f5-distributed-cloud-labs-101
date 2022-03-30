@@ -68,7 +68,7 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
     Variable                        Value
     =============================== =====
     Name                            brews-spa
-    Image Name                      registry.f5demos.com/spa
+    Image Name                      f5demos.azurecr.io/spa
     Select Container Registry       Private Registry
     Private Registry                Select the private registry you created previously
     =============================== =====
@@ -140,7 +140,7 @@ Exercise 3: Create Virtual K8s Workload for the API
     Variable                        Value
     =============================== =====
     Name                            brews-api
-    Image Name                      registry.f5demos.com/api
+    Image Name                      f5demos.azurecr.io/api
     Select Container Registry       Private Registry
     Private Registry                Select the private registry you created previously
     =============================== =====
