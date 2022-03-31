@@ -62,7 +62,7 @@ the k8s service to the internet.
     Variable                        Value
     =============================== =====
     Name                            brews-recs
-    Image Name                      registry.f5demos.com/recs
+    Image Name                      f5demos.azurecr.io/recs
     Select Container Registry       Private Registry
     Private Registry                Select the private registry you created previously
     =============================== =====

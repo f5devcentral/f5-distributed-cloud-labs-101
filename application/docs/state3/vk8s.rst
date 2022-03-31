@@ -68,7 +68,7 @@ Exercise 2: Create Virtual K8s Workload for the Single-page App
     Variable                        Value
     =============================== =====
     Name                            brews-spa
-    Image Name                      registry.f5demos.com/spa
+    Image Name                      f5demos.azurecr.io/spa
     Select Container Registry       Private Registry
     Private Registry                Select the private registry you created previously
     =============================== =====
@@ -140,7 +140,7 @@ Exercise 3: Create Virtual K8s Workload for the API
     Variable                        Value
     =============================== =====
     Name                            brews-api
-    Image Name                      registry.f5demos.com/api
+    Image Name                      f5demos.azurecr.io/api
     Select Container Registry       Private Registry
     Private Registry                Select the private registry you created previously
     =============================== =====
@@ -216,8 +216,8 @@ You should now see your two workloads with 1 Running/Completed Pods per workload
 .. |vk8s_cluster| image:: ../_static/vk8s_cluster.png
 .. |vk8s_list| image:: ../_static/vk8s_list.png
 .. |k8s_workloads_menu| image:: ../_static/k8s_workloads_menu.png
-.. |vk8s_workloads_containers| image:: ../_static/vk8s_workloads_containers.png
-.. |vk8s_workloads_containers_api| image:: ../_static/vk8s_workloads_containers_api.png
+.. |vk8s_workloads_containers| image:: ../_static/vk8s_workloads_containers-new.png
+.. |vk8s_workloads_containers_api| image:: ../_static/vk8s_workloads_containers_api-new.png
 .. |vk8s_workloads_deploy| image:: ../_static/vk8s_workloads_deploy.png
 .. |vk8s_workloads_advertise| image:: ../_static/vk8s_workloads_advertise.png
 .. |vk8s_workloads_list| image:: ../_static/vk8s_workloads_list.png
